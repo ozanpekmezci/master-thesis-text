@@ -1,22 +1,19 @@
 \RequirePackage[l2tabu,orthodox]{nag}
 
-% TODO: decide if one-sided/two-sided
-%\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
 \documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
 
-% TODO: change citation style in settings
 \input{settings}
 
-% TODO: change thesis information
+% TODO: spelling mistake
 \newcommand*{\getUniversity}{Technische Universität München}
 \newcommand*{\getFaculty}{Department of Informatics}
-\newcommand*{\getTitle}{Thesis title}
-\newcommand*{\getTitleGer}{Titel der Abschlussarbeit}
-\newcommand*{\getAuthor}{Author}
-\newcommand*{\getDoctype}{Thesis type (Bachelor's Thesis in Informatics, Master's Thesis in Robotics, \ldots)}
-\newcommand*{\getSupervisor}{Supervisor}
-\newcommand*{\getAdvisor}{Advisor}
-\newcommand*{\getSubmissionDate}{Submission date}
+\newcommand*{\getTitle}{Development of a Recommender System that addresses the diversity principle to improve user satisfaction.}
+\newcommand*{\getTitleGer}{Entwicklung eines Empfehlungdienst unter Berücksichtigung der Benutzerzufriedenheit zur Diversität der Empfehlungen.}
+\newcommand*{\getAuthor}{Ozan Pekmezci}
+\newcommand*{\getDoctype}{Master's Thesis in Informatics}
+\newcommand*{\getSupervisor}{Prof. Dr-Ing. Klaus Diepold}
+\newcommand*{\getAdvisor}{Julian Wörmann, M.Sc.}
+\newcommand*{\getSubmissionDate}{15.05.2019}
 \newcommand*{\getSubmissionLocation}{Munich}
 
 \begin{document}
@@ -39,6 +36,8 @@
 \mainmatter{}
 
 \input{chapters/01_introduction}
+\input{chapters/02_review_of_research}
+\input{chapters/03_evaluation_metrics}
 % TODO: add more chapters here
 
 \appendix{}
