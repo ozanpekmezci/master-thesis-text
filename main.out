@@ -15,8 +15,30 @@
 \BOOKMARK [0][-]{chapter.2}{Review of Literature and Research}{}% 15
 \BOOKMARK [1][-]{section.2.1}{Types of Recommender Systems}{chapter.2}% 16
 \BOOKMARK [1][-]{section.2.2}{Neighborhood-Based Approach}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Evaluation Metrics}{}% 18
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 19
-\BOOKMARK [0][-]{chapter*.9}{List of Figures}{}% 20
-\BOOKMARK [0][-]{chapter*.10}{List of Tables}{}% 21
-\BOOKMARK [0][-]{chapter*.11}{Bibliography}{}% 22
+\BOOKMARK [2][-]{subsection.2.2.1}{Introduction}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.2}{User-Based Rating Prediction}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.3}{User-Based Classification}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.4}{Regression vs Classification}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.5}{Item-Based Recommendation}{section.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.6}{Item-Based vs User-Based Recommendation}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.7}{Steps of Neighborhood Methods}{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.8}{Conclusion}{section.2.2}% 25
+\BOOKMARK [0][-]{chapter.3}{Collaborative Filtering}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.2}{Baseline}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.2.1}{Baseline Predictors}{section.3.2}% 29
+\BOOKMARK [2][-]{subsection.3.2.2}{Matrix Factorization}{section.3.2}% 30
+\BOOKMARK [2][-]{subsection.3.2.3}{Neighborhood Models}{section.3.2}% 31
+\BOOKMARK [0][-]{chapter.4}{Content-Based Filtering}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.1.1}{Text to Vector Space Model}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.2}{Methods for Learning User Profile}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.3}{Advantages and Drawbacks of Content-Based Filtering}{section.4.1}% 36
+\BOOKMARK [1][-]{section.4.2}{Conclusion}{chapter.4}% 37
+\BOOKMARK [0][-]{chapter.5}{Evaluation Metrics}{}% 38
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 41
+\BOOKMARK [0][-]{chapter*.15}{List of Figures}{}% 42
+\BOOKMARK [0][-]{chapter*.16}{List of Tables}{}% 43
+\BOOKMARK [0][-]{chapter*.17}{Bibliography}{}% 44
