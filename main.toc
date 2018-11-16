@@ -89,16 +89,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Conclusion}{28}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation Metrics}{29}{chapter.5}
+\contentsline {chapter}{\numberline {5}Knowledge-Based Recommender Systems}{29}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{29}{section.5.1}
+\contentsline {chapter}{\numberline {6}Evaluation Metrics}{30}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Implementation}{31}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{30}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Introduction}{31}{section.6.1}
+\contentsline {chapter}{\numberline {7}Novelty and Diversity}{32}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{33}{chapter*.15}
+\contentsline {section}{\numberline {7.1}Introduction}{32}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{34}{chapter*.16}
+\contentsline {section}{\numberline {7.2}Novelty and Diversity in Recommender Systems}{33}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{35}{chapter*.17}
+\contentsline {subsection}{\numberline {7.2.1}Why Novelty and Diversity in Recommendation}{33}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Defining Novelty and Diversity}{35}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.3}Diversity in Other Fields}{36}{subsection.7.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Novelty and Diversity Evaluation}{37}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}Notation}{38}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Average Intra-List Distance}{38}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Implementation}{39}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Introduction}{39}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{41}{chapter*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Tables}{42}{chapter*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.17}
