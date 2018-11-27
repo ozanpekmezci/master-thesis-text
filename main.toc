@@ -95,30 +95,114 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Introduction}{30}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Novelty and Diversity}{32}{chapter.7}
+\contentsline {section}{\numberline {6.2}Experimental Settings}{32}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Introduction}{32}{section.7.1}
+\contentsline {subsection}{\numberline {6.2.1}Offline Experiments}{33}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Novelty and Diversity in Recommender Systems}{33}{section.7.2}
+\contentsline {subsubsection}{\nonumberline Data Sets for Offline Experiments}{34}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}Why Novelty and Diversity in Recommendation}{33}{subsection.7.2.1}
+\contentsline {subsubsection}{\nonumberline Simulating User Behavior}{34}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}Defining Novelty and Diversity}{35}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {6.2.2}User Studies}{36}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.3}Diversity in Other Fields}{36}{subsection.7.2.3}
+\contentsline {subsubsection}{\nonumberline Advantages and Disadvantages}{37}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Novelty and Diversity Evaluation}{37}{section.7.3}
+\contentsline {subsubsection}{\nonumberline Between vs. Within Subjects}{38}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Notation}{38}{subsection.7.3.1}
+\contentsline {subsubsection}{\nonumberline Questionnaires}{38}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Average Intra-List Distance}{38}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {6.2.3}Online Evaluation}{39}{subsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Implementation}{39}{chapter.8}
+\contentsline {subsection}{\numberline {6.2.4}Drawing Reliable Conclusion}{40}{subsection.6.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Introduction}{39}{section.8.1}
+\contentsline {section}{\numberline {6.3}Recommender System Properties}{40}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{41}{chapter*.15}
+\contentsline {section}{\numberline {6.4}User Preference}{41}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{42}{chapter*.16}
+\contentsline {section}{\numberline {6.5}Notation}{42}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.17}
+\contentsline {subsection}{\numberline {6.5.1}Converage}{43}{subsection.6.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.2}Confidence}{44}{subsection.6.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.3}Trust}{44}{subsection.6.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.4}Novelty}{44}{subsection.6.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.5}Serendipity}{44}{subsection.6.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.6}Diversity}{44}{subsection.6.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.7}Utility}{45}{subsection.6.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.8}Risk}{47}{subsection.6.5.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.9}Robustness}{47}{subsection.6.5.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.10}Privacy}{47}{subsection.6.5.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.11}Adaptivity}{47}{subsection.6.5.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5.12}Scalability}{47}{subsection.6.5.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.6}Conclusion}{47}{section.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Novelty and Diversity}{49}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Introduction}{49}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Novelty and Diversity in Recommender Systems}{50}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Why Novelty and Diversity in Recommendation}{50}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Defining Novelty and Diversity}{52}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.3}Diversity in Other Fields}{53}{subsection.7.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Novelty and Diversity Evaluation}{54}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}Notation}{55}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Average Intra-List Distance}{55}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.3}Global Long-Tail Novelty}{56}{subsection.7.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.4}User-Specific Unexpectedness}{56}{subsection.7.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.5}Inter-Recommendation Diversity Metrics}{56}{subsection.7.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.6}Specific Methodologies}{56}{subsection.7.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.7}Diversity vs. Novelty vs. Serendipity}{56}{subsection.7.3.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Novelty and Diversity Enhancement Approaches}{57}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.1}Result Diversification/Re-ranking}{57}{subsection.7.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.2}Using Clustering for Diversification}{57}{subsection.7.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.3}Fusion-Based Methods}{57}{subsection.7.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.4}Learning to Rank with Diversity}{58}{subsection.7.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.5}Other Approaches}{58}{subsection.7.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.6}User Studies}{59}{subsection.7.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.7}Diversification Approaches in Information Retrieval}{59}{subsection.7.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5}Unified View}{59}{section.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.6}Empirical Metric Comparison}{60}{section.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.7}Conclusion}{60}{section.7.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Implementation}{61}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Introduction}{61}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{63}{chapter*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Tables}{64}{chapter*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{65}{chapter*.22}

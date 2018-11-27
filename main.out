@@ -38,17 +38,54 @@
 \BOOKMARK [0][-]{chapter.5}{Knowledge-Based Recommender Systems}{}% 38
 \BOOKMARK [0][-]{chapter.6}{Evaluation Metrics}{}% 39
 \BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 40
-\BOOKMARK [0][-]{chapter.7}{Novelty and Diversity}{}% 41
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 42
-\BOOKMARK [1][-]{section.7.2}{Novelty and Diversity in Recommender Systems}{chapter.7}% 43
-\BOOKMARK [2][-]{subsection.7.2.1}{Why Novelty and Diversity in Recommendation}{section.7.2}% 44
-\BOOKMARK [2][-]{subsection.7.2.2}{Defining Novelty and Diversity}{section.7.2}% 45
-\BOOKMARK [2][-]{subsection.7.2.3}{Diversity in Other Fields}{section.7.2}% 46
-\BOOKMARK [1][-]{section.7.3}{Novelty and Diversity Evaluation}{chapter.7}% 47
-\BOOKMARK [2][-]{subsection.7.3.1}{Notation}{section.7.3}% 48
-\BOOKMARK [2][-]{subsection.7.3.2}{Average Intra-List Distance}{section.7.3}% 49
-\BOOKMARK [0][-]{chapter.8}{Implementation}{}% 50
-\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 51
-\BOOKMARK [0][-]{chapter*.15}{List of Figures}{}% 52
-\BOOKMARK [0][-]{chapter*.16}{List of Tables}{}% 53
-\BOOKMARK [0][-]{chapter*.17}{Bibliography}{}% 54
+\BOOKMARK [1][-]{section.6.2}{Experimental Settings}{chapter.6}% 41
+\BOOKMARK [2][-]{subsection.6.2.1}{Offline Experiments}{section.6.2}% 42
+\BOOKMARK [2][-]{subsection.6.2.2}{User Studies}{section.6.2}% 43
+\BOOKMARK [2][-]{subsection.6.2.3}{Online Evaluation}{section.6.2}% 44
+\BOOKMARK [2][-]{subsection.6.2.4}{Drawing Reliable Conclusion}{section.6.2}% 45
+\BOOKMARK [1][-]{section.6.3}{Recommender System Properties}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.4}{User Preference}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.5}{Notation}{chapter.6}% 48
+\BOOKMARK [2][-]{subsection.6.5.1}{Converage}{section.6.5}% 49
+\BOOKMARK [2][-]{subsection.6.5.2}{Confidence}{section.6.5}% 50
+\BOOKMARK [2][-]{subsection.6.5.3}{Trust}{section.6.5}% 51
+\BOOKMARK [2][-]{subsection.6.5.4}{Novelty}{section.6.5}% 52
+\BOOKMARK [2][-]{subsection.6.5.5}{Serendipity}{section.6.5}% 53
+\BOOKMARK [2][-]{subsection.6.5.6}{Diversity}{section.6.5}% 54
+\BOOKMARK [2][-]{subsection.6.5.7}{Utility}{section.6.5}% 55
+\BOOKMARK [2][-]{subsection.6.5.8}{Risk}{section.6.5}% 56
+\BOOKMARK [2][-]{subsection.6.5.9}{Robustness}{section.6.5}% 57
+\BOOKMARK [2][-]{subsection.6.5.10}{Privacy}{section.6.5}% 58
+\BOOKMARK [2][-]{subsection.6.5.11}{Adaptivity}{section.6.5}% 59
+\BOOKMARK [2][-]{subsection.6.5.12}{Scalability}{section.6.5}% 60
+\BOOKMARK [1][-]{section.6.6}{Conclusion}{chapter.6}% 61
+\BOOKMARK [0][-]{chapter.7}{Novelty and Diversity}{}% 62
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 63
+\BOOKMARK [1][-]{section.7.2}{Novelty and Diversity in Recommender Systems}{chapter.7}% 64
+\BOOKMARK [2][-]{subsection.7.2.1}{Why Novelty and Diversity in Recommendation}{section.7.2}% 65
+\BOOKMARK [2][-]{subsection.7.2.2}{Defining Novelty and Diversity}{section.7.2}% 66
+\BOOKMARK [2][-]{subsection.7.2.3}{Diversity in Other Fields}{section.7.2}% 67
+\BOOKMARK [1][-]{section.7.3}{Novelty and Diversity Evaluation}{chapter.7}% 68
+\BOOKMARK [2][-]{subsection.7.3.1}{Notation}{section.7.3}% 69
+\BOOKMARK [2][-]{subsection.7.3.2}{Average Intra-List Distance}{section.7.3}% 70
+\BOOKMARK [2][-]{subsection.7.3.3}{Global Long-Tail Novelty}{section.7.3}% 71
+\BOOKMARK [2][-]{subsection.7.3.4}{User-Specific Unexpectedness}{section.7.3}% 72
+\BOOKMARK [2][-]{subsection.7.3.5}{Inter-Recommendation Diversity Metrics}{section.7.3}% 73
+\BOOKMARK [2][-]{subsection.7.3.6}{Specific Methodologies}{section.7.3}% 74
+\BOOKMARK [2][-]{subsection.7.3.7}{Diversity vs. Novelty vs. Serendipity}{section.7.3}% 75
+\BOOKMARK [1][-]{section.7.4}{Novelty and Diversity Enhancement Approaches}{chapter.7}% 76
+\BOOKMARK [2][-]{subsection.7.4.1}{Result Diversification/Re-ranking}{section.7.4}% 77
+\BOOKMARK [2][-]{subsection.7.4.2}{Using Clustering for Diversification}{section.7.4}% 78
+\BOOKMARK [2][-]{subsection.7.4.3}{Fusion-Based Methods}{section.7.4}% 79
+\BOOKMARK [2][-]{subsection.7.4.4}{Learning to Rank with Diversity}{section.7.4}% 80
+\BOOKMARK [2][-]{subsection.7.4.5}{Other Approaches}{section.7.4}% 81
+\BOOKMARK [2][-]{subsection.7.4.6}{User Studies}{section.7.4}% 82
+\BOOKMARK [2][-]{subsection.7.4.7}{Diversification Approaches in Information Retrieval}{section.7.4}% 83
+\BOOKMARK [1][-]{section.7.5}{Unified View}{chapter.7}% 84
+\BOOKMARK [1][-]{section.7.6}{Empirical Metric Comparison}{chapter.7}% 85
+\BOOKMARK [1][-]{section.7.7}{Conclusion}{chapter.7}% 86
+\BOOKMARK [0][-]{chapter.8}{Implementation}{}% 87
+\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 88
+\BOOKMARK [0][-]{chapter*.20}{List of Figures}{}% 89
+\BOOKMARK [0][-]{chapter*.21}{List of Tables}{}% 90
+\BOOKMARK [0][-]{chapter*.22}{Bibliography}{}% 91
