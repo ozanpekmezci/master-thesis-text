@@ -1,9 +1,9 @@
 % !TeX root = ../main.tex
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
-\chapter{Evaluation Metrics}\label{chapter:evaluation_metrics}
+\section{Evaluation Metrics}\label{section:evaluation_metrics}
 
-\section{Introduction}
+\subsection{Introduction}
 [kopi peyst, 8.1]
 
 Recommender systems can now be found in many modern applications that expose the user to a huge collections of items. Such systems typically provide the user with a list of recommended items they might prefer, or predict how much they might prefer each item. These systems help users to decide on appropriate items, and ease the task of finding preferred items in the collection.
@@ -25,7 +25,7 @@ We also review a set of previous suggestions for evaluating recommender systems,
 
 The rest of the chapter is structured as follows. In Sect.8.2 we discuss the different experimental settings in which recommender systems can be evaluated, discussing the appropriate use of offline experiments, user studies, and online trials. We also outline considerations that go into making reliable decisions based on these experiments, including generalization and statistical significance of results. In Sect. 8.3 we describe a large variety of properties of recommender systems that may impact their performance, as well as metrics for measuring these properties. Finally, we conclude in Sect. 8.4.
 
-\section{Experimental Settings}
+\subsection{Experimental Settings}
 [8.2 kitap]
 In this section we describe three levels of experiments that can be used in order to compare several recommenders. The discussion below is motivated by evaluation protocols in related areas such as machine learning and information retrieval, highlighting practices relevant to evaluating recommender systems. The reader is referred to publications in these fields for more detailed discussions [17, 61, 75].
 
@@ -39,20 +39,20 @@ In all experimental scenarios, it is important to follow a few basic guidelines 
 	\item Generalization power: when drawing conclusions from experiments, we may desire that our conclusions generalize beyond the immediate context of the experiments. When choosing an algorithm for a real application, we may want our conclusions to hold on the deployed system, and generalize beyond our experimental data set. Similarly, when developing new algorithms, we want our conclusions to hold beyond the scope of the specific application or data set that we experimented with. To increase the probability of generalization of the results we must typically experiment with several data sets or applications. It is important to understand the properties of the various data sets that are used. Generally speaking, the more diverse the data used, the more we can generalize the results.
 \end{itemize}
 
-\subsection{Offline Experiments}
+\subsubsection{Offline Experiments}
 
 
 An offline experiment is performed by using a pre-collected data set of users choosing or rating items. Using this data set we can try to simulate the behavior of users that interact with a recommendation system. In doing so, we assume that the user behavior when the data was collected will be similar enough to the user behavior when the recommender system is deployed, so that we can make reliable decisions based on the simulation. Offline experiments are attractive because they require no interaction with real users, and thus allow us to compare a wide range of candidate algorithms at a low cost. The downside of offline experiments is that they can answer a very narrow set of questions, typically questions about the prediction power of an algorithm. In particular, we must assume that users’ behavior when interacting with a system including the recommender system chosen will be modeled well by the users’ behavior prior to that system’s deployment. Thus we cannot directly measure the recommender’s influence on user behavior in this setting.
 
 Therefore, the goal of the offline experiments is to filter out inappropriate approaches, leaving a relatively small set of candidate algorithms to be tested by the more costly user studies or online experiments. A typical example of this process is when the parameters of the algorithms are tuned in an offline experiment, and then the algorithm with the best tuned parameters continues to the next phase.
 
-\subsubsection{Data Sets for Offline Experiments}
+\paragraph{Data Sets for Offline Experiments}
 
 As the goal of the offline evaluation is to filter algorithms, the data used for the offline evaluation should match as closely as possible the data the designer expects the recommender system to face when deployed online. Care must be exercised to ensure that there is no bias in the distributions of users, items and ratings selected. For example, in cases where data from an existing system (perhaps a system without a recommender) is available, the experimenter may be tempted to pre-filter the data by excluding items or users with low counts, in order to reduce the costs of experimentation. In doing so, the experimenter should be mindful that this involves a trade-off, since this introduces a systematic bias in the data. If necessary, randomly sampling users and items may be a preferable method for reducing data, although this can also introduce other biases into the experiment (e.g. this could tend to favor algorithms that work better with more sparse data). Sometimes, known biases in the data can be corrected for by techniques such as reweighing data, but correcting biases in the data is often difficult.
 
 Another source of bias may be the data collection itself. For example, users may be more likely to rate items that they have strong opinions on, and some users may provide many more ratings than others. Furthermore, users tend to rate items that they like, and avoid exploring, and hence rating, items that they will not like. For example, a person who doesn’t like horror movies will tend not to watch them, would not explore the list of available horror movies for rental, and would not rate them. Thus, the set of items on which explicit ratings are available may be biased by the ratings themselves. This is often known as the not missing at random assumption [47]. Once again, techniques such as resampling or reweighting the test data [70, 71] may be used to attempt to correct such biases.
 
-\subsubsection{Simulating User Behavior}
+\paragraph{Simulating User Behavior}
 
 In order to evaluate algorithms offline, it is necessary to simulate the online process where the system makes predictions or recommendations, and the user corrects the predictions or uses the recommendations. This is usually done by recording historical user data, and then hiding some of these interactions in order to simulate the knowledge of how a user will rate an item, or which recommendations a user will act upon. There are a number of ways to choose the ratings/selected items to be hidden. Once again, it is preferable that this choice be done in a manner that simulates the target application as closely as possible. In many cases, though, we are restricted by the computational cost of an evaluation protocol, and must make compromises in order to execute the experiment over large data sets.
 
@@ -62,7 +62,7 @@ An even cheaper alternative is to sample a set of test users, then sample a sing
 
 A common protocol used in many research papers is to use a fixed number of known items or a fixed number of hidden items per test user (so called “given n” or “all but n” protocols). This protocol may be useful for diagnosing algorithms and identifying in which cases they work best. However, when we wish to make decisions on the algorithm that we will use in our application, we must ask ourselves whether we are truly interested in presenting recommendations only for users who have rated exactly n items, or are expected to rate exactly n items more. If that is not the case, then results computed using these protocols have biases that make them unreliable in predicting the performance of the algorithms online, and these protocols should be avoided.
 
-\subsection{User Studies}
+\subsubsection{User Studies}
 
 Many recommendation approaches rely on the interaction of users with the system (see, e.g., Chaps. 24, 5, 10, and 18). It is very difficult to create a reliable simulation of users interactions with the system, and thus, offline testing are difficult to conduct. In order to properly evaluate such systems, real user interactions with the system must be collected. Even when offline testing is possible, interactions with real users can still provide additional information about the system performance. In these cases we typically conduct user studies.
 
@@ -75,7 +75,7 @@ We can collect data such as how many times a recommendation was clicked, and eve
 
 Of course, in many other research areas user studies are a central tool, and thus there is much literature on the proper design of user studies. This section only overviews the basic considerations that should be taken when evaluating a recommender system through a user study, and the interested reader can find much deeper discussions elsewhere (see. e.g. [7]).
 
-\subsubsection{Advantages and Disadvantages}
+\paragraph{Advantages and Disadvantages}
 
 User studies can perhaps answer the widest set of questions of all three experimental settings that we survey here. Unlike offline experiments this setting allows us to test the behavior of users when interacting with the recommender system, and the influence of the recommendations on user behavior. In the offline case we typically make assumptions such as “given a relevant recommendation the user is likely to use it” which are tested in the user study. Second, this is the only setting that allows us to collect qualitative data that is often crucial for interpreting the quantitative results. Also, we can typically collect in this setting a large set of quantitative measurements because the users can be closely monitored while performing the tasks.
 
@@ -89,7 +89,7 @@ Another important consideration is that the test subjects must represent as clos
 
 However, even when the subjects represent properly the true population of users, the results can still be biased because they are aware that they are participating in an experiment. For example, it is well known that paid subjects tend to try and satisfy the person or company conducting the experiment [60]. If the subjects are aware of the hypothesis that is tested they may unconsciously provide evidence that supports it. To accommodate that, it is typically better not to disclose the goal of the experiment prior to collecting data. Another, more subtle effect occurs when the payment to subjects takes the form of a complete or partial subsidy of items they select. This may bias the data in cases where final users of the system are not similarly subsidized, as users’ choices and preferences may be different when they pay full price. Unfortunately, avoiding this particular bias is difficult.
 
-\subsubsection{Between vs. Within Subjects}
+\paragraph{Between vs. Within Subjects}
 
 As typically a user study compares a few candidate approaches, each candidate must be tested over the same tasks. To test all candidates we can either compare the candidates between subjects, where each subject is assigned to a candidate method and experiments with it, or within subjects, where each subject tests a set of candidates on different tasks [24].
 
@@ -99,7 +99,7 @@ Between subjects experiments, also known as A-B testing (All Between), provide a
 
 [ If needed 8.2.2.3]
 
-\subsubsection{Questionnaires}
+\paragraph{Questionnaires}
 
 User studies allow us to use the powerful questionnaire tool (e.g. [58]). Before, during, and after subjects perform their tasks we can ask them questions about their experience. These questions can provide information about properties that are difficult to measure, such as the subject’s state of mind, or whether the subject enjoyed the system.
 
@@ -107,7 +107,7 @@ While these questions can provide valuable information, they can also provide mi
 
 Indeed, vast amount of research was conducted in other areas about the art of questionnaire writing, and we refer the readers to that literature (e.g. [56]) for more details.
 
-\subsection{Online Evaluation}
+\subsubsection{Online Evaluation}
 
 In many realistic recommendation applications the designer of the system wishes to influence the behavior of users. We are therefore interested in measuring the change in user behavior when interacting with different recommender systems. For example, if users of one system follow the recommendations more often, or if some utility gathered from users of one system exceeds utility gathered from users of the other system, then we can conclude that one system is superior to the other, all else being equal.
 
@@ -125,13 +125,13 @@ For these reasons, it is best to run an online evaluation last, after an extensi
 
 Online evaluations are unique in that they allow direct measurement of overall system goals, such as long-term profit or user retention. As such, they can be used to understand how these overall goals are affected by system properties such as recommendation accuracy and diversity of recommendations, and to understand the trade-offs between these properties. However, since varying such properties independently is difficult, and comparing many algorithms through online trials is expensive, it can be difficult to gain a complete understanding of these relationships.
 
-\subsection{Drawing Reliable Conclusion}
+\subsubsection{Drawing Reliable Conclusion}
 
 In any type of experiment it is important that we can be confidant that the candidate recommender that we choose will also be a good choice for the yet unseen data the system will be faced with in the future. As we explain above, we should exercise caution in choosing the data in an offline experiments, and the subjects in a user study, to best resemble the online application. Still, there is a possibility that the algorithm that performed best on this test set did so because the experiment was fortuitously suitable for that algorithm. To reduce the possibility of such statistical mishaps, we must perform significance testing on the results.
 
 [Also rest of 8.2.4 on handbook, couple of pages]
 
-\section{Recommender System Properties}
+\subsection{Recommender System Properties}
 
 In this section we survey a range of properties that are commonly considered when deciding which recommendation approach to select. As different applications have different needs, the designer of the system must decide on the important properties to measure for the concrete application at hand. Some of the properties can be traded-off, the most obvious example perhaps is the decline in accuracy when other properties (e.g. diversity) are improved. It is important to understand and evaluate these trade-offs and their effect on the overall performance. However, the proper way of gaining such understanding without intensive online testing or defering to the opinions of domain experts is still an open question.
 
@@ -142,7 +142,7 @@ Such an experiment typically uses a single recommendation method with a tunable 
 Once the effects of the specific system properties in affecting the user experience of the application at hand is understood, we can use differences in these properties to select a recommender.
 
 
-\section{User Preference}
+\subsection{User Preference}
 
 As in this chapter we are interested in the selection problem, where we need to choose on out of a set of candidate algorithms, an obvious option is to run a user study (within subjects) and ask the participants to choose one of the systems [29]. This evaluation does not restrict the subjects to specific properties, and it is generally easier for humans to make such judgments than to give scores for the experience. Then, we can select the system that had the largest number of votes.
 
@@ -152,7 +152,7 @@ It may also be the case that users who preferred system A, only slightly preferr
 
 Finally, when we wish to improve a system, it is important to know why people favor one system over the other. Typically, it is easier to understand that when comparing specific properties. Therefore, while user satisfaction is important to measure, breaking satisfaction into smaller components is helpful to understand the system and improve it.
 
-\section{Notation}
+\subsection{Notation}
 [kopi peyst kitap first chapters]
 [8.3.2 de daha detayli anlatiyor prediction accuracy konusunu sayfalarca, bunu onlarla birlestir ya da bunu sal belki de]
 
@@ -190,29 +190,29 @@ $$
 where rank(iu ; L(u)) is the rank of item iu in L(u). A more extensive description of evaluation measures for recommender systems can be found in Chap. 8 of this book.
 
 
-\subsection{Converage}
+\subsubsection{Converage}
 
 As the prediction accuracy of a recommender system, especially in collaborative filtering systems, in many cases grows with the amount of data, some algorithms may provide recommendations with high quality, but only for a small portion of the items where they have huge amounts of data. This is often referred to as the long tail or heavy tail problem, where the vast majority of the items where selected or rated only by a handful of users, yet the total amount of evidence over these unpopular items is much more than the evidence over the few popular items.
 The term coverage can refer to several distinct properties of the system that we discuss below.
 
 [8.3.3 birkac sayfa var]
 
-\subsection{Confidence}
+\subsubsection{Confidence}
 [8.3.4]
 
-\subsection{Trust}
+\subsubsection{Trust}
 
 While confidence is the system trust in its ratings (Chap.20), in trust we refer here to the user’s trust in the system recommendation.4 For example, it may be beneficial for the system to recommend a few items that the user already knows and likes. This way, even though the user gains no value from this recommendation, she observes that the system provides reasonable recommendations, which may increase her trust in the system recommendations for unknown items. Another common way of enhancing trust in the system is to explain the recommendations that the system provides (Chap. 10). Trust in the system is also called the credibility of the system. 
 
 If we do not restrict ourselves to a single method of gaining trust, such as the one suggested above, the obvious method for evaluating user trust is by asking users whether the system recommendations are reasonable in a user study [5, 14, 26, 57]. In an online test one could associate the number of recommendations that were followed with the trust in the recommender, assuming that higher trust in the recommender would lead to more recommendations being used. Alternatively, we could also assume that trust in the system is correlated with repeated users, as users who trust the system will return to it when performing future tasks. However, such measurements may not separate well other factors of user satisfaction, and may not be accurate. It is unclear how to measure trust in an offline experiment, because trust is built through an interaction between the system and a user.
 
-\subsection{Novelty}
+\subsubsection{Novelty}
 [8.3.6]
 
-\subsection{Serendipity}
+\subsubsection{Serendipity}
 [8.3.7]
 
-\subsection{Diversity}
+\subsubsection{Diversity}
 
 Diversity is generally defined as the opposite of similarity (Chap. 26). In some cases suggesting a set of similar items may not be as useful for the user, because it may take longer to explore the range of items. Consider for example a recommendation for a vacation [68], where the system should recommend vacation packages. Presenting a list with five recommendations, all for the same location, varying only on the choice of hotel, or the selection of attraction, may not be as useful as suggesting five different locations. The user can view the various recommended locations and request more details on a subset of the locations that are appropriate to her.
 
@@ -224,7 +224,7 @@ Example 8.4. In a book recommendation application, we are interested in pre- sen
 
 In recommenders that assist in information search, we can assume that more diverse recommendations will result in shorter search interactions [68]. We could use this in an online experiment measuring interaction sequence length as a proxy for diversification. As is always the case in online testing, shorter sessions may be due to other factors of the system, and to validate this claim it is useful to experiment with different diversity thresholds using the same prediction engine before comparing different recommenders.
 
-\subsection{Utility}
+\subsubsection{Utility}
 
 Many e-commerce websites employ a recommender system in order to improve their revenue by, e.g., enhancing cross-sell. In such cases the recommendation engine can be judged by the revenue that it generates for the website [66]. In general, we can define various types of utility functions that the recommender tries to optimize. For such recommenders, measuring the utility, or the expected utility of the recommendations may be more significant than measuring the accuracy of recommendations. It is also possible to view many of the other properties, such as diversity or serendipity, as different types of utility functions, over single items or over lists. In this chapter, however, we define utility as the value that either the system or the user gains from a recommendation.
 
@@ -238,22 +238,22 @@ For any utility function, the standard evaluation of the recommender is to com- 
 
 Evaluating utility in user studies and online is easy in the case of recommender utility. If the utility we optimize for is the revenue of the website, measuring the change in revenue between users of various recommenders is simple. When we try to optimize user utilities the online evaluation becomes harder, because users typically find it challenging to assign utilities to outcomes. In many cases, however, users can say whether they prefer one outcome to another. Therefore, we can try to elicit the user preferences [31] in order to rank the candidate methods.
 
-\subsection{Risk}
+\subsubsection{Risk}
 {8.3.10}
 
-\subsection{Robustness}
+\subsubsection{Robustness}
 {8.3.11}
 
-\subsection{Privacy}
+\subsubsection{Privacy}
 {8.3.12}
 
-\subsection{Adaptivity}
+\subsubsection{Adaptivity}
 {8.3.13}
 
-\subsection{Scalability}
+\subsubsection{Scalability}
 {8.3.14}
 
-\section{Conclusion}
+\subsection{Conclusion}
 
 In this chapter we discussed how recommendation algorithms could be evaluated in order to select the best algorithm from a set of candidates. This is an important step in the research attempt to find better algorithms, as well as in application design where a designer chooses an existing algorithm for their application. As such, many evaluation metrics have been used for algorithm selection in the past.
 

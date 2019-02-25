@@ -1,9 +1,9 @@
 % !TeX root = ../main.tex
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
-\chapter{Collaborative Filtering}\label{chapter:collaborative_filtering}
+\section{Collaborative Filtering}\label{section:collaborative_filtering}
 
-\section{Introduction}
+\subsection{Introduction}
 [kopi peyst]
 Collaborative filtering recommender system (CF) methods produce user specific recommendations of items based on patterns of ratings or usage (e.g., purchases) without need for exogenous information about either items or users. While well established methods work adequately for many purposes, we present several recent extensions available to analysts who are looking for the best possible recommendations.
 
@@ -18,13 +18,13 @@ In order to establish recommendations, CF systems need to relate two funda- ment
 Producing more accurate prediction methods requires deepening their founda- tions and reducing reliance on arbitrary decisions. In this chapter, we describe a variety of recent improvements to the primary CF modeling techniques. Yet, the quest for more accurate models goes beyond this. At least as important is the identification of all the signals, or features, available in the data. Conventional techniques address the sparse data of user-item ratings. Accuracy significantly improves by also utilising other sources of information. One prime example includes all kinds of temporal effects reflecting the dynamic, time-drifting nature of user-item interactions. No less important is listening to hidden feedback such as which items users chose to rate (regardless of rating values). Rated items are not selected at random, but rather reveal interesting aspects of user preferences, going beyond the numerical values of the ratings.
 Section 3.3 surveys matrix factorization techniques, which combine implementa- tion convenience with a relatively high accuracy. This has made them the preferred technique for addressing the largest publicly available dataset—the Netflix data.
 
-\section{Baseline}
+\subsection{Baseline}
 
 We are given ratings for m users (aka customers) and n items (aka products). We reserve special indexing letters to distinguish users from items: for users u; v, and for items i; j; l. A rating rui indicates the preference by user u of item i, where high values mean stronger preference. For example, values can be integers ranging from 1 (star) indicating no interest to 5 (stars) indicating a strong interest. We distinguish predicted ratings from known ones, by using the notation rOui for the predicted value of rui.
 
 The scalar tui denotes the time of rating rui. One can use different time units, based on what is appropriate for the application at hand. For example, when time is measured in days, then tui counts the number of days elapsed since some early time point. Usually the vast majority of ratings are unknown. For example, in the Netflix data 99\% of the possible ratings are missing because a user typically rates only a small portion of the movies. The (u,i) pairs for which rui is known are stored in the set $ \mathcal { K } = \{ ( u , i ) | r _ { u i } is known \} $ is knowng. Each user u is associated with a set of items denoted by R.u/, which contains all the items for which ratings by u are available. Likewise, R.i/ denotes the set of users who rated item i. Sometimes, we also use a set denoted by $\lambda$, which contains all items for which u provided an implicit preference (items that he rented/purchased/watched, etc.).
 
-\subsection{Baseline Predictors}
+\subsubsection{Baseline Predictors}
 
 CF models try to capture the interactions between users and items that produce the different rating values. However, much of the observed rating values are due to effects associated with either users or items, independently of their interaction. A principal example is that typical CF data exhibit large user and item biases—i.e., systematic tendencies for some users to give higher ratings than others, and for some items to receive higher ratings than others.
 We will encapsulate those effects, which do not involve user-item interaction, within the baseline predictors (also known as biases). Because these predictors tend to capture much of the observed signal, it is vital to model them accurately. Such modeling enables isolating the part of the signal that truly represents user-item interaction, and subjecting it to more appropriate user preference models.
@@ -60,7 +60,7 @@ $$
 \sqrt { \sum _ { ( u , i ) \in T e s t s e t } \left( r _ { u i } - \hat { r } _ { u i } \right) ^ { 2 } / | T e s t S e t | }
 $$
 
-\subsection{Matrix Factorization}
+\subsubsection{Matrix Factorization}
 
 Latent factor models approach collaborative filtering with the holistic goal to uncover latent features that explain observed ratings; examples include pLSA [14], neural networks [22], Latent Dirichlet Allocation [7], and models that are induced by factorization of the user-item ratings matrix (also known as SVD-based models). Recently, matrix factorization models have gained popularity, thanks to their attractive accuracy and scalability.
 
@@ -68,10 +68,10 @@ In information retrieval, SVD is well established for identifying latent semanti
 
 In this section we describe several matrix factorization techniques, with increas- ing complexity and accuracy. We start with the basic model—“SVD”. Then, we show how to integrate other sources of user feedback in order to increase prediction accuracy, through the “SVD++ model”. Finally we deal with the fact that customer preferences for products may drift over time. Product perception and popularity are constantly changing as new selection emerges. Similarly, customer inclinations are evolving, leading them to ever redefine their taste. This leads to a factor model that addresses temporal dynamics for better tracking user behavior.
 
-\subsubsection{SVD}
+\paragraph{SVD}
 [kitapta 3.3.1, 1.5 sayfa ve gerekirse SVD++(with implicit feedback)]
 
-\subsubsection{Summary}
+\paragraph{Summary}
 
 In its basic form, matrix factorization characterizes both items and users by vectors of factors inferred from patterns of item ratings. High correspondence between item and user factors leads to recommendation of an item to a user. These methods deliver prediction accuracy superior to other published collaborative filtering techniques. At the same time, they offer a memory efficient compact model, which can be trained relatively easy. Those advantages, together with the implementation ease of gradient based matrix factorization model (SVD), made this the method of choice within the Netflix Prize competition.
 
@@ -79,7 +79,7 @@ What makes these techniques even more convenient is their ability to address sev
 
 Another important aspect is the temporal dynamics that make users’ tastes evolve over time. Each user and product potentially goes through a distinct series of changes in their characteristics. A mere decay of older instances cannot adequately identify communal patterns of behavior in time changing data. The solution we adopted is to model the temporal dynamics along the whole time period, allowing us to intelligently separate transient factors from lasting ones. The inclusion of temporal dynamics proved very useful in improving quality of predictions, more than various algorithmic enhancements.
 
-\subsection{Neighborhood Models}
+\subsubsection{Neighborhood Models}
 
 The most common approach to CF is based on neighborhood models. Chapter 2 provides an extensive survey on this approach. Its original form, which was shared by virtually all earlier CF systems, is user-user based; see [13] for a good analysis. User-user methods estimate unknown ratings based on recorded ratings of like- minded users.
 
@@ -92,7 +92,7 @@ The structure of this section is as follows. First, we describe how to estimate 
 [3.4.1 ve 3.4.2 banko]
 [3.4.3'te yeni bir neighborhood modeli anlatiyor, belki o eger kullanilirsa]
 
-\subsubsection{Summary}
+\paragraph{Summary}
 
 
 Collaborative filtering through neighborhood-based interpolation is probably the most popular way to create a recommender system. Three major components characterize the neighborhood approach: (1) data normalization, (2) neighbor selection, and (3) determination of interpolation weights.
