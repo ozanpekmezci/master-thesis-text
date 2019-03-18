@@ -77,6 +77,44 @@
       \verb https://doi.org/10.1007/s00799-015-0156-0
       \endverb
     \endentry
+    \entry{bird2009natural}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=a6ad72a87713a430f7335c5656da28f1}{%
+           family={Bird},
+           familyi={B\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=95e002ca584c2d8d701c96f08c6d589f}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Ewan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2814798d9a65d66800fc6e2ec5ad7483}{%
+           family={Loper},
+           familyi={L\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{f0999d1f539a44b08b01482038a721f8}
+      \strng{fullhash}{f0999d1f539a44b08b01482038a721f8}
+      \strng{bibnamehash}{f0999d1f539a44b08b01482038a721f8}
+      \strng{authorbibnamehash}{f0999d1f539a44b08b01482038a721f8}
+      \strng{authornamehash}{f0999d1f539a44b08b01482038a721f8}
+      \strng{authorfullhash}{f0999d1f539a44b08b01482038a721f8}
+      \field{labelalpha}{BKL09}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Natural language processing with Python: analyzing text with the natural language toolkit}
+      \field{year}{2009}
+    \endentry
     \entry{PARK201210059}{article}{}
       \name{author}{4}{}{%
         {{uniquename=0,uniquepart=base,hash=5b745df0961f7e29675185b7e9258a44}{%
@@ -208,6 +246,43 @@
       \verb{url}
       \verb https://doi.org/10.1007/978-1-4899-7637-6_1
       \endverb
+    \endentry
+    \entry{sathya2013comparison}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=295de89c6650ff835c5c8e16ccfad63a}{%
+           family={Sathya},
+           familyi={S\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=93adf4d83f2395621c3b62311865a966}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Annamma},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{fullhash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{bibnamehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{authorbibnamehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{authornamehash}{419e3ce04be4778d42cbafac45f5769c}
+      \strng{authorfullhash}{419e3ce04be4778d42cbafac45f5769c}
+      \field{labelalpha}{SA13}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Research in Artificial Intelligence}
+      \field{number}{2}
+      \field{title}{Comparison of supervised and unsupervised learning algorithms for pattern classification}
+      \field{volume}{2}
+      \field{year}{2013}
+      \field{pages}{34\bibrangedash 38}
+      \range{pages}{5}
     \endentry
   \enddatalist
 \endrefsection

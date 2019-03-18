@@ -1981,7 +1981,9 @@
     <bcf:citekey order="5">Ricci2015</bcf:citekey>
     <bcf:citekey order="6">Ricci2015</bcf:citekey>
     <bcf:citekey order="7">Ricci2015</bcf:citekey>
-    <bcf:citekey order="8">Ricci2015</bcf:citekey>
+    <bcf:citekey order="8">sathya2013comparison</bcf:citekey>
+    <bcf:citekey order="9">bird2009natural</bcf:citekey>
+    <bcf:citekey order="10">Ricci2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
