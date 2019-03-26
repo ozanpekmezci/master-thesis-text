@@ -1983,7 +1983,18 @@
     <bcf:citekey order="7">Ricci2015</bcf:citekey>
     <bcf:citekey order="8">sathya2013comparison</bcf:citekey>
     <bcf:citekey order="9">bird2009natural</bcf:citekey>
-    <bcf:citekey order="10">Ricci2015</bcf:citekey>
+    <bcf:citekey order="10">amatriain2011data</bcf:citekey>
+    <bcf:citekey order="11">amatriain2015recommender</bcf:citekey>
+    <bcf:citekey order="12">beliakov2015aggregation</bcf:citekey>
+    <bcf:citekey order="13">sola1997importance</bcf:citekey>
+    <bcf:citekey order="14">singh2015survey</bcf:citekey>
+    <bcf:citekey order="15">chollet2018deep</bcf:citekey>
+    <bcf:citekey order="16">Goodfellow-et-al-2016</bcf:citekey>
+    <bcf:citekey order="17">lee2007nonlinear</bcf:citekey>
+    <bcf:citekey order="18">poggio2017and</bcf:citekey>
+    <bcf:citekey order="19">lee2007nonlinear</bcf:citekey>
+    <bcf:citekey order="20">lee2007nonlinear</bcf:citekey>
+    <bcf:citekey order="21">Ricci2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

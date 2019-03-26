@@ -207,100 +207,116 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Freelancer Dataset}{58}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Company Dataset}{61}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Company Dataset}{60}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Unsupervised Individual Recommender}{61}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Supervised Individual Recommender}{61}{section.3.4}
+\contentsline {subsection}{\numberline {3.3.1}Recommendation by Similarity}{61}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Using Sparse Input}{61}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.3.2}Recommendation by Popularity}{61}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Using Embeddings}{61}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.3.3}Hybrid Recommendation}{62}{subsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Simpler Architecture for Company Dataset}{61}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.4}Supervised Individual Recommender}{62}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Unsupervised Group Recommender}{61}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.1}Using Sparse Input}{62}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Supervised Group Recommender}{61}{section.3.6}
+\contentsline {subsection}{\numberline {3.4.2}Using Embeddings}{66}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Using Sparse Input}{61}{subsection.3.6.1}
+\contentsline {subsubsection}{\nonumberline Preprocessing}{66}{section*.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Using Embeddings}{61}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.4.3}Simpler Architecture for Company Dataset}{68}{subsection.3.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Using Clustering}{61}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.5}Unsupervised Group Recommender}{69}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Using Recurrent Neural Networks}{61}{subsection.3.6.4}
+\contentsline {section}{\numberline {3.6}Supervised Group Recommender}{69}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Dashboard to show data and enter Feedback}{61}{section.3.7}
+\contentsline {subsection}{\numberline {3.6.1}Using Sparse Input}{69}{subsection.3.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Improvement of Recommendations via Feedback Learning}{61}{section.3.8}
+\contentsline {subsection}{\numberline {3.6.2}Using Embeddings}{69}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.9}Conclusion}{61}{section.3.9}
+\contentsline {subsection}{\numberline {3.6.3}Using Clustering}{69}{subsection.3.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Evaluation}{62}{chapter.4}
+\contentsline {subsection}{\numberline {3.6.4}Using Recurrent Neural Networks}{69}{subsection.3.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{62}{section.4.1}
+\contentsline {section}{\numberline {3.7}Dashboard to show data and enter Feedback}{69}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Individual Recommendation}{62}{section.4.2}
+\contentsline {section}{\numberline {3.8}Improvement of Recommendations via Feedback Learning}{69}{section.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}The Existing Algorithm}{62}{subsection.4.2.1}
+\contentsline {section}{\numberline {3.9}Conclusion}{69}{section.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{62}{section*.58}
+\contentsline {chapter}{\numberline {4}Evaluation}{70}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.59}
+\contentsline {section}{\numberline {4.1}Introduction}{70}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Baseline Unsupervised Learning}{62}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.2}Individual Recommendation}{70}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{62}{section*.60}
+\contentsline {subsection}{\numberline {4.2.1}The Existing Algorithm}{70}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.61}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{70}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Baseline Deep Learning}{62}{subsection.4.2.3}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{70}{section*.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{62}{section*.62}
+\contentsline {subsection}{\numberline {4.2.2}Baseline Unsupervised Learning}{70}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.63}
+\contentsline {subsubsection}{\nonumberline Recommendation by Similarity}{70}{section*.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Group Recommendation}{62}{section.4.3}
+\contentsline {subsubsection}{\nonumberline Recommendation by Popularity}{70}{section*.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{62}{section*.64}
+\contentsline {subsubsection}{\nonumberline Hybrid Recommendation}{70}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.65}
+\contentsline {subsection}{\numberline {4.2.3}Baseline Deep Learning}{70}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Group Recommendation with Unsupervised Learning}{62}{subsection.4.3.1}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{70}{section*.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{62}{section*.66}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{70}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.67}
+\contentsline {subsection}{\numberline {4.2.4}Embeddings and Deep Learning}{70}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Group Recommendation with Neural Networks}{63}{subsection.4.3.2}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{71}{section*.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{63}{section*.68}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{71}{section*.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{63}{section*.69}
+\contentsline {section}{\numberline {4.3}Group Recommendation}{71}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Feedback Loop}{63}{section.4.4}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{71}{section*.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Conclusion}{63}{section.4.5}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{71}{section*.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{64}{chapter.5}
+\contentsline {subsection}{\numberline {4.3.1}Group Recommendation with Unsupervised Learning}{71}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{64}{section.5.1}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{71}{section*.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Comparison of Individual Recommenders}{64}{section.5.2}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{71}{section*.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Comparison of Group Recommenders}{64}{section.5.3}
+\contentsline {subsection}{\numberline {4.3.2}Group Recommendation with Neural Networks}{71}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Conclusion}{64}{section.5.4}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{71}{section*.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{65}{chapter.6}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{71}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Introduction}{65}{section.6.1}
+\contentsline {section}{\numberline {4.4}Feedback Loop}{71}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Conclusion}{65}{section.6.2}
+\contentsline {section}{\numberline {4.5}Conclusion}{71}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{67}{chapter*.74}
+\contentsline {chapter}{\numberline {5}Discussion}{72}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{68}{chapter*.75}
+\contentsline {section}{\numberline {5.1}Introduction}{72}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{69}{chapter*.76}
+\contentsline {section}{\numberline {5.2}Comparison of Individual Recommenders}{72}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Comparison of Group Recommenders}{72}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Conclusion}{72}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion}{73}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Introduction}{73}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Conclusion}{73}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{75}{chapter*.83}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Tables}{76}{chapter*.84}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{77}{chapter*.85}

@@ -19,6 +19,129 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{amatriain2015recommender}{incollection}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=73d7725e7b8c19a7a179442f898f8a48}{%
+           family={Amatriain},
+           familyi={A\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=042b0e84adeda3e71aa6da8dfd83c261}{%
+           family={Basilico},
+           familyi={B\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{81baf350b598bdb96297a90ba4f012ff}
+      \strng{fullhash}{81baf350b598bdb96297a90ba4f012ff}
+      \strng{bibnamehash}{81baf350b598bdb96297a90ba4f012ff}
+      \strng{authorbibnamehash}{81baf350b598bdb96297a90ba4f012ff}
+      \strng{authornamehash}{81baf350b598bdb96297a90ba4f012ff}
+      \strng{authorfullhash}{81baf350b598bdb96297a90ba4f012ff}
+      \field{labelalpha}{AB15}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender systems handbook}
+      \field{title}{Recommender systems in industry: A netflix case study}
+      \field{year}{2015}
+      \field{pages}{385\bibrangedash 419}
+      \range{pages}{35}
+    \endentry
+    \entry{amatriain2011data}{incollection}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=73d7725e7b8c19a7a179442f898f8a48}{%
+           family={Amatriain},
+           familyi={A\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9cbeee55786f3e242c0fd2af57ff4334}{%
+           family={Jaimes},
+           familyi={J\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6befa50d1bad159fffc14e56262c94b2}{%
+           family={Oliver},
+           familyi={O\bibinitperiod},
+           given={Nuria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a11ee9cb97fff52bc4494fdcad217961}{%
+           family={Pujol},
+           familyi={P\bibinitperiod},
+           given={Josep\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fcf3aef0922e819043628bffc1fe24a6}
+      \strng{fullhash}{fcf3aef0922e819043628bffc1fe24a6}
+      \strng{bibnamehash}{fcf3aef0922e819043628bffc1fe24a6}
+      \strng{authorbibnamehash}{fcf3aef0922e819043628bffc1fe24a6}
+      \strng{authornamehash}{fcf3aef0922e819043628bffc1fe24a6}
+      \strng{authorfullhash}{fcf3aef0922e819043628bffc1fe24a6}
+      \field{labelalpha}{Ama+11}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender systems handbook}
+      \field{title}{Data mining methods for recommender systems}
+      \field{year}{2011}
+      \field{pages}{39\bibrangedash 71}
+      \range{pages}{33}
+    \endentry
+    \entry{beliakov2015aggregation}{incollection}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=508b71811234444c0cdafdaa94eee6b4}{%
+           family={Beliakov},
+           familyi={B\bibinitperiod},
+           given={Gleb},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a3e06a1d3c61ce98b9b4a290690b4fc9}{%
+           family={Calvo},
+           familyi={C\bibinitperiod},
+           given={Tomasa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e2af63e84d6e2c07534bd2b793215892}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{e2352aa7d83f35944503f3992be0be4f}
+      \strng{fullhash}{e2352aa7d83f35944503f3992be0be4f}
+      \strng{bibnamehash}{e2352aa7d83f35944503f3992be0be4f}
+      \strng{authorbibnamehash}{e2352aa7d83f35944503f3992be0be4f}
+      \strng{authornamehash}{e2352aa7d83f35944503f3992be0be4f}
+      \strng{authorfullhash}{e2352aa7d83f35944503f3992be0be4f}
+      \field{labelalpha}{BCJ15}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender Systems Handbook}
+      \field{title}{Aggregation functions for recommender systems}
+      \field{year}{2015}
+      \field{pages}{777\bibrangedash 808}
+      \range{pages}{32}
+    \endentry
     \entry{Beel2016}{article}{}
       \name{author}{4}{}{%
         {{uniquename=0,uniquepart=base,hash=2e33a4017ed8565e1d62adbc946d27fd}{%
@@ -115,6 +238,103 @@
       \field{title}{Natural language processing with Python: analyzing text with the natural language toolkit}
       \field{year}{2009}
     \endentry
+    \entry{chollet2018deep}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=5836fc1fa037e340c8b5591da3207608}{%
+           family={Chollet},
+           familyi={C\bibinitperiod},
+           given={Francois},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MITP-Verlags GmbH \& Co. KG}%
+      }
+      \strng{namehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{fullhash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{bibnamehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{authorbibnamehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{authornamehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{authorfullhash}{5836fc1fa037e340c8b5591da3207608}
+      \field{labelalpha}{Cho18}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deep Learning mit Python und Keras: Das Praxis-Handbuch vom Entwickler der Keras-Bibliothek}
+      \field{year}{2018}
+    \endentry
+    \entry{Goodfellow-et-al-2016}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \field{labelalpha}{GBC16}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://www.deeplearningbook.org}}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+    \endentry
+    \entry{lee2007nonlinear}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=ba58923fb7fa1bb0565a803a381f2d43}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=88691a3c06eb4d21eecbf7a3688cfc6b}{%
+           family={Verleysen},
+           familyi={V\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{bca148c3d38fe31323cad7ee7e42f07c}
+      \strng{fullhash}{bca148c3d38fe31323cad7ee7e42f07c}
+      \strng{bibnamehash}{bca148c3d38fe31323cad7ee7e42f07c}
+      \strng{authorbibnamehash}{bca148c3d38fe31323cad7ee7e42f07c}
+      \strng{authornamehash}{bca148c3d38fe31323cad7ee7e42f07c}
+      \strng{authorfullhash}{bca148c3d38fe31323cad7ee7e42f07c}
+      \field{labelalpha}{LV07}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nonlinear dimensionality reduction}
+      \field{year}{2007}
+    \endentry
     \entry{PARK201210059}{article}{}
       \name{author}{4}{}{%
         {{uniquename=0,uniquepart=base,hash=5b745df0961f7e29675185b7e9258a44}{%
@@ -171,6 +391,61 @@
       \verb http://www.sciencedirect.com/science/article/pii/S0957417412002825
       \endverb
       \keyw{Recommender systems,Literature review,Data mining technique,Classification}
+    \endentry
+    \entry{poggio2017and}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=f65eec80d26b2ab02398d1e78643c9a6}{%
+           family={Poggio},
+           familyi={P\bibinitperiod},
+           given={Tomaso},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=91773948d7d81bc73bfc99ea00571d18}{%
+           family={Mhaskar},
+           familyi={M\bibinitperiod},
+           given={Hrushikesh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=50d9bfec9f6162486e5504b41791de0d}{%
+           family={Rosasco},
+           familyi={R\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=123b64f0d336967a39a3290d8cb4510b}{%
+           family={Miranda},
+           familyi={M\bibinitperiod},
+           given={Brando},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=39377cb6f8cc657a85f903fc006e1b30}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={Qianli},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{97b67eae5e225c9adc510e5c2e993e0f}
+      \strng{fullhash}{c1a9db0db4e22d1ede239d33b910fe0d}
+      \strng{bibnamehash}{c1a9db0db4e22d1ede239d33b910fe0d}
+      \strng{authorbibnamehash}{c1a9db0db4e22d1ede239d33b910fe0d}
+      \strng{authornamehash}{97b67eae5e225c9adc510e5c2e993e0f}
+      \strng{authorfullhash}{c1a9db0db4e22d1ede239d33b910fe0d}
+      \field{labelalpha}{Pog+17}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Automation and Computing}
+      \field{number}{5}
+      \field{title}{Why and when can deep-but not shallow-networks avoid the curse of dimensionality: a review}
+      \field{volume}{14}
+      \field{year}{2017}
+      \field{pages}{503\bibrangedash 519}
+      \range{pages}{17}
     \endentry
     \entry{Ricci2015}{inbook}{}
       \name{author}{3}{}{%
@@ -282,6 +557,80 @@
       \field{volume}{2}
       \field{year}{2013}
       \field{pages}{34\bibrangedash 38}
+      \range{pages}{5}
+    \endentry
+    \entry{singh2015survey}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=196c97af3d7d4131442ccd3ba71ecfab}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Arpit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6acf83dedc8f2a64ad08105af2e36d4c}{%
+           family={Purohit},
+           familyi={P\bibinitperiod},
+           given={Anuradha},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{df9a3b58c784d5615c5fc37299a8bc39}
+      \strng{fullhash}{df9a3b58c784d5615c5fc37299a8bc39}
+      \strng{bibnamehash}{df9a3b58c784d5615c5fc37299a8bc39}
+      \strng{authorbibnamehash}{df9a3b58c784d5615c5fc37299a8bc39}
+      \strng{authornamehash}{df9a3b58c784d5615c5fc37299a8bc39}
+      \strng{authorfullhash}{df9a3b58c784d5615c5fc37299a8bc39}
+      \field{labelalpha}{SP15}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Applications}
+      \field{number}{15}
+      \field{title}{A survey on methods for solving data imbalance problem for classification}
+      \field{volume}{127}
+      \field{year}{2015}
+      \field{pages}{37\bibrangedash 41}
+      \range{pages}{5}
+    \endentry
+    \entry{sola1997importance}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=f977967ec2bead596509134a49e37d25}{%
+           family={Sola},
+           familyi={S\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0ede2fde38c17975c1490cc9f71d98c3}{%
+           family={Sevilla},
+           familyi={S\bibinitperiod},
+           given={Joaquin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{67723fc4e4bd6bbb2c77cb0f4a695a05}
+      \strng{fullhash}{67723fc4e4bd6bbb2c77cb0f4a695a05}
+      \strng{bibnamehash}{67723fc4e4bd6bbb2c77cb0f4a695a05}
+      \strng{authorbibnamehash}{67723fc4e4bd6bbb2c77cb0f4a695a05}
+      \strng{authornamehash}{67723fc4e4bd6bbb2c77cb0f4a695a05}
+      \strng{authorfullhash}{67723fc4e4bd6bbb2c77cb0f4a695a05}
+      \field{labelalpha}{SS97}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on nuclear science}
+      \field{number}{3}
+      \field{title}{Importance of input data normalization for the application of neural networks to complex industrial problems}
+      \field{volume}{44}
+      \field{year}{1997}
+      \field{pages}{1464\bibrangedash 1468}
       \range{pages}{5}
     \endentry
   \enddatalist

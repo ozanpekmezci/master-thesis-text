@@ -12,7 +12,7 @@ As it was mentioned in the Introduction part [See~\autoref{section:motivation}],
 
 The methods used can be categorized as individual and group recommenders. Individual recommenders have the aim of suggesting only one person to a project. As oppose to that, group recommenders combine multiple subprojects as a super project and suggest multiple talents to this super project. Another differantiation of these recommenders are the type of their learning algorithms. Both group recommender and the individual recommenders are implemented via supervised and unsupervised learning approaches. The supervised learning approach trains neural networks with the help of ground-truth labels. On the other hand, the unsupervised approach employs training just with the feature vectors ~\parencite{sathya2013comparison}. Detailed information about these methods can be found in the upcoming sections. 
 
-\section{Datasets}
+\section{Datasets}\label{section:datasets}
 
 The author of the thesis received two seperate but similar datasets before starting the thesis. Both of the datasets contain information about projects and people. The company dataset [See~\autoref{subsection:company-dataset}] is the internal database of the company Motius and contains skill vectors of 795 people and 375 roles. These roles come together and form projects, which is not the case in freelancer dataset. In freelancer dataset, we have projects as opposed to roles in the company dataset. However, we treat the projects in the freelancer data and the roles in the company data same. The reason for that is that, we want to combine both data together and we also want to compare them.
 
@@ -47,31 +47,217 @@ As you can see in the figure \ref{fig:freelancer-example-project}, a typical fre
 The figure \ref{fig:freelancer-example-talent} shows the bidders of the same project as above. The first one of the bidders has won the bidding race, which is decided by the creator of the project. The bidders include information such as a motivation text, the demanded monetary amount, their star rating until the time of bidding, amount of reviews they received and their total earnings until that date. In this thesis, we only consider the money they demand, their star rating and the number of reviews. For the sake of simplicity, we don't use the motivation text.
 
 
-Each bidder lists their skills on their profile page and the employers may check their profiles before hiring talents. 
+Each bidder lists their skills on their profile page and the employers may check their profiles before hiring talents. The figure depicts top skills of an example talent, which are listed in a descending order. The number near each skill shows how many related projects the talent completed. That's why the numbers can range from one to more than hundreds. 
+
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/FreelancerTalentSkills.png}
 	\caption{The list of tops skills by a talent on Freelancer web page}
-	\label{fig:freelancer-talent-skills}
+	\label{fig:freelancer-talent-talent}
 \end{figure}
 
 
+The dataset encloses  941 unique skills, which are both technical and non-technical. However, the author of the thesis chose to limit these skills to 780, since some of them weren't used in notable amounts and the data can be expressed without using those skills. [TODO see dimensionality reduction add to research]
 
+
+This dataset was scraped from freelancer.com by Philip Offtermatt, who also took part in this very project.
 
 
 \subsection{Company Dataset}\label{subsection:company-dataset}
 
+The company dataset at hand is acquired from the sponsor of this thesis, which is Motius GmbH. This dataset exported from their internal database and contains information of 795 people and 375 roles. Each role contains the required skills for the role and each person has their skills listed. One difference to the freelancer dataset would be that the talents also include skills that are associated with their original skill set. In theory, this is called association rules and the skills that are mostly used together are considered to have a correlation score of 1. Because of these correlations, each talent has many skills listed, some of them highly correlated and others are not correlated at all.
+
+
+The amount of unique skills in the company data equals to 1768. Nonetheless, more than 85\% of the skills are used rarely, so the author reduced the unique set of skills to  202. Both of the datasets combined, there are 923 unique skills that were given at least 5 times. A problem we have with the datasets are the naming. Since, both Freelancer and Motius have used different names for skills, there are exists only a set of 59 common skills. Therefore, training both datasets together doesn't improve model like it's expected[TODO: evaluation neural network 10 000 data training falan filan].
+
+
+When all of freelancer and company dataset are put together in their raw form, the matrix that contains all talent and project data reaches the size of 8 GB. This created a big problem for the author of the thesis. Since we only had available physical memory of 16 GB, working with an 8 GB matrix wasn't possible. When an operation like normalization is being done, the library \textit{Pandas} applies many copying operations, which doubles the memory usage and crashes. That's why the author employed embeddings as a dimensionality reduction mechanism[See \ref{subsection:using-embeddings}].
+
+
 
 \section{Unsupervised Individual Recommender}
 
+\subsection{Recommendation by Similarity}
+
+As it was mentioned before, the unsupervised learning techniques focus on  learning without use of labels. Therefore, in the context of this thesis, we find similarites between projects and talents by using their feature vectors. 
+
+
+\begin{equation}
+\cos (x, y)=\frac{(x \bullet y)}{\|x\|\|y\|}
+\end{equation}
+
+
+The similarity measure we use for this part of the thesis is the cosine similarity ~\parencite{amatriain2011data}. The formula for the cosine similarity is shown above. The inputs  \textit{x and y} in the formula can correspond to a project-talent or a talent-talent pair. The types of input are document vectors of an n-dimensional space and the formula calculates the similarity as cosine of the angle between two vectors. The formula first calculates the dot product of the vectors and then divides it by the multiplication of the norm vectors.
+
+
+To get the most relevant talents for the project, we calculate the cosine similarity between a selected project and every other talent. Then the algorithm sorts the talents by similarity and returns \textit{top n} talents.
+
+
+\subsection{Recommendation by Popularity}
+
+
+Another unsupervised recommendation mechanism that is used as a baseline is the popularity recommender. The popularity recommender is a hard to beat algorithm, that increases user satisfaction. [TODO add pages 394 and 395 to research section(from book)]]. The logic comes from the fact that, the \textit{items} that are in demand approved by many \textit{people}. That's why it's likely that selecting these items will increase the user satisfaction ~\parencite{amatriain2015recommender}. 
+
+
+For this specific project, the popular items that are in demand are the people that finished the maximum amount of projects at Freelancer or at Motius. Although the results won't be personal, recommending the same successful talents is a nice strategy to acquire proven talents. The proof of this approach is shown in the subsection \ref{subsubsection:eval-popularity}.
+
+\subsection{Hybrid Recommendation}
+
+As a last submethod of unsupervised individual recommenders, we can name the hybrid recommender. Hybrid methods are also called as \textit{ensemble learning} methods. This technique combines the results from multiple methods and outputs a new result ~\parencite{beliakov2015aggregation}. For our use case, the author implemented different versions that combine the similarity recommender and the popularity  recommender. We can merge both of the recommenders by adding or multiplying the results. It is also possible to give different weights to these sources.
+
+
 \section{Supervised Individual Recommender}
+
+Supervised learning means creating a model that learns with the help of labels. In our project, the author conceptualized labels as 0 or 1. 1 is for the case of the person got accepted for the project at freelaner.com or at Motius. 0 is for the case that the person got rejected. The models try to predict if the talent should be hired for the project or not(1 or 0).
+
+For this task, we use two different versions; one version that takes all the skills as-is, the other one creates embeddings[TODO: embeddings in research chapter]. Both of the methods employ neural networks[TODO: neural networks in research chapter].
+
 
 \subsection{Using Sparse Input}
 
-\subsection{Using Embeddings}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/FreelancerTalentSkillsMatrix.png}
+	\caption{The talent skill matrix from freelancer.com}
+	\label{fig:freelancer-talent-matrix}
+\end{figure}
+
+The first option that comes to mind is using the data as it is and training the model with them. The format of the talent data is shown on the figure \ref{fig:freelancer-talent-matrix} and the projects skills matrix also have the same format with project names as keys.
+
+\begin{equation}
+z = (x - u) / s
+\label{eq:normal}
+\end{equation}
+
+According to experts ~\parencite{sola1997importance}, it is crucial to normalize input data before training neural networks. It has two significant benefits; it reduces the estimation errors and it cuts down the training time. That's why we normalize all of the inputs using \textit{StandardScaler} module of \textit{scikit-learn}. It uses equation \ref{eq:normal} to scale the data. In the equation, \textit{u} is the mean and \textit{s} is the standard deviation.
+
+As it was mentioned before [See section \ref{section:datasets}], the freelancer.com dataset accommodates some extra information like experience level, star rating, number of reviews and hourly rate. These extra information of 10 example talents are shown in the figure \ref{fig:freelancer-talent-meta}. Since this information doesn't exist in Motius dataset, this subsection focuses only on the implementation with freelancer dataset. The extra information that is mentioned is also scaled and input into the neural network. 
+
+
+After normalizing data, we prepare the matrix that is fed into the neural network row by row. For each bid in the freelancer data, we create a vector of length 1565. 780 of these values correspond to talent skills, the next 780 correspond to project skills, 4 of them are the extra information that are mentioned above and the last of them is for the outcome. Outcome is 1 for the case that the person received the project and 0 for the case that the person didn't receive the project.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/FreelancerTalentMeta.png}
+	\caption{The talent extra information matrix from freelancer.com}
+	\label{fig:freelancer-talent-meta}
+\end{figure}
+
+As one would expect, the model tries to guess if the person should be employed or not. Out of the \textit{321225} data points in total, we use 60\% for training, 20\% for test and the rest for validation. We split the data into those sets randomly using \textit{train\_test\_split} function of \textit{scikit-learn}. An important parameter not to miss is \textit{stratify}; since our dataset has  6\% positive and 94\% negative samples, we need to make sure that the this ratio remains also in the sets. Not using this feature could result in the model always predicting the same negative results. This means that the model would learn the same result, no matter what ~\parencite{singh2015survey}.
+
+After splitting the data, we can start with training. There exists also some important features that we need to use; these optional features all have different objectives but they all serve to improve the results. These features are all supported by the packages \textit{Keras} and \textit{TensorFlow}, which are open-source neural network libraries. Keras is an abstraction layer for TensorFlow that lets the users to train neural networks with minimal number of lines ~\parencite{chollet2018deep}. While fitting the model with training data, Keras gives the option to add callbacks. The callbacks that we adopt are \textit{EarlyStopping}, \textit{ModelCheckpoint},  \textit{ReduceLROnPlateau} and \textit{TensorBoard} . As the name suggests, early stopping [TODO: add neural networks to research part, also validation loss, overfitting, graph vs] serves to prevent overfitting. In our case, it compares the validation loss of current batch with the previous one. If the validation loss doesn't drop for 10 times, the training stops. The next callback model checkpoint is used complementary to early stopping. Model checkpoint saves the model weights of the batch with the minimum validation loss. After the training is done, we load those model weights that achieved the best accuracy. ReduceLROnPlateau reduces learning rate when the validation loss has stopped improving. Lastly, TensorBoard is a visualization tool of TensorFlow. It produces model visions and graphs that show the evolution of the accuracy, loss and learning rate.
+
+
+The figure \ref{fig:tensor-board-sparse}  depicts the model that is used to predict if a talent should be employed or not. The direction of the graph starts at the bottom of the image and goes up. Like it was mentioned before, the model expects three feature vectors. These vectors are defined as the skill vectore of the project, the skill vector of the talent and extra information of the talent(e.g. hourly rate, total experience). 
+
+For each of the inputs, a dense layer exists with number of neurons equal to number of features. This means that project and talent layers contain 780 neurons and profile information layer contains 4 neurons. For these layers, we use \textit{relu} activation, \textit{l1} regularization with the value \textit{0.0001} and we initialize the weights with \textit{he normal}. Detailed knowledge about activation, regularization and weight initialization can be found in the ~\autoref{chapter:review_of_research}[TODO: add activation, regularization and weight init to research chapter].
+
+
+ \begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/TensorBoardSparseCropped.png}
+	\caption{The graph that explains the sparse input model}
+	\label{fig:tensor-board-sparse}
+\end{figure}
+
+
+After the activation functions, all layers get concatenated horizontally. This is followed by a dropout layer with half of the neurons are disabled randomly[TODO: add dropout to neural networks section of chapter 2]. Next one in the model is a dense layer with 256 nodes, which possesses the same activation function, regularization and weight initialization methods as the previous dense layers. The model accommodates a last dropout layer and ends with the main output. The output is only a one node layer and involves a \textit{sigmoid} activation function that squeezes the output value to be between 0 and 1[TODO: research -> nn -> activation functions -> sigmoid]. The weight initializer of the last layer is \textit{glorot uniform}.[TODO: research -> nn -> weight initializers -> glorot uniform].
+
+\begin{equation}
+C(w, b) \equiv \frac{1}{2 n} \sum_{x}\|y(x)-a\|^{2}
+\label{eq:mean-squared-error}
+\end{equation}
+
+Each neural network has the aim of minimizing their cost function ~\parencite{Goodfellow-et-al-2016}. The cost function that we chose is \textit{mean squared error}[See ~\autoref{eq:mean-squared-error}]. This example of cost function is used mostly for regression tasks and calculates the mean squared difference of the actual value and the predicted output value. The metric we use is accuracy and more information about it can be found in ~\autoref{chapter:evaluation}.
+
+
+\subsection{Using Embeddings}\label{subsection:using-embeddings}
+
+High-dimensional spaces and distributions  prove to be unexpected and completely differ from low-dimensional spaces. The empty space phenomenon and other ones are examples of the \textit{curse of dimensionality}. With the help of embeddings layers, we can represent high-dimensional data in low-dimensions  ~\parencite{lee2007nonlinear}.
+
+Although deep neural networks have the ability to avoid the  curse of dimensionality ~\parencite{poggio2017and}, we still need to use embeddings layers for spatial reasons. In the previous sections, we mentioned that there are 780 unique skills for freelancer data and 923 skills if we also add Motius data. This means that the data has 923 dimensions and we know that the data is sparse, most of the data matrices consist of zeroes, so we can actually reduce the dimensionality. 
+
+[TODO explain embeddings and move this image to research. also explain embeddings math. instead, put the actual embedding image here from TensorBoard]
+ \begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/DimensionalityReduction.png}
+	\caption{2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite{lee2007nonlinear}.}
+	\label{fig:embedding-projection}
+\end{figure}
+
+
+\subsubsection{Preprocessing}
+
+For both Freelancer and Motius data, we know the skill levels of projects and talents for various of skills. Instead of having some positive and hundreds of zero skill values for each project/talent, we can set a skill threshold. This threshold implies skills above or equals to the threshold are positive and the rest are zero. The idea is converting the talent-skill and project-skill matrices so that, each talent/skill holds list of skills they know/require. However, another constraint that need to be addressed is the maximum length of the padded skill matrix, because neural networks require a fixed input shape. Therefore, the talent/project maximum amount of positive skills is determined. For Freelancer data, this is 18, which means all skills vectors are padded with zeroes to have the length of 18. 
+
+In the case of Motius data, the topic is more complex. The ~\autoref{subsection:company-dataset} explained how the correlation mechanism of the company data works. To explain it briefly, Motius stores user skills and other skills that are correlated for each user. This has the effect that there exists many skills for each user but most of these skill levels are low. Here the highest skill level would 2 and lowest would be 0.
+
+The effect of different threshold values on Motius data is shown on \autoref{fig:threshold-selection}. Without any threshold, there is a couple of Motius projects with the maximum skill length of 21. Projects don't specify skill levels so these are taken as they are. That's why, we also wanted to have a similar maximum length for Motius talents. When there is no threshold, there are 780 Motius talents with at least one skill value but the maximum skill vector length is 132. We wouldn't want to implement this version because the maximum length of 132 will create millions of zeroes in the dataset, which we wanted to avoid in the first place. Setting the threshold to a high value(like 1 or more) is also not optimal, since it limits the maximum skill vector length to 9 and number of Motius talents to 269. Having such a high value would decrease the amount of informatio we have significantly,  because the Freelancer data also has a maximum length of 18. Therefore, the optimum threshold value we reached is \textit{0.75}. Doing this, limits the number of Motius talents to 361 and limits the maximum skill vector length to 21, just like the project with the most skills.
+
+
+
+
+\begin{figure}[htpb]
+	\centering
+	
+	\pgfplotstableset{col sep=&, row sep=\\}
+	% This should probably go into a file in data/
+	\pgfplotstableread{
+		a & b    \\
+		0.1 & 780 \\
+		0.2 & 732 \\
+		0.3 & 676 \\
+		0.4 & 605 \\
+		0.5 & 530 \\
+		0.6 & 463 \\
+		0.7 & 386 \\
+		0.75 & 361 \\
+		0.8 & 325 \\
+		0.9 & 299 \\
+		1.0 & 269 \\
+	}\exampleA
+	\pgfplotstableread{
+		a & b    \\
+		0.1 & 132 \\
+		0.2 & 112 \\
+		0.3 & 94 \\
+		0.4 & 71 \\
+		0.5 & 57 \\
+		0.6 & 44 \\
+		0.7 & 28 \\
+		0.75 & 21 \\
+		0.8 & 16 \\
+		0.9 & 12 \\
+		1.0 & 9 \\
+	}\exampleB
+	% This should probably go into a file in figures/
+	\begin{tikzpicture}
+	\begin{axis}[
+	ymin=0,
+	legend style={legend pos=outer north east},
+	grid,
+	thick,
+	ylabel=Threshold,
+	xlabel=Amount
+	]
+	\addplot table[x=a, y=b]{\exampleA};
+	\addlegendentry{Amount of Motius talents};
+	\addplot table[x=a, y=b]{\exampleB};
+	\addlegendentry{Maximum skill vector length};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[Threshold figure]{Effect of threshold selection on talents and maximum skill vector length}\label{fig:threshold-selection}
+\end{figure}
+
+Pad, only 21 etc. 
+
+Show the figure of 0.75
 
 \subsection{Simpler Architecture for Company Dataset}
+
+The Freelancer dataset has a huge advantage over Motius data.
 
 \section{Unsupervised Group Recommender}
 
@@ -80,6 +266,8 @@ Each bidder lists their skills on their profile page and the employers may check
 \subsection{Using Sparse Input}
 
 \subsection{Using Embeddings}
+
+Why embeddings
 
 \subsection{Using Clustering}
 
