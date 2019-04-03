@@ -1994,7 +1994,13 @@
     <bcf:citekey order="18">poggio2017and</bcf:citekey>
     <bcf:citekey order="19">lee2007nonlinear</bcf:citekey>
     <bcf:citekey order="20">lee2007nonlinear</bcf:citekey>
-    <bcf:citekey order="21">Ricci2015</bcf:citekey>
+    <bcf:citekey order="21">steinbach2004challenges</bcf:citekey>
+    <bcf:citekey order="22">jolliffe2011principal</bcf:citekey>
+    <bcf:citekey order="23">rousseeuw1987silhouettes</bcf:citekey>
+    <bcf:citekey order="24">you2018vue</bcf:citekey>
+    <bcf:citekey order="25">grinberg2018flask</bcf:citekey>
+    <bcf:citekey order="26">anderson2015docker</bcf:citekey>
+    <bcf:citekey order="27">Ricci2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

@@ -101,6 +101,37 @@
       \field{pages}{39\bibrangedash 71}
       \range{pages}{33}
     \endentry
+    \entry{anderson2015docker}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9b5606e9ab1e06176b5c05f0c2b6ce0a}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9b5606e9ab1e06176b5c05f0c2b6ce0a}
+      \strng{fullhash}{9b5606e9ab1e06176b5c05f0c2b6ce0a}
+      \strng{bibnamehash}{9b5606e9ab1e06176b5c05f0c2b6ce0a}
+      \strng{authorbibnamehash}{9b5606e9ab1e06176b5c05f0c2b6ce0a}
+      \strng{authornamehash}{9b5606e9ab1e06176b5c05f0c2b6ce0a}
+      \strng{authorfullhash}{9b5606e9ab1e06176b5c05f0c2b6ce0a}
+      \field{labelalpha}{And15}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Software}
+      \field{number}{3}
+      \field{title}{Docker [software engineering]}
+      \field{volume}{32}
+      \field{year}{2015}
+      \field{pages}{102\bibrangedash c3}
+      \range{pages}{-1}
+    \endentry
     \entry{beliakov2015aggregation}{incollection}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=508b71811234444c0cdafdaa94eee6b4}{%
@@ -303,6 +334,58 @@
       \field{title}{Deep Learning}
       \field{year}{2016}
     \endentry
+    \entry{grinberg2018flask}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eeba7ae00fae9a99a709f6f40abb3917}{%
+           family={Grinberg},
+           familyi={G\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{fullhash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{bibnamehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authorbibnamehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authornamehash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \strng{authorfullhash}{eeba7ae00fae9a99a709f6f40abb3917}
+      \field{labelalpha}{Gri18}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Flask web development: developing web applications with python}
+      \field{year}{2018}
+    \endentry
+    \entry{jolliffe2011principal}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=af567b67da24eaa33594ca6127e01c40}{%
+           family={Jolliffe},
+           familyi={J\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{af567b67da24eaa33594ca6127e01c40}
+      \strng{fullhash}{af567b67da24eaa33594ca6127e01c40}
+      \strng{bibnamehash}{af567b67da24eaa33594ca6127e01c40}
+      \strng{authorbibnamehash}{af567b67da24eaa33594ca6127e01c40}
+      \strng{authornamehash}{af567b67da24eaa33594ca6127e01c40}
+      \strng{authorfullhash}{af567b67da24eaa33594ca6127e01c40}
+      \field{labelalpha}{Jol11}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principal component analysis}
+      \field{year}{2011}
+    \endentry
     \entry{lee2007nonlinear}{book}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=ba58923fb7fa1bb0565a803a381f2d43}{%
@@ -447,6 +530,36 @@
       \field{pages}{503\bibrangedash 519}
       \range{pages}{17}
     \endentry
+    \entry{rousseeuw1987silhouettes}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=d08305d0cbeebf027810103d8d8b331c}{%
+           family={Rousseeuw},
+           familyi={R\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d08305d0cbeebf027810103d8d8b331c}
+      \strng{fullhash}{d08305d0cbeebf027810103d8d8b331c}
+      \strng{bibnamehash}{d08305d0cbeebf027810103d8d8b331c}
+      \strng{authorbibnamehash}{d08305d0cbeebf027810103d8d8b331c}
+      \strng{authornamehash}{d08305d0cbeebf027810103d8d8b331c}
+      \strng{authorfullhash}{d08305d0cbeebf027810103d8d8b331c}
+      \field{labelalpha}{Rou87}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of computational and applied mathematics}
+      \field{title}{Silhouettes: a graphical aid to the interpretation and validation of cluster analysis}
+      \field{volume}{20}
+      \field{year}{1987}
+      \field{pages}{53\bibrangedash 65}
+      \range{pages}{13}
+    \endentry
     \entry{Ricci2015}{inbook}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=5abb1d77d80f46918651a5bbc5ee8371}{%
@@ -559,6 +672,47 @@
       \field{pages}{34\bibrangedash 38}
       \range{pages}{5}
     \endentry
+    \entry{steinbach2004challenges}{incollection}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=b9765658c356344d0b65e62185a7fbda}{%
+           family={Steinbach},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=93f4cb4a1622593461f4e97c7fd7c8d0}{%
+           family={Ert{ö}z},
+           familyi={E\bibinitperiod},
+           given={Levent},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=efb90d78e35ff61d3bc639f5c6f3d822}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vipin},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{adbdf225928859d1eb9f70cf7654d431}
+      \strng{fullhash}{adbdf225928859d1eb9f70cf7654d431}
+      \strng{bibnamehash}{adbdf225928859d1eb9f70cf7654d431}
+      \strng{authorbibnamehash}{adbdf225928859d1eb9f70cf7654d431}
+      \strng{authornamehash}{adbdf225928859d1eb9f70cf7654d431}
+      \strng{authorfullhash}{adbdf225928859d1eb9f70cf7654d431}
+      \field{labelalpha}{SEK04}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{New directions in statistical physics}
+      \field{title}{The challenges of clustering high dimensional data}
+      \field{year}{2004}
+      \field{pages}{273\bibrangedash 309}
+      \range{pages}{37}
+    \endentry
     \entry{singh2015survey}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=196c97af3d7d4131442ccd3ba71ecfab}{%
@@ -632,6 +786,31 @@
       \field{year}{1997}
       \field{pages}{1464\bibrangedash 1468}
       \range{pages}{5}
+    \endentry
+    \entry{you2018vue}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c181205d8e6010f589e6c498afe0fe11}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c181205d8e6010f589e6c498afe0fe11}
+      \strng{fullhash}{c181205d8e6010f589e6c498afe0fe11}
+      \strng{bibnamehash}{c181205d8e6010f589e6c498afe0fe11}
+      \strng{authorbibnamehash}{c181205d8e6010f589e6c498afe0fe11}
+      \strng{authornamehash}{c181205d8e6010f589e6c498afe0fe11}
+      \strng{authorfullhash}{c181205d8e6010f589e6c498afe0fe11}
+      \field{labelalpha}{You18}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Diakses dari https://vuejs. org/, pada tanggal}
+      \field{title}{Vue. js}
+      \field{volume}{17}
+      \field{year}{2018}
     \endentry
   \enddatalist
 \endrefsection

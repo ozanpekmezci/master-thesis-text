@@ -25,16 +25,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{68}{figure.caption.63}
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{69}{figure.caption.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Model Code}}{70}{figure.caption.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{73}{figure.caption.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{74}{figure.caption.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{75}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{75}{figure.caption.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces Main screen of the dashboard\relax }}{76}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{73}{figure.caption.80}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{74}{figure.caption.81}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{81}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{74}{figure.caption.82}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{82}{figure.caption.89}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{82}{figure.caption.90}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

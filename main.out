@@ -58,36 +58,34 @@
 \BOOKMARK [1][-]{section.3.4}{Supervised Individual Recommender}{chapter.3}% 58
 \BOOKMARK [2][-]{subsection.3.4.1}{Using Sparse Input}{section.3.4}% 59
 \BOOKMARK [2][-]{subsection.3.4.2}{Using Embeddings}{section.3.4}% 60
-\BOOKMARK [2][-]{subsection.3.4.3}{Simpler Architecture for Company Dataset}{section.3.4}% 61
-\BOOKMARK [1][-]{section.3.5}{Unsupervised Group Recommender}{chapter.3}% 62
-\BOOKMARK [1][-]{section.3.6}{Supervised Group Recommender}{chapter.3}% 63
-\BOOKMARK [2][-]{subsection.3.6.1}{Using Sparse Input}{section.3.6}% 64
-\BOOKMARK [2][-]{subsection.3.6.2}{Using Embeddings}{section.3.6}% 65
-\BOOKMARK [2][-]{subsection.3.6.3}{Using Clustering}{section.3.6}% 66
-\BOOKMARK [2][-]{subsection.3.6.4}{Using Recurrent Neural Networks}{section.3.6}% 67
-\BOOKMARK [1][-]{section.3.7}{Dashboard to show data and enter Feedback}{chapter.3}% 68
-\BOOKMARK [1][-]{section.3.8}{Improvement of Recommendations via Feedback Learning}{chapter.3}% 69
-\BOOKMARK [1][-]{section.3.9}{Conclusion}{chapter.3}% 70
-\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 71
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 72
-\BOOKMARK [1][-]{section.4.2}{Individual Recommendation}{chapter.4}% 73
-\BOOKMARK [2][-]{subsection.4.2.1}{The Existing Algorithm}{section.4.2}% 74
-\BOOKMARK [2][-]{subsection.4.2.2}{Baseline Unsupervised Learning}{section.4.2}% 75
-\BOOKMARK [2][-]{subsection.4.2.3}{Baseline Deep Learning}{section.4.2}% 76
-\BOOKMARK [2][-]{subsection.4.2.4}{Embeddings and Deep Learning}{section.4.2}% 77
-\BOOKMARK [1][-]{section.4.3}{Group Recommendation}{chapter.4}% 78
-\BOOKMARK [2][-]{subsection.4.3.1}{Group Recommendation with Unsupervised Learning}{section.4.3}% 79
-\BOOKMARK [2][-]{subsection.4.3.2}{Group Recommendation with Neural Networks}{section.4.3}% 80
-\BOOKMARK [1][-]{section.4.4}{Feedback Loop}{chapter.4}% 81
-\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 82
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 83
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 84
-\BOOKMARK [1][-]{section.5.2}{Comparison of Individual Recommenders}{chapter.5}% 85
-\BOOKMARK [1][-]{section.5.3}{Comparison of Group Recommenders}{chapter.5}% 86
-\BOOKMARK [1][-]{section.5.4}{Conclusion}{chapter.5}% 87
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 88
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 89
-\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 90
-\BOOKMARK [0][-]{chapter*.83}{List of Figures}{}% 91
-\BOOKMARK [0][-]{chapter*.84}{List of Tables}{}% 92
-\BOOKMARK [0][-]{chapter*.85}{Bibliography}{}% 93
+\BOOKMARK [1][-]{section.3.5}{Unsupervised Group Recommender}{chapter.3}% 61
+\BOOKMARK [2][-]{subsection.3.5.1}{Baseline}{section.3.5}% 62
+\BOOKMARK [2][-]{subsection.3.5.2}{Diverse}{section.3.5}% 63
+\BOOKMARK [1][-]{section.3.6}{Supervised Group Recommender}{chapter.3}% 64
+\BOOKMARK [2][-]{subsection.3.6.1}{Using Clustering}{section.3.6}% 65
+\BOOKMARK [1][-]{section.3.7}{Dashboard to show data and enter Feedback}{chapter.3}% 66
+\BOOKMARK [1][-]{section.3.8}{Improvement of Recommendations via Feedback Learning}{chapter.3}% 67
+\BOOKMARK [1][-]{section.3.9}{Conclusion}{chapter.3}% 68
+\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 69
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 70
+\BOOKMARK [1][-]{section.4.2}{Individual Recommendation}{chapter.4}% 71
+\BOOKMARK [2][-]{subsection.4.2.1}{The Existing Algorithm}{section.4.2}% 72
+\BOOKMARK [2][-]{subsection.4.2.2}{Baseline Unsupervised Learning}{section.4.2}% 73
+\BOOKMARK [2][-]{subsection.4.2.3}{Baseline Deep Learning}{section.4.2}% 74
+\BOOKMARK [2][-]{subsection.4.2.4}{Embeddings and Deep Learning}{section.4.2}% 75
+\BOOKMARK [1][-]{section.4.3}{Group Recommendation}{chapter.4}% 76
+\BOOKMARK [2][-]{subsection.4.3.1}{Group Recommendation with Unsupervised Learning}{section.4.3}% 77
+\BOOKMARK [2][-]{subsection.4.3.2}{Group Recommendation with Neural Networks}{section.4.3}% 78
+\BOOKMARK [1][-]{section.4.4}{Feedback Loop}{chapter.4}% 79
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 80
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 81
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 82
+\BOOKMARK [1][-]{section.5.2}{Comparison of Individual Recommenders}{chapter.5}% 83
+\BOOKMARK [1][-]{section.5.3}{Comparison of Group Recommenders}{chapter.5}% 84
+\BOOKMARK [1][-]{section.5.4}{Conclusion}{chapter.5}% 85
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 86
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 87
+\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 88
+\BOOKMARK [0][-]{chapter*.91}{List of Figures}{}% 89
+\BOOKMARK [0][-]{chapter*.92}{List of Tables}{}% 90
+\BOOKMARK [0][-]{chapter*.93}{Bibliography}{}% 91

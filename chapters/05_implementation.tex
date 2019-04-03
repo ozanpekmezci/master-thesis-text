@@ -25,7 +25,7 @@ Another important contrast between two datasets are the distribution of their po
 \subsection{Freelancer Dataset}
 
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\textwidth]{figures/FreelancerExample.png}
 	\caption{An example project from the Freelancer Website}
@@ -36,7 +36,7 @@ Another important contrast between two datasets are the distribution of their po
 As you can see in the figure \ref{fig:freelancer-example-project}, a typical freelancer project posting consists of a title, the description and the relevant skills. For simplicity, the thesis at hand only concentrates on the skills and doesn't take the project description into account. This would be topic of another paper/thesis, as it would require natural language processing and other techniques ~\parencite{bird2009natural}.
 
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/FreelancerTalentExample.png}
 	\caption{The winner and other bidders to the same project}
@@ -50,7 +50,7 @@ The figure \ref{fig:freelancer-example-talent} shows the bidders of the same pro
 Each bidder lists their skills on their profile page and the employers may check their profiles before hiring talents. The figure depicts top skills of an example talent, which are listed in a descending order. The number near each skill shows how many related projects the talent completed. That's why the numbers can range from one to more than hundreds. 
 
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/FreelancerTalentSkills.png}
 	\caption{The list of tops skills by a talent on Freelancer web page}
@@ -107,7 +107,7 @@ For this specific project, the popular items that are in demand are the people t
 As a last submethod of unsupervised individual recommenders, we can name the hybrid recommender. Hybrid methods are also called as \textit{ensemble learning} methods. This technique combines the results from multiple methods and outputs a new result ~\parencite{beliakov2015aggregation}. For our use case, the author implemented different versions that combine the similarity recommender and the popularity  recommender. We can merge both of the recommenders by adding or multiplying the results. It is also possible to give different weights to these sources.
 
 
-\section{Supervised Individual Recommender}
+\section{Supervised Individual Recommender}\label{section:supervised}
 
 Supervised learning means creating a model that learns with the help of labels. In our project, the author conceptualized labels as 0 or 1. 1 is for the case of the person got accepted for the project at freelaner.com or at Motius. 0 is for the case that the person got rejected. The models try to predict if the talent should be hired for the project or not(1 or 0).
 
@@ -116,7 +116,7 @@ For this task, we use two different versions; one version that takes all the ski
 
 \subsection{Using Sparse Input}
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\textwidth]{figures/FreelancerTalentSkillsMatrix.png}
 	\caption{The talent skill matrix from freelancer.com}
@@ -138,7 +138,7 @@ As it was mentioned before [See section \ref{section:datasets}], the freelancer.
 After normalizing data, we prepare the matrix that is fed into the neural network row by row. For each bid in the freelancer data, we create a vector of length 1565. 780 of these values correspond to talent skills, the next 780 correspond to project skills, 4 of them are the extra information that are mentioned above and the last of them is for the outcome. Outcome is 1 for the case that the person received the project and 0 for the case that the person didn't receive the project.
 
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/FreelancerTalentMeta.png}
 	\caption{The talent extra information matrix from freelancer.com}
@@ -147,20 +147,22 @@ After normalizing data, we prepare the matrix that is fed into the neural networ
 
 As one would expect, the model tries to guess if the person should be employed or not. Out of the \textit{321225} data points in total, we use 60\% for training, 20\% for test and the rest for validation. We split the data into those sets randomly using \textit{train\_test\_split} function of \textit{scikit-learn}. An important parameter not to miss is \textit{stratify}; since our dataset has  6\% positive and 94\% negative samples, we need to make sure that the this ratio remains also in the sets. Not using this feature could result in the model always predicting the same negative results. This means that the model would learn the same result, no matter what ~\parencite{singh2015survey}.
 
-After splitting the data, we can start with training. There exists also some important features that we need to use; these optional features all have different objectives but they all serve to improve the results. These features are all supported by the packages \textit{Keras} and \textit{TensorFlow}, which are open-source neural network libraries. Keras is an abstraction layer for TensorFlow that lets the users to train neural networks with minimal number of lines ~\parencite{chollet2018deep}. While fitting the model with training data, Keras gives the option to add callbacks. The callbacks that we adopt are \textit{EarlyStopping}, \textit{ModelCheckpoint},  \textit{ReduceLROnPlateau} and \textit{TensorBoard} . As the name suggests, early stopping [TODO: add neural networks to research part, also validation loss, overfitting, graph vs] serves to prevent overfitting. In our case, it compares the validation loss of current batch with the previous one. If the validation loss doesn't drop for 10 times, the training stops. The next callback model checkpoint is used complementary to early stopping. Model checkpoint saves the model weights of the batch with the minimum validation loss. After the training is done, we load those model weights that achieved the best accuracy. ReduceLROnPlateau reduces learning rate when the validation loss has stopped improving. Lastly, TensorBoard is a visualization tool of TensorFlow. It produces model visions and graphs that show the evolution of the accuracy, loss and learning rate.
+After splitting the data, we can start with training. There exists also some important features that we need to use; these optional features all have different objectives but they all serve to improve the results. These features are all supported by the packages \textit{Keras} and \textit{TensorFlow}, which are open-source neural network libraries. Keras is an abstraction layer for TensorFlow that lets the users to train neural networks with minimal number of lines ~\parencite{chollet2018deep}. While fitting the model with training data, Keras gives the option to add callbacks. The callbacks that we adopt are \textit{EarlyStopping}, \textit{ModelCheckpoint},  \textit{ReduceLROnPlateau} and \textit{TensorBoard} . As the name suggests, early stopping [TODO: add neural networks to research part, also validation loss, overfitting, graph vs] serves to prevent overfitting. In our case, it compares the validation loss of current batch with the previous one. If the validation loss doesn't drop for 10 times, the training stops. The next callback model checkpoint is used complementary to early stopping. Model checkpoint saves the model weights of the batch with the minimum validation loss. After the training is done, we load those model weights that achieved the best accuracy. ReduceLROnPlateau reduces learning rate when the validation loss has stopped improving. Lastly, TensorBoard is a visualization tool of TensorFlow. It produces model visions and graphs that show the evolution of the accuracy, loss and learning rate. 
+
+When we are training the model, we should also set the training weights for both labels manually. The dataset encompasses 6\% positive and 94\% negative samples, so we need to penalize the errors according to this rate. After training, the class weights are ignored and not used in testing/predicting.
 
 
 The figure \ref{fig:tensor-board-sparse}  depicts the model that is used to predict if a talent should be employed or not. The direction of the graph starts at the bottom of the image and goes up. Like it was mentioned before, the model expects three feature vectors. These vectors are defined as the skill vectore of the project, the skill vector of the talent and extra information of the talent(e.g. hourly rate, total experience). 
 
-For each of the inputs, a dense layer exists with number of neurons equal to number of features. This means that project and talent layers contain 780 neurons and profile information layer contains 4 neurons. For these layers, we use \textit{relu} activation, \textit{l1} regularization with the value \textit{0.0001} and we initialize the weights with \textit{he normal}. Detailed knowledge about activation, regularization and weight initialization can be found in the ~\autoref{chapter:review_of_research}[TODO: add activation, regularization and weight init to research chapter].
-
-
- \begin{figure}[h]
+ \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/TensorBoardSparseCropped.png}
 	\caption{The graph that explains the sparse input model}
 	\label{fig:tensor-board-sparse}
 \end{figure}
+
+For each of the inputs, a dense layer exists with number of neurons equal to number of features. This means that project and talent layers contain 780 neurons and profile information layer contains 4 neurons. For these layers, we use \textit{relu} activation, \textit{l1} regularization with the value \textit{0.0001} and we initialize the weights with \textit{he normal}. Detailed knowledge about activation, regularization and weight initialization can be found in the ~\autoref{chapter:review_of_research}[TODO: add activation, regularization and weight init to research chapter].
+
 
 
 After the activation functions, all layers get concatenated horizontally. This is followed by a dropout layer with half of the neurons are disabled randomly[TODO: add dropout to neural networks section of chapter 2]. Next one in the model is a dense layer with 256 nodes, which possesses the same activation function, regularization and weight initialization methods as the previous dense layers. The model accommodates a last dropout layer and ends with the main output. The output is only a one node layer and involves a \textit{sigmoid} activation function that squeezes the output value to be between 0 and 1[TODO: research -> nn -> activation functions -> sigmoid]. The weight initializer of the last layer is \textit{glorot uniform}.[TODO: research -> nn -> weight initializers -> glorot uniform].
@@ -180,7 +182,7 @@ High-dimensional spaces and distributions  prove to be unexpected and completely
 Although deep neural networks have the ability to avoid the  curse of dimensionality ~\parencite{poggio2017and}, we still need to use embeddings layers for spatial reasons. In the previous sections, we mentioned that there are 780 unique skills for freelancer data and 923 skills if we also add Motius data. This means that the data has 923 dimensions and we know that the data is sparse, most of the data matrices consist of zeroes, so we can actually reduce the dimensionality. 
 
 [TODO explain embeddings and move this image to research. also explain embeddings math. instead, put the actual embedding image here from TensorBoard]
- \begin{figure}[h]
+ \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/DimensionalityReduction.png}
 	\caption{2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite{lee2007nonlinear}.}
@@ -193,11 +195,6 @@ Although deep neural networks have the ability to avoid the  curse of dimensiona
 For both Freelancer and Motius data, we know the skill levels of projects and talents for various of skills. Instead of having some positive and hundreds of zero skill values for each project/talent, we can set a skill threshold. This threshold implies skills above or equals to the threshold are positive and the rest are zero. The idea is converting the talent-skill and project-skill matrices so that, each talent/skill holds list of skills they know/require. However, another constraint that need to be addressed is the maximum length of the padded skill matrix, because neural networks require a fixed input shape. Therefore, the talent/project maximum amount of positive skills is determined. For Freelancer data, this is 18, which means all skills vectors are padded with zeroes to have the length of 18. 
 
 In the case of Motius data, the topic is more complex. The ~\autoref{subsection:company-dataset} explained how the correlation mechanism of the company data works. To explain it briefly, Motius stores user skills and other skills that are correlated for each user. This has the effect that there exists many skills for each user but most of these skill levels are low. Here the highest skill level would 2 and lowest would be 0.
-
-The effect of different threshold values on Motius data is shown on \autoref{fig:threshold-selection}. Without any threshold, there is a couple of Motius projects with the maximum skill length of 21. Projects don't specify skill levels so these are taken as they are. That's why, we also wanted to have a similar maximum length for Motius talents. When there is no threshold, there are 780 Motius talents with at least one skill value but the maximum skill vector length is 132. We wouldn't want to implement this version because the maximum length of 132 will create millions of zeroes in the dataset, which we wanted to avoid in the first place. Setting the threshold to a high value(like 1 or more) is also not optimal, since it limits the maximum skill vector length to 9 and number of Motius talents to 269. Having such a high value would decrease the amount of informatio we have significantly,  because the Freelancer data also has a maximum length of 18. Therefore, the optimum threshold value we reached is \textit{0.75}. Doing this, limits the number of Motius talents to 361 and limits the maximum skill vector length to 21, just like the project with the most skills.
-
-
-
 
 \begin{figure}[htpb]
 	\centering
@@ -251,29 +248,190 @@ The effect of different threshold values on Motius data is shown on \autoref{fig
 	\caption[Threshold figure]{Effect of threshold selection on talents and maximum skill vector length}\label{fig:threshold-selection}
 \end{figure}
 
-Pad, only 21 etc. 
+The effect of different threshold values on Motius data is shown on \autoref{fig:threshold-selection}. Without any threshold, there is a couple of Motius projects with the maximum skill length of 21. Projects don't specify skill levels so these are taken as they are. That's why, we also wanted to have a similar maximum length for Motius talents. When there is no threshold, there are 780 Motius talents with at least one skill value but the maximum skill vector length is 132. We wouldn't want to implement this version because the maximum length of 132 will create millions of zeroes in the dataset, which we wanted to avoid in the first place. Setting the threshold to a high value(like 1 or more) is also not optimal, since it limits the maximum skill vector length to 9 and number of Motius talents to 269. Having such a high value would decrease the amount of informatio we have significantly,  because the Freelancer data also has a maximum length of 18. Therefore, the optimum threshold value we reached is \textit{0.75}. Doing this, limits the number of Motius talents to 361 and limits the maximum skill vector length to 21, just like the project with the most skills.
 
-Show the figure of 0.75
+\autoref{fig:embedding-training-matrix} depicts the training data with padded skill matrix. The columns with the numbers in range 0 to 20 are the indices of the talent skills. The columns with the numbers 21 to 41 are project skills indices.  The version of the image is the one with the Motius and Freelancer data combined. In the variant with only Freelancer data, we have skill vector lengths of 18 and the extra information of talents included.
 
-\subsection{Simpler Architecture for Company Dataset}
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{figures/EmbeddingTrainingMatrix.png}
+	\caption{Training data that contains padded embedding skill vectors}
+	\label{fig:embedding-training-matrix}
+\end{figure}
 
-The Freelancer dataset has a huge advantage over Motius data.
 
-\section{Unsupervised Group Recommender}
 
-\section{Supervised Group Recommender}
+\subsubsection{Simpler Architecture for Company Dataset}
 
-\subsection{Using Sparse Input}
+The Freelancer dataset has a huge advantage over Motius data, which is the extra information that we know about the applicants. When we use both datasets together to train a model, we can limit the inputs to talent and project skills. 
 
-\subsection{Using Embeddings}
+\autoref{fig:model-code} illustrates the simplified version of the \textit{Python} code that constructs the model to predict the hiring result. The \textit{features} parameter of the model building function corresponds to the length of padded skill vector and the next parameter \textit{dimensions} represents total amount of unique skills. Embedding layers in Keras expect the arguments \textit{input dimension}, \textit{output dimension}, \textit{input length} and the optional flag \textit{mask zero}. As embeddings only accept positive integers, input dimension should be the size of the vocabulary, which is number of total skills in the recommender system. The value of the output dimension can be decided by the developer and explains the size of the desired output dimension. Although, there is no scientific document that states an ideal output dimension, trial-and-error method showed that the best result is achieved with the fourth root of the number of dimensions. The additions of one in multiple places in code are due to using the mask zero operation. Zeros in rows get filtered out, which increases the performance and speeds up the training process. The cost function that we use is \textit{binary crossentropy}, because we want to optimize the process of hiring or not hiring a talent to the project. [TODO: research -> cost functions -> binary crossentropy]. Lastly, \textit{sigmoid} activation function squeezes the output value to be between 0 and 1[TODO: research -> nn -> activation functions -> sigmoid].
 
-Why embeddings
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{tabular}{c}
+		\begin{lstlisting}[language=Python]
+		def nn_embedding(features, dimensions):
+		  talent = Input(shape = (features,))
+		  project = Input(shape = (features,))
+		  output_dim = int(dimensions ** 0.25) + 1
+		
+		  talent_embedding = Embedding(dimensions + 1, output_dim,
+		  input_length=features, mask_zero=True )(talent)
+		  project_embedding = Embedding(dimensions + 1, output_dim,
+		  input_length=features, mask_zero=True)(project)
+		
+		  # these are required because of mask zero
+		  talent_embedding = Lambda(lambda x: x,
+		  output_shape=lambda s:s)(talent_embedding)
+		  project_embedding = Lambda(lambda x: x,
+		  output_shape=lambda s:s)(project_embedding)
+		
+		  merged = Concatenate()([talent_embedding, project_embedding])
+		  merged = Flatten()(merged)
+		  merged = Dropout(0.5)(merged)
+		  main_output = Dense(1, activation='sigmoid')(merged)
+		
+		  model = Model(inputs=[talent, project], outputs=[main_output])
+		  model.compile(optimizer='adam', loss='binary_crossentropy',
+		  metrics=["accuracy"])
+		
+		  return model
+		\end{lstlisting}
+	\end{tabular}
+	\caption[Model Code]{The code of the model for both Motius and Freelancer data}\label{fig:model-code}
+\end{figure}
+
+\section{Unsupervised Group Recommender}\label{section:unsupervised-group-rec}
+
+In this section, we explain the process of recommending multiple talents to super groups. The methods that are used for this part are derivations of the ones that are used in individual recommenders. Therefore, the basic concepts that are used before also apply here. 
+
+To perform group recommendations, projec-role or project-project information are needed. The website freelancer.com shows other projects from the same supervisor, which can be combined. Then these projects will form a superproject and projects can be treated as roles of a bigger project. For Motius data, we already possess this information as project-role data. Roles of Motius correspond to the projects in the Freelancer data. In terms of simplicity and shortness, we only take Freelancer dataset with groups of size 5 into account. 
+
+\subsection{Baseline}
+
+The basic appoach to unsupervised group recommendations would be calculating the cosine similarity between each project and talents. Then picking the best talents and listing them. However, the results won't be diverse and we can pick talents that have similar skills to each other. We want to avoid that [TODO add different evaluations to both theory and their results to evaluation part!] and have diverse recommendations for each project.
+
+\subsection{Diverse}
+
+Because of the reasons above, we want to create the recommendation list in a diverse way from the beginning. The topic of diversity is already explained before[TODO: reserach -> diversity enhancement] and the pseudocode to enhance diversity is shown below.
+
+\begin{equation}
+\begin{array} { l } { R \leftarrow \emptyset } \\ {  while\, | R | < k\,: } \\ { \quad i * \leftarrow \arg \max _ { i \in C - R } g ( R \cup \{ i \} , \lambda ) } \\ { \quad R \leftarrow R \cup \{ i * \} } \\ { end\, while\,  } \\ {  return\,  R } \end{array}
+\label{eq:diversity-enhancement}
+\end{equation}
+
+
+In the algorithm above, we first create an empty recommendation list \textit{R} and set a recommendation length \textit{k}. In our example, we only consider the groups with project amount of 5, so \textit{k} is 5 as well. After that, we find the the optimal candidate that hasn't been selected yet, is relevant to the project at hand and is also diverse to the other selected candidates. Finding the optimal candidate can be tuned with the help of \autoref{eq:diversity-equation}. The $\lambda$ parameter in the equation can be tuned to value the relevancy or diversity more; $\lambda$ of 1 means to only consider diversity, 0 means to only consider relevancy and 0.5 gives the balanced result. When we receive the optimal candidate from the equation, we add them to the recommendation list and iterate until we have enough talents for the whole group.
+
+\begin{equation}
+g ( R , \lambda ) = ( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R )
+\label{eq:diversity-equation}
+\end{equation}
+
+When we compare the diversity of the baseline approach to the diverse group recommendation, it is obvious that the diversity of talents recommended has increased. The evaluation algorithm for diversity and other relevant measures can be found in \autoref{chapter:evaluation}. [TODO group-rec evaluation]
+
+\section{Supervised Group Recommender}\label{section:supervised-group-rec}
+
+The previous section was about performing group recommendations with unsupervised learning. This section will do the same job using supervised learning model that we used in \autoref{section:supervised}.
+
+\autoref{eq:diversity-equation} includes a $f _ { r e l } $, which is a relevancy score and a diversity rate that can be computed via cosine similarity, neural networks or other methods. In contrast to the unsupervised method, we calculate the relevancy score using the neural network that we used in \autoref{section:supervised}.
+
+What we do in the individual supervised learning part is, training all parameters jointly, which is called end-to-end learning. This ideal was also the first aim for supervised group recommender approach. However, the data for such learning doesn't exist. To apply it, we would need data of hiring decisions for the groups not just projects. Since we don't have such information, we would have to generate it with a seperate algorithm. In the end, it wouldn't bring much, because the model would learn the data generation algorithm and wouldn't have an effect on the real-life hiring prediction.
+
+Due to the reason above, step by step  learning process practiced. The first step of the process is training the model to optimize the individual hiring of talents. Then, we predict the relevancy score for each project-talent pair. For diversity score, we use the cosine similarity between the talents. After set those functions, the algorithm \ref{eq:diversity-enhancement} is applied.
+
+In the end, this method increases diversity according to the evaluation methods that are listed in \autoref{chapter:evaluation}.
 
 \subsection{Using Clustering}
 
-\subsection{Using Recurrent Neural Networks}
+Clustering is the process of dividing data into different groups. To perfom diverse multi-project recommendations, we can pick talents from clusters. Therefore, we can be sure that they are dissimilar. 
+
+Since k-means clustering can suffer from the curse of dimensionality~\parencite{steinbach2004challenges} [TODO reseache: curse of dim, clustering ve k-means, pca ekle], To prevent it, it is logical to reduce the dimensionality first. The choice of the author to reduce dimensionality is \textit{Principal Component Analysis}.
+
+The central idea of principal component analysis (PCA) is to reduce the
+dimensionality of a data set consisting of a large number of interrelated
+variables, while retaining as much as possible of the variation present in
+the data set. This is achieved by transforming to a new set of variables,
+the principal components (PCs), which are uncorrelated, and which are
+ordered so that the first few retain most of the variation present in all of
+the original variables~\parencite{jolliffe2011principal}. 
+
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/PCAExplainedVariance.png}
+	\caption{Explained variance ratio for difference number of PCs is shown.}
+	\label{fig:pca-explained-variance}
+\end{figure}
+
+To determine the number of PCs, the explained variance ratio for different amount of PCs can be checked. \autoref{fig:pca-explained-variance} shows how much of variance information we lose if we set the number of components to a certain value. Here, it makes sense to note that a higher number will the clustering model negatively and a lower number won't be able to capture everything in the dataset. The author of the thesis, experimented with different values.
+
+\begin{equation}
+a(i)=\frac{1}{\left|C_{i}\right|-1} \sum_{j \in C_{i}, i \neq j} d(i, j)
+\label{eq:silhouette-a}
+\end{equation}
+
+\begin{equation}
+b(i)=\min _{i \neq j} \frac{1}{\left|C_{j}\right|} \sum_{j \in C_{j}} d(i, j)
+\label{eq:silhouette-b}
+\end{equation}
+
+\begin{equation}
+s(i)=\frac{b(i)-a(i)}{\max \{a(i), b(i)\}}
+\label{eq:silhouette-c}
+\end{equation}
+
+K-means clustering  requires a \textit{k} value that determines the number of clusters the model is going to create. The ideal number of clusters can be verified by calculating the silhouette scores for different number of clusters. The figure \ref{fig:pca-silhouette} shows silhouette scores for different cluster amounts. Silhouette score calculates how similar a data point to its own cluster compared to other clusters \parencite{rousseeuw1987silhouettes}. For this task, we use the equation in the equations \ref{eq:silhouette-a}, \ref{eq:silhouette-b}, \ref{eq:silhouette-c}. In the equations, different distance metrics can be employed. The choice of the author is euclidian distance[TODO: distance metrics research].  The equation \ref{eq:silhouette-a} calculates mean intra-cluster distance for each sample and the next \ref{eq:silhouette-b} computes mean nearest-cluster distance for each sample, which means the distance between a sample and the nearest cluster that the sample is not a part of. The last function \ref{eq:silhouette-c} converts the results of the first two equations into silhouette coefficients. The mean of all silhouette coefficients from every sample gives the silhouette score for that \textit{k} value. Higher silhoutte scores sugges that the samples well matched to its own cluster and poorly matched to neighboring clusters. In the example of \ref{fig:pca-silhouette}, it makes sense to select a value like 30. To visualize results, the centers of the clusters are projected on a 2D space[See \ref{fig:kmeans-centers}]. The X axis of the graph is the maximum value in each cluster center coordinate and Y axis of the graph is the maximum value in each cluster center coordinate.
+
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{figures/PCASilhouette.png}
+	\caption{Silhouette scores of many different \textit{k} values of k-means}
+	\label{fig:pca-silhouette}
+\end{figure}
+
+Next, we benefit from another function of the PCA; \textit{inverse\_transform}. Inverse transform takes the cluster centers as an input and converts them to full talent values. This promises that we treat each cluster center like a talent and transform their values to skill values and extra information. In end, we possess an average skill vector for every cluster [See figure \ref{fig:cluster-centers-matrix}]. The figure contains some part of the skill vectors of the first three average talents. For example the cluster(segment) 0 in the figure has exceptional \textit{Adobe Illustrator} skills. Segment 1, on the other hand, is an all-rounder. Lastly, segment 3 is a \textit{c\#} developer.  It must be noted these values are calculated after standard scaling[TODO research -> standard scaling].
+
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/KMeansCenters.png}
+	\caption{Centers of clusters that are projected on a 2D space}
+	\label{fig:kmeans-centers}
+\end{figure}
+
+
+
+After we exercise clustering, we can start with group recommendation process. The recommendation can be operated both supervised[See \ref{section:supervised-group-rec}] or unsupervised[See figure \ref{section:unsupervised-group-rec}]. The same principles apply and we calculate relevancy score with cosine similarity or neural networks. In contrast to the other methods, the algorithm computes the relevancy score of the project and average cluster skills [See figure \ref{fig:cluster-centers-matrix}]. This way, we determine the ideal cluster for the project. When a project got recommended a talent from a specific cluster, that cluster is excluded from the next projects in the group. Therefore, a diversity in a group is guaranteed. After the selection of the optimal cluster, the best candidate in that cluster is chosen via neural networks or cosine similarity.
+
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{figures/ClusterCentersMatrix.png}
+	\caption{Examples of some centers of clusters that are projected on a 2D space}
+	\label{fig:cluster-centers-matrix}
+\end{figure}
+
+
 
 \section{Dashboard to show data and enter Feedback}
+
+Another big part of the thesis is the dashboard that was built for various purposes; these purposes are showing individual unsupervised, supervised and hybrid recommendations for Motius and Freelancer datasets, showing group recommendetaions using unsupervised, supervised and hybrid methods and allowing to enter feedback, that have direct and indirect effects on the results.
+
+The dashboard adopts the front-end that is programmed with \textit{Vue.js} and a back-end that employs \textit{Flask}[TODO: research -> frontend, backend, docker]. Vue.js is a front-end development framework that can be programmed with JavaScript. Flask is a back-end development framework that can be called with Python. The reason to use Vue.js is because of subjective reasons; it a reactive, modern framework that is easy to develop \cite{you2018vue}. Flask is on the other hand is chosen, because it is a popular leight-weight Python framework \cite{grinberg2018flask}. Since the rest of the machine learning training/prediction was done on Python, the author seized the opportunity to reuse/adapt the same codebase. 
+
+Docker is a container virtualization technology, which like a very lightweight virtual machine. Adding Docker to our software stack gives the advantage of portability. This is important for various reasons; first of all the operating system choice of the author is \textit{MacOS} but most of the servers run different flavors of \textit{Linux}. All of the different operating systems have different installation methods, different pre-installed libraries and different dependencies. Docker solves this problem by standardizing the building and running operations of virtual machines. This way, the author was able to run everything on own computer and can be sure that it will also run perfectly on the servers of Motius if they choose to implement the solution on their internal system. \cite{anderson2015docker}.
+
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/DashboardMain.png}
+	\caption{Main screen of the dashboard}
+	\label{fig:dashboard-main}
+\end{figure}
+
+
+The main screen of the dashboard is shown on \autoref{fig:dashboard-main}.
+
 
 \section{Improvement of Recommendations via Feedback Learning}
 
