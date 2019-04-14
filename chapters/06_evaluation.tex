@@ -3,58 +3,43 @@
 
 \chapter{Evaluation}\label{chapter:evaluation}
 
-\section{Introduction}
+This chapter focuses on assessing the results of the recommender systems that were created in scope of the chapter \ref{chapter:implementation}. Recommendation systems have a variety of properties that may affect user experience, such as accuracy, robustness, scalability, and so forth \cite{shani2011evaluating}. In this thesis, we mostly focus on characteristics such as accuracy, diversity and others that are related to these two. 
 
-\section{Individual Recommendation}
+In the first years of recommender systems, the developers of recommendation systems only focused on accuracy. However, this has started to change and now we know that accuracy is not always equals user satisfaction. Before starting this thesis, we analyzed what properties are important to improve user satisfaction in job recommender systems. The research led us to the diversity as a metric \cite{castells2015novelty}.
 
-\subsection{The Existing Algorithm}
+When we recommend a talent to a project, the only important evaluation properties are accuracy of the first item in the list, accuracy of top \textit{n} items in the list and the overall list value. We can find out the first two via evaluation algorithms. However, the overall list value can only be acquired from human observers. 
 
-\subsubsection{Offline Evaluation}
+When we recommend multiple talents to a group of projects, we have the hypothesis that the extra evaluation metric diversity is also important to increase the user satisfaction. That's why, we need evaluation results for diversity, accuracy and user satisfaction, so that prove or disprove the hypothesis. 
 
-\subsubsection{Online Evaluation}
+While we are working on our hypothesis, we use all three types of experiments; offline, online and user studies \cite{shani2011evaluating}. Offline evaluation serves the purpose of calculating the accuracy and diversity. This type of experiments don't involve human feedback and are calculated via algorithms. When we aim for more advanced metrics, like user satisfaction, we have to rely on other types of experiments like user studies; we ask show users the results and ask their opinion about overall list value. Lastly, we also employ online experiments by allowing them to intereact with the system and reranking the talents using the feedback loop [See section \ref{section:eval-feedback}]. 
 
-\subsection{Baseline Unsupervised Learning}
-
-\subsubsection{Recommendation by Similarity}
-
-\subsubsection{Recommendation by Popularity}\label{subsubsection:eval-popularity}
-
-\subsubsection{Hybrid Recommendation}\label{subsubsection:eval-hybrid}
+According to the research \cite{shani2011evaluating}, there are some guidelines that we need to follow to conduct a succesful experiment; a \textit{hypothesis}, \textit{controlling variables} and \textit{generalization power}. Our hypothesis is that the diversity increases user satisfaction and serves as an important factor near accuracy. The controlling variables are the factors that stay the same during different experiments. We need those variables to make sure that different results are comparable. In our case, the trained dataset is the same. Also, when we conduct user studies, we ask about the results of the same groups and projects. This way, the user study results are directly comparable. The last guideline is the generalization power; to make sure that our model generalizes well, we combine and adapt \textit{freelancer.com} and Motius datasets together. That's why, the generalization power for different job recommender datasets is secured. 
 
 
-\subsection{Baseline Deep Learning}
+\section{Unsupervised Individual Recommendation}
 
-\subsubsection{Offline Evaluation}
+As it was explained in the section \ref{implementation-unsupervised-individual}, unsupervised individual recommendation addresses proposal of single talents to single projects using different methods. What these methods have in common is that, they all ignore labels of data and only consider features. The first approach is recommendation via feature similarity, the second one suggests the most popular candidates and the last one is the combination of first two.
 
-\subsubsection{Online Evaluation}
+When we calculate the accuracy for these methods, we use performance measures such as \textit{precision} and \textit{recall} \cite{burke2015robust}. Precision refers to the percentage of your results which are relevant and recall refers to the percentage of total relevant results correctly classified by your algorithm \cite{davis2006relationship}.
 
-\subsection{Embeddings and Deep Learning}
+\begin{equation}
+recall \equiv  sensitivity =\frac{\#  true positives }{\# true positives +\# false negatives }
+\end{equation}
 
-Why 
+\begin{equation}
+precision =\frac{\#true positives }{\# true positives +\#  false positives }
+\end{equation}
 
-\subsubsection{Offline Evaluation}
+The above equations show how we calculated recall and precision. True positives in our case explain selected and relevant talents. False positives are selected but irrelevant talents. Lastly, false negatives are not selected but relevant talents.
 
-\subsubsection{Online Evaluation}
+To be more specific, true positive is the case, when the first person in recommendation list is the person that won the project. False positives disclose all non-awarded bidders that are first in list and false negatives demonstrate all bidders that are first in the list but didn't win the project. 
 
-\section{Group Recommendation}
+When we start to calculate results, we see that precision and recall always have the same results for the freelancer dataset. For each project, the number of true positives are either one or zero. The number of false negatives or false positives are also one or zero for each project. If the prediction was correct, the number of true positives are one. In this case, both the number of false negatives and false positives are zero.
 
-\subsubsection{Offline Evaluation}
+The takeaway from the previous paragraph does not hold true for every dataset. For Motius case, there are more than one talent that got positive feedback for each project. That's the number of true positives can vary from zero to the number of talents that received invitation. TP, TN
 
-\subsubsection{Online Evaluation}
 
-\subsection{Group Recommendation with Unsupervised Learning}
-
-\subsubsection{Offline Evaluation}
-
-\subsubsection{Online Evaluation}
-
-bla
-
-bla
-
-\subsection{Group Recommendation with Neural Networks}
-
-bla
+\subsection{Recommendation by Similarity}
 
 bla
 
@@ -62,13 +47,75 @@ bla
 
 \subsubsection{Online Evaluation}
 
-\section{Feedback Loop}
+\subsection{Recommendation by Popularity}\label{subsubsection:eval-popularity}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
+
+\subsection{Hybrid Recommendation}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
 
 
-\section{Conclusion}
+\section{Supervised Individual Recommender}
+
+\subsection{Using Sparse Input}
+
+\subsubsection{Offline Evaluation}
+
+
+\subsection{Using Embeddings}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
+
+\section{Unsupervised Group Recommender}
+
+\subsection{Baseline}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
+
+\subsection{Diverse}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
+
+
+\section{Supervised Group Recommender}
+
+\subsection{Baseline}
 
 bla
 
-bla 
+\subsubsection{Offline Evaluation}
 
-lbla
+\subsubsection{Online Evaluation}
+
+
+
+\subsection{Diverse}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
+
+\section{Group Recommendation with Clustering}
+
+\subsubsection{Offline Evaluation}
+
+\subsubsection{Online Evaluation}
+
+
+\section{Feedback Loop}\label{section:eval-feedback}
+
+
+\section{Summary}
+
+

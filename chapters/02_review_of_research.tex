@@ -107,5 +107,11 @@ In the implementation of a neighborhood-based approach, one has to make several 
 
 Finally, when the performance of a neighborhood-based approach suffers from the problems of limited coverage and sparsity, one may explore techniques based on dimensionality reduction or graphs. Dimensionality reduction provides a compact representation of users and items that captures their most significant features. An advantage of such approach is that it allows to obtain meaningful relations between pairs of users or items, even though these users have rated different items, or these items were rated by different users. On the other hand, graph-based techniques exploit the transitive relations in the data. These techniques also avoid the problems of sparsity and limited coverage by evaluating the relationship between users or items that are not “directly connected”. However, unlike dimensionality reduction, graph-based methods also preserve some of the “local” relations in the data, which are useful in making serendipitous recommendations.
 
+ \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/DimensionalityReduction.png}
+	\caption{2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite{lee2007nonlinear}.}
+	\label{fig:embedding-projection-example}
+\end{figure}
 
 

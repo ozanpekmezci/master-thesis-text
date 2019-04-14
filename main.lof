@@ -7,48 +7,62 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer Website\relax }}{58}{figure.caption.55}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{59}{figure.caption.56}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The list of tops skills by a talent on Freelancer web page\relax }}{60}{figure.caption.57}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The talent skill matrix from freelancer.com\relax }}{63}{figure.caption.58}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The talent extra information matrix from freelancer.com\relax }}{64}{figure.caption.59}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The graph that explains the sparse input model\relax }}{65}{figure.caption.60}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces 2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite {lee2007nonlinear}.\relax }}{67}{figure.caption.61}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{68}{figure.caption.63}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{69}{figure.caption.64}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Model Code}}{70}{figure.caption.66}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{73}{figure.caption.67}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{74}{figure.caption.68}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{75}{figure.caption.69}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{75}{figure.caption.70}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces Main screen of the dashboard\relax }}{76}{figure.caption.71}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces 2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite {lee2007nonlinear}.\relax }}{15}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer Website\relax }}{58}{figure.caption.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{59}{figure.caption.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The list of tops skills by a talent on Freelancer web page\relax }}{60}{figure.caption.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The talent skill matrix from freelancer.com\relax }}{63}{figure.caption.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The talent extra information matrix from freelancer.com\relax }}{64}{figure.caption.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The graph that explains the sparse input model\relax }}{65}{figure.caption.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces 3D version of the embedding space that is created for projects of this thesis\relax }}{67}{figure.caption.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{68}{figure.caption.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{68}{figure.caption.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Model Code}}{70}{figure.caption.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{73}{figure.caption.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{74}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{75}{figure.caption.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{75}{figure.caption.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces Main screen of the dashboard\relax }}{76}{figure.caption.72}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces A snippet from the list of all projects that start with the letter \textit {a}\relax }}{77}{figure.caption.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{78}{figure.caption.74}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{79}{figure.caption.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces A screenshot from the list of all recommendations from diverse cosine similarity for the group 9\relax }}{80}{figure.caption.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.20}{\ignorespaces Model Bias Code}}{80}{figure.caption.77}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.21}{\ignorespaces Neural networks model with the addition of feedback loop bias\relax }}{82}{figure.caption.78}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{81}{figure.caption.88}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{89}{figure.caption.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{82}{figure.caption.89}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{90}{figure.caption.100}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{82}{figure.caption.90}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{90}{figure.caption.101}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
