@@ -32,56 +32,218 @@ precision =\frac{\#true positives }{\# true positives +\#  false positives }
 
 The above equations show how we calculated recall and precision. True positives in our case explain selected and relevant talents. False positives are selected but irrelevant talents. Lastly, false negatives are not selected but relevant talents.
 
-To be more specific, true positive is the case, when the first person in recommendation list is the person that won the project. False positives disclose all non-awarded bidders that are first in list and false negatives demonstrate all bidders that are first in the list but didn't win the project. 
+To be more specific, true positive is the case, when the first person in recommendation list is the person that won the project. False positives disclose all non-awarded bidders that are first in list and false negatives demonstrate all bidders that are not first in the list but won the project in real life. 
 
 When we start to calculate results, we see that precision and recall always have the same results for the freelancer dataset. For each project, the number of true positives are either one or zero. The number of false negatives or false positives are also one or zero for each project. If the prediction was correct, the number of true positives are one. In this case, both the number of false negatives and false positives are zero.
 
-The takeaway from the previous paragraph does not hold true for every dataset. For Motius case, there are more than one talent that got positive feedback for each project. That's the number of true positives can vary from zero to the number of talents that received invitation. TP, TN
+The takeaway from the previous paragraph does not hold true for every dataset. For Motius case, there are more than one talent that got positive feedback for each project. That's the number of true positives can vary from zero to the number of talents that received invitation. Next, the number of false negatives can have values from zero to the number of people that were accepted. Last of all, the number of false positives also range from zero to number of people with positive feedback for each project. Therefore, it is safe to say that those values vary for each project.
 
+In the next subsections, we demonstrate the evaluation results for various approaches.
+
+
+\subsection{Existing Company Recommender}
+
+The sponsor of this thesis, Motius, runs an internal recommendation system to suggest talents to roles. The internal mechanism that submits recommendations has stored the logs of the past recommendations in an internal database. This database has included all important details, such as the name of the roles, projects, talents, recommendation strength and if the person got an invitation to the next stage. We used the logs to conduct an offline evaluation.
+
+\subsubsection{Offline Evaluation}
+
+First of all, the logs contained 140914 recommendations for 375 roles. There are only 961 positive labels, which means the people who got accepted on the recommendation list. Therefore, we can conclude that there are 2-3 accepted talents for every role. We can also confirm that the most of the logs consist of talents that got rejected. 
+
+As part of the evaluation, we checked the rate of an accepted talent being the first in the recommendation list and being in the top 5 of the recommendation list, so that the results are directly comparable with the recommender systems that we implemented. The first talents in the list only get accepted in 7\% of the roles and the accepted talents were only a part of 21\% of the projects. Lastly, the average rank of accepted people was 161. 
 
 \subsection{Recommendation by Similarity}
 
-bla
+Subsection \ref{implementation-unsupervised-similarity} revealed the implementation details of the approach recommendation by feature similarity. Now, we show the evaluation results. 
 
 \subsubsection{Offline Evaluation}
 
+For this type of recommender, we used the same evaluation metric for different purposes. First of all, we assessed different flavors of implementation mechanisms to select the best one. Secondly, we calculate, final accuracy score for each individual unsupervised recommender, so that the recommenders are comparable.
+
+\begin{table}[htpb]
+	\caption[Evaluation mid-results]{A table that shows results of different implementation settings of recommendation by similarity.}\label{tab:evaluation-rec-similarity}
+	\centering
+	\begin{tabular}{l l l l}
+		\toprule
+		A & B & C & D \\
+		\midrule
+		0.28 & 0.36 & 0.31 & 0.35 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+As figure \ref{tab:evaluation-rec-similarity} depicts top 5 accuracy from different flavors of similarity recommendation systems. Top 5 accuracy explains the case that the recommender suggests a bidder list and the correct result is searched in top 5 elements of this lists, which contains bidders with a descending recommendation strength. 
+
+The depths of freelancer.com dataset are already defined in \ref{implementation-subsection-freelancer}. To sum it up, each project lists their required skills. These required skill don't have any any value, so they are used as zero or one. Each talent accommodates a skill vector, which encloses the number of projects that the person finished. For example, if an example talent 1 participated in 10 projects that only required \textit{Python} and 2 projects that only required \textit{JavaScript}, this person would have a 10 for Python, a 2 for JavaScript and zero for rest of the skills. 
+
+When we do talk about recommendation by similarity, it suggests that each row is normalized first, so that the greates values correspond to one the smallest zero. Then the cosine similarity of the feature vector of th picked project and the feature vector of all talents are calculated. This cosine similarty is used as the recommendation strength of each talent for a particular project. Then, we sort these values in a descending order. 
+
+\paragraph{A} In this first setting, we just use the plain mode like it was told in the previous paragraph. This means normalazing rows and calculating the cosine similarity. The accuracy we reached is 28\%. 
+
+\paragraph{B} After carefully checking and debugging the setting \textit{A}, we found out that there are many cases of winners with no skill vector. This indicates that, there are many projects that hired talents with zero experience according to the freelancer.com dataset. Since, this method picks talent just by looking at their features, it is impossible to predict the winners for those projects. That's why we removed the talents that have no skill vector present. Doing this increased the accuracy to 36\%. 
+
+\paragraph{C} When the developer of this thesis checked the data, it seemed like some further improvements could be made. An idea was normalizing columns additional to the rows. Normalizing rows was what we were doing in other setups, which is scaling for each talent. Normalizing columns means setting the highest value for each skill to one and the lowest value to zero. Doing this has the advantage that the talents, who finished a lot of projects with particular skills won't lose hat advantage against others. However, this method decreases the accuracy to 31\%. This implicates that when the project owners choose talents, the information of how many projects the talents completed with relevant skills doesn't play a big role. However, it's hard to draw conclusions, since every employer is different.
+
+\paragraph{D} To test the suspicion that we have grown, we start losing some information on purpose. This version changes the talent skills to zeroes and ones just like the project feature vectors. If a person has completed any project that involved the relevant skill, that is a one. If this person didn't work with a skill before, that value becomes zero. In the end, we reach 35\% accuracy, which is not the best among others but also not the worst, considering we slimmed down the data and lost a lot of information about talent skills.
+
+In the end, we decide to use the last version. Because that version has the smallest dataframe size, which is benefical according to what we explained before [See subsection \ref{subsection:company-dataset}]. Also the accuracy is the second best among others and it's structure is similar to what we programmed in subsection \ref{subsection:using-embeddings}.
+
+When to try to guess the project winners with the chosen version, we reach the accuracy of 0.27. When we check if the winner is in the top 5 of the score list, then the accuracy is 0.35, like we mentioned before. 
+
+ Lastly, it must be noted that during preprocessing, we remove the projects that has less than 5 bidders. Therefore, the minimum number of applicants is 5. We continue with the online evaluation of this recommender.
+ 
 \subsubsection{Online Evaluation}
+
+[TODO]
 
 \subsection{Recommendation by Popularity}\label{subsubsection:eval-popularity}
 
+Popularity recommender is a recommender that is easy to explain: it checks the profile information of every bidder from a specific project. Then it sorts them by their experience level and recommends people that have the most experience. 
+
 \subsubsection{Offline Evaluation}
+
+Offline evaluation of this method is straightforward. Like we did before, we check if the winner is in the top one and top 5 in the recommendation list that holds the top bidders with descending recommendation score. Top one accuracy is 0.06 and top 5 accuracy is 0.45. This shows that the popularity recommender is worse than the similarity recommender at guessing if it is given just one chance. However, it runs better than the similarity recommender if it is given 5 chances. 
 
 \subsubsection{Online Evaluation}
 
 \subsection{Hybrid Recommendation}
 
+According to \cite{burke2002hybrid}, hybridization is a valid technique to combine several recommendation methods to produce a single recommendation. There are different methods to achive this, but we combine weighted scores of both of other recommenders. In our version, we have decide to add results from both recommender with some weights. The reason for that is to be able to predict results for as many projects as possible. The \ref{tab:evaluation-amount-prediction} depicts for how many projects is it possible to predict the results. The slimmed down version that we developed to recommend by similarity, can't predict for all projects, because a big percent of the winners don't have a skill vector. When we combine both results, we also increase our coverage, since we get to use the results from two different recommenders.
+
+\begin{table}[htpb]
+	\caption[The number of predicted projects]{A table that shows the amount of projects that we can generate predictions.}\label{tab:evaluation-amount-prediction}
+	\centering
+	\begin{tabular}{l l l}
+		\toprule
+		Similarity & Popularity & Hybrid \\
+		\midrule
+		4987 & 20433 & 14152 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
 \subsubsection{Offline Evaluation}
+
+Since we decided for a weighted addition of two recommenders, we also have the flexibility to decide for the weights. We tried different weights for similarity and popularity recommenders and calculated the accuracy for these different settings. 
+
+
+\begin{figure}[htpb]
+	\centering
+	
+	\pgfplotstableset{col sep=&, row sep=\\}
+	% This should probably go into a file in data/
+	\pgfplotstableread{
+		a & b    \\
+		0 & 0.06 \\
+		0.6 & 0.12 \\
+		0.8 & 0.13 \\
+		1.0 & 0.27 \\
+	}\exampleA
+	\pgfplotstableread{
+		a & b    \\
+		0 & 0.45 \\
+		0.6 & 0.29 \\
+		0.8 & 0.29 \\
+		1.0 & 0.35 \\
+	}\exampleB
+	% This should probably go into a file in figures/
+	\begin{tikzpicture}
+	\begin{axis}[
+	ymin=0,
+	legend style={legend pos=outer north east},
+	grid,
+	thick,
+	ylabel=Accuracy,
+	xlabel=Similarity weight
+	]
+	\addplot table[x=a, y=b]{\exampleA};
+	\addlegendentry{Top 1 Accuracy};
+	\addplot table[x=a, y=b]{\exampleB};
+	\addlegendentry{Top 5 Accuracy};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[Weight figure]{Effect of weight selection on hybrid recommenders to the accuracy}\label{fig:weight-selection}
+\end{figure}
+
+Figures \ref{fig:weight-selection} and \ref{fig:weight-selection-coverage}  depict the results of what happens with different similarity weights. Although, the figures only show the similarity weights, popularity weights can also be calculated by subtracting the similarity weight from one. The figure \ref{fig:weight-selection} displays top 1 and top 5 accuracy for different weights. When the similarity weight is zero, top 1 accuracy is the lowest and top 5 accuracy is highest. When the similarity weight is one, both accuracies stay in the middle. The figure \ref{fig:weight-selection-coverage} show the amount of projects that is possible to predict results with the recommender at hand. That graph includes a clear function that is inversely proportional to the similarity weight. The highest project coverage can be seen on highest popularity weight and the lowest project coverage can bee seen on the highest similarity weight.
+
+It is clear that there is no obvious best weight choice, since we both want to increase project coverage and accuracies. We chose the similarity weight 0.6 and popularity weight 0.4 to increase these results.
+
+\begin{figure}[htpb]
+	\centering
+	
+	\pgfplotstableset{col sep=&, row sep=\\}
+	% This should probably go into a file in data/
+	\pgfplotstableread{
+		a & b    \\
+		0 & 20433 \\
+		0.6 & 14152 \\
+		0.8 & 6312 \\
+		1.0 & 4987 \\
+	}\exampleA
+	% This should probably go into a file in figures/
+	\begin{tikzpicture}
+	\begin{axis}[
+	ymin=500,
+	legend style={legend pos=outer north east},
+	grid,
+	thick,
+	ylabel=Amount of projects,
+	xlabel=Similarity weight
+	]
+	\addplot table[x=a, y=b]{\exampleA};
+	\addlegendentry{Project coverage};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[Coverage figure]{Effect of weight selection on the amount of projects that we can generate predictions.}\label{fig:weight-selection-coverage}
+\end{figure}
+
+
 
 \subsubsection{Online Evaluation}
 
 
 \section{Supervised Individual Recommender}
 
+The details of supervised individual recommender is already clarified in the section \ref{section:supervised}. This type of recommender suggests individual talents to individual projects using neural networks. There are two different settings that we apply supervised individual recommender; using sparse input and using embeddings. 
+
 \subsection{Using Sparse Input}
 
-\subsubsection{Offline Evaluation}
+Since the sparse data is too big for computers to handle, this one only contains offline evaluation results. The performance of this subtype of recommender is measured for different amount of layers, different cost functions, other activation functions and various optimizations. In the end, it wouldn't make sens to visualize all of the distinct results. However, we must note the maximum accuracy that is measured with the test set is 79\%. Here the accuracy doesn't reveal top 1 or top 5 prediction that we used before. This prediction with the test set demonstrates that the model is able to predict the right results for 79\% of the talent-project pairs. The neural network generates a value between 0 and 1 for each pair and values that are below 0.5 interpreted as the person should be rejected and above 0.5 gets treated as the talent should be hired. That's why the model succesfully predicts 79\% of those pairs.
 
+Predicting the winners of projects is another story. Through diffent parameters and settings, the most that we have reached is 21\% for the first-place accuracy and 59\% for the top 5 accuracy. It is fair to note that these maximum values are reached with the help of extra profile information like experience level on top of skills [TODO: if more text needed add evaluation information from SparseFreelancerBias.ipynb]. 
 
 \subsection{Using Embeddings}
 
+To be able to use embeddings, we reduce the dimensioanality of the data first. This makes the dataframe smaller in size but it also decreases the performance, since some information is lost during the reduction. 
+
+This version is the actual approach that is used in the dashboard. That's why we gained evaluation results for both offline and online cases. 
+
 \subsubsection{Offline Evaluation}
+
+The maximum accuracy that is reached to predict the test set results is 72\%, which is lower than the sparse version. When the top 1 and top 5 talents for each project is calculated, the best that is achieved are 18.5\% and 56\% respectively. 
+
+This is calculated with the extra profile information included. When we don't add them, the biggest value for guessing the winner is 9\%. [TODO: if more info needed, Embedding notebooks]
 
 \subsubsection{Online Evaluation}
 
 \section{Unsupervised Group Recommender}
 
+This is another type of recommender that we implemented in the dashboard is the unsupervised group recommender. 
+
 \subsection{Baseline}
 
 \subsubsection{Offline Evaluation}
 
+\cite{smyth2001similarity}
+
+$$\mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j )$$
+
 \subsubsection{Online Evaluation}
 
 \subsection{Diverse}
+
+bla
 
 \subsubsection{Offline Evaluation}
 
@@ -101,6 +263,8 @@ bla
 
 
 \subsection{Diverse}
+
+bla 
 
 \subsubsection{Offline Evaluation}
 

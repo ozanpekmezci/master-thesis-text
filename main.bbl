@@ -353,6 +353,37 @@
       \field{pages}{961\bibrangedash 995}
       \range{pages}{35}
     \endentry
+    \entry{burke2002hybrid}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=927ab4206ced595b50d2ac5fb4535b88}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{fullhash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{bibnamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorbibnamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authornamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorfullhash}{927ab4206ced595b50d2ac5fb4535b88}
+      \field{labelalpha}{Bur02}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{User modeling and user-adapted interaction}
+      \field{number}{4}
+      \field{title}{Hybrid recommender systems: Survey and experiments}
+      \field{volume}{12}
+      \field{year}{2002}
+      \field{pages}{331\bibrangedash 370}
+      \range{pages}{40}
+    \endentry
     \entry{chollet2018deep}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=5836fc1fa037e340c8b5591da3207608}{%
@@ -907,6 +938,41 @@
       \field{year}{2011}
       \field{pages}{257\bibrangedash 297}
       \range{pages}{41}
+    \endentry
+    \entry{smyth2001similarity}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=ccbc3ce6a6d463b4a755eac0e057f7f5}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fc4a6eb94ccc8e852830923e6c896409}{%
+           family={McClave},
+           familyi={M\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{fullhash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{bibnamehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authorbibnamehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authornamehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authorfullhash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \field{labelalpha}{SM01}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International conference on case-based reasoning}
+      \field{title}{Similarity vs. diversity}
+      \field{year}{2001}
+      \field{pages}{347\bibrangedash 361}
+      \range{pages}{15}
     \endentry
     \entry{singh2015survey}{article}{}
       \name{author}{2}{}{%
