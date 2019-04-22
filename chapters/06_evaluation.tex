@@ -51,7 +51,7 @@ First of all, the logs contained 140914 recommendations for 375 roles. There are
 
 As part of the evaluation, we checked the rate of an accepted talent being the first in the recommendation list and being in the top 5 of the recommendation list, so that the results are directly comparable with the recommender systems that we implemented. The first talents in the list only get accepted in 7\% of the roles and the accepted talents were only a part of 21\% of the projects. Lastly, the average rank of accepted people was 161. 
 
-\subsection{Recommendation by Similarity}
+\subsection{Recommendation by Similarity}\label{ev-rec-sim}
 
 Subsection \ref{implementation-unsupervised-similarity} revealed the implementation details of the approach recommendation by feature similarity. Now, we show the evaluation results. 
 
@@ -229,28 +229,185 @@ This is calculated with the extra profile information included. When we don't ad
 
 \section{Unsupervised Group Recommender}
 
-This is another type of recommender that we implemented in the dashboard is the unsupervised group recommender. 
+This is another type of recommender that we implemented in the dashboard is the unsupervised group recommender and contains different modes such as baseline and diverse. 
 
-\subsection{Baseline}
+\subsection{Baseline Recommender}
+
+The baseline unsupervised group recommender recommends a group of talents by maximizing the relevancy of project-talent pairs. However, this method doesn't check the relation of talents that are chosen. 
 
 \subsubsection{Offline Evaluation}
 
-\cite{smyth2001similarity}
+There are many evaluation methods that count under offline evaluation. Since they are employed first time in this thesis, we explain them in a detailed way.
+
+\paragraph{Accuracy}
+
+The first detail that we check is the top 1 and top 5 accuracy, like we did before. This didn't change from results of the section \ref{ev-rec-sim}. Which means that the top 1 accuracy is around 20\% and top 5 is around 30\%.
+
+\paragraph{Diversity}\label{ev-unsupervised-group-diversity}
+
+There are many evaluation mechanism to measure diversity and the first equations were coined in the beginning of 2000's \cite{smyth2001similarity}.
 
 $$\mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j )$$
 
+The above \textit{inter-list diversity} is the first to calculate. This mechanism calculates the diversity inside a recommendation list. As a diversity measure, we use the cosine distance, which is calculated as $1 - Cosine Similarity$, which is used many times in this thesis. With various sizes of groups from the freelancer.com dataset, we calculated the average \textit{ILD} of 40\% with this baseline suggestion engine.
+
+\paragraph{Unexpedtedness}\label{ev-unsupervised-group-unexpectedness}
+
+Unexpectedness tells us how unforeseen the data is to the recruiters.  In the formula below $\mathcal { J } _ { u }$ is a symbol for set of talents that the recruiter has interacted with. When we know about this past, we can compare the talents with the people in the set. We want to maximize the distance between already seen and not yet seen talents. The result that we reach in baseliner is 0.61.
+
+$$
+Unexp = \frac { 1 } { | R | \left| \mathcal { J } _ { u } \right| } \sum _ { i \in R } \sum _ { j \in \mathcal { J } _ { u } } d ( i , j )
+$$
+
+$$
+where 
+\mathcal { J } _ { u } \stackrel { \mathrm { def } } { = } \{ i \in \mathcal { J } | r ( u , i ) \neq \emptyset \}
+$$
+
+[TODO: if not enogh: unexp, Gini, shannonggroup-rec.ipynb]
+
 \subsubsection{Online Evaluation}
 
-\subsection{Diverse}
+\subsection{Diverse Recommender}
 
-bla
+Diverse unsupervised group recommender optimizes the relationship of the chosen talents in a group on top of maximizing the relevancy of project-talent pairs. Both project-talent and talent-talent relationships are optimized via cosine similarity. We continue with the evaluation results.
+
+The way this type of recommender functions is already explained in the implementation chapter[See section \ref{implementation-diverse}]. We can sum it up using the formulas:
+
+$$
+R _ { o p t } ( \lambda ) =  { \arg \max } g ( R , \lambda )
+$$
+
+$$
+g ( R , \lambda ) = ( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R )
+$$
+
+In the above equations, the variable $\lambda$ can be tuned according to our needs. A value closer to zero means, the recruiters want to see more relevant scores and a value closer to one shows more diverse results. 
 
 \subsubsection{Offline Evaluation}
+
+When we evaluate a diverse recommender, we need to show variations of results for different $\lambda$ values. Because, every small or big modification of this value will have an effect on the accuracy, diversity or overall list value.
+
+\paragraph{Accuracy}
+
+\begin{figure}[htpb]
+	\centering
+	
+	\pgfplotstableset{col sep=&, row sep=\\}
+	% This should probably go into a file in data/
+	\pgfplotstableread{
+		a & b    \\
+		0 & 0.27 \\
+		0.3 & 0.21 \\
+		0.6 & 0.14 \\
+		0.8 & 0.09 \\
+		1.0 & 0.06 \\
+	}\exampleA
+	\pgfplotstableread{
+		a & b    \\
+		0 & 0.35 \\
+		0.3 & 0.29 \\
+		0.6 & 0.19 \\
+		0.8 & 0.14 \\
+		1.0 & 0.11 \\
+	}\exampleB
+	% This should probably go into a file in figures/
+	\begin{tikzpicture}
+	\begin{axis}[
+	ymin=0,
+	legend style={legend pos=outer north east},
+	grid,
+	thick,
+	ylabel=Accuracy,
+	xlabel=Diversity constant
+	]
+	\addplot table[x=a, y=b]{\exampleA};
+	\addlegendentry{Top 1 Accuracy};
+	\addplot table[x=a, y=b]{\exampleB};
+	\addlegendentry{Top 5 Accuracy};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[Unsupervised-diversity-accuracy Figure]{Effect of diversity constant on unsupervised group recommender to the accuracy}\label{fig:unsupervised-diversity-accuracy}
+\end{figure}
+
+The figure \ref{fig:unsupervised-diversity-accuracy} depicts the impact of diversity constant change to the accuracy, which are calculated on freelancer.com dataset.
+
+\paragraph{Diversity}\label{ev-unsupervised-group-diversity-diverse}
+
+For the diversity, we use the same equation that we used in the paragraph \ref{ev-unsupervised-group-diversity}. However, a major change is that we have to calculate the inter-list-diversity for different $\lambda$ values.
+
+
+\begin{figure}[htpb]
+	\centering
+	
+	\pgfplotstableset{col sep=&, row sep=\\}
+	% This should probably go into a file in data/
+	\pgfplotstableread{
+		a & b    \\
+		0 & 0.4 \\
+		0.3 & 0.7 \\
+		0.6 & 0.81 \\
+		1.0 & 0.95 \\
+	}\exampleA
+	% This should probably go into a file in figures/
+	\begin{tikzpicture}
+	\begin{axis}[
+	legend style={legend pos=outer north east},
+	grid,
+	thick,
+	ylabel=Inter-List-Diversity,
+	xlabel=Diversity constant
+	]
+	\addplot table[x=a, y=b]{\exampleA};
+	\addlegendentry{Inter-List-Diversity};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[Unsupervised-diversity-diversity Figure]{Effect of diversity constant on unsupervised group recommender to the diversity}\label{fig:unsupervised-diversity-diversity}
+\end{figure}
+
+The figure \ref{fig:unsupervised-diversity-diversity} portrays, how changing the diversity constant affects the actual diversity of the recommendation lists that are generated by the recommendation engine.
+
+\paragraph{Unexpectedness}\label{ev-unsupervised-group-unexpectedness}
+
+\begin{figure}[htpb]
+	\centering
+	
+	\pgfplotstableset{col sep=&, row sep=\\}
+	% This should probably go into a file in data/
+	\pgfplotstableread{
+		a & b    \\
+		0 & 0.61\\
+		0.3 & 0.65 \\
+		0.6 & 0.71 \\
+		1.0 & 0.76 \\
+	}\exampleA
+	% This should probably go into a file in figures/
+	\begin{tikzpicture}
+	\begin{axis}[
+	legend style={legend pos=outer north east},
+	grid,
+	thick,
+	ylabel=Unexpectedness,
+	xlabel=Diversity constant
+	]
+	\addplot table[x=a, y=b]{\exampleA};
+	\addlegendentry{Unexpectedness};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[Unsupervised Diverse Group Unexpectedness Figure]{Effect of diversity constant on unsupervised group recommender to the unexpectedness}\label{fig:unsupervised-diversity-unexpectedness}
+\end{figure}
+
+
+We use the same formula, which was explained in the paragraph \ref{ev-unsupervised-group-unexpectedness}. Again, we calculate the values seperately for different diversity rates and drawn on the figure \ref{fig:unsupervised-diversity-unexpectedness}. It is obvious that the diverse recommender didn't increase the unexpectedness as it improved the diversity.
+
 
 \subsubsection{Online Evaluation}
 
 
 \section{Supervised Group Recommender}
+
+The supervised group recommender takes advantage of neural networks to ascertain the relevancy of talents to the project and uses cosine similarity to ensure the variance of talent recommendation lists.
+
 
 \subsection{Baseline}
 

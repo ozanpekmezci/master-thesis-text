@@ -79,8 +79,8 @@
 \BOOKMARK [2][-]{subsection.4.2.1}{Using Sparse Input}{section.4.2}% 79
 \BOOKMARK [2][-]{subsection.4.2.2}{Using Embeddings}{section.4.2}% 80
 \BOOKMARK [1][-]{section.4.3}{Unsupervised Group Recommender}{chapter.4}% 81
-\BOOKMARK [2][-]{subsection.4.3.1}{Baseline}{section.4.3}% 82
-\BOOKMARK [2][-]{subsection.4.3.2}{Diverse}{section.4.3}% 83
+\BOOKMARK [2][-]{subsection.4.3.1}{Baseline Recommender}{section.4.3}% 82
+\BOOKMARK [2][-]{subsection.4.3.2}{Diverse Recommender}{section.4.3}% 83
 \BOOKMARK [1][-]{section.4.4}{Supervised Group Recommender}{chapter.4}% 84
 \BOOKMARK [2][-]{subsection.4.4.1}{Baseline}{section.4.4}% 85
 \BOOKMARK [2][-]{subsection.4.4.2}{Diverse}{section.4.4}% 86
@@ -97,6 +97,6 @@
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 97
 \BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 98
 \BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 99
-\BOOKMARK [0][-]{chapter*.110}{List of Figures}{}% 100
-\BOOKMARK [0][-]{chapter*.111}{List of Tables}{}% 101
-\BOOKMARK [0][-]{chapter*.112}{Bibliography}{}% 102
+\BOOKMARK [0][-]{chapter*.119}{List of Figures}{}% 100
+\BOOKMARK [0][-]{chapter*.120}{List of Tables}{}% 101
+\BOOKMARK [0][-]{chapter*.121}{Bibliography}{}% 102
