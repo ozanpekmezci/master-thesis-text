@@ -5,8 +5,6 @@
 
 This chapter explains different solutions for the problem at hand. These solutions include applications using different datasets and different methods.
 
-\section{Introduction}
-
 As we mentioned in the Introduction part [See~\autoref{section:motivation}], the implementation of this thesis focuses on recommending the best talents to projects. While serving this aim, we use different datasets and different methods. 
 
 
@@ -285,42 +283,6 @@ The Freelancer dataset has a huge advantage over Motius data, which is the extra
 \autoref{fig:model-code} illustrates the simplified version of the \textit{Python} code that constructs the model to predict the hiring result. The \textit{features} parameter of the model building function corresponds to the length of the padded skill vector and the next parameter \textit{dimensions} represents the total amount of unique skills. Embedding layers in Keras expect the arguments \textit{input dimension}, \textit{output dimension}, \textit{input length} and the optional flag \textit{mask zero}. As embeddings only accept positive integers, input dimension should be the size of the vocabulary, which is the number of total skills in the recommender system. The value of the output dimension can be decided by the developer and explains the size of the desired output dimension. Although no scientific document states an ideal output dimension, the trial-and-error method showed that the best result is achieved with the fourth root of the number of dimensions. The additions of one in multiple places in the code are due to using the mask zero operation. Zeros in rows get filtered out, which increases the performance and speeds up the training process. The cost function that we use is \textit{binary crossentropy} because we want to optimize the process of hiring or not hiring talent to the project. [TODO: research -> cost functions -> binary crossentropy]. Lastly, \textit{sigmoid} activation function squeezes the output value to be between 0 and 1[TODO: research -> nn -> activation functions -> sigmoid].
 
 
-
-\begin{figure}[!ht]
-	\centering
-	\begin{tabular}{c}
-		\begin{lstlisting}[language=Python]
-		def nn_embedding(features, dimensions):
-		  talent = Input(shape = (features,))
-		  project = Input(shape = (features,))
-		  output_dim = int(dimensions ** 0.25) + 1
-		
-		  talent_embedding = Embedding(dimensions + 1, output_dim,
-		  input_length=features, mask_zero=True )(talent)
-		  project_embedding = Embedding(dimensions + 1, output_dim,
-		  input_length=features, mask_zero=True)(project)
-		
-		  # these are required because of mask zero
-		  talent_embedding = Lambda(lambda x: x,
-		  output_shape=lambda s:s)(talent_embedding)
-		  project_embedding = Lambda(lambda x: x,
-		  output_shape=lambda s:s)(project_embedding)
-		
-		  merged = Concatenate()([talent_embedding, project_embedding])
-		  merged = Flatten()(merged)
-		  merged = Dropout(0.5)(merged)
-		  main_output = Dense(1, activation='sigmoid')(merged)
-		
-		  model = Model(inputs=[talent, project], outputs=[main_output])
-		  model.compile(optimizer='adam', loss='binary_crossentropy',
-		  metrics=["accuracy"])
-		
-		  return model
-		\end{lstlisting}
-	\end{tabular}
-	\caption[Model Code]{The code of the model for both Motius and Freelancer data}\label{fig:model-code}
-\end{figure}
-
 \section{Unsupervised Group Recommender}\label{section:unsupervised-group-rec}
 
 In this section, we explain the process of recommending multiple talents to supergroups. The methods that are used for this part are derivations of the ones that are used in individual recommenders. Therefore, the basic concepts that are employed before also apply here. 
@@ -515,20 +477,6 @@ Readers of this thesis may wonder what do the up and down arrows on the figures 
 
 The feedback that are provided by real people may have direct or indirect effects. To understand the process, it may make sense to check the figure \ref{fig:tensorboard-feedback} first. Feedback data is given to the model as a separate input, and this input is followed by a dense layer with one node with \textit{tanh} activation function. Tanh activation is chosen, because the bias can be negative or positive. [TODO research: tanh]. The output of the bias activation functions is \textit{added} to the result that comes from project-talent information. In this context, adding means actually the mathematical addition operation [See \ref{fig:feedback-model-code}]. Due to this addition, the outcome from the human feedback has a direct effect, even without retraining. 
 
-
-\begin{figure}[!ht]
-	\centering
-	\begin{tabular}{c}
-		\begin{lstlisting}[language=Python]
-			bias = Input(name = 'bias', shape = (1,))
-			talent_bias = Dense(1, activation = 'linear')(bias)
-			talent_bias = Activation("tanh")(talent_bias)
-			main_output = Add()([output, talent_bias])
-		\end{lstlisting}
-	\end{tabular}
-	\caption[Model Bias Code]{Simplified version of the extra code for enabling feedback}\label{fig:feedback-model-code}
-\end{figure}
-
 The default value for any talent bias is 0, and they may be increased up to 1 with positive feedbacks and decrease to -1 with negative feedbacks. These values are added to the result that comes from the dense layer, which gets data from talent and project skills. Since human feedback is stored in the database immediately, they can directly be used and have a direct effect on the total results.
 
 
@@ -544,7 +492,7 @@ Feedback learning also has an indirect effect;  entering feedback changes the la
 
 
 
-\section{Conclusion}
+\section{Summary}
 
 This chapter analyzed the practical portion of this thesis exhaustively. We explained how we programmed different recommenders with diverse approaches. We also revealed the dashboard that glues everything together and the proposal to improve recommendations with the help of feedback learning. 
 
