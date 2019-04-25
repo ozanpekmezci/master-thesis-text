@@ -132,6 +132,42 @@
       \field{pages}{102\bibrangedash c3}
       \range{pages}{-1}
     \endentry
+    \entry{adomavicius2005toward}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=70fa40a00f026a60fb97363242ea797d}{%
+           family={Adomavicius},
+           familyi={A\bibinitperiod},
+           given={Gediminas},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7ea9e44de0d35171d632227a1ddf838a}{%
+           family={Tuzhilin},
+           familyi={T\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{605db2b95bce0ae2b9db7fa6b0c04a07}
+      \strng{fullhash}{605db2b95bce0ae2b9db7fa6b0c04a07}
+      \strng{bibnamehash}{605db2b95bce0ae2b9db7fa6b0c04a07}
+      \strng{authorbibnamehash}{605db2b95bce0ae2b9db7fa6b0c04a07}
+      \strng{authornamehash}{605db2b95bce0ae2b9db7fa6b0c04a07}
+      \strng{authorfullhash}{605db2b95bce0ae2b9db7fa6b0c04a07}
+      \field{labelalpha}{AT05}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Knowledge \& Data Engineering}
+      \field{number}{6}
+      \field{title}{Toward the next generation of recommender systems: A survey of the state-of-the-art and possible extensions}
+      \field{year}{2005}
+      \field{pages}{734\bibrangedash 749}
+      \range{pages}{16}
+    \endentry
     \entry{beliakov2015aggregation}{incollection}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=508b71811234444c0cdafdaa94eee6b4}{%
@@ -451,6 +487,59 @@
       \field{pages}{881\bibrangedash 918}
       \range{pages}{38}
     \endentry
+    \entry{de2015semantics}{incollection}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=a3f40d574d6339004200fc9d85178f3e}{%
+           family={De\bibnamedelima Gemmis},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e2de4717b0a7f2faba103bdaf4b03bee}{%
+           family={Lops},
+           familyi={L\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=20a01d7357984be6536720f3ae4455b6}{%
+           family={Musto},
+           familyi={M\bibinitperiod},
+           given={Cataldo},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3f2cc121698b08c5aed6b5afb48bc5f0}{%
+           family={Narducci},
+           familyi={N\bibinitperiod},
+           given={Fedelucio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=648dfaca113383f23724ce78b40b515f}{%
+           family={Semeraro},
+           familyi={S\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{def16659da0968343084838da559f3de}
+      \strng{fullhash}{503af8b809ce2eb812d0d03b92358705}
+      \strng{bibnamehash}{503af8b809ce2eb812d0d03b92358705}
+      \strng{authorbibnamehash}{503af8b809ce2eb812d0d03b92358705}
+      \strng{authornamehash}{def16659da0968343084838da559f3de}
+      \strng{authorfullhash}{503af8b809ce2eb812d0d03b92358705}
+      \field{labelalpha}{De +15}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender Systems Handbook}
+      \field{title}{Semantics-aware content-based recommender systems}
+      \field{year}{2015}
+      \field{pages}{119\bibrangedash 159}
+      \range{pages}{41}
+    \endentry
     \entry{davis2006relationship}{inproceedings}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=5f9ed160b91c65c59a8d61af7f1e5017}{%
@@ -485,6 +574,41 @@
       \field{year}{2006}
       \field{pages}{233\bibrangedash 240}
       \range{pages}{8}
+    \endentry
+    \entry{desrosiers2011comprehensive}{incollection}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=123ea28f5bf47452f84a35dc5f0022c4}{%
+           family={Desrosiers},
+           familyi={D\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3db7df6401b206bb040d6735adbe81e2}{%
+           family={Karypis},
+           familyi={K\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5068f3285e449405f2fc03e76f367b06}
+      \strng{fullhash}{5068f3285e449405f2fc03e76f367b06}
+      \strng{bibnamehash}{5068f3285e449405f2fc03e76f367b06}
+      \strng{authorbibnamehash}{5068f3285e449405f2fc03e76f367b06}
+      \strng{authornamehash}{5068f3285e449405f2fc03e76f367b06}
+      \strng{authorfullhash}{5068f3285e449405f2fc03e76f367b06}
+      \field{labelalpha}{DK11}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender systems handbook}
+      \field{title}{A comprehensive survey of neighborhood-based recommendation methods}
+      \field{year}{2011}
+      \field{pages}{107\bibrangedash 144}
+      \range{pages}{38}
     \endentry
     \entry{Goodfellow-et-al-2016}{book}{}
       \name{author}{3}{}{%
@@ -576,6 +700,41 @@
       \field{labeltitlesource}{title}
       \field{title}{Principal component analysis}
       \field{year}{2011}
+    \endentry
+    \entry{koren2015advances}{incollection}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=fce0a5d2aa4ba307f448e452e68fdbcb}{%
+           family={Koren},
+           familyi={K\bibinitperiod},
+           given={Yehuda},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4ff3ffca1a595b355b42c528ad4e37a9}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{785bea9618f4b8c2f952aa7ac61f1ea7}
+      \strng{fullhash}{785bea9618f4b8c2f952aa7ac61f1ea7}
+      \strng{bibnamehash}{785bea9618f4b8c2f952aa7ac61f1ea7}
+      \strng{authorbibnamehash}{785bea9618f4b8c2f952aa7ac61f1ea7}
+      \strng{authornamehash}{785bea9618f4b8c2f952aa7ac61f1ea7}
+      \strng{authorfullhash}{785bea9618f4b8c2f952aa7ac61f1ea7}
+      \field{labelalpha}{KB15}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender systems handbook}
+      \field{title}{Advances in collaborative filtering}
+      \field{year}{2015}
+      \field{pages}{77\bibrangedash 118}
+      \range{pages}{42}
     \endentry
     \entry{lee2007nonlinear}{book}{}
       \name{author}{2}{}{%
@@ -974,6 +1133,42 @@
       \field{pages}{347\bibrangedash 361}
       \range{pages}{15}
     \endentry
+    \entry{shardanand1995social}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=eec663a90214e7a6006bfbe208cdd2ea}{%
+           family={Shardanand},
+           familyi={S\bibinitperiod},
+           given={Upendra},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2f8f33c85296fc648721ff66ab814d0a}{%
+           family={Maes},
+           familyi={M\bibinitperiod},
+           given={Pattie},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{57c2a76db4ecfcfa136cfdfde116fdd6}
+      \strng{fullhash}{57c2a76db4ecfcfa136cfdfde116fdd6}
+      \strng{bibnamehash}{57c2a76db4ecfcfa136cfdfde116fdd6}
+      \strng{authorbibnamehash}{57c2a76db4ecfcfa136cfdfde116fdd6}
+      \strng{authornamehash}{57c2a76db4ecfcfa136cfdfde116fdd6}
+      \strng{authorfullhash}{57c2a76db4ecfcfa136cfdfde116fdd6}
+      \field{labelalpha}{SM95}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Chi}
+      \field{title}{Social information filtering: Algorithms for automating" word of mouth"}
+      \field{volume}{95}
+      \field{year}{1995}
+      \field{pages}{210\bibrangedash 217}
+      \range{pages}{8}
+    \endentry
     \entry{singh2015survey}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=196c97af3d7d4131442ccd3ba71ecfab}{%
@@ -1047,6 +1242,47 @@
       \field{year}{1997}
       \field{pages}{1464\bibrangedash 1468}
       \range{pages}{5}
+    \endentry
+    \entry{wang2015collaborative}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=1,uniquepart=given,hash=c8cf19241225247d6d07dbf8a516b8ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=1,uniquepart=given,hash=7b94afca49a5fad9a08434bbb6abf1ce}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Naiyan},
+           giveni={N\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=08526b4206cdff511b54e9b0678b1fd3}{%
+           family={Yeung},
+           familyi={Y\bibinitperiod},
+           given={Dit-Yan},
+           giveni={D\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{6db057e10c4010e79c12754723fda167}
+      \strng{fullhash}{6db057e10c4010e79c12754723fda167}
+      \strng{bibnamehash}{6db057e10c4010e79c12754723fda167}
+      \strng{authorbibnamehash}{6db057e10c4010e79c12754723fda167}
+      \strng{authornamehash}{6db057e10c4010e79c12754723fda167}
+      \strng{authorfullhash}{6db057e10c4010e79c12754723fda167}
+      \field{labelalpha}{WWY15}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 21th ACM SIGKDD international conference on knowledge discovery and data mining}
+      \field{title}{Collaborative deep learning for recommender systems}
+      \field{year}{2015}
+      \field{pages}{1235\bibrangedash 1244}
+      \range{pages}{10}
     \endentry
     \entry{you2018vue}{article}{}
       \name{author}{1}{}{%

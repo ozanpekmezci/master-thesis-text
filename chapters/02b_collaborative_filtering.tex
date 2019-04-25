@@ -3,108 +3,11 @@
 
 \section{Collaborative Filtering}\label{section:collaborative_filtering}
 
-\subsection{Introduction}
-[kopi peyst]
-Collaborative filtering recommender system (CF) methods produce user specific recommendations of items based on patterns of ratings or usage (e.g., purchases) without need for exogenous information about either items or users. While well established methods work adequately for many purposes, we present several recent extensions available to analysts who are looking for the best possible recommendations.
+Collaborative filtering recommender system methods produce user specific recommendations of items based on patterns of ratings or hiring data without need for content information about either items or users \cite{desrosiers2011comprehensive}.
 
-The Netflix Prize competition that began in October 2006 has fueled much recent progress in the field of collaborative filtering. For the first time, the researchcommunity gained access to a large-scale, industrial strength data set of 100 million movie ratings—attracting thousands of scientists, students, engineers and enthusiasts to the field. The nature of the competition has encouraged rapid development, where innovators built on each generation of techniques to improve prediction accuracy. Because all methods are judged by the same rigid yardstick on common data, the evolution of more powerful models has been especially efficient.
+Collorative filtering recommenders need the interactions between users and items. Using these information, these recommenders can establish recommendations with two different approaches; 
+the neighborhood approach and latent factor models. Neighborhood methods focus on relationships between items and users and can function by checking the similarity between users or items.  Latent factor models, such as matrix factorization transfer the user-item matrix into a different space. By doing this operation, it is possible to fill the gaps in the matrix, which correspond to the predictions.
 
-Recommender systems rely on various types of input. Most convenient is high quality explicit feedback, where users directly report on their interest in products. For example, Netflix collects star ratings for movies and TiVo users indicate their preferences for TV shows by hitting thumbs-up/down buttons.
+[TODO maybe matrix image]
 
-Because explicit feedback is not always available, some recommenders infer user preferences from the more abundant implicit feedback, which indirectly reflects opinion through observing user behavior [20]. Types of implicit feedback include purchase history, browsing history, search patterns, or even mouse movements. For example, a user who purchased many books by the same author probably likes that author. This chapter focuses on models suitable for explicit feedback. Nonetheless, we recognize the importance of implicit feedback, an especially valuable information source for users who do not provide much explicit feedback. Hence, we show how to address implicit feedback within the models as a secondary source of information.
-
-In order to establish recommendations, CF systems need to relate two funda- mentally different entities: items and users. There are two primary approaches to facilitate such a comparison, which constitute the two main techniques of CF: the neighborhood approach and latent factor models. Neighborhood methods focus on relationships between items or, alternatively, between users. An item-item approach models the preference of a user to an item based on ratings of similar items by the same user. Latent factor models, such as matrix factorization (aka, SVD), comprise an alternative approach by transforming both items and users to the same latent factor space. The latent space tries to explain ratings by characterizing both products and users on factors automatically inferred from user feedback.
-
-Producing more accurate prediction methods requires deepening their founda- tions and reducing reliance on arbitrary decisions. In this chapter, we describe a variety of recent improvements to the primary CF modeling techniques. Yet, the quest for more accurate models goes beyond this. At least as important is the identification of all the signals, or features, available in the data. Conventional techniques address the sparse data of user-item ratings. Accuracy significantly improves by also utilising other sources of information. One prime example includes all kinds of temporal effects reflecting the dynamic, time-drifting nature of user-item interactions. No less important is listening to hidden feedback such as which items users chose to rate (regardless of rating values). Rated items are not selected at random, but rather reveal interesting aspects of user preferences, going beyond the numerical values of the ratings.
-Section 3.3 surveys matrix factorization techniques, which combine implementa- tion convenience with a relatively high accuracy. This has made them the preferred technique for addressing the largest publicly available dataset—the Netflix data.
-
-\subsection{Baseline}
-
-We are given ratings for m users (aka customers) and n items (aka products). We reserve special indexing letters to distinguish users from items: for users u; v, and for items i; j; l. A rating rui indicates the preference by user u of item i, where high values mean stronger preference. For example, values can be integers ranging from 1 (star) indicating no interest to 5 (stars) indicating a strong interest. We distinguish predicted ratings from known ones, by using the notation rOui for the predicted value of rui.
-
-The scalar tui denotes the time of rating rui. One can use different time units, based on what is appropriate for the application at hand. For example, when time is measured in days, then tui counts the number of days elapsed since some early time point. Usually the vast majority of ratings are unknown. For example, in the Netflix data 99\% of the possible ratings are missing because a user typically rates only a small portion of the movies. The (u,i) pairs for which rui is known are stored in the set $ \mathcal { K } = \{ ( u , i ) | r _ { u i } is known \} $ is knowng. Each user u is associated with a set of items denoted by R.u/, which contains all the items for which ratings by u are available. Likewise, R.i/ denotes the set of users who rated item i. Sometimes, we also use a set denoted by $\lambda$, which contains all items for which u provided an implicit preference (items that he rented/purchased/watched, etc.).
-
-\subsubsection{Baseline Predictors}
-
-CF models try to capture the interactions between users and items that produce the different rating values. However, much of the observed rating values are due to effects associated with either users or items, independently of their interaction. A principal example is that typical CF data exhibit large user and item biases—i.e., systematic tendencies for some users to give higher ratings than others, and for some items to receive higher ratings than others.
-We will encapsulate those effects, which do not involve user-item interaction, within the baseline predictors (also known as biases). Because these predictors tend to capture much of the observed signal, it is vital to model them accurately. Such modeling enables isolating the part of the signal that truly represents user-item interaction, and subjecting it to more appropriate user preference models.
-Denote by $\mu$ the overall average rating. A baseline prediction for an unknown rating rui is denoted by bui and accounts for the user and item effects:
-$$
-b _ { u i } = \mu + b _ { u } + b _ { i }
-$$
-
-The parameters bu and bi indicate the observed deviations of user u and item i, respectively, from the average. For example, suppose that we want a baseline predictor for the rating of the movie Titanic by user Joe. Now, say that the average rating over all movies, $\mu$ , is 3.7 stars. Furthermore, Titanic is better than an average movie, so it tends to be rated 0.5 stars above the average. On the other hand, Joe is a critical user, who tends to rate 0.3 stars lower than the average. Thus, the baseline predictor for Titanic’s rating by Joe would be 3.9 stars by calculating 3.7 - 0.3 + 0.5. In order to estimate bu and bi one can solve the least squares problem
-
-$$
-\min _ { b _ { * } } \sum _ { ( u , i ) \in \mathcal { K } } \left( r _ { u i } - \mu - b _ { u } - b _ { i } \right) ^ { 2 } + \lambda _ { 1 } \left( \sum _ { u } b _ { u } ^ { 2 } + \sum _ { i } b _ { i } ^ { 2 } \right)
-$$
-
-Here, the first term $\sum _ { ( u , i ) \in \mathcal { X } } \left( r _ { u i } - \mu + b _ { u } + b _ { i } \right) ^ { 2 }$ 
-the given ratings. The regularizing term $\lambda _ { 1 } \left( \sum _ { u } b _ { u } ^ { 2 } + \sum _ { i } b _ { i } ^ { 2 } \right)$ avoids overfitting by penalizing the magnitudes of the parameters. This least square problem can be solved fairly efficiently by the method of stochastic gradient descent.
-
-For the Netflix data the mean rating $\mu$ is 3.6. As for the learned user biases (bu), their average is 0.044 with standard deviation of 0.41. The average of their absolute values (|bu|) is: 0.32. The learned item biases (bi) average to -0.26 with a standard deviation of 0.48. The average of their absolute values (|bi|) is 0.43.
-
-An easier, yet somewhat less accurate way to estimate the parameters is by decoupling the calculation of the bi’s from the calculation of the bu’s. First, for each item i we set
-
-$$
-b _ { i } = \frac { \sum _ { u \in \mathbb { R } ( i ) } \left( r _ { u i } - \mu \right) } { \lambda _ { 2 } + | \mathrm { R } ( i ) | }
-$$
-
-Then, for each user u we set:
-
-$$b _ { u } = \frac { \sum _ { i \in \mathrm { R } ( u ) } \left( r _ { u i } - \mu - b _ { i } \right) } { \lambda _ { 3 } + | \mathrm { R } ( u ) | }$$
-
-For Netflix data, the accuracy can be easily evaluated using RMSE:
-
-$$
-\sqrt { \sum _ { ( u , i ) \in T e s t s e t } \left( r _ { u i } - \hat { r } _ { u i } \right) ^ { 2 } / | T e s t S e t | }
-$$
-
-\subsubsection{Matrix Factorization}
-
-Latent factor models approach collaborative filtering with the holistic goal to uncover latent features that explain observed ratings; examples include pLSA [14], neural networks [22], Latent Dirichlet Allocation [7], and models that are induced by factorization of the user-item ratings matrix (also known as SVD-based models). Recently, matrix factorization models have gained popularity, thanks to their attractive accuracy and scalability.
-
-In information retrieval, SVD is well established for identifying latent semantic factors [9]. However, applying SVD to explicit ratings in the CF domain raises dif- ficulties due to the high portion of missing values. Conventional SVD is undefined when knowledge about the matrix is incomplete. Moreover, carelessly addressing only the relatively few known entries is highly prone to overfitting. Earlier works relied on imputation [15, 24], which fills in missing ratings and makes the rating matrix dense. However, imputation can be very expensive as it significantly increases the amount of data. In addition, the data may be considerably distorted due to inaccurate imputation. Hence, more recent works [4, 6, 10, 16, 21, 22, 26] suggested modeling directly only the observed ratings, while avoiding overfitting through an adequate regularized model.
-
-In this section we describe several matrix factorization techniques, with increas- ing complexity and accuracy. We start with the basic model—“SVD”. Then, we show how to integrate other sources of user feedback in order to increase prediction accuracy, through the “SVD++ model”. Finally we deal with the fact that customer preferences for products may drift over time. Product perception and popularity are constantly changing as new selection emerges. Similarly, customer inclinations are evolving, leading them to ever redefine their taste. This leads to a factor model that addresses temporal dynamics for better tracking user behavior.
-
-\paragraph{SVD}
-[kitapta 3.3.1, 1.5 sayfa ve gerekirse SVD++(with implicit feedback)]
-
-\paragraph{Summary}
-
-In its basic form, matrix factorization characterizes both items and users by vectors of factors inferred from patterns of item ratings. High correspondence between item and user factors leads to recommendation of an item to a user. These methods deliver prediction accuracy superior to other published collaborative filtering techniques. At the same time, they offer a memory efficient compact model, which can be trained relatively easy. Those advantages, together with the implementation ease of gradient based matrix factorization model (SVD), made this the method of choice within the Netflix Prize competition.
-
-What makes these techniques even more convenient is their ability to address several crucial aspects of the data. First, is the ability to integrate multiple forms of user feedback. One can better predict user ratings by also observing other related actions by the same user, such as purchase and browsing history. The proposed SVD++ model leverages multiple sorts of user feedback for improving user profiling.
-
-Another important aspect is the temporal dynamics that make users’ tastes evolve over time. Each user and product potentially goes through a distinct series of changes in their characteristics. A mere decay of older instances cannot adequately identify communal patterns of behavior in time changing data. The solution we adopted is to model the temporal dynamics along the whole time period, allowing us to intelligently separate transient factors from lasting ones. The inclusion of temporal dynamics proved very useful in improving quality of predictions, more than various algorithmic enhancements.
-
-\subsubsection{Neighborhood Models}
-
-The most common approach to CF is based on neighborhood models. Chapter 2 provides an extensive survey on this approach. Its original form, which was shared by virtually all earlier CF systems, is user-user based; see [13] for a good analysis. User-user methods estimate unknown ratings based on recorded ratings of like- minded users.
-
-Later, an analogous item-item approach [18, 25] became popular. In those methods, a rating is estimated using known ratings made by the same user on similar items. Better scalability and improved accuracy make the item-item approach more favorable in many cases [2, 25, 26]. In addition, item-item methods are more amenable to explaining the reasoning behind predictions. This is because users are familiar with items previously preferred by them, but do not know those allegedly like-minded users. We focus mostly on item-item approaches, but the same techniques can be directly applied within a user-user approach; see also Sect. 3.5.2.2.
-
-In general, latent factor models offer high expressive ability to describe various aspects of the data. Thus, they tend to provide more accurate results than neigh- borhood models. However, most literature and commercial systems (e.g., those of Amazon [18] and TiVo [1]) are based on the neighborhood models. The prevalence of neighborhood models is partly due to their relative simplicity. However, there are more important reasons for real life systems to stick with those models. First, they naturally provide intuitive explanations of the reasoning behind recommendations, which often enhance user experience beyond what improved accuracy may achieve. Second, they can provide immediate recommendations based on newly entered user feedback.
-
-The structure of this section is as follows. First, we describe how to estimate the similarity between two items, which is a basic building block of most neighborhood techniques. Then, we move on to the widely used similarity-based neighborhood method, which constitutes a straightforward application of the similarity weights. We identify certain limitations of this similarity based approach. As a consequence, in Sect. 3.4.3 we suggest a way to solve these issues, thereby improving prediction accuracy at the cost of a slight increase in computation time.
-
-[3.4.1 ve 3.4.2 banko]
-[3.4.3'te yeni bir neighborhood modeli anlatiyor, belki o eger kullanilirsa]
-
-\paragraph{Summary}
-
-
-Collaborative filtering through neighborhood-based interpolation is probably the most popular way to create a recommender system. Three major components characterize the neighborhood approach: (1) data normalization, (2) neighbor selection, and (3) determination of interpolation weights.
-
-Normalization is essential to collaborative filtering in general, and in particular to the more local neighborhood methods. Otherwise, even more sophisticated methods are bound to fail, as they mix incompatible ratings pertaining to different unnormal- ized users or items. We described a suitable approach to data normalization, based around baseline predictors.
-
-Neighborhood selection is another important component. It is directly related to the employed similarity measure. Here, we emphasized the importance of shrinking unreliable similarities, in order to avoid detection of neighbors with a low rating support.
-
-Finally, the success of neighborhood methods depends on the choice of the interpolation weights, which are used to estimate unknown ratings from neighboring known ones. Nevertheless, most known methods lack a rigorous way to derive these weights. We showed how the interpolation weights can be computed as a global solution to an optimization problem that precisely reflects their role.
-
-[kullanirsan ve yer kalirsa 3.5]
-
-[yer kalirsa ve matrix factorization kullanirsan 3.6]
-
-[taxonomy vs olayina girersen 4]
+Since we haven't used collaborative filtering in the implementation part of this thesis, we keep this section short. Readers who are interested in this topic are advised to check the resources \cite{koren2015advances} and \cite{wang2015collaborative}.

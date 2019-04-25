@@ -7,80 +7,82 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces 2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite {lee2007nonlinear}.\relax }}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces High level architecture of a content based recommender ~\parencite {de2015semantics}.\relax }}{9}{figure.caption.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces 2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite {lee2007nonlinear}.\relax }}{13}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer Website\relax }}{58}{figure.caption.56}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer Website\relax }}{44}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{59}{figure.caption.57}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{45}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The list of tops skills by a talent on Freelancer web page\relax }}{60}{figure.caption.58}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The list of tops skills by a talent on Freelancer web page\relax }}{46}{figure.caption.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The talent skill matrix from freelancer.com\relax }}{62}{figure.caption.59}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The talent skill matrix from freelancer.com\relax }}{48}{figure.caption.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The talent extra information matrix from freelancer.com\relax }}{63}{figure.caption.60}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The talent extra information matrix from freelancer.com\relax }}{49}{figure.caption.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The graph that explains the sparse input model\relax }}{65}{figure.caption.61}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The graph that explains the sparse input model\relax }}{51}{figure.caption.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces 3D version of the embedding space that is created for projects of this thesis\relax }}{67}{figure.caption.62}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces 3D version of the embedding space that is created for projects of this thesis\relax }}{53}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{68}{figure.caption.64}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{54}{figure.caption.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{68}{figure.caption.65}
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{54}{figure.caption.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{72}{figure.caption.67}
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{58}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{73}{figure.caption.68}
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{59}{figure.caption.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{74}{figure.caption.69}
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{60}{figure.caption.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{74}{figure.caption.70}
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{60}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Main screen of the dashboard\relax }}{75}{figure.caption.71}
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Main screen of the dashboard\relax }}{61}{figure.caption.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces A snippet from the list of all projects that start with the letter \textit {a}\relax }}{76}{figure.caption.72}
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces A snippet from the list of all projects that start with the letter \textit {a}\relax }}{62}{figure.caption.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{77}{figure.caption.73}
+\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{63}{figure.caption.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{78}{figure.caption.74}
+\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{64}{figure.caption.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces A screenshot from the list of all recommendations from diverse cosine similarity for the group 9\relax }}{79}{figure.caption.75}
+\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces A screenshot from the list of all recommendations from diverse cosine similarity for the group 9\relax }}{65}{figure.caption.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces Neural networks model with the addition of feedback loop bias\relax }}{81}{figure.caption.76}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Weight figure}}{88}{figure.caption.89}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Coverage figure}}{89}{figure.caption.90}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Unsupervised-diversity-accuracy Figure}}{92}{figure.caption.101}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Unsupervised-diversity-diversity Figure}}{93}{figure.caption.103}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Unsupervised Diverse Group Unexpectedness Figure}}{93}{figure.caption.105}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Accuracy in Diverse Supervised Group Recommender}}{95}{figure.caption.114}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Diversity in Diverse Supervised Group Recommender}}{96}{figure.caption.116}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Supervised Diverse Group Unexpectedness Figure}}{96}{figure.caption.118}
+\contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces Neural networks model with the addition of feedback loop bias\relax }}{67}{figure.caption.66}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Weight figure}}{74}{figure.caption.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Coverage figure}}{75}{figure.caption.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Unsupervised-diversity-accuracy Figure}}{78}{figure.caption.91}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Unsupervised-diversity-diversity Figure}}{79}{figure.caption.93}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Unsupervised Diverse Group Unexpectedness Figure}}{79}{figure.caption.95}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Accuracy in Diverse Supervised Group Recommender}}{81}{figure.caption.104}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Diversity in Diverse Supervised Group Recommender}}{82}{figure.caption.106}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Supervised Diverse Group Unexpectedness Figure}}{82}{figure.caption.108}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{99}{figure.caption.121}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{100}{figure.caption.122}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{86}{figure.caption.111}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{100}{figure.caption.123}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{87}{figure.caption.112}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{87}{figure.caption.113}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Model Code}}{101}{figure.caption.124}
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Model Code}}{88}{figure.caption.114}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Model Bias Code}}{102}{figure.caption.125}
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Model Bias Code}}{89}{figure.caption.115}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
