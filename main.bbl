@@ -389,6 +389,34 @@
       \field{pages}{961\bibrangedash 995}
       \range{pages}{35}
     \endentry
+    \entry{burke2000knowledge}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=927ab4206ced595b50d2ac5fb4535b88}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{fullhash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{bibnamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorbibnamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authornamehash}{927ab4206ced595b50d2ac5fb4535b88}
+      \strng{authorfullhash}{927ab4206ced595b50d2ac5fb4535b88}
+      \field{labelalpha}{Bur00}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Encyclopedia of library and information systems}
+      \field{number}{Supplement 32}
+      \field{title}{Knowledge-based recommender systems}
+      \field{volume}{69}
+      \field{year}{2000}
+      \field{pages}{175\bibrangedash 186}
+      \range{pages}{12}
+    \endentry
     \entry{burke2002hybrid}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=927ab4206ced595b50d2ac5fb4535b88}{%
@@ -609,6 +637,53 @@
       \field{year}{2011}
       \field{pages}{107\bibrangedash 144}
       \range{pages}{38}
+    \endentry
+    \entry{felfernig2015constraint}{incollection}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=81655836ef41c3264e367ccbbd394701}{%
+           family={Felfernig},
+           familyi={F\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8c14fa59a9c511fd1b3a0c36b8d30d17}{%
+           family={Friedrich},
+           familyi={F\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8044b9528a8ea937291cf64035350877}{%
+           family={Jannach},
+           familyi={J\bibinitperiod},
+           given={Dietmar},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cb922243615d2e342d795021fe955909}{%
+           family={Zanker},
+           familyi={Z\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a4a54d50073d5c885fa98037c6df8077}
+      \strng{fullhash}{a4a54d50073d5c885fa98037c6df8077}
+      \strng{bibnamehash}{a4a54d50073d5c885fa98037c6df8077}
+      \strng{authorbibnamehash}{a4a54d50073d5c885fa98037c6df8077}
+      \strng{authornamehash}{a4a54d50073d5c885fa98037c6df8077}
+      \strng{authorfullhash}{a4a54d50073d5c885fa98037c6df8077}
+      \field{labelalpha}{Fel+15}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Recommender systems handbook}
+      \field{title}{Constraint-based recommender systems}
+      \field{year}{2015}
+      \field{pages}{161\bibrangedash 190}
+      \range{pages}{30}
     \endentry
     \entry{Goodfellow-et-al-2016}{book}{}
       \name{author}{3}{}{%
