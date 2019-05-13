@@ -750,6 +750,47 @@
       \field{title}{Flask web development: developing web applications with python}
       \field{year}{2018}
     \endentry
+    \entry{herlocker2000explaining}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=ed3578253984eccd32a99381d2a9ae23}{%
+           family={Herlocker},
+           familyi={H\bibinitperiod},
+           given={Jonathan\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=56166c8860311f4f36d850565432affe}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=05e2f63cd94159cec34470131ca35297}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{7fadc014da94c6a66db21ec74319adc4}
+      \strng{fullhash}{7fadc014da94c6a66db21ec74319adc4}
+      \strng{bibnamehash}{7fadc014da94c6a66db21ec74319adc4}
+      \strng{authorbibnamehash}{7fadc014da94c6a66db21ec74319adc4}
+      \strng{authornamehash}{7fadc014da94c6a66db21ec74319adc4}
+      \strng{authorfullhash}{7fadc014da94c6a66db21ec74319adc4}
+      \field{labelalpha}{HKR00}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2000 ACM conference on Computer supported cooperative work}
+      \field{title}{Explaining collaborative filtering recommendations}
+      \field{year}{2000}
+      \field{pages}{241\bibrangedash 250}
+      \range{pages}{10}
+    \endentry
     \entry{jolliffe2011principal}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=af567b67da24eaa33594ca6127e01c40}{%

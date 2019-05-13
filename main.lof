@@ -9,80 +9,78 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces High level architecture of a content based recommender ~\parencite {de2015semantics}.\relax }}{9}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces 2D representation of a 4D cube. The colors indicate the depth in fourth dimension ~\parencite {lee2007nonlinear}.\relax }}{30}{figure.caption.36}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer Website\relax }}{29}{figure.caption.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{30}{figure.caption.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The list of tops skills by a talent on Freelancer web page\relax }}{31}{figure.caption.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The talent skill matrix from freelancer.com\relax }}{33}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The talent extra information matrix from freelancer.com\relax }}{34}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The graph that explains the sparse input model\relax }}{36}{figure.caption.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces 3D version of the embedding space that is created for projects of this thesis\relax }}{38}{figure.caption.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{39}{figure.caption.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{39}{figure.caption.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{43}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{44}{figure.caption.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{45}{figure.caption.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{45}{figure.caption.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Main screen of the dashboard\relax }}{46}{figure.caption.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces A snippet from the list of all projects that start with the letter \textit {a}\relax }}{47}{figure.caption.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{48}{figure.caption.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{49}{figure.caption.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces A screenshot from the list of all recommendations from diverse cosine similarity for the group 9\relax }}{50}{figure.caption.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces Neural networks model with the addition of feedback loop bias\relax }}{52}{figure.caption.44}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer Website\relax }}{32}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Weight figure}}{59}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{33}{figure.caption.38}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Coverage figure}}{60}{figure.caption.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The list of tops skills by a talent on Freelancer web page\relax }}{34}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Unsupervised-diversity-accuracy Figure}}{63}{figure.caption.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The talent skill matrix from freelancer.com\relax }}{36}{figure.caption.40}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Unsupervised-diversity-diversity Figure}}{64}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The talent extra information matrix from freelancer.com\relax }}{37}{figure.caption.41}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Unsupervised Diverse Group Unexpectedness Figure}}{64}{figure.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The graph that explains the sparse input model\relax }}{39}{figure.caption.42}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Accuracy in Diverse Supervised Group Recommender}}{66}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces 3D version of the embedding space that is created for projects of this thesis\relax }}{41}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Diversity in Diverse Supervised Group Recommender}}{67}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Threshold figure}}{42}{figure.caption.45}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Training data that contains padded embedding skill vectors\relax }}{42}{figure.caption.46}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Explained variance ratio for difference number of PCs is shown.\relax }}{46}{figure.caption.48}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Silhouette scores of many different \textit {k} values of k-means\relax }}{47}{figure.caption.49}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Centers of clusters that are projected on a 2D space\relax }}{48}{figure.caption.50}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Examples of some centers of clusters that are projected on a 2D space\relax }}{48}{figure.caption.51}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Main screen of the dashboard\relax }}{49}{figure.caption.52}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces A snippet from the list of all projects that start with the letter \textit {a}\relax }}{50}{figure.caption.53}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{51}{figure.caption.54}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces A screenshot from the list of all recommendations from neural networks for the project \textit {a.i. \& software engineer}\relax }}{52}{figure.caption.55}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces A screenshot from the list of all recommendations from diverse cosine similarity for the group 9\relax }}{53}{figure.caption.56}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces Neural networks model with the addition of feedback loop bias\relax }}{55}{figure.caption.57}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Weight figure}}{62}{figure.caption.70}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Coverage figure}}{63}{figure.caption.71}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Unsupervised-diversity-accuracy Figure}}{66}{figure.caption.82}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Unsupervised-diversity-diversity Figure}}{67}{figure.caption.84}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Unsupervised Diverse Group Unexpectedness Figure}}{67}{figure.caption.86}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Accuracy in Diverse Supervised Group Recommender}}{69}{figure.caption.95}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Diversity in Diverse Supervised Group Recommender}}{70}{figure.caption.97}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Supervised Diverse Group Unexpectedness Figure}}{70}{figure.caption.99}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Supervised Diverse Group Unexpectedness Figure}}{67}{figure.caption.86}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{74}{figure.caption.102}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Example drawing}}{71}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{75}{figure.caption.103}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Example plot}}{72}{figure.caption.90}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{75}{figure.caption.104}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Example listing}}{72}{figure.caption.91}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Model Code}}{76}{figure.caption.105}
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Model Code}}{73}{figure.caption.92}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Model Bias Code}}{77}{figure.caption.106}
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Model Bias Code}}{74}{figure.caption.93}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

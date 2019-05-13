@@ -51,195 +51,219 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.6}Recommender System Evaluation Properties}{12}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Notation}{12}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}Accuracy}{12}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Coverage}{14}{section*.7}
+\contentsline {subsection}{\numberline {2.6.2}Coverage}{13}{subsection.2.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Confidence}{14}{section*.8}
+\contentsline {subsection}{\numberline {2.6.3}Confidence}{14}{subsection.2.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Trust}{14}{section*.9}
+\contentsline {subsection}{\numberline {2.6.4}Trust}{14}{subsection.2.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Novelty}{15}{section*.10}
+\contentsline {subsection}{\numberline {2.6.5}Novelty}{14}{subsection.2.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Serendipity}{15}{section*.11}
+\contentsline {subsection}{\numberline {2.6.6}Serendipity}{14}{subsection.2.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Diversity}{15}{section*.12}
+\contentsline {subsection}{\numberline {2.6.7}Diversity}{14}{subsection.2.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Utility}{16}{section*.13}
+\contentsline {subsection}{\numberline {2.6.8}Utility}{14}{subsection.2.6.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Risk}{17}{section*.14}
+\contentsline {subsection}{\numberline {2.6.9}Risk}{15}{subsection.2.6.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Robustness}{17}{section*.15}
+\contentsline {subsection}{\numberline {2.6.10}Robustness}{15}{subsection.2.6.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Privacy}{17}{section*.16}
+\contentsline {subsection}{\numberline {2.6.11}Privacy}{15}{subsection.2.6.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Adaptivity}{17}{section*.17}
+\contentsline {subsection}{\numberline {2.6.12}Adaptivity}{15}{subsection.2.6.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Scalability}{18}{section*.18}
+\contentsline {subsection}{\numberline {2.6.13}Scalability}{15}{subsection.2.6.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.2}Summary}{18}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.14}Summary}{15}{subsection.2.6.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Novelty and Diversity}{18}{section.2.7}
+\contentsline {section}{\numberline {2.7}Novelty and Diversity}{16}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.1}Introduction}{18}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.1}Novelty and Diversity in Recommender Systems}{16}{subsection.2.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.2}Novelty and Diversity in Recommender Systems}{19}{subsection.2.7.2}
+\contentsline {subsubsection}{\nonumberline Why Novelty and Diversity in Recommendation}{17}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Why Novelty and Diversity in Recommendation}{20}{section*.19}
+\contentsline {subsubsection}{\nonumberline Defining Novelty and Diversity}{19}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Defining Novelty and Diversity}{22}{section*.20}
+\contentsline {subsubsection}{\nonumberline Diversity in Other Fields}{20}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Diversity in Other Fields}{23}{section*.21}
+\contentsline {subsection}{\numberline {2.7.2}Novelty and Diversity Evaluation}{21}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.3}Novelty and Diversity Evaluation}{24}{subsection.2.7.3}
+\contentsline {subsubsection}{\nonumberline Notation}{21}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Notation}{24}{section*.22}
+\contentsline {subsubsection}{\nonumberline Average Intra-List Distance}{22}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Average Intra-List Distance}{25}{section*.23}
+\contentsline {subsubsection}{\nonumberline Global Long-Tail Novelty}{22}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Global Long-Tail Novelty}{25}{section*.24}
+\contentsline {subsubsection}{\nonumberline User-Specific Unexpectedness}{23}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline User-Specific Unexpectedness}{25}{section*.25}
+\contentsline {subsubsection}{\nonumberline Inter-Recommendation Diversity Metrics}{23}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Inter-Recommendation Diversity Metrics}{25}{section*.26}
+\contentsline {subsubsection}{\nonumberline Specific Methodologies}{23}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Specific Methodologies}{25}{section*.27}
+\contentsline {subsubsection}{\nonumberline Diversity vs. Novelty vs. Serendipity}{23}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Diversity vs. Novelty vs. Serendipity}{26}{section*.28}
+\contentsline {subsection}{\numberline {2.7.3}Novelty and Diversity Enhancement Approaches}{23}{subsection.2.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.4}Novelty and Diversity Enhancement Approaches}{26}{subsection.2.7.4}
+\contentsline {subsubsection}{\nonumberline Result Diversification/Re-ranking}{23}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Result Diversification/Re-ranking}{26}{section*.29}
+\contentsline {subsubsection}{\nonumberline Using Clustering for Diversification}{24}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Using Clustering for Diversification}{26}{section*.30}
+\contentsline {subsubsection}{\nonumberline Fusion-Based Methods}{24}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Fusion-Based Methods}{27}{section*.31}
+\contentsline {subsubsection}{\nonumberline Learning to Rank with Diversity}{24}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Learning to Rank with Diversity}{27}{section*.32}
+\contentsline {subsubsection}{\nonumberline Other Approaches}{25}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Other Approaches}{27}{section*.33}
+\contentsline {subsubsection}{\nonumberline User Studies}{25}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline User Studies}{28}{section*.34}
+\contentsline {subsubsection}{\nonumberline Diversification Approaches in Information Retrieval}{26}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Diversification Approaches in Information Retrieval}{29}{section*.35}
+\contentsline {subsection}{\numberline {2.7.4}Unified View}{26}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.5}Unified View}{29}{subsection.2.7.5}
+\contentsline {subsection}{\numberline {2.7.5}Empirical Metric Comparison}{26}{subsection.2.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.6}Empirical Metric Comparison}{29}{subsection.2.7.6}
+\contentsline {subsection}{\numberline {2.7.6}Conclusion}{26}{subsection.2.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.7}Conclusion}{29}{subsection.2.7.7}
+\contentsline {chapter}{\numberline {3}Implementation}{28}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Implementation}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Datasets}{28}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Datasets}{31}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Freelancer Dataset}{29}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Freelancer Dataset}{32}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Company Dataset}{31}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Company Dataset}{34}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Unsupervised Individual Recommender}{32}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Unsupervised Individual Recommender}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Recommendation by Similarity}{32}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Recommendation by Similarity}{35}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Recommendation by Popularity}{32}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Recommendation by Popularity}{35}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Hybrid Recommendation}{33}{subsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Hybrid Recommendation}{36}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Supervised Individual Recommender}{33}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Supervised Individual Recommender}{36}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Using Sparse Input}{33}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Using Sparse Input}{36}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Using Embeddings}{37}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Using Embeddings}{40}{subsection.3.3.2}
+\contentsline {subsubsection}{\nonumberline Preprocessing}{37}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Preprocessing}{40}{section*.44}
+\contentsline {subsubsection}{\nonumberline Simpler Architecture for Company Dataset}{39}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Simpler Architecture for Company Dataset}{42}{section*.47}
+\contentsline {section}{\numberline {3.4}Unsupervised Group Recommender}{40}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Unsupervised Group Recommender}{43}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Baseline}{40}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Baseline}{43}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Diverse}{41}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Diverse}{44}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Supervised Group Recommender}{41}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Supervised Group Recommender}{44}{section.3.5}
+\contentsline {section}{\numberline {3.6}Group Recommendation using clustering}{42}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Group Recommendation using clustering}{45}{section.3.6}
+\contentsline {section}{\numberline {3.7}Dashboard to show data and enter Feedback}{46}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Dashboard to show data and enter Feedback}{49}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}General Dashboard}{46}{subsection.3.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.1}General Dashboard}{49}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Individual Recommendations}{47}{subsection.3.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.2}Individual Recommendations}{50}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Group Recommendations}{48}{subsection.3.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.3}Group Recommendations}{51}{subsection.3.7.3}
+\contentsline {section}{\numberline {3.8}Improvement of Recommendations via Feedback Learning}{50}{section.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Improvement of Recommendations via Feedback Learning}{53}{section.3.8}
+\contentsline {section}{\numberline {3.9}Summary}{51}{section.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.9}Summary}{54}{section.3.9}
+\contentsline {chapter}{\numberline {4}Evaluation}{53}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Evaluation}{56}{chapter.4}
+\contentsline {section}{\numberline {4.1}Unsupervised Individual Recommendation}{54}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Unsupervised Individual Recommendation}{57}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Existing Company Recommender}{55}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Existing Company Recommender}{58}{subsection.4.1.1}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{55}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{58}{section*.58}
+\contentsline {subsection}{\numberline {4.1.2}Recommendation by Similarity}{55}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Recommendation by Similarity}{58}{subsection.4.1.2}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{55}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{58}{section*.59}
+\contentsline {paragraph}{\nonumberline A}{56}{section*.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline A}{59}{section*.61}
+\contentsline {paragraph}{\nonumberline B}{56}{section*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline B}{59}{section*.62}
+\contentsline {paragraph}{\nonumberline C}{56}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline C}{59}{section*.63}
+\contentsline {paragraph}{\nonumberline D}{57}{section*.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline D}{60}{section*.64}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{57}{section*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{60}{section*.65}
+\contentsline {subsection}{\numberline {4.1.3}Recommendation by Popularity}{57}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Recommendation by Popularity}{60}{subsection.4.1.3}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{57}{section*.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{60}{section*.66}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{58}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{61}{section*.67}
+\contentsline {subsection}{\numberline {4.1.4}Hybrid Recommendation}{58}{subsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Hybrid Recommendation}{61}{subsection.4.1.4}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{58}{section*.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{61}{section*.69}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{59}{section*.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.72}
+\contentsline {section}{\numberline {4.2}Supervised Individual Recommender}{59}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Supervised Individual Recommender}{62}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Using Sparse Input}{59}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Using Sparse Input}{62}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Using Embeddings}{60}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Using Embeddings}{63}{subsection.4.2.2}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{61}{section*.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{64}{section*.73}
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{61}{section*.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{64}{section*.74}
+\contentsline {section}{\numberline {4.3}Unsupervised Group Recommender}{61}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Unsupervised Group Recommender}{64}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Baseline Recommender}{61}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Baseline Recommender}{64}{subsection.4.3.1}
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{61}{section*.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{64}{section*.75}
+\contentsline {paragraph}{\nonumberline Accuracy}{61}{section*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Accuracy}{64}{section*.76}
+\contentsline {paragraph}{\nonumberline Diversity}{61}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Diversity}{64}{section*.77}
+\contentsline {paragraph}{\nonumberline Unexpedtedness}{62}{section*.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{62}{section*.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Diverse Recommender}{62}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{62}{section*.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Accuracy}{63}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Diversity}{63}{section*.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Unexpectedness}{63}{figure.caption.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Online Evaluation}{63}{section*.74}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Supervised Group Recommender}{63}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Baseline Recommender}{65}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Offline Evaluation}{65}{section*.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Accuracy}{65}{section*.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Diversity}{65}{section*.77}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Unexpedtedness}{65}{section*.78}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Online Evaluation}{65}{section*.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Diverse Recommender}{65}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4.2}Diverse Recommender}{65}{subsection.4.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Offline Evaluation}{65}{section*.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Accuracy}{66}{figure.caption.82}
+\contentsline {paragraph}{\nonumberline Accuracy}{65}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Diversity}{66}{section*.83}
 \defcounter {refsection}{0}\relax 
@@ -247,66 +271,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Online Evaluation}{66}{section*.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Supervised Group Recommender}{66}{section.4.4}
+\contentsline {section}{\numberline {4.5}Feedback Loop}{66}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Baseline Recommender}{68}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.5.1}Online Evaluation and User Study}{68}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{68}{section*.88}
+\contentsline {section}{\numberline {4.6}Summary}{68}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Accuracy}{68}{section*.89}
+\contentsline {chapter}{\numberline {5}Discussion}{69}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Diversity}{68}{section*.90}
+\contentsline {section}{\numberline {5.1}Problems about datasets}{69}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Unexpedtedness}{68}{section*.91}
+\contentsline {subsection}{\numberline {5.1.1}Problems about Motius dataset}{69}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{68}{section*.92}
+\contentsline {subsection}{\numberline {5.1.2}Problems about Freelancer dataset}{69}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Diverse Recommender}{68}{subsection.4.4.2}
+\contentsline {section}{\numberline {5.2}Problems about recommender type}{69}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Offline Evaluation}{68}{section*.93}
+\contentsline {section}{\numberline {5.3}Reasons to use hybrid recommender}{69}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Accuracy}{68}{figure.caption.95}
+\contentsline {section}{\numberline {5.4}Comparison of Individual Recommenders}{70}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Diversity}{69}{section*.96}
+\contentsline {section}{\numberline {5.5}Comparison of Group Recommenders}{70}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Unexpectedness}{69}{figure.caption.99}
+\contentsline {section}{\numberline {5.6}Conclusion}{70}{section.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Online Evaluation}{69}{section*.100}
+\contentsline {chapter}{\numberline {6}Conclusion}{71}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Feedback Loop}{69}{section.4.5}
+\contentsline {section}{\numberline {6.1}Introduction}{71}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Online Evaluation and User Study}{71}{subsection.4.5.1}
+\contentsline {section}{\numberline {6.2}Conclusion}{71}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Summary}{71}{section.4.6}
+\contentsline {chapter}{\numberline {7}Appendix}{73}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{72}{chapter.5}
+\contentsline {chapter}{\nonumberline List of Figures}{75}{chapter*.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Problems about datasets}{72}{section.5.1}
+\contentsline {chapter}{\nonumberline List of Tables}{77}{chapter*.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Problems about Motius dataset}{72}{subsection.5.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Problems about Freelancer dataset}{72}{subsection.5.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Problems about recommender type}{72}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Reasons to use hybrid recommender}{72}{section.5.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Comparison of Individual Recommenders}{73}{section.5.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Comparison of Group Recommenders}{73}{section.5.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Conclusion}{73}{section.5.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{74}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Introduction}{74}{section.6.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Conclusion}{74}{section.6.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Appendix}{76}{chapter.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{78}{chapter*.107}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{80}{chapter*.108}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{81}{chapter*.109}
+\contentsline {chapter}{\nonumberline Bibliography}{78}{chapter*.96}

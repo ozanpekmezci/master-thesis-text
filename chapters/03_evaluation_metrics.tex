@@ -9,27 +9,24 @@ Although offline evaluation may be enough for properties like accuracy, user stu
 
 When the developers conduct experiments to select the relevant properties and evaluate their performance, the most suitable recommenders can be selected.
 
-\subsection{Notation}
-[kopi peyst kitap first chapters]
-[8.3.2 de daha detayli anlatiyor prediction accuracy konusunu sayfalarca, bunu onlarla birlestir ya da bunu sal belki de]
+\subsection{Accuracy}
 
-In this section some equations are presented. To understand them better, the notation used is also explained briefly. 
+In this section some equations to calculate the are presented. To understand them better, the notation used is also explained briefly. 
 
-In order to give a formal definition of the item recommendation task, we introduce the following notation. The set of users in the recommender system will be denoted by U, and the set of items by I. Moreover, we denote by R the set of ratings recorded in the system, and write S the set of possible values for a rating (e.g., S = [1..5] or S = {like; dislike}). Also, we suppose that no more than one rating can be made by any user u $\in$  U for a particular item i $\in$ I and write $r_ui$ this rating. To identify the subset of users that have rated an item i, we use the notation $U_ii$. Likewise, $I_u$ represents the subset of items that have been rated by a user u. Finally, the items that have been rated by two users u and v, i.e. $I_u$ $\cap$ $I_v$, is an important concept in our presentation, and we use Iuv to denote this concept. In a similar fashion, $U_ij$ is used to denote the set of users that have rated both items i and j.
+To understand the equations, we define some notations; the set of users in the recommender system will be denoted by \textit{U}, and the set of items by \textit{I}. Additionally, \textit{R} depicsts the set of ratings recorded in the system, and the letter \textit{S} is for the set of possible values for a rating. \textit{S} can be a discrete number from 1 to 5 or a element of the set {like, dislike} or other values depend on the implementation. Also, we suppose that no more than one rating can be made by any user u $\in$  U for a particular item i $\in$ I and set $r_ui$ this rating. To identify the subset of users that have rated an item i, we use the notation $U_i$. Similar to that, $I_u$ represents the subset of items that have been rated by a user u \cite{shani2011evaluating}.
 
-Two of the most important problems associated with recommender systems are the rating prediction and top-N recommendation problems. The first problem is to predict the rating that a user u will give his or her unrated item i. When ratings are available, this task is most often defined as a regression or (multi-class) classification problem where the goal is to learn a function f $\colon$ U $\times$ I $\rightarrow$ S that predicts the rating f(u, i) of a user u for a new item i. Accuracy is commonly used to evaluate the performance of the recommendation method. Typically, the ratings R are divided into a training set $R_train$ used to learn f , and a test set Rtest used to evaluate the prediction accuracy. Two popular measures of accuracy are the Mean Absolute Error (MAE):
+Recommender systems have two main tasks, which are predicting the ratings and recommending a list to the users. Prediction of ratings is self-explanatory and the aim is predicting the ratings of an unrated item \textit{i} from the user \textit{u}. This task is defined as a regression or a classification problem with the goal of learning the function f $\colon$ U $\times$ I $\rightarrow$ S. There are two popular measures of accuracy to for this task: Mean Absolute Error (MAE) and the Root Mean Squared Error (RMSE). These are presented below and the author of this thesis used them as the cost function of the neural networks[TODO imp supervised] \cite{shani2011evaluating}.
 
 $$
 \mathrm { MAE } ( f ) = \frac { 1 } { \left| \mathcal { R } _ {test} \right| } \sum _ { r _ { u i } \in \mathcal { R } _ {test} } \left| f ( u , i ) - r _ { u i } \right|
 $$
 
-and the Root Mean Squared Error (RMSE):
 
 $$
 \mathrm { RMSE } ( f ) = \sqrt { \frac { 1 } { \left| \mathcal { R } _ { test} \right| } \sum _ { r _ { i u } } \left( f ( u , i ) - r _ { u i } \right) ^ { 2 } }
 $$
 
-When ratings are not available, for instance, if only the list of items purchased by each user is known, measuring the rating prediction accuracy is not possible. In such cases, the problem of finding the best item is usually transformed into the task of recommending to an active user ua a list L($u_a$) containing N items likely to interest him or her [15, 59]. The quality of such method can be evaluated by splitting the items of I into a set Itrain, used to learn L, and a test set Itest. Let  T(u) $\in$ $I_u$ $\cap$ $I_test$ be the subset of test items that a user u found relevant. If the user responses are binary, these can be the items that u has rated positively. Otherwise, if only a list of purchased or accessed items is given for each user u, then these items can be used as T(u). The performance of the method is then computed using the measures of precision and recall:
+The other task that was mentioned  is presenting a top-n recommendation list. This list that is shown to a user is represented with L($u$). We define T($u$) as the subset of test items that the user \textit{u} found relevant. The performance of the method is then calculated using the measures of precision and recall:
 
 $$
 \mathrm { Precision } ( L ) = \frac { 1 } { | u | } \sum _ { u \in \mathcal { U } } | L ( u ) \cap T ( u ) | / | L ( u ) |
@@ -40,84 +37,68 @@ $$
 \mathrm { Recall } ( L ) = \frac { 1 } { | u | } \sum _ { u \in \mathcal { U } } | L ( u ) \cap T ( u ) | / | T ( u ) |
 $$
 
-A drawback of this task is that all items of a recommendation list L.u/ are considered equally interesting to user u. An alternative setting, described in [15], consists in learning a function L that maps each user u to a list L.u/ where items are ordered by their “interestingness” to u. If the test set is built by randomly selecting, for each user u, a single item iu of Iu, the performance of L can be evaluated with the Average Reciprocal Hit-Rank (ARHR):
+A drawback of the previous methods is that all items of a recommendation list L($u$) are considered equally interesting to user \textit{u}. An alternative setting would be calculating the success of average hit ranks with the method Average Reciprocal Hit-Rank (ARHR):
 
 $$
 \mathrm { ARHR } ( L ) = \frac { 1 } { | \mathcal { U } | } \sum _ { u \in \mathcal { U } } \frac { 1 } { \mathrm { rank } \left( i _ { u } , L ( u ) \right) }
 $$
 
-where rank(iu ; L(u)) is the rank of item iu in L(u). A more extensive description of evaluation measures for recommender systems can be found in Chap. 8 of this book.
+, which is used to evaluate the success of the company recommender\cite{shani2011evaluating}.[TODO if necessary add other source + ref to implementation]
 
 
-\subsubsection{Coverage}
+\subsection{Coverage}
 
-As the prediction accuracy of a recommender system, especially in collaborative filtering systems, in many cases grows with the amount of data, some algorithms may provide recommendations with high quality, but only for a small portion of the items where they have huge amounts of data. This is often referred to as the long tail or heavy tail problem, where the vast majority of the items where selected or rated only by a handful of users, yet the total amount of evidence over these unpopular items is much more than the evidence over the few popular items.
-The term coverage can refer to several distinct properties of the system that we discuss below.
+Coverage can also be an important evaluation property for some recommender systems. The aim of maximizing the coverage would be making sure that a big portion of items are recommended by the recommender system. This might be especially important for recommender systems of e-commerce systems, so that different range of products get sold \cite{shani2011evaluating}.
 
-[8.3.3 birkac sayfa var]
 
-\subsubsection{Confidence}
-[8.3.4]
+\subsection{Confidence}\label{research:confidence}
 
-\subsubsection{Trust}
+Confidence in context of recommender systems refers to the system's trust into it's own suggestions. As we don't use this property in the implementation part, we also go into detail \cite{herlocker2000explaining}.
 
-While confidence is the system trust in its ratings (Chap.20), in trust we refer here to the user’s trust in the system recommendation.4 For example, it may be beneficial for the system to recommend a few items that the user already knows and likes. This way, even though the user gains no value from this recommendation, she observes that the system provides reasonable recommendations, which may increase her trust in the system recommendations for unknown items. Another common way of enhancing trust in the system is to explain the recommendations that the system provides (Chap. 10). Trust in the system is also called the credibility of the system. 
+\subsection{Trust}
 
-If we do not restrict ourselves to a single method of gaining trust, such as the one suggested above, the obvious method for evaluating user trust is by asking users whether the system recommendations are reasonable in a user study [5, 14, 26, 57]. In an online test one could associate the number of recommendations that were followed with the trust in the recommender, assuming that higher trust in the recommender would lead to more recommendations being used. Alternatively, we could also assume that trust in the system is correlated with repeated users, as users who trust the system will return to it when performing future tasks. However, such measurements may not separate well other factors of user satisfaction, and may not be accurate. It is unclear how to measure trust in an offline experiment, because trust is built through an interaction between the system and a user.
+Opposite to the confidence that was explained in the subsection \ref{research:confidence}, trust refers to user's trust into the recommender system. More information on this can be found in other sources \cite{shani2011evaluating}.
 
-\subsubsection{Novelty}
-[8.3.6]
+\subsection{Novelty}
 
-\subsubsection{Serendipity}
-[8.3.7]
+Novel recommendations are recommendations for the items that the user didn't know about before \cite{shani2011evaluating}. A simple solution to increase this would be filtering out the items for every user, which they interacted before.
 
-\subsubsection{Diversity}
+\subsection{Serendipity}
 
-Diversity is generally defined as the opposite of similarity (Chap. 26). In some cases suggesting a set of similar items may not be as useful for the user, because it may take longer to explore the range of items. Consider for example a recommendation for a vacation [68], where the system should recommend vacation packages. Presenting a list with five recommendations, all for the same location, varying only on the choice of hotel, or the selection of attraction, may not be as useful as suggesting five different locations. The user can view the various recommended locations and request more details on a subset of the locations that are appropriate to her.
+Serendipity also known as unexpectedness depicts how surprising the recommendation results are. Although serendipty and novelty may sound similar in the beginning, items that are the similar to what the user already saw wouldn't be surprising at all. That's why, filtering out the items that the user already saw woudn't be a solution \cite{shani2011evaluating}.
 
-The most explored method for measuring diversity uses item-item similarity, typically based on item content, as in Sect.8.3.7. Then, we could measure the diversity of a list based on the sum, average, min, or max distance between item pairs, or measure the value of adding each item to the recommendation list as the new item’s diversity from the items already in the list [8, 80]. The item-item similarity measurement used in evaluation can be different from the similarity measurement used by the algorithm that computes the recommendation lists. For example, we can use for evaluation a costly metric that produces more accurate results than fast approximate methods that are more suitable for online computations.
+\subsection{Diversity}
 
-As diversity may come at the expanse of other properties, such as accuracy [78], we can compute curves to evaluate the decrease in accuracy vs. the increase in diversity.
+Diversity is a property that ensures the recommended items are not similar to each other. As this is the main metric that we focus on, there is a special section just for this topic [See section \ref{section:novelty_and_diversity}].
 
-Example 8.4. In a book recommendation application, we are interested in pre- senting the user with a diverse set of recommendations, with minimal impact to accuracy. We use d.b; B/ from Example 8.3 as the distance metric. Given candidate recommenders, each with a tunable parameter that controls the diversity of the recommendations, we train each algorithm over a range of values for the diversity parameters. For each trained model, we now compute a precision score, and a diversity score as follows; we take each recommendation list that an algorithm produces, and compute the distance of each item from the rest of the list, averaging the result to obtain a diversity score. We now plot the precision-diversity curves of the recommenders in a graph, and select the algorithm with the dominating curve.
 
-In recommenders that assist in information search, we can assume that more diverse recommendations will result in shorter search interactions [68]. We could use this in an online experiment measuring interaction sequence length as a proxy for diversification. As is always the case in online testing, shorter sessions may be due to other factors of the system, and to validate this claim it is useful to experiment with different diversity thresholds using the same prediction engine before comparing different recommenders.
+\subsection{Utility}
 
-\subsubsection{Utility}
+Utility as a property hints the optimization of predefined property that brings any advantage to the recommendation system. For example, the utility function of an e-commerce website may be improving their revenue. Generally, the utility touches on any system or user gain with the help of the recommender system \cite{shani2011evaluating}.
 
-Many e-commerce websites employ a recommender system in order to improve their revenue by, e.g., enhancing cross-sell. In such cases the recommendation engine can be judged by the revenue that it generates for the website [66]. In general, we can define various types of utility functions that the recommender tries to optimize. For such recommenders, measuring the utility, or the expected utility of the recommendations may be more significant than measuring the accuracy of recommendations. It is also possible to view many of the other properties, such as diversity or serendipity, as different types of utility functions, over single items or over lists. In this chapter, however, we define utility as the value that either the system or the user gains from a recommendation.
+\subsection{Risk}
 
-Utility can be measured cleanly from the perspective of the recommendation engine or the recommender system owner. Care must be taken, though, when measuring the utility that the user receives from the recommendations. First, user utilities or preferences are difficult to capture and model, and considerable research has focused on this problem [9, 25, 59]. Second, it is unclear how to aggregate user utilities across users for computing a score for a recommender. For example, it is tempting to use money as a utility thus selecting a recommender that minimizes user cost. However, under the diminishing returns assumption [69], the same amount of money does not have the same utility for people with different income levels. Therefore, the average cost per purchase, for example, is not a reasonable aggregation across users.
+Risk is another property that is important for some specific use-cases. For example, for a recommender system that suggests stocks to buy, then the risk would play a big role \cite{shani2011evaluating}.
 
-In an application where users rate items, it is also possible to use the ratings as a utility measurement [10]. For example, in movie ratings, where a five star movie is considered an excellent movie, we can assume that a recommending a five star movie has a higher utility for the user than recommending a movie that the user will rate with four stars. As users may interpret ratings differently, user ratings should be normalized before aggregating across users.
+\subsection{Robustness}
 
-While we typically only assign positive utilities to successful recommendations, we can also assign negative utilities to unsuccessful recommendations. For example, if some recommended item offends the user, then we should punish the system for recommending it by assigning a negative utility. We can also add a cost to each recommendation, perhaps based on the position of the recommended item in the list, and subtract it from the utility of the item.
+Robustness in recommender systems explain how strong the system is to unwanted mofications on the system. For example. if an hotel owner can inject fake positive reviews to the system to make their hotel get recommended, then the system is not robust enough \cite{shani2011evaluating}.
 
-For any utility function, the standard evaluation of the recommender is to com- pute the expected utility of a recommendation. In the case where the recommender is trying to predict only a single item, such as when we evaluate the system on time- based splits and try to predict only the next item in the sequence, the value of a correct recommendation should simply be the utility of the item. In the task where the recommender predicts n items we can use the sum of the utilities of the correct recommendations in the list. When negative utilities for failed recommendations are used, then the sum is over all recommendations, successful or failed. We can also integrate utilities into ranking measurements, as discussed in Sect. 8.3.2.3. Finally, we can normalize the resulting score using the maximal possible utility given the optimal recommendation list.
+\subsection{Privacy}
 
-Evaluating utility in user studies and online is easy in the case of recommender utility. If the utility we optimize for is the revenue of the website, measuring the change in revenue between users of various recommenders is simple. When we try to optimize user utilities the online evaluation becomes harder, because users typically find it challenging to assign utilities to outcomes. In many cases, however, users can say whether they prefer one outcome to another. Therefore, we can try to elicit the user preferences [31] in order to rank the candidate methods.
+For recommender systems that want to keep the preferences of users secret from others, privacy is an important metric, so that they can make sure that everone can interact with the system and get suggestions without worrying about their feedback being public \cite{shani2011evaluating}.
 
-\subsubsection{Risk}
-{8.3.10}
+\subsection{Adaptivity}
 
-\subsubsection{Robustness}
-{8.3.11}
+Adaptivity in recommender systems try to give relevant recommendation even if the the trends change. For example, for a news recommender system, the system should be able to recommend news about earthquake, in case of one happens, even though the user doesn't have previous interest in earthquakes \cite{shani2011evaluating}.
 
-\subsubsection{Privacy}
-{8.3.12}
+\subsection{Scalability}
 
-\subsubsection{Adaptivity}
-{8.3.13}
-
-\subsubsection{Scalability}
-{8.3.14}
+It may also be important for recommender systems to be performant. For production systems with millions of items, the recommender shoud still be able to suggest new items without any latency \cite{shani2011evaluating}.
 
 \subsection{Summary}
 
-In this chapter we discussed how recommendation algorithms could be evaluated in order to select the best algorithm from a set of candidates. This is an important step in the research attempt to find better algorithms, as well as in application design where a designer chooses an existing algorithm for their application. As such, many evaluation metrics have been used for algorithm selection in the past.
+In this section we discussed how recommendation algorithms could be evaluated in order to increase user satisfaction. There are different properties for different needs and the developers should understand what they need.
 
-We describe the concerns that need to be addressed when designing offline and online experiments and user studies. We outline a few important measurements that one must take in addition to the score that the metric provides, as well as other considerations that should be taken into account when designing experiments for recommendation algorithms.
+As this thesis focuses mostly on diversity, the next section gives detailed information about diversity and its evaluation techniques.
 
-We specify a set of properties that are sometimes discussed as important for the recommender system. For each such property we suggest an experiment that can be used to rank recommenders with regards to that property. For less explored properties, we restrict ourselves to generic descriptions that could be applied to various manifestations of that property. Specific procedures that can be practically implemented can then be developed for the specific property manifestation based on our generic guidelines.
-
-[If needed chapters 9 and 10 of handbook]
