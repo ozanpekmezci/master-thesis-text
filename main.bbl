@@ -362,12 +362,12 @@
            given={Michael\bibnamedelima P},
            giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=26c3f4114b262673aa71a726b9de6fa0}{%
+        {{uniquename=1,uniquepart=given,hash=26c3f4114b262673aa71a726b9de6fa0}{%
            family={Hurley},
            familyi={H\bibinitperiod},
            given={Neil\bibnamedelima J},
            giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {Springer}%
@@ -482,12 +482,12 @@
            given={Pablo},
            giveni={P\bibinitperiod},
            givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=26c3f4114b262673aa71a726b9de6fa0}{%
+        {{uniquename=1,uniquepart=given,hash=26c3f4114b262673aa71a726b9de6fa0}{%
            family={Hurley},
            familyi={H\bibinitperiod},
            given={Neil\bibnamedelima J},
            giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{uniquename=0,uniquepart=base,hash=2df7ccf84bc2d6e172802a13357749ba}{%
            family={Vargas},
            familyi={V\bibinitperiod},
@@ -791,6 +791,58 @@
       \field{pages}{241\bibrangedash 250}
       \range{pages}{10}
     \endentry
+    \entry{Hurley:2011:NDT:1944339.1944341}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=1,uniquepart=given,hash=ffe7004cc091f0f5d771b34bfd062787}{%
+           family={Hurley},
+           familyi={H\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=01a32e9e8e0c214c2962c768dcc820dd}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{6c94611823483656dae9cf3b5b6b3682}
+      \strng{fullhash}{6c94611823483656dae9cf3b5b6b3682}
+      \strng{bibnamehash}{6c94611823483656dae9cf3b5b6b3682}
+      \strng{authorbibnamehash}{6c94611823483656dae9cf3b5b6b3682}
+      \strng{authornamehash}{6c94611823483656dae9cf3b5b6b3682}
+      \strng{authorfullhash}{6c94611823483656dae9cf3b5b6b3682}
+      \field{labelalpha}{HZ11}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1533-5399}
+      \field{journaltitle}{ACM Trans. Internet Technol.}
+      \field{month}{3}
+      \field{number}{4}
+      \field{title}{Novelty and Diversity in Top-N Recommendation -- Analysis and Evaluation}
+      \field{volume}{10}
+      \field{year}{2011}
+      \field{pages}{14:1\bibrangedash 14:30}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/1944339.1944341
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/1944339.1944341
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/1944339.1944341
+      \endverb
+      \keyw{Novelty,case-based recommendation,collaborative filtering,diversity,recommender systems}
+    \endentry
     \entry{jolliffe2011principal}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=af567b67da24eaa33594ca6127e01c40}{%
@@ -883,6 +935,130 @@
       \field{labeltitlesource}{title}
       \field{title}{Nonlinear dimensionality reduction}
       \field{year}{2007}
+    \endentry
+    \entry{McNee:2006:AEA:1125451.1125659}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=9dbc31ef71b6292815170d05f8bb6995}{%
+           family={McNee},
+           familyi={M\bibinitperiod},
+           given={Sean\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=05e2f63cd94159cec34470131ca35297}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6890e5694694ed7506a720d42774f73a}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Montr\&\#233;al, Qu\&\#233;bec, Canada}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{d1813ba735d7e2389cc58ebaa7234d2a}
+      \strng{fullhash}{d1813ba735d7e2389cc58ebaa7234d2a}
+      \strng{bibnamehash}{d1813ba735d7e2389cc58ebaa7234d2a}
+      \strng{authorbibnamehash}{d1813ba735d7e2389cc58ebaa7234d2a}
+      \strng{authornamehash}{d1813ba735d7e2389cc58ebaa7234d2a}
+      \strng{authorfullhash}{d1813ba735d7e2389cc58ebaa7234d2a}
+      \field{labelalpha}{MRK06}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CHI '06 Extended Abstracts on Human Factors in Computing Systems}
+      \field{isbn}{1-59593-298-4}
+      \field{series}{CHI EA '06}
+      \field{title}{Being Accurate is Not Enough: How Accuracy Metrics Have Hurt Recommender Systems}
+      \field{year}{2006}
+      \field{pages}{1097\bibrangedash 1101}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/1125451.1125659
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/1125451.1125659
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/1125451.1125659
+      \endverb
+      \keyw{collaborative filtering,metrics,personalization,recommender systems}
+    \endentry
+    \entry{Nguyen:2014:EFB:2566486.2568012}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=8960c96043b934bb2b449bf0cf7186c1}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Tien\bibnamedelima T.},
+           giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=64d36d75e78a1036d5241cae65c501c4}{%
+           family={Hui},
+           familyi={H\bibinitperiod},
+           given={Pik-Mai},
+           giveni={P\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=45ce1c729c0e4fba657741683ef073a6}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={F.\bibnamedelimi Maxwell},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=93870d471dd00976b612c275fc9ac94f}{%
+           family={Terveen},
+           familyi={T\bibinitperiod},
+           given={Loren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6890e5694694ed7506a720d42774f73a}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Seoul, Korea}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{40955a3cd19636256b15ffbe70758aec}
+      \strng{fullhash}{040f3f8c3c1896c9de232f70dda49e5c}
+      \strng{bibnamehash}{040f3f8c3c1896c9de232f70dda49e5c}
+      \strng{authorbibnamehash}{040f3f8c3c1896c9de232f70dda49e5c}
+      \strng{authornamehash}{40955a3cd19636256b15ffbe70758aec}
+      \strng{authorfullhash}{040f3f8c3c1896c9de232f70dda49e5c}
+      \field{labelalpha}{Ngu+14}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 23rd International Conference on World Wide Web}
+      \field{isbn}{978-1-4503-2744-2}
+      \field{series}{WWW '14}
+      \field{title}{Exploring the Filter Bubble: The Effect of Using Recommender Systems on Content Diversity}
+      \field{year}{2014}
+      \field{pages}{677\bibrangedash 686}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/2566486.2568012
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/2566486.2568012
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/2566486.2568012
+      \endverb
+      \keyw{content diversity,filter bubble,longitudinal data,recommender systems,user experience}
     \endentry
     \entry{PARK201210059}{article}{}
       \name{author}{4}{}{%
