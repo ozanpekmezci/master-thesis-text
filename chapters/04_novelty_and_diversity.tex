@@ -85,13 +85,25 @@ $$
 
 Shannon Entropy is a logically similar to the \textit{gini index} and they are calculated similarly. In the end, if the entropy is zero, a single item was always chosen and if the entropy is $log2(\#items)$, then each item is equally chosen \cite{castells2015novelty}.
 
-[TODO if some place left, add IUD, ISD, embeddings and NN maybe]
+[TODO if some place left, add IUD, ISD]
 
 \subsection{Diversity Enhancement Approaches}
 
 There are also some methods to not just evaluate but also increase the diversity. The methods that we employed are reranking and clustering. These methods are explained in the chapter \ref{chapter:implementation}.
 
-\subsection{Summary}
+\section{Artificial Neural Networks}
+
+Neural Networks are frameworks to process complex data inputs and the version of neural networks that are used in this thesis are feed-forward neural networks. These type of networks have input, hidden and output layers and good for learning non-linear patterns with the help of various activation functions. The advantage of neural networks compared to other supervised learning methods is the fact that they can learn and generalize from labeled data without much of adjustements \cite{maind2014research}.
+
+\subsection{Embeddings}
+
+To reduce dimensionality with neural networks, embeddings can be used. Embeddings layer of a network only accepts the indices of the desired skills and outputs a much smaller dimension. This technique is also used in this thesis \cite{gal2016theoretically}.
 
 
-In scope of this chapter, we gave detailed information about the types of recommender systems with focus on the content-based recommendation. Then, we listed the evaluation properties that can lead to user satisfaction. Lastly, we disclosed the property that we chose, which is the diversity and illustrated how diversity can be calculated.
+
+
+
+\section{Summary}
+
+
+In scope of this chapter, we gave detailed information about the types of recommender systems with focus on the content-based recommendation. Then, we listed the evaluation properties that can lead to user satisfaction. Next, we disclosed the property that we chose, which is the diversity and illustrated how diversity can be calculated. Last of all, a short introduction to the neural networks are given.
