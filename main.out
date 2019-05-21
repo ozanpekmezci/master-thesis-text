@@ -82,18 +82,23 @@
 \BOOKMARK [2][-]{subsection.4.5.1}{Online Evaluation and User Study}{section.4.5}% 82
 \BOOKMARK [1][-]{section.4.6}{Summary}{chapter.4}% 83
 \BOOKMARK [0][-]{chapter.5}{Discussion}{}% 84
-\BOOKMARK [1][-]{section.5.1}{Problems about datasets}{chapter.5}% 85
-\BOOKMARK [2][-]{subsection.5.1.1}{Problems about Motius dataset}{section.5.1}% 86
-\BOOKMARK [2][-]{subsection.5.1.2}{Problems about Freelancer dataset}{section.5.1}% 87
-\BOOKMARK [1][-]{section.5.2}{Problems about recommender type}{chapter.5}% 88
-\BOOKMARK [1][-]{section.5.3}{Reasons to use hybrid recommender}{chapter.5}% 89
-\BOOKMARK [1][-]{section.5.4}{Comparison of Individual Recommenders}{chapter.5}% 90
-\BOOKMARK [1][-]{section.5.5}{Comparison of Group Recommenders}{chapter.5}% 91
-\BOOKMARK [1][-]{section.5.6}{Conclusion}{chapter.5}% 92
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 93
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 94
-\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 95
-\BOOKMARK [0][-]{chapter.7}{Appendix}{}% 96
-\BOOKMARK [0][-]{chapter*.92}{List of Figures}{}% 97
-\BOOKMARK [0][-]{chapter*.93}{List of Tables}{}% 98
-\BOOKMARK [0][-]{chapter*.94}{Bibliography}{}% 99
+\BOOKMARK [1][-]{section.5.1}{Comparison of Individual Recommenders}{chapter.5}% 85
+\BOOKMARK [2][-]{subsection.5.1.1}{Offline Evaluation}{section.5.1}% 86
+\BOOKMARK [2][-]{subsection.5.1.2}{User Study}{section.5.1}% 87
+\BOOKMARK [1][-]{section.5.2}{Comparison of Group Recommenders}{chapter.5}% 88
+\BOOKMARK [2][-]{subsection.5.2.1}{Offline Evaluation}{section.5.2}% 89
+\BOOKMARK [2][-]{subsection.5.2.2}{User Study}{section.5.2}% 90
+\BOOKMARK [1][-]{section.5.3}{Feedback Loop}{chapter.5}% 91
+\BOOKMARK [1][-]{section.5.4}{Problems about datasets}{chapter.5}% 92
+\BOOKMARK [2][-]{subsection.5.4.1}{Problems about Motius dataset}{section.5.4}% 93
+\BOOKMARK [2][-]{subsection.5.4.2}{Problems about Freelancer dataset}{section.5.4}% 94
+\BOOKMARK [1][-]{section.5.5}{Problems about recommender type}{chapter.5}% 95
+\BOOKMARK [1][-]{section.5.6}{Reasons to use hybrid recommender}{chapter.5}% 96
+\BOOKMARK [1][-]{section.5.7}{Summary}{chapter.5}% 97
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 98
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 99
+\BOOKMARK [1][-]{section.6.2}{Conclusion}{chapter.6}% 100
+\BOOKMARK [0][-]{chapter.7}{Appendix}{}% 101
+\BOOKMARK [0][-]{chapter*.104}{List of Figures}{}% 102
+\BOOKMARK [0][-]{chapter*.105}{List of Tables}{}% 103
+\BOOKMARK [0][-]{chapter*.106}{Bibliography}{}% 104

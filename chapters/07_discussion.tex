@@ -3,6 +3,86 @@
 
 \chapter{Discussion}\label{chapter:discussion}
 
+This chapter of the thesis, comments on the results that we achieved in the chapter \ref{chapter:discussion} and speculates about possible reasons.
+
+\section{Comparison of Individual Recommenders}
+
+First we start of by comparing the results of individual recommenders for different kind of evaluation methods and properties.
+
+\subsection{Offline Evaluation}
+
+The first evaluation method we discuss is the offline evaluation, which include the properties accuracy and coverage.
+
+\subsubsection{Accuracy}\label{discussion:single-offline-accuracy}
+
+As always we first check the accuracy levels of different individual recommendation systems.
+
+The existing recommendation system at the company Motius provides the scores 0.07, 0.21 for top one and top 5 accuracies respectively. Pure similarity based approach that we developed reached the values 0.28 and 0.36 for same measures and the pure popularity algorithm achieves 0.07 and 0.45. Lastly for unsupervised methods, the combination of similarity and popularity algorithms didn't reach better results than the similarity recommender. That is why, we can conclude that the similarity based recommendation is the best unsupervised method for offline accuracy.
+
+When we also include the supervised recommendation that we developed with neural networks top one and top five accuracies of 0.19 and 0.56. All of them together, unsupervised similarity recommender still had the best offline accuracy performance for guessing the first talent, but the neural networks suggest better lists in general.
+
+\subsubsection{Coverage}
+
+Although we said the pure similarity based approach is the best one for offline accuracy, it is also the worst one in terms of coverage. Since a big proportion of talents did not get selected according to their skill match on the website \textit{freelancer.com}, it only possible to make predictions for 4987 projects with the similarity-based recommendation system. However, the popularity recommender can make predictions for 20433 projects with a worse accuracy, because it always suggests the most experienced person among bidders and there are mostly at least one experienced talent inside the group of bidders for every project.
+
+When we combine the popularity and the similarity recommendation systems with the weights 0.4 and 0.6 respectively, we can make predictions for 14152 projects. In addition to that,  we achieve the accuracies of 0.12 for top one and 0.29 for top five. All in all, if we only want to have the maximum coverage, the popularity recommender is the most succesful unsupervised method, but hybrid recommenders are more beneficial, if we want to optimize both coverage and accuracy.
+
+The supervised method has the same coverage as the popularity recommender, which is the highest among others. On top of that, the supervised method also has superior accuracy rates compared to unsupervised methods that makes it favorable. However, the hybrid function of the combination of neural networks and cosine similarity performed worse in terms of accuracy and coverage. With all the information that we have, pure neural networks perform better than unsupervised processes, when we want to optimize both accuracy and coverage.
+
+\subsection{User Study}
+
+We also ran a second evaluation round that consisted of a user study with recruiters. The questions we asked were their opinions about the first item in the list and general satisfaction about the list.
+
+\subsubsection{First Item Value}
+
+The recruiters gave the recommendation by similarity a score of 4.375, which is a unsupervised recommendation method. Same recruiters graded pure neural networks the score of 2.5625 and the hybrid of the first two methods the score of 4.5. From this information, we can conclude that the hybrid model performed the best. However, we must note that the number of participants are only eight and the score difference is also only around five percent.
+
+\subsubsection{Overall List Value}
+
+Overall list value, also known as user satisfaction, had similar results to the first item value. Unsupervised model got the score of 3.815, neural networks got 2.8125 and the hybrid of the first two got 4.0625.
+
+Here, it is interesting that the hybrid outperformed other methods, which is not the case for the offline accuracy. This can indicate that developing models only based on offline accuracy, does not always mean that the model will also increase human satisfaction. However, further evaluation and research is necessary, since our evaluation group only contains eight subjects.
+
+\section{Comparison of Group Recommenders}
+
+Group recommenders of this thesis consist of two main categories: baseline and diverse. These categories also have unsupervised and supervised versions.
+
+\subsection{Offline Evaluation}
+
+Offline evaluation of group recommenders comprise three different measures: accuracy, diversity and unexpectedness.
+
+\subsubsection{Accuracy}
+
+The accuracy of the unsupervised baseline recommender is 0.28 for top one and 0.36 for top five. When we add the diversity constant to the equation these results do not get any higher. When we employ the supervised baseline or diverse recommendation system, the maximum accuracy we see is 0.18 for top one and 0.56 for top five.
+
+Just like in the individual recommender [See section\ref{discussion:single-offline-accuracy}], we conclude that the unsupervised similarity method predicts the winners better, but the supervised approach produces lists with better accuracy in general.
+
+\subsubsection{Diversity}\label{discussion:group-offline-diversity}
+
+The diversity metric that we used \textit{Inter-List-Diversity} resulted in being between 0.4 and 0.9 depending on the diversity constant. The only exception was that the diversity of the results from the neural networks were around 10\% higher than the given results. This is expected, because projects of a group mostly require similar skills, which also produces similar talents for the group. Similar talents in a group means lower diversity. In contrary to that, the supervised learning model may produce results with more variety, because it also includes other factors such as extra profile information.
+
+\subsubsection{Unexpectedness}
+
+The unexpectedness of the results from unsupervised recommenders range from 0.61 to 0.77 and the unexpectedness of the results from supervised recommenders range from 0.66 to 0.79. The reason is same as in the previous section [See \ref{discussion:group-offline-diversity}].
+
+\subsection{User Study}
+
+As part of the user study, we asked a group of recruiters about their opinions on the first item on the list, overall list value and the diversity of the group.
+
+\subsubsection{First Item Value}
+
+
+
+Offline and users opposite opinion
+
+\subsubsection{Overall List Value}
+
+projects of the groups are similar to each other so talents also similar
+
+\subsubsection{Diversity}
+
+\section{Feedback Loop}
+
 \section{Problems about datasets}
 
 \subsection{Problems about Motius dataset}
@@ -28,17 +108,5 @@ Recommender systems based only on content generally suffer from the problems of 
 \section{Reasons to use hybrid recommender}
 Several studies have shown hybrid recommendation approaches to provide more accurate recommendations than pure content-based or collaborative methods, especially when few ratings are available \cite{adomavicius2005toward}.
 
-\section{Comparison of Individual Recommenders}
 
-\section{Comparison of Group Recommenders}
-
-
-\section{Conclusion}
-
-bla
-
-bla
-
-bla
-
-bla
+\section{Summary}

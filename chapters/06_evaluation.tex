@@ -3,24 +3,24 @@
 
 \chapter{Evaluation}\label{chapter:evaluation}
 
-This chapter focuses on assessing the results of the recommender systems that were created in scope of the chapter \ref{chapter:implementation}. Recommendation systems have a variety of properties that may affect user experience, such as accuracy, robustness, scalability, and so forth \cite{shani2011evaluating}. In this thesis, we mostly focus on characteristics such as accuracy, diversity and others that are related to these two. 
+This chapter focuses on assessing the results of the recommender systems that were created in the scope of the chapter \ref{chapter:implementation}. Recommendation systems have a variety of properties that may affect user experience, such as accuracy, robustness, scalability, and so forth \cite{shani2011evaluating}. In this thesis, we mostly focus on characteristics such as accuracy, diversity, and others that are related to these two. 
 
-In the first years of recommender systems, the developers of recommendation systems only focused on accuracy. However, this has started to change and now we know that accuracy is not always equals user satisfaction. Before starting this thesis, we analyzed what properties are important to improve user satisfaction in job recommender systems. The research led us to the diversity as a metric \cite{castells2015novelty}.
+In the first years of recommender systems, the developers of recommendation systems only focused on accuracy. However, this has started to change, and now we know that accuracy is not always equaled user satisfaction. Before starting this thesis, we analyzed what properties are essential to improve user satisfaction in job recommender systems. The research led us to diversity as a metric \cite{castells2015novelty}.
 
-When we recommend a talent to a project, the only important evaluation properties are accuracy of the first item in the list, accuracy of top \textit{n} items in the list and the overall list value. We can find out the first two via evaluation algorithms. However, the overall list value can only be acquired from human observers. 
+When we recommend talent to a project, the only essential evaluation properties are the accuracy of the first item in the list, the accuracy of top \textit{n} items in the list, and the overall list value. We can find out the first two via evaluation algorithms. However, the overall list value can only be acquired from human observers. 
 
-When we recommend multiple talents to a group of projects, we have the hypothesis that the extra evaluation metric diversity is also important to increase the user satisfaction. That's why, we need evaluation results for diversity, accuracy and user satisfaction, so that prove or disprove the hypothesis. 
+When we recommend multiple talents to a group of projects, we have the hypothesis that the extra evaluation metric diversity is also vital to increase user satisfaction. That is why we need evaluation results for diversity, accuracy, and user satisfaction, so that prove or disprove the hypothesis. 
 
-While we are working on our hypothesis, we use all three types of experiments; offline, online and user studies \cite{shani2011evaluating}. Offline evaluation serves the purpose of calculating the accuracy and diversity. This type of experiments don't involve human feedback and are calculated via algorithms. When we aim for more advanced metrics, like user satisfaction, we have to rely on other types of experiments like user studies; we ask show users the results and ask their opinion about overall list value. Lastly, we also employ online experiments by allowing them to intereact with the system and reranking the talents using the feedback loop [See section \ref{section:eval-feedback}]. 
+While we are working on our hypothesis, we use all three types of experiments, which include offline, online, and user studies \cite{shani2011evaluating}. Offline evaluation serves the purpose of calculating accuracy and diversity. This type of experiments do not involve personal feedback and are calculated via algorithms. When we aim for more advanced metrics, like user satisfaction, we have to rely on other types of experiments like user studies; we ask to show users the results and ask their opinion about overall list value. Lastly, we also employ online experiments by allowing them to interact with the system and reranking the talents using the feedback loop [See section \ref{section:eval-feedback}]. 
 
-According to the research \cite{shani2011evaluating}, there are some guidelines that we need to follow to conduct a succesful experiment; a \textit{hypothesis}, \textit{controlling variables} and \textit{generalization power}. Our hypothesis is that the diversity increases user satisfaction and serves as an important factor near accuracy. The controlling variables are the factors that stay the same during different experiments. We need those variables to make sure that different results are comparable. In our case, the trained dataset is the same. Also, when we conduct user studies, we ask about the results of the same groups and projects. This way, the user study results are directly comparable. The last guideline is the generalization power; to make sure that our model generalizes well, we combine and adapt \textit{freelancer.com} and Motius datasets together. That's why, the generalization power for different job recommender datasets is secured. 
+According to the research \cite{shani2011evaluating}, there are some guidelines that we need to follow to conduct a successful experiment; a \textit{hypothesis}, \textit{controlling variables} and \textit{generalization power}. We hypothesize that diversity increases user satisfaction and serves as an important factor near accuracy. The controlling variables are the factors that stay the same during different experiments. We need those variables to make sure that different results are comparable. In our case, the trained dataset is the same. Also, when we conduct user studies, we ask about the results of the same groups and projects. This way, the user study results are directly comparable. The last guideline is the generalization power; to make sure that our model generalizes well, we combine and adapt \textit{freelancer.com} and Motius datasets together. That is why the generalization power for different job recommender datasets is secured. 
 
 
 \section{Unsupervised Individual Recommendation}
 
-As it was explained in the section \ref{implementation-unsupervised-individual}, unsupervised individual recommendation addresses proposal of single talents to single projects using different methods. What these methods have in common is that, they all ignore labels of data and only consider features. The first approach is recommendation via feature similarity, the second one suggests the most popular candidates and the last one is the combination of first two.
+As it was explained in section \ref{implementation-unsupervised-individual}, unsupervised individual recommendation addresses the proposal of single talents to single projects using different methods. What these methods have in common is that they all ignore labels of data and only consider features. The first approach is recommendation via feature similarity, and the second one suggests the most popular candidates, and the last one is the combination of the first two.
 
-When we calculate the accuracy for these methods, we use performance measures such as \textit{precision} and \textit{recall} \cite{burke2015robust}. Precision refers to the percentage of your results which are relevant and recall refers to the percentage of total relevant results correctly classified by your algorithm \cite{davis2006relationship}.
+When we calculate the accuracy for these methods, we use performance measures such as \textit{precision} and \textit{recall} \cite{burke2015robust}. Precision refers to the percentage of the relevant results, and recall refers to the percentage of total relevant results correctly classified by the algorithm \cite{davis2006relationship}.
 
 \begin{equation}
 recall \equiv  sensitivity =\frac{\#  true positives }{\# true positives +\# false negatives }
@@ -30,34 +30,34 @@ recall \equiv  sensitivity =\frac{\#  true positives }{\# true positives +\# fal
 precision =\frac{\#true positives }{\# true positives +\#  false positives }
 \end{equation}
 
-The above equations show how we calculated recall and precision. True positives in our case explain selected and relevant talents. False positives are selected but irrelevant talents. Lastly, false negatives are not selected but relevant talents.
+The above equations show how we calculated recall and precision. True positives in our case explain selected and relevant talents. False positives are selected, but irrelevant talents. Lastly, false negatives are not selected, but relevant talents.
 
-To be more specific, true positive is the case, when the first person in recommendation list is the person that won the project. False positives disclose all non-awarded bidders that are first in list and false negatives demonstrate all bidders that are not first in the list but won the project in real life. 
+To be more specific, true positive is the case, when the first person in the recommendation list is the person that won the project. False positives disclose all non-awarded bidders that are first in the list, and false negatives demonstrate all bidders that are not first in the list but won the project in real life. 
 
-When we start to calculate results, we see that precision and recall always have the same results for the freelancer dataset. For each project, the number of true positives are either one or zero. The number of false negatives or false positives are also one or zero for each project. If the prediction was correct, the number of true positives are one. In this case, both the number of false negatives and false positives are zero.
+When we start to calculate results, we see that precision and recall always have the same results for the freelancer dataset. For each project, the number of true positives is either one or zero. The number of false negatives or false positives is also one or zero for each project. If the prediction was correct, the number of true positives is one. In this case, both the number of false negatives and false positives are zero.
 
-The takeaway from the previous paragraph does not hold true for every dataset. For Motius case, there are more than one talent that got positive feedback for each project. That's the number of true positives can vary from zero to the number of talents that received invitation. Next, the number of false negatives can have values from zero to the number of people that were accepted. Last of all, the number of false positives also range from zero to number of people with positive feedback for each project. Therefore, it is safe to say that those values vary for each project.
+The takeaway from the previous paragraph does not hold for every dataset. For Motius case, there is more than one talent that got positive feedback for each project. That is the number of true positives can vary from zero to the number of talents that received an invitation. Next, the number of false negatives can have values from zero to the number of people that were accepted. Last, the number of false positives also range from zero to the number of people with positive feedback for each project. Therefore, it is safe to say that those values vary for each project.
 
 In the next subsections, we demonstrate the evaluation results for various approaches.
 
 
 \subsection{Existing Company Recommender}
 
-The sponsor of this thesis, Motius, runs an internal recommendation system to suggest talents to roles. The internal mechanism that submits recommendations has stored the logs of the past recommendations in an internal database. This database has included all important details, such as the name of the roles, projects, talents, recommendation strength and if the person got an invitation to the next stage. We used the logs to conduct an offline evaluation.
+The sponsor of this thesis, Motius, runs an internal recommendation system to suggest talents to roles. The internal mechanism that submits recommendations has stored the logs of the past recommendations in an internal database. This database has included all crucial details, such as the name of the roles, projects, talents, recommendation strength, and if the person got an invitation to the next stage. We used the logs to conduct an offline evaluation.
 
 \subsubsection{Offline Evaluation}
 
-First of all, the logs contained 140914 recommendations for 375 roles. There are only 961 positive labels, which means the people who got accepted on the recommendation list. Therefore, we can conclude that there are 2-3 accepted talents for every role. We can also confirm that the most of the logs consist of talents that got rejected. 
+First of all, the logs contained 140914 recommendations for 375 roles. There are only 961 positive labels, which means the people who got accepted on the recommendation list. Therefore, we can conclude that there are 2-3 accepted talents for every role. We can also confirm that most of the logs consist of talents that got rejected. 
 
-As part of the evaluation, we checked the rate of an accepted talent being the first in the recommendation list and being in the top 5 of the recommendation list, so that the results are directly comparable with the recommender systems that we implemented. The first talents in the list only get accepted in 7\% of the roles and the accepted talents were only a part of 21\% of the projects. Lastly, the average rank of accepted people was 161. 
+As part of the evaluation, we checked the rate of an accepted talent being the first in the recommendation list and being in the top 5 of the recommendation list so that the results are directly comparable with the recommender systems that we implemented. The first talents in the list only get accepted in 7\% of the roles, and the accepted talents were only a part of 21\% of the projects. Lastly, the average rank of accepted people was 161. 
 
 \subsection{Recommendation by Similarity}\label{ev-rec-sim}
 
-Subsection \ref{implementation-unsupervised-similarity} revealed the implementation details of the approach recommendation by feature similarity. Now, we show the evaluation results. 
+Subsection \ref{implementation-unsupervised-similarity} revealed the implementation details of the approach, which is a recommendation by feature similarity. Now, we show the evaluation results. 
 
 \subsubsection{Offline Evaluation}
 
-For this type of recommender, we used the same evaluation metric for different purposes. First of all, we assessed different flavors of implementation mechanisms to select the best one. Secondly, we calculate, final accuracy score for each individual unsupervised recommender, so that the recommenders are comparable.
+For this type of recommender, we used the same evaluation metric for different purposes. First of all, we assessed different flavors of implementation mechanisms to select the best one. Secondly, we calculate, final accuracy score for each unsupervised recommender, so that the recommenders are comparable.
 
 \begin{table}[htpb]
 	\caption[Evaluation mid-results]{A table that shows results of different implementation settings of recommendation by similarity.}\label{tab:evaluation-rec-similarity}
@@ -73,27 +73,27 @@ For this type of recommender, we used the same evaluation metric for different p
 
 As figure \ref{tab:evaluation-rec-similarity} depicts top 5 accuracy from different flavors of similarity recommendation systems. Top 5 accuracy explains the case that the recommender suggests a bidder list and the correct result is searched in top 5 elements of this lists, which contains bidders with a descending recommendation strength. 
 
-The depths of freelancer.com dataset are already defined in \ref{implementation-subsection-freelancer}. To sum it up, each project lists their required skills. These required skill don't have any any value, so they are used as zero or one. Each talent accommodates a skill vector, which encloses the number of projects that the person finished. For example, if an example talent 1 participated in 10 projects that only required \textit{Python} and 2 projects that only required \textit{JavaScript}, this person would have a 10 for Python, a 2 for JavaScript and zero for rest of the skills. 
+The depths of freelancer.com dataset are already defined in \ref{implementation-subsection-freelancer}. To sum it up, each project lists their required skills. These required skills do not have any value, so they are used as zero or one. Each talent accommodates a skill vector, which encloses the number of projects that the person finished. For example, if an example talent 1 participated in 10 projects that only required \textit{Python} and two projects that only required \textit{JavaScript}, this person would have a 10 for Python, a 2 for JavaScript and zero for rest of the skills. 
 
-When we do talk about recommendation by similarity, it suggests that each row is normalized first, so that the greates values correspond to one the smallest zero. Then the cosine similarity of the feature vector of th picked project and the feature vector of all talents are calculated. This cosine similarty is used as the recommendation strength of each talent for a particular project. Then, we sort these values in a descending order. 
+When we do talk about the recommendation by similarity, it suggests that each row is normalized first, so that the highest values correspond to one the smallest zero. Then the cosine similarity of the feature vector of the picked project and the feature vector of all talents are calculated. This cosine similarity is used as the recommendation strength of each talent for a particular project. Then, we sort these values in descending order. 
 
-\paragraph{A} In this first setting, we just use the plain mode like it was told in the previous paragraph. This means normalazing rows and calculating the cosine similarity. The accuracy we reached is 28\%. 
+\paragraph{A} In this first set, we use the plain mode like it was told in the previous paragraph. This setting means normalizing rows and calculating the cosine similarity. The accuracy we reached is 28\%. 
 
-\paragraph{B} After carefully checking and debugging the setting \textit{A}, we found out that there are many cases of winners with no skill vector. This indicates that, there are many projects that hired talents with zero experience according to the freelancer.com dataset. Since, this method picks talent just by looking at their features, it is impossible to predict the winners for those projects. That's why we removed the talents that have no skill vector present. Doing this increased the accuracy to 36\%. 
+\paragraph{B} After carefully checking and debugging the setting \textit{A}, we found out that there are many cases of winners with no skill vector. This outcome indicates that many projects hired talents with zero experience according to the freelancer.com dataset. Since this method picks talent just by looking at their features, it is impossible to predict the winners for those projects. That is why we removed the talents that have no skill vector present. Doing this increased the accuracy to 36\%. 
 
-\paragraph{C} When the developer of this thesis checked the data, it seemed like some further improvements could be made. An idea was normalizing columns additional to the rows. Normalizing rows was what we were doing in other setups, which is scaling for each talent. Normalizing columns means setting the highest value for each skill to one and the lowest value to zero. Doing this has the advantage that the talents, who finished a lot of projects with particular skills won't lose hat advantage against others. However, this method decreases the accuracy to 31\%. This implicates that when the project owners choose talents, the information of how many projects the talents completed with relevant skills doesn't play a big role. However, it's hard to draw conclusions, since every employer is different.
+\paragraph{C} When the developer of this thesis checked the data, it seemed like some further improvements could be made. An idea was normalizing columns added to the rows. Normalizing rows was what we were doing in other setups, which is scaling for each talent. Normalizing columns means setting the highest value for each skill to one and the lowest value to zero. Doing this has the advantage that the talents, who finished many projects with particular skills, will not lose hat advantage against others. However, this method decreases the accuracy of 31\%. This implicates that when the project owners choose talents, the information of how many projects the talents completed with relevant skills do not play a significant role. However, it is hard to conclude since every employer is different.
 
-\paragraph{D} To test the suspicion that we have grown, we start losing some information on purpose. This version changes the talent skills to zeroes and ones just like the project feature vectors. If a person has completed any project that involved the relevant skill, that is a one. If this person didn't work with a skill before, that value becomes zero. In the end, we reach 35\% accuracy, which is not the best among others but also not the worst, considering we slimmed down the data and lost a lot of information about talent skills.
+\paragraph{D} To test the suspicion that we have grown, we start losing some information on purpose. This version changes the talent skills to zeroes and ones just like the project feature vectors. If a person has completed any project that involved the relevant skill, that is a one. If this person did not work with a skill before, that value becomes zero. In the end, we reach 35\% accuracy, which is not the best among others but also not the worst, considering we slimmed down the data and lost much information about talent skills.
 
-In the end, we decide to use the last version. Because that version has the smallest dataframe size, which is benefical according to what we explained before [See subsection \ref{subsection:company-dataset}]. Also the accuracy is the second best among others and it's structure is similar to what we programmed in subsection \ref{subsection:using-embeddings}.
+In the end, we decide to use the last version. Because that version has the smallest data frame size, which is beneficial according to what we explained before [See subsection \ref{subsection:company-dataset}]. Also, the accuracy is the second best among others, and it is a structure similar to what we programmed in subsection \ref{subsection:using-embeddings}.
 
-When to try to guess the project winners with the chosen version, we reach the accuracy of 0.27. When we check if the winner is in the top 5 of the score list, then the accuracy is 0.35, like we mentioned before. 
+When to try to guess the project winners with the chosen version, we reach the accuracy of 0.27. When we check if the winner is in the top 5 of the score list, then the accuracy is 0.35, as we mentioned before. 
 
- Lastly, it must be noted that during preprocessing, we remove the projects that has less than 5 bidders. Therefore, the minimum number of applicants is 5. We continue with the online evaluation of this recommender.
- 
+Lastly, it must be noted that during preprocessing, we remove the projects that have less than five bidders. Therefore, the minimum number of applicants is 5. We continue with the online evaluation of this recommender.
+
 \subsubsection{User Study}\label{subsubsection:user-study-first}
 
-As this is the first user study we conduct, some background information is necessary. We asked eight recruiters about what they think about the first recommended item of the list and what they thinkg about the overall list value for individual roles. We also asked them about the user satisfaction but the answers were always same as overall list value, so we put them together as overall list value. The author gave them as little information as possible to avoid any bias on the recruiters. The table \ref{tab:user-study-individual-rec-similarity} shows the averaged results. Recruiters were allowed to give values between zero and five, with zero the worst and five the best.
+As this is the first user study we conduct, some background information is necessary. We asked eight recruiters about what they think about the first recommended item of the list and what they think about the overall list value for individual roles. We also asked them about user satisfaction, but the answers were always the same as the overall list value, so we put them together as an overall list value. The author gave them as little information as possible to avoid any bias on the recruiters. The table \ref{tab:user-study-individual-rec-similarity} shows the averaged results. Recruiters were allowed to give values between zero and five, with zero the worst and five the best.
 
 \begin{table}[ht]
 	\caption[User Study Individual Similarity]{A table that shows results of user study about individual recommendation by similarity}\label{tab:user-study-individual-rec-similarity}
@@ -111,16 +111,16 @@ As this is the first user study we conduct, some background information is neces
 
 \subsection{Recommendation by Popularity}\label{subsubsection:eval-popularity}
 
-Popularity recommender is a recommender that is easy to explain: it checks the profile information of every bidder from a specific project. Then it sorts them by their experience level and recommends people that have the most experience. 
+Popularity recommender is a recommender that is easy to explain: it checks the profile information of every bidder from a specific project. Then it sorts them by their experience level and recommends people that have the most experience. This type of recommendation system is only evaluated via offline evaluation, because the experience level property is only available for the Freelancer dataset. That's why, we did not implement it on the dashboard. 
 
 \subsubsection{Offline Evaluation}
 
-Offline evaluation of this method is straightforward. Like we did before, we check if the winner is in the top one and top 5 in the recommendation list that holds the top bidders with descending recommendation score. Top one accuracy is 0.06 and top 5 accuracy is 0.45. This shows that the popularity recommender is worse than the similarity recommender at guessing if it is given just one chance. However, it runs better than the similarity recommender if it is given 5 chances. 
+Offline evaluation of this method is straightforward. Like we did before, we check if the winner is in the top one and top 5 in the recommendation list that holds the top bidders with descending recommendation score. Top one accuracy is 0.06, and top 5 accuracy is 0.45. This shows that the popularity of recommender is worse than the similarity recommender at guessing if it is given just one chance. However, it runs better than the similarity recommender if it is given five chances. 
 
 
 \subsection{Hybrid Recommendation}
 
-According to \cite{burke2002hybrid}, hybridization is a valid technique to combine several recommendation methods to produce a single recommendation. There are different methods to achive this, but we combine weighted scores of both of other recommenders. In our version, we have decide to add results from both recommender with some weights. The reason for that is to be able to predict results for as many projects as possible. The \ref{tab:evaluation-amount-prediction} depicts for how many projects is it possible to predict the results. The slimmed down version that we developed to recommend by similarity, can't predict for all projects, because a big percent of the winners don't have a skill vector. When we combine both results, we also increase our coverage, since we get to use the results from two different recommenders.
+According to \cite{burke2002hybrid}, hybridization is a valid technique to combine several recommendation methods to produce a single recommendation. There are different methods to achieve this, but we combine weighted scores of both of other recommenders. In our version, we have decided to add results from both recommenders with some weights. The reason for that is to be able to predict results for as many projects as possible. The \ref{tab:evaluation-amount-prediction} depicts how many projects is it possible to predict the results. The slimmed-down version that we developed to recommend by similarity cannot predict for all projects, because a significant percentage of the winners do not have a skill vector. When we combine both results, we also increase our coverage, since we get to use the results from two different recommenders. Since the popularity information for the Motius dataset doesn't exist, we did not implement this feature into the dashboard. That's why, we also didn't conduct a corresponding user study for this algorithm.
 
 \begin{table}[htpb]
 	\caption[The number of predicted projects]{A table that shows the amount of projects that we can generate predictions.}\label{tab:evaluation-amount-prediction}
@@ -137,7 +137,7 @@ According to \cite{burke2002hybrid}, hybridization is a valid technique to combi
 
 \subsubsection{Offline Evaluation}
 
-Since we decided for a weighted addition of two recommenders, we also have the flexibility to decide for the weights. We tried different weights for similarity and popularity recommenders and calculated the accuracy for these different settings. 
+Since we decided on a weighted addition of two recommenders, we also have the flexibility to decide for the weights. We tried different weights for similarity and popularity recommenders and calculated the accuracy for these different settings. 
 
 
 \begin{figure}[htpb]
@@ -178,9 +178,9 @@ Since we decided for a weighted addition of two recommenders, we also have the f
 	\caption[Weight figure]{Effect of weight selection on hybrid recommenders to the accuracy}\label{fig:weight-selection}
 \end{figure}
 
-Figures \ref{fig:weight-selection} and \ref{fig:weight-selection-coverage}  depict the results of what happens with different similarity weights. Although, the figures only show the similarity weights, popularity weights can also be calculated by subtracting the similarity weight from one. The figure \ref{fig:weight-selection} displays top 1 and top 5 accuracy for different weights. When the similarity weight is zero, top 1 accuracy is the lowest and top 5 accuracy is highest. When the similarity weight is one, both accuracies stay in the middle. The figure \ref{fig:weight-selection-coverage} show the amount of projects that is possible to predict results with the recommender at hand. That graph includes a clear function that is inversely proportional to the similarity weight. The highest project coverage can be seen on highest popularity weight and the lowest project coverage can bee seen on the highest similarity weight.
+Figures \ref{fig:weight-selection} and \ref{fig:weight-selection-coverage}  depict the results of what happens with different similarity weights. Although the figures only show the similarity weights, popularity weights can also be calculated by subtracting the similarity weight from one. The figure \ref{fig:weight-selection} displays top 1 and top 5 accuracy for different weights. When the similarity weight is zero, top 1 accuracy is the lowest, and top 5 accuracy is highest. When the similarity weight is one, both accuracies stay in the middle. The figure \ref{fig:weight-selection-coverage} show the number of projects that are possible to predict results with the recommender at hand. That graph includes a clear function that is inversely proportional to the similarity weight. The highest project coverage can be seen on the highest popularity weight, and the lowest project coverage can be seen on the highest similarity weight.
 
-It is clear that there is no obvious best weight choice, since we both want to increase project coverage and accuracies. We chose the similarity weight 0.6 and popularity weight 0.4 to increase these results.
+It is clear that there is no obvious best weight choice since we both want to increase project coverage and accuracies. We chose the similarity weight 0.6 and popularity weight 0.4 to increase these results.
 
 \begin{figure}[htpb]
 	\centering
@@ -214,25 +214,33 @@ It is clear that there is no obvious best weight choice, since we both want to i
 
 \section{Supervised Individual Recommender}
 
-The details of supervised individual recommender is already clarified in the section \ref{section:supervised}. This type of recommender suggests individual talents to individual projects using neural networks. There are two different settings that we apply supervised individual recommender; using sparse input and using embeddings. 
+The details of the supervised individual recommender are already clarified in section \ref{section:supervised}. This type of recommender suggests individual talents to individual projects using neural networks. There are two different settings that we apply supervised individual recommender; using sparse input and using embeddings. 
 
 \subsection{Using Sparse Input}
 
-Since the sparse data is too big for computers to handle, this one only contains offline evaluation results. The performance of this subtype of recommender is measured for different amount of layers, different cost functions, other activation functions and various optimizations. In the end, it wouldn't make sens to visualize all of the distinct results. However, we must note the maximum accuracy that is measured with the test set is 79\%. Here the accuracy doesn't reveal top 1 or top 5 prediction that we used before. This prediction with the test set demonstrates that the model is able to predict the right results for 79\% of the talent-project pairs. The neural network generates a value between 0 and 1 for each pair and values that are below 0.5 interpreted as the person should be rejected and above 0.5 gets treated as the talent should be hired. That's why the model succesfully predicts 79\% of those pairs.
+Since the sparse data is too big for computers to handle, this one only contains offline evaluation results. The performance of this subtype of the recommender is measured for a different amount of layers, different cost functions, other activation functions, and various optimizations. In the end, it would not make sense to visualize all of the distinct results. However, we must note that the maximum accuracy that is measured with the test set is 79\%. Here the accuracy does not reveal top 1 or top 5 predictions that we used before. This prediction with the test set demonstrates that the model can predict the right results for 79\% of the talent-project pairs. The neural network generates a value between 0 and 1 for each pair and values that are below 0.5 interpreted as the person should be rejected, and above 0.5 gets treated as the talent should be hired. That is why the model successfully predicts 79\% of those pairs.
 
-Predicting the winners of projects is another story. Through diffent parameters and settings, the most that we have reached is 21\% for the first-place accuracy and 59\% for the top 5 accuracy. It is fair to note that these maximum values are reached with the help of extra profile information like experience level on top of skills [TODO: if more text needed add evaluation information from SparseFreelancerBias.ipynb]. 
+Predicting the winners of projects is another story. Through different parameters and settings, the most that we have reached is 21\% for the first-place accuracy and 59\% for the top 5 accuracies. It is fair to note that these maximum values are reached with the help of extra profile information like experience level on top of skills.
 
 \subsection{Using Embeddings}
 
-To be able to use embeddings, we reduce the dimensioanality of the data first. This makes the dataframe smaller in size but it also decreases the performance, since some information is lost during the reduction. 
+To be able to use embeddings, we reduce the dimensionality of the data first. The reduction makes the data frame smaller in size, but it also decreases the performance, since some information is lost during the reduction. 
 
-This version is the actual approach that is used in the dashboard. That's why we gained evaluation results for both offline and online cases. 
+This version is the actual approach that is used in the dashboard. That is why we gained evaluation results for both offline and online cases. 
 
 \subsubsection{Offline Evaluation}
 
+In this round of offline evaluation, run evaluation tests for neural networks and the hybrid method. In this context, the term hybrid signifies the linear combination of neural networks and cosine similarity.
+
+\paragraph{Neural Networks}
+
 The maximum accuracy that is reached to predict the test set results is 72\%, which is lower than the sparse version. When the top 1 and top 5 talents for each project is calculated, the best that is achieved are 18.5\% and 56\% respectively. 
 
-This is calculated with the extra profile information included. When we don't add them, the biggest value for guessing the winner is 9\%. [TODO: if more info needed, Embedding notebooks]
+This is calculated with the extra profile information included. When we do not add the extra profile information, the most significant value for guessing the winner is 9\%.
+
+\paragraph{Hybrid}
+
+The outcome of this type of recommender come from the multiplication of results from the supervised and unsupervised recommendation systems. However, the offline evaluation results are worse than pure neural networks, which are 10\% for the top 1 and 49\% for the top 5.
 
 \subsubsection{User Study}
 
@@ -256,7 +264,7 @@ For this first user study, we present a list for a randomly selected consisted r
 
 \paragraph{Hybrid}
 
-For this user study, we listed talents for the same role that were suggested by the multiplication of neural networks and cosine similarity results that come from the section \ref{subsubsection:user-study-first}. The results are shown in the table \ref{tab:user-study-individual-rec-hybrid}.
+For this user study, we listed talents for the same role that were suggested by the multiplication of neural networks and cosine similarity results that come from section \ref{subsubsection:user-study-first}. The results are shown in the table \ref{tab:user-study-individual-rec-hybrid}.
 
 \begin{table}[ht]
 	\caption[User Study Individual Hybrid]{A table that shows results of the user study about hybrid individual recommendation}\label{tab:user-study-individual-rec-hybrid}
@@ -272,31 +280,31 @@ For this user study, we listed talents for the same role that were suggested by 
 
 \section{Unsupervised Group Recommender}
 
-This is another type of recommender that we implemented in the dashboard is the unsupervised group recommender and contains different modes such as baseline and diverse. 
+Unsupervised group recommender is another type of recommender that we implemented in the dashboard is the unsupervised group recommender and contains different modes such as baseline and diverse. 
 
 \subsection{Baseline Recommender}
 
-The baseline unsupervised group recommender recommends a group of talents by maximizing the relevancy of project-talent pairs. However, this method doesn't check the relation of talents that are chosen. 
+The baseline unsupervised group recommender recommends a group of talents by maximizing the relevancy of project-talent pairs. However, this method does not check the relation of talents that are chosen. 
 
 \subsubsection{Offline Evaluation}
 
-There are many evaluation methods that count under offline evaluation. Since they are employed first time in this thesis, we explain them in a detailed way.
+Many evaluation methods count under offline evaluation. Since they are employed the first time in this thesis, we explain them in a particular way.
 
 \paragraph{Accuracy}
 
-The first detail that we check is the top 1 and top 5 accuracy, like we did before. This didn't change from results of the section \ref{ev-rec-sim}. Which means that the top 1 accuracy is around 20\% and top 5 is around 30\%.
+The first detail that we check is the top 1 and top 5 accuracies like we did before. The performance did not change from the results of section \ref{ev-rec-sim}, which means that the top 1 accuracy is around 20\% and top 5 is around 30\%.
 
 \paragraph{Diversity}\label{ev-unsupervised-group-diversity}
 
-There are many evaluation mechanism to measure diversity and the first equations were coined in the beginning of 2000's \cite{smyth2001similarity}.
+There are many evaluation mechanisms to measure diversity, and the first equations were coined at the beginning of 2000's \cite{smyth2001similarity}.
 
 $$\mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j )$$
 
 The above \textit{inter-list diversity} is the first to calculate. This mechanism calculates the diversity inside a recommendation list. As a diversity measure, we use the cosine distance, which is calculated as $1 - Cosine Similarity$, which is used many times in this thesis. With various sizes of groups from the freelancer.com dataset, we calculated the average \textit{ILD} of 40\% with this baseline suggestion engine.
 
-\paragraph{Unexpedtedness}\label{ev-unsupervised-group-unexpectedness}
+\paragraph{Unexpectedness}\label{ev-unsupervised-group-unexpectedness}
 
-Unexpectedness tells us how unforeseen the data is to the recruiters.  In the formula below $\mathcal { J } _ { u }$ is a symbol for set of talents that the recruiter has interacted with. When we know about this past, we can compare the talents with the people in the set. We want to maximize the distance between already seen and not yet seen talents. The result that we reach in baseliner is 0.61.
+Unexpectedness tells us how unforeseen the data is to the recruiters.  In the formula below $\mathcal { J } _ { u }$ is a symbol for a set of talents that the recruiter has interacted with. When we know about this past, we can compare the talents with the people in the set. We want to maximize the distance between already seen and not yet seen talents. The result that we reach in baseliner is 0.61.
 
 $$
 Unexp = \frac { 1 } { | R | \left| \mathcal { J } _ { u } \right| } \sum _ { i \in R } \sum _ { j \in \mathcal { J } _ { u } } d ( i , j )
@@ -310,7 +318,7 @@ $$
 
 \subsubsection{User Study}\label{subsubsection:user-study-first-group}
 
-In this user study, we pick a random group and ask the opinions of the recruiters for the performance of first item for each project in the group, the diversity of these first items in the group and the overall list value. The results are shown in the table \ref{tab:user-study-group-rec-unsupervised}.
+In this user study, we pick a random group and ask the opinions of the recruiters for the performance of the first item for each project in the group, the diversity of these first items in the group and the overall list value. For this and the next user studies, we also wanted to ask the recruiters their opinions about the unexpectedness[See section \ref{ev-unsupervised-group-diversity-unexp}]. However, the subjects of the user study can not know about the past interactions of the system. That's why the unexpectedness results are only present for the offline evaluation. The results are shown in the table \ref{tab:user-study-group-rec-unsupervised}.
 
 \begin{table}[ht]
 	\caption[User Study Group Unsupervised]{A table that shows results of the user study about unsupervised group recommendation}\label{tab:user-study-group-rec-unsupervised}
@@ -338,11 +346,11 @@ $$
 g ( R , \lambda ) = ( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R )
 $$
 
-In the above equations, the variable $\lambda$ can be tuned according to our needs. A value closer to zero means, the recruiters want to see more relevant scores and a value closer to one shows more diverse results. 
+In the above equations, the variable $\lambda$ can be tuned according to our needs. A value closer to zero means, the recruiters want to see more relevant scores and a value closer to one shows more different results. 
 
 \subsubsection{Offline Evaluation}
 
-When we evaluate a diverse recommender, we need to show variations of results for different $\lambda$ values. Because, every small or big modification of this value will have an effect on the accuracy, diversity or overall list value.
+When we evaluate a diverse recommender, we need to show variations of results for different $\lambda$ values. Because, every small or big modification of this value will affect the accuracy, diversity, or overall list value.
 
 \paragraph{Accuracy}
 
@@ -386,11 +394,11 @@ When we evaluate a diverse recommender, we need to show variations of results fo
 	\caption[Unsupervised-diversity-accuracy Figure]{Effect of diversity constant on unsupervised group recommender to the accuracy}\label{fig:unsupervised-diversity-accuracy}
 \end{figure}
 
-The figure \ref{fig:unsupervised-diversity-accuracy} depicts the impact of diversity constant change to the accuracy, which are calculated on freelancer.com dataset.
+The figure \ref{fig:unsupervised-diversity-accuracy} depicts the impact of the diversity constant change to the accuracy, which is calculated on freelancer.com dataset.
 
 \paragraph{Diversity}\label{ev-unsupervised-group-diversity-diverse}
 
-For the diversity, we use the same equation that we used in the paragraph \ref{ev-unsupervised-group-diversity}. However, a major change is that we have to calculate the inter-list-diversity for different $\lambda$ values.
+For diversity, we use the same equation that we used in paragraph \ref{ev-unsupervised-group-diversity}. However, a significant change is that we have to calculate the inter-list-diversity for different $\lambda$ values.
 
 
 \begin{figure}[htpb]
@@ -423,7 +431,7 @@ For the diversity, we use the same equation that we used in the paragraph \ref{e
 
 The figure \ref{fig:unsupervised-diversity-diversity} portrays, how changing the diversity constant affects the actual diversity of the recommendation lists that are generated by the recommendation engine.
 
-\paragraph{Unexpectedness}
+\paragraph{Unexpectedness}\label{ev-unsupervised-group-diversity-unexp}
 
 \begin{figure}[htpb]
 	\centering
@@ -454,12 +462,12 @@ The figure \ref{fig:unsupervised-diversity-diversity} portrays, how changing the
 \end{figure}
 
 
-We use the same formula, which was explained in the paragraph \ref{ev-unsupervised-group-unexpectedness}. Again, we calculate the values seperately for different diversity rates and drawn on the figure \ref{fig:unsupervised-diversity-unexpectedness}. It is obvious that the diverse recommender didn't increase the unexpectedness as it improved the diversity.
+We use the same formula, which was explained in paragraph \ref{ev-unsupervised-group-unexpectedness}. Again, we calculate the values separately for different diversity rates and drawn on the figure \ref{fig:unsupervised-diversity-unexpectedness}. It is evident that the diverse recommender did not increase the unexpectedness as it improved diversity.
 
 
 \subsubsection{User Study}
 
-In this part of the user study, we gave the recruiters the control of the dashboard and received their opinion about a specific group. We asked them about the success of firsts items for each project, the diversity between them and the overall list value. In comparison to the individual recommenders, we asked these questions for different $\lambda$ values, which is the diversity constant. The results of this study are drawn in the graph \ref{fig:unsupervised-diversity-user-study}.
+In this part of the user study, we gave the recruiters the control of the dashboard and received their opinion about a specific group. We asked them about the success of firsts items for each project, the diversity between them, and the overall list value. In comparison to the individual recommenders, we asked these questions for different $\lambda$ values, which is the diversity constant. The results of this study are drawn in the graph \ref{fig:unsupervised-diversity-user-study}.
 
 \begin{figure}[ht]
 	\centering
@@ -492,7 +500,7 @@ In this part of the user study, we gave the recruiters the control of the dashbo
 		0.5 & 3.75 \\
 		0.7 & 4 \\
 		0.9 & 4.25 \\
-		}\exampleC
+	}\exampleC
 	% This should probably go into a file in figures/
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -521,11 +529,11 @@ The supervised group recommender takes advantage of neural networks to ascertain
 
 \subsection{Baseline Recommender}
 
-The baseline supervised group recommender maximizes the relevancy of each project-talent pair for a given group. It doesn't aim to optimize the diversity of talents. 
+The baseline supervised group recommender maximizes the relevancy of each project-talent pair for a given group. It does not aim to optimize the diversity of talents. 
 
 \subsubsection{Offline Evaluation}
 
-Again, we run algorithms to determine the accuracy, diversity and unexpedtedness of the current recommender.
+Again, we run algorithms to determine the accuracy, diversity, and unexpectedness of the current recommender system.
 
 \paragraph{Accuracy}
 
@@ -537,12 +545,12 @@ We calculate the diversity according to the formula in \ref{ev-unsupervised-grou
 
 \paragraph{Unexpectedness}
 
-The unexpectedness that is generated by this recommender was spelled out in the paragraph \ref{ev-unsupervised-group-unexpectedness}. When the average unexpectedness for all projects are measured, the value that we see is 65.5\%.
+The unexpectedness that is generated by this recommender was spelled out in paragraph \ref{ev-unsupervised-group-unexpectedness}. When the average unexpectedness for all projects is measured, the value that we see is 65.5\%.
 
 
 \subsubsection{User Study}
 
-The rules of the user study in section \ref{subsubsection:user-study-first-group} still applies to this study. However, the recruiters give their opinions about the results of the group neural network approach, which are listed in the table \ref{tab:user-study-group-rec-nn}.
+The rules of the user study in section \ref{subsubsection:user-study-first-group} still applies to this study. However, the recruiters give their opinions about the results of the group neural network approach, which are listed in table \ref{tab:user-study-group-rec-nn}.
 
 \begin{table}[ht]
 	\caption[User Study Group Supervised]{A table that shows results of the user study about supervised group recommendation}\label{tab:user-study-group-rec-nn}
@@ -607,11 +615,11 @@ In the following paragraphs, we demonstrate the evaluation results using differe
 	\caption[Accuracy in Diverse Supervised Group Recommender]{Effect of diversity constant on supervised group recommender to the accuracy}\label{fig:supervised-diversity-accuracy}
 \end{figure}
 
-The figure \ref{fig:supervised-diversity-accuracy} depicts the impact of diversity constant change to the accuracy, which are calculated on freelancer.com dataset.
+The figure \ref{fig:supervised-diversity-accuracy} depicts the impact of the diversity constant change to the accuracy, which is calculated on freelancer.com dataset.
 
 \paragraph{Diversity}
 
-To calculate diversity, we use the same equation that we used in the paragraph \ref{ev-unsupervised-group-diversity} with different diversity constants. The figure \ref{fig:supervised-diversity-diversity} shows the diversity in recommendation lists under the effect of diversity constant.
+To calculate diversity, we use the same equation that we used in paragraph \ref{ev-unsupervised-group-diversity} with different diversity constants. The figure \ref{fig:supervised-diversity-diversity} shows the diversity in recommendation lists under the effect of diversity constant.
 
 
 \begin{figure}[htpb]
@@ -621,9 +629,9 @@ To calculate diversity, we use the same equation that we used in the paragraph \
 	% This should probably go into a file in data/
 	\pgfplotstableread{
 		a & b    \\
-		0 & 0.61 \\
-		0.3 & 0.73 \\
-		0.6 & 0.89 \\
+		0 & 0.44 \\
+		0.3 & 0.63 \\
+		0.6 & 0.81 \\
 		1.0 & 0.99 \\
 	}\exampleA
 	% This should probably go into a file in figures/
@@ -674,12 +682,12 @@ To calculate diversity, we use the same equation that we used in the paragraph \
 \end{figure}
 
 
-We use the same formula, which was explained in the paragraph \ref{ev-unsupervised-group-unexpectedness} and the values are calculated seperately for different diversity rates that are drawn on the figure \ref{fig:supervised-diversity-unexpectedness}.
+We use the same formula, which was explained in paragraph \ref{ev-unsupervised-group-unexpectedness} and the values are calculated separately for different diversity rates that are drawn on the figure \ref{fig:supervised-diversity-unexpectedness}.
 
 
 \subsubsection{User Study}
 
-In scope of this user study, user gave ratings to different supervised group recommendations that were induced by varying $\lambda$ values. The results of this study are drawn in the graph \ref{fig:supervised-diversity-user-study}.
+In the scope of this user study, the user gave ratings to different supervised group recommendations that were induced by varying $\lambda$ values. The results of this study are drawn in the graph \ref{fig:supervised-diversity-user-study}.
 
 \begin{figure}[ht]
 	\centering
@@ -735,17 +743,17 @@ In scope of this user study, user gave ratings to different supervised group rec
 
 \section{Feedback Loop}\label{section:eval-feedback}
 
-Improving the outcomes via a feedback loop is an essential part of this thesis. Like it was told before [See \ref{section:feedback-learning}], the loop has a direct and an indirect effect. When the recruiters that use the dashboard, post feedback to talents, the recommendation list is instantly changed accordingly. This is called the direct effect. Posting feedback, also modifies the existing dataset that is used to train the model. Sending a positive feedback modifies the datapoint to a positive label, which is one. Also, sending a negative feedback modifies the datapoint to a negative label, which is zero. After that, the model will produce \textit{better} results, when we retrain with the modified data.
+Improving the outcomes via a feedback loop is an essential part of this thesis. Like it was told before [See \ref{section:feedback-learning}], the loop has a direct and an indirect effect when the recruiters that use the dashboard, post feedback to talents, the recommendation list is instantly changed accordingly. This instant change is called the direct effect. Posting feedback also modifies the existing dataset that is used to train the model. Sending positive feedback modifies the data point to a positive label, which is one. Also, sending negative feedback modifies the data point to a negative label, which is zero. After that, the model will produce \textit{better} results when we retrain with the modified data.
 
-This section focuses on evaluation of this loop. It not feasible to conduct offline evaluation for the feedback loop, because the model that generates predictions tries to maximize the accuracy already. We already have a model and we want to improve it to satisfy the needs of recruiters. A logical evaluation method for the feedback loop would be a combination of online evaluation and user studies.
+This section focuses on the evaluation of this loop. It not feasible to conduct an offline evaluation for the feedback loop, because the model that generates predictions tries to maximize the accuracy already. We already have a model, and we want to improve it to satisfy the needs of recruiters. A logical evaluation method for the feedback loop would be a combination of online evaluation and user studies.
 
 \subsection{Online Evaluation and User Study}
 
-In this round of evaluation, we had eight participants that recruited talents before. The functional dashboard is given to each of the participants and the author of this thesis clearly gave instruction how the recommenders, the dashboard and the feedback loop work. Then, we asked the participants to choose some groups and arrange the loops according to their ideal scenario. 
+In this round of evaluation, we had eight participants that recruited talents before. The functional dashboard is given to each of the participants, and the author of this thesis instructed on how the recommenders, the dashboard, and the feedback loop work. Then, we asked the participants to choose some groups and arrange the loops according to their ideal scenario. 
 
-Participants gave more than 200 feedbacks in total. Considering the fact that the training data consists of more 350.000 data points, the amount of feedbacks are low. From the criteria that the recruiters stated, the author continued to add more feedbacks, making them 3500 in total. After this, the model is retrained with the modifed data. Last of all, the results are shown again the recruiters and their opinions are asked again.
+Participants gave more than 200 feedbacks in total. Because the training data consists of more 350.000 data points, the number of feedbacks are low. From the criteria that the recruiters stated, the author continued to add more feedbacks, making them 3500 in total. After this, the model is retrained with the modified data. Last, the results are shown to the recruiters again and their opinions are asked again.
 
-The table \ref{tab:online-evaluation} depicts the opinions of the recruiters before and after retraining. The first line is the data before and the second line contains their ratings for after retraining for the same group recommendation. 
+The table \ref{tab:online-evaluation} depicts the opinions of the recruiters before and after retraining. The first line is the data before, and the second line contains their ratings for after retraining for the same group recommendation. 
 
 \begin{table}[htpb]
 	\caption[Online Evaluation Table]{A table that shows the user opinions before and after re-training.}\label{tab:online-evaluation}
@@ -760,11 +768,11 @@ The table \ref{tab:online-evaluation} depicts the opinions of the recruiters bef
 	\end{tabular}
 \end{table}
 
-The discussion about the results are included in the chapter \ref{chapter:discussion}.
+The discussion about the results is included in chapter \ref{chapter:discussion}.
 
 \section{Summary}
 
-In this chapter we showed the evaluation results for unsupervised and supervised individual recommender, unsupervised and supervised group recommender  and the feedback loop. These results come from offline, online evaluation and user studies. 
+In this chapter, we showed the evaluation results for the unsupervised and supervised individual recommender, unsupervised, and supervised group recommender system and the feedback loop. These results come from offline, online evaluation, and user studies. 
 
 In the next chapter, we continue with understanding the results [See chapter \ref{chapter:discussion}].
 
