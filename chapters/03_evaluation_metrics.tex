@@ -5,17 +5,17 @@
 
 When recommender systems are evaluated, the relevant metrics should be chosen according to the needs. Some of the properties consist of trade-offs, accuracy declines when the diversity and other properties increase, or other properties can be directly proportional. The developers of the recommender systems should evaluate important properties using offline and online evaluation \cite{shani2011evaluating}.
 
-Although offline evaluation may be enough for properties like accuracy, user studies and online evaluation are required to draw reliable conclusions on properties like diversity. Such an online experiment/user study uses a recommendation method with a tunable parameter that affects the property being considered. Test subjects shoud be presented with the list of recommendations that are affected by diverse values for tunable parameters.whether the user noticed the change in the property shouldn't be measured, but whether the change in property has increased their satisfaction. Like other user studies, it is advantageous, when the participants don't know about the aim of the experiment. We can only measure properties like diversity with user study or online evaluation, because we need user response that gets affected by this parameter \cite{shani2011evaluating}.
+Although offline evaluation may be enough for properties like accuracy, user studies and online evaluation are required to draw reliable conclusions on properties like diversity. Such an online experiment/user study uses a recommendation method with a tunable parameter that affects the property being considered. Test subjects should be presented with the list of recommendations that are affected by diverse values for tunable parameters.whether the user noticed the change in the property should not be measured, but whether the change in property has increased their satisfaction. Like other user studies, it is advantageous when the participants do not know about the aim of the experiment. We can only measure properties like diversity with user study or online evaluation because we need user response that gets affected by this parameter \cite{shani2011evaluating}.
 
 When the developers conduct experiments to select the relevant properties and evaluate their performance, the most suitable recommenders can be selected.
 
 \subsection{Accuracy}
 
-In this section some equations to calculate the are presented. To understand them better, the notation used is also explained briefly. 
+In this section, some equations to calculate the accuracy are presented. To understand them better, the notation is also explained briefly. 
 
-To understand the equations, we define some notations; the set of users in the recommender system will be denoted by \textit{U}, and the set of items by \textit{I}. Additionally, \textit{R} depicsts the set of ratings recorded in the system, and the letter \textit{S} is for the set of possible values for a rating. \textit{S} can be a discrete number from 1 to 5 or a element of the set {like, dislike} or other values depend on the implementation. Also, we suppose that no more than one rating can be made by any user u $\in$  U for a particular item i $\in$ I and set $r_ui$ this rating. To identify the subset of users that have rated an item i, we use the notation $U_i$. Similar to that, $I_u$ represents the subset of items that have been rated by a user u \cite{shani2011evaluating}.
+To understand the equations, we define some notations; the set of users in the recommender system will be denoted by \textit{U} and the set of items by \textit{I}. Additionally, \textit{R} depicts the set of ratings recorded in the system, and the letter \textit{S} is for the set of possible values for a rating. \textit{S} can be a discrete number from 1 to 5 or an element of the set {like, dislike} or other values depend on the implementation. Also, we suppose that a user $u$ $\in$  $U$ can perform no more than one rating for a particular item $i$ $\in$ $I$ and set $r_ui$ this rating. To identify the subset of users that have rated item $i$, we use the notation $U_i$. Similar to that, $I_u$ represents the subset of items that have been rated by a user $u$ \cite{shani2011evaluating}.
 
-Recommender systems have two main tasks, which are predicting the ratings and recommending a list to the users. Prediction of ratings is self-explanatory and the aim is predicting the ratings of an unrated item \textit{i} from the user \textit{u}. This task is defined as a regression or a classification problem with the goal of learning the function f $\colon$ U $\times$ I $\rightarrow$ S. There are two popular measures of accuracy to for this task: Mean Absolute Error (MAE) and the Root Mean Squared Error (RMSE). These are presented below and the author of this thesis used them as the cost function of the neural networks[TODO imp supervised] \cite{shani2011evaluating}.
+Recommender systems have two main tasks, which are predicting the ratings and recommending a list to the users. Prediction of ratings is self-explanatory, and the aim is predicting the ratings of an unrated item \textit{i} from the user \textit{u}. This task is defined as a regression or a classification problem to learn the function f $\colon$ U $\times$ $I$ $\rightarrow$ S. There are two popular measures of accuracy to for this task: Mean Absolute Error (MAE) and the Root Mean Squared Error (RMSE). These are presented below, and the author of this thesis used them as the cost function of the neural networks [See section \ref{section:supervised}] \cite{shani2011evaluating}.
 
 $$
 \mathrm { MAE } ( f ) = \frac { 1 } { \left| \mathcal { R } _ {test} \right| } \sum _ { r _ { u i } \in \mathcal { R } _ {test} } \left| f ( u , i ) - r _ { u i } \right|
@@ -43,29 +43,29 @@ $$
 \mathrm { ARHR } ( L ) = \frac { 1 } { | \mathcal { U } | } \sum _ { u \in \mathcal { U } } \frac { 1 } { \mathrm { rank } \left( i _ { u } , L ( u ) \right) }
 $$
 
-, which is used to evaluate the success of the company recommender\cite{shani2011evaluating}.[TODO if necessary add other source + ref to implementation]
+, which is used to evaluate the success of the company recommender [See section \ref{evaluation:existing}] \cite{shani2011evaluating}.
 
 
 \subsection{Coverage}
 
-Coverage can also be an important evaluation property for some recommender systems. The aim of maximizing the coverage would be making sure that a big portion of items are recommended by the recommender system. This might be especially important for recommender systems of e-commerce systems, so that different range of products get sold \cite{shani2011evaluating}.
+Coverage can also be a vital evaluation property for some recommender systems. The aim of maximizing the coverage would be making sure that the recommender system recommends a significant portion of items. Coverage might be especially crucial for recommender systems of e-commerce systems so that different range of products get sold \cite{shani2011evaluating}.
 
 
 \subsection{Confidence}\label{research:confidence}
 
-Confidence in context of recommender systems refers to the system's trust into it's own suggestions. As we don't use this property in the implementation part, we also go into detail \cite{herlocker2000explaining}.
+Confidence in the context of recommender systems refers to the system's trust into its suggestions. As we do not use this property in the implementation part, we also go into detail \cite{herlocker2000explaining}.
 
 \subsection{Trust}
 
-Opposite to the confidence that was explained in the subsection \ref{research:confidence}, trust refers to user's trust into the recommender system. More information on this can be found in other sources \cite{shani2011evaluating}.
+Opposite to the confidence that was explained in subsection \ref{research:confidence}, trust refers to user's trust into the recommender system. More information on this can be found in other sources \cite{shani2011evaluating}.
 
 \subsection{Novelty}
 
-Novel recommendations are recommendations for the items that the user didn't know about before \cite{shani2011evaluating}. A simple solution to increase this would be filtering out the items for every user, which they interacted before.
+Novel recommendations are recommendations for the items that the user did not know about before \cite{shani2011evaluating}. A simple solution to increase this would be filtering out the items for every user, which they interacted before.
 
 \subsection{Serendipity}
 
-Serendipity also known as unexpectedness depicts how surprising the recommendation results are. Although serendipty and novelty may sound similar in the beginning, items that are the similar to what the user already saw wouldn't be surprising at all. That's why, filtering out the items that the user already saw woudn't be a solution \cite{shani2011evaluating}.
+Serendipity also is known as unexpectedness, depicts how surprising the recommendation results are. Although serendipity and novelty may sound similar in the beginning, items that are similar to what the user already saw would not be surprising at all. That is why filtering out the items that the user already saw would not be a solution \cite{shani2011evaluating}.
 
 \subsection{Diversity}
 
@@ -74,31 +74,31 @@ Diversity is a property that ensures the recommended items are not similar to ea
 
 \subsection{Utility}
 
-Utility as a property hints the optimization of predefined property that brings any advantage to the recommendation system. For example, the utility function of an e-commerce website may be improving their revenue. Generally, the utility touches on any system or user gain with the help of the recommender system \cite{shani2011evaluating}.
+Utility as a property hints the optimization of predefined property that brings any advantage to the recommendation system. For example, the utility function of an e-commerce website may be improving revenue. Generally, the utility touches on any system or user gain with the help of the recommender system \cite{shani2011evaluating}.
 
 \subsection{Risk}
 
-Risk is another property that is important for some specific use-cases. For example, for a recommender system that suggests stocks to buy, then the risk would play a big role \cite{shani2011evaluating}.
+Risk is another property that is important for some specific use-cases. For example, for a recommender system that suggests stocks to buy, then the risk would play a significant role \cite{shani2011evaluating}.
 
 \subsection{Robustness}
 
-Robustness in recommender systems explain how strong the system is to unwanted mofications on the system. For example. if an hotel owner can inject fake positive reviews to the system to make their hotel get recommended, then the system is not robust enough \cite{shani2011evaluating}.
+Robustness in recommender systems explains how secure the system is to unwanted modifications on the system. For example, If a hotel owner can inject fake positive reviews to the system to make their hotel get recommended, then the system is not robust enough \cite{shani2011evaluating}.
 
 \subsection{Privacy}
 
-For recommender systems that want to keep the preferences of users secret from others, privacy is an important metric, so that they can make sure that everone can interact with the system and get suggestions without worrying about their feedback being public \cite{shani2011evaluating}.
+For recommender systems that want to keep the preferences of users secret from others, privacy is an important metric, so that they can make sure that everyone can interact with the system and get suggestions without worrying about their feedback being public \cite{shani2011evaluating}.
 
 \subsection{Adaptivity}
 
-Adaptivity in recommender systems try to give relevant recommendation even if the the trends change. For example, for a news recommender system, the system should be able to recommend news about earthquake, in case of one happens, even though the user doesn't have previous interest in earthquakes \cite{shani2011evaluating}.
+Adaptivity in recommender systems tries to give relevant recommendation even if the trends change. For example, for a news recommender system, the system should be able to recommend news about the earthquake, in case of one happens, even though the user does not have a previous interest in earthquakes \cite{shani2011evaluating}.
 
 \subsection{Scalability}
 
-It may also be important for recommender systems to be performant. For production systems with millions of items, the recommender shoud still be able to suggest new items without any latency \cite{shani2011evaluating}.
+It may also be necessary for recommender systems to be performant. For production systems with millions of items, the recommender should still be able to suggest new items without any latency \cite{shani2011evaluating}.
 
 \subsection{Summary}
 
-In this section we discussed how recommendation algorithms could be evaluated in order to increase user satisfaction. There are different properties for different needs and the developers should understand what they need.
+In this section, we discussed how recommendation algorithms could be evaluated in order to increase user satisfaction. There are different properties for different needs, and the developers should understand what they need.
 
 As this thesis focuses mostly on diversity, the next section gives detailed information about diversity and its evaluation techniques.
 

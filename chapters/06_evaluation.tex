@@ -41,7 +41,7 @@ The takeaway from the previous paragraph does not hold for every dataset. For Mo
 In the next subsections, we demonstrate the evaluation results for various approaches.
 
 
-\subsection{Existing Company Recommender}
+\subsection{Existing Company Recommender}\label{evaluation:existing}
 
 The sponsor of this thesis, Motius, runs an internal recommendation system to suggest talents to roles. The internal mechanism that submits recommendations has stored the logs of the past recommendations in an internal database. This database has included all crucial details, such as the name of the roles, projects, talents, recommendation strength, and if the person got an invitation to the next stage. We used the logs to conduct an offline evaluation.
 
@@ -59,7 +59,7 @@ Subsection \ref{implementation-unsupervised-similarity} revealed the implementat
 
 For this type of recommender, we used the same evaluation metric for different purposes. First of all, we assessed different flavors of implementation mechanisms to select the best one. Secondly, we calculate, final accuracy score for each unsupervised recommender, so that the recommenders are comparable.
 
-\begin{table}[htpb]
+\begin{table}[htp]
 	\caption[Evaluation mid-results]{A table that shows results of different implementation settings of recommendation by similarity.}\label{tab:evaluation-rec-similarity}
 	\centering
 	\begin{tabular}{l l l l}
@@ -122,7 +122,7 @@ Offline evaluation of this method is straightforward. Like we did before, we che
 
 According to \cite{burke2002hybrid}, hybridization is a valid technique to combine several recommendation methods to produce a single recommendation. There are different methods to achieve this, but we combine weighted scores of both of other recommenders. In our version, we have decided to add results from both recommenders with some weights. The reason for that is to be able to predict results for as many projects as possible. The \ref{tab:evaluation-amount-prediction} depicts how many projects is it possible to predict the results. The slimmed-down version that we developed to recommend by similarity cannot predict for all projects, because a significant percentage of the winners do not have a skill vector. When we combine both results, we also increase our coverage, since we get to use the results from two different recommenders. Since the popularity information for the Motius dataset doesn't exist, we did not implement this feature into the dashboard. That's why, we also didn't conduct a corresponding user study for this algorithm.
 
-\begin{table}[htpb]
+\begin{table}[htp]
 	\caption[The number of predicted projects]{A table that shows the amount of projects that we can generate predictions.}\label{tab:evaluation-amount-prediction}
 	\centering
 	\begin{tabular}{l l l}
@@ -140,7 +140,7 @@ According to \cite{burke2002hybrid}, hybridization is a valid technique to combi
 Since we decided on a weighted addition of two recommenders, we also have the flexibility to decide for the weights. We tried different weights for similarity and popularity recommenders and calculated the accuracy for these different settings. 
 
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -182,7 +182,7 @@ Figures \ref{fig:weight-selection} and \ref{fig:weight-selection-coverage}  depi
 
 It is clear that there is no obvious best weight choice since we both want to increase project coverage and accuracies. We chose the similarity weight 0.6 and popularity weight 0.4 to increase these results.
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -278,7 +278,7 @@ For this user study, we listed talents for the same role that were suggested by 
 	\end{tabular}
 \end{table}
 
-\section{Unsupervised Group Recommender}
+\section{Unsupervised Group Recommender}\label{ev:unsupervised-group-rec}
 
 Unsupervised group recommender is another type of recommender that we implemented in the dashboard is the unsupervised group recommender and contains different modes such as baseline and diverse. 
 
@@ -354,7 +354,7 @@ When we evaluate a diverse recommender, we need to show variations of results fo
 
 \paragraph{Accuracy}
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -401,7 +401,7 @@ The figure \ref{fig:unsupervised-diversity-accuracy} depicts the impact of the d
 For diversity, we use the same equation that we used in paragraph \ref{ev-unsupervised-group-diversity}. However, a significant change is that we have to calculate the inter-list-diversity for different $\lambda$ values.
 
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -433,7 +433,7 @@ The figure \ref{fig:unsupervised-diversity-diversity} portrays, how changing the
 
 \paragraph{Unexpectedness}\label{ev-unsupervised-group-diversity-unexp}
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -575,7 +575,7 @@ In the following paragraphs, we demonstrate the evaluation results using differe
 
 \paragraph{Accuracy}
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -622,7 +622,7 @@ The figure \ref{fig:supervised-diversity-accuracy} depicts the impact of the div
 To calculate diversity, we use the same equation that we used in paragraph \ref{ev-unsupervised-group-diversity} with different diversity constants. The figure \ref{fig:supervised-diversity-diversity} shows the diversity in recommendation lists under the effect of diversity constant.
 
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -653,7 +653,7 @@ To calculate diversity, we use the same equation that we used in paragraph \ref{
 
 \paragraph{Unexpectedness}
 
-\begin{figure}[htpb]
+\begin{figure}[htp]
 	\centering
 	
 	\pgfplotstableset{col sep=&, row sep=\\}
@@ -755,7 +755,7 @@ Participants gave more than 200 feedbacks in total. Because the training data co
 
 The table \ref{tab:online-evaluation} depicts the opinions of the recruiters before and after retraining. The first line is the data before, and the second line contains their ratings for after retraining for the same group recommendation. 
 
-\begin{table}[htpb]
+\begin{table}[htp]
 	\caption[Online Evaluation Table]{A table that shows the user opinions before and after re-training.}\label{tab:online-evaluation}
 	\centering
 	\begin{tabular}{l l l}

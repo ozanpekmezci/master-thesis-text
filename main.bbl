@@ -782,6 +782,32 @@
       \field{title}{Flask web development: developing web applications with python}
       \field{year}{2018}
     \endentry
+    \entry{grus2019data}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=1ffc3eb84c3593aa01ba1d6000796064}{%
+           family={Grus},
+           familyi={G\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{1ffc3eb84c3593aa01ba1d6000796064}
+      \strng{fullhash}{1ffc3eb84c3593aa01ba1d6000796064}
+      \strng{bibnamehash}{1ffc3eb84c3593aa01ba1d6000796064}
+      \strng{authorbibnamehash}{1ffc3eb84c3593aa01ba1d6000796064}
+      \strng{authornamehash}{1ffc3eb84c3593aa01ba1d6000796064}
+      \strng{authorfullhash}{1ffc3eb84c3593aa01ba1d6000796064}
+      \field{labelalpha}{Gru19}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data science from scratch: first principles with python}
+      \field{year}{2019}
+    \endentry
     \entry{herlocker2000explaining}{inproceedings}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=ed3578253984eccd32a99381d2a9ae23}{%
@@ -822,6 +848,38 @@
       \field{year}{2000}
       \field{pages}{241\bibrangedash 250}
       \range{pages}{10}
+    \endentry
+    \entry{hanin2018start}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=cf9a954bd1391f7be502bbdd80737355}{%
+           family={Hanin},
+           familyi={H\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=148ce343efcf9f02663d801b4860811c}{%
+           family={Rolnick},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1849abdccb01aced2d7cf4098bd09b0b}
+      \strng{fullhash}{1849abdccb01aced2d7cf4098bd09b0b}
+      \strng{bibnamehash}{1849abdccb01aced2d7cf4098bd09b0b}
+      \strng{authorbibnamehash}{1849abdccb01aced2d7cf4098bd09b0b}
+      \strng{authornamehash}{1849abdccb01aced2d7cf4098bd09b0b}
+      \strng{authorfullhash}{1849abdccb01aced2d7cf4098bd09b0b}
+      \field{labelalpha}{HR18}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{How to start training: The effect of initialization and architecture}
+      \field{year}{2018}
+      \field{pages}{571\bibrangedash 581}
+      \range{pages}{11}
     \endentry
     \entry{Hurley:2011:NDT:1944339.1944341}{article}{}
       \name{author}{2}{}{%
@@ -968,6 +1026,32 @@
       \field{title}{Nonlinear dimensionality reduction}
       \field{year}{2007}
     \endentry
+    \entry{masse2011rest}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=d17b34343fbf45b0a0ec9962f1ac0431}{%
+           family={Masse},
+           familyi={M\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{bibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorbibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authornamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \field{labelalpha}{Mas11}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{REST API Design Rulebook: Designing Consistent RESTful Web Service Interfaces}
+      \field{year}{2011}
+    \endentry
     \entry{McNee:2006:AEA:1125451.1125659}{inproceedings}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=9dbc31ef71b6292815170d05f8bb6995}{%
@@ -1023,6 +1107,32 @@
       \verb http://doi.acm.org/10.1145/1125451.1125659
       \endverb
       \keyw{collaborative filtering,metrics,personalization,recommender systems}
+    \endentry
+    \entry{murphy2012machine}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f5025f90a927ba1db6539051f9669f83}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Kevin\bibnamedelima P},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MIT press}%
+      }
+      \strng{namehash}{f5025f90a927ba1db6539051f9669f83}
+      \strng{fullhash}{f5025f90a927ba1db6539051f9669f83}
+      \strng{bibnamehash}{f5025f90a927ba1db6539051f9669f83}
+      \strng{authorbibnamehash}{f5025f90a927ba1db6539051f9669f83}
+      \strng{authornamehash}{f5025f90a927ba1db6539051f9669f83}
+      \strng{authorfullhash}{f5025f90a927ba1db6539051f9669f83}
+      \field{labelalpha}{Mur12}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine learning: a probabilistic perspective}
+      \field{year}{2012}
     \endentry
     \entry{maind2014research}{article}{}
       \true{moreauthor}
@@ -1184,6 +1294,30 @@
       \verb http://www.sciencedirect.com/science/article/pii/S0957417412002825
       \endverb
       \keyw{Recommender systems,Literature review,Data mining technique,Classification}
+    \endentry
+    \entry{pedamonti2018comparison}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9b540b856d45386c67d739a36e874d68}{%
+           family={Pedamonti},
+           familyi={P\bibinitperiod},
+           given={Dabal},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b540b856d45386c67d739a36e874d68}
+      \strng{fullhash}{9b540b856d45386c67d739a36e874d68}
+      \strng{bibnamehash}{9b540b856d45386c67d739a36e874d68}
+      \strng{authorbibnamehash}{9b540b856d45386c67d739a36e874d68}
+      \strng{authornamehash}{9b540b856d45386c67d739a36e874d68}
+      \strng{authorfullhash}{9b540b856d45386c67d739a36e874d68}
+      \field{labelalpha}{Ped18}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1804.02763}
+      \field{title}{Comparison of non-linear activation functions for deep neural networks on MNIST classification task}
+      \field{year}{2018}
     \endentry
     \entry{poggio2017and}{article}{}
       \name{author}{5}{}{%

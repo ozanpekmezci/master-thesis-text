@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  22 MAY 2019 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  23 MAY 2019 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1722,7 +1722,7 @@ chapter 2.
 
 ]) (./chapters/02b_collaborative_filtering.tex)
 (./chapters/02c_content_based_filtering.tex [8]
-<figures/HighLevelContentBased.png, id=641, 609.27625pt x 419.5675pt>
+<figures/HighLevelContentBased.png, id=642, 609.27625pt x 419.5675pt>
 File: figures/HighLevelContentBased.png Graphic file (type png)
 <use figures/HighLevelContentBased.png>
 Package pdftex.def Info: figures/HighLevelContentBased.png  used on input line 
@@ -1738,134 +1738,129 @@ chapter 3.
 
 
 ]
-<figures/FreelancerExample.png, id=763, 778.91pt x 533.995pt>
+<figures/FreelancerExample.png, id=766, 778.91pt x 533.995pt>
 File: figures/FreelancerExample.png Graphic file (type png)
 <use figures/FreelancerExample.png>
 Package pdftex.def Info: figures/FreelancerExample.png  used on input line 31.
 (pdftex.def)             Requested size: 418.25555pt x 286.73969pt.
-<figures/FreelancerTalentExample.png, id=766, 777.90625pt x 742.775pt>
+<figures/FreelancerTalentExample.png, id=769, 777.90625pt x 742.775pt>
 File: figures/FreelancerTalentExample.png Graphic file (type png)
 <use figures/FreelancerTalentExample.png>
 Package pdftex.def Info: figures/FreelancerTalentExample.png  used on input lin
 e 42.
 (pdftex.def)             Requested size: 313.69167pt x 299.53017pt.
- [21 <./figures/FreelancerExample.png>]
-<figures/FreelancerTalentSkills.png, id=776, 376.40625pt x 470.75874pt>
+ [21 <./figures/FreelancerExample.png>] [22 <./figures/FreelancerTalentExample.
+png>]
+<figures/FreelancerTalentSkills.png, id=784, 376.40625pt x 470.75874pt>
 File: figures/FreelancerTalentSkills.png Graphic file (type png)
 <use figures/FreelancerTalentSkills.png>
 Package pdftex.def Info: figures/FreelancerTalentSkills.png  used on input line
  58.
 (pdftex.def)             Requested size: 209.12778pt x 261.55434pt.
- [22 <./figures/FreelancerTalentExample.png>] [23 <./figures/FreelancerTalentSk
-ills.png>] [24]
-<figures/FreelancerTalentSkillsMatrix.png, id=801, 1304.875pt x 441.65pt>
+ [23 <./figures/FreelancerTalentSkills.png>] [24]
+<figures/FreelancerTalentSkillsMatrix.png, id=806, 1304.875pt x 441.65pt>
 File: figures/FreelancerTalentSkillsMatrix.png Graphic file (type png)
 <use figures/FreelancerTalentSkillsMatrix.png>
 Package pdftex.def Info: figures/FreelancerTalentSkillsMatrix.png  used on inpu
 t line 130.
 (pdftex.def)             Requested size: 418.25555pt x 141.56001pt.
- [25 <./figures/FreelancerTalentSkillsMatrix.png>]
-<figures/FreelancerTalentMeta.png, id=814, 626.34pt x 379.4175pt>
+ [25]
+<figures/FreelancerTalentMeta.png, id=818, 626.34pt x 379.4175pt>
 File: figures/FreelancerTalentMeta.png Graphic file (type png)
 <use figures/FreelancerTalentMeta.png>
 Package pdftex.def Info: figures/FreelancerTalentMeta.png  used on input line 1
 55.
 (pdftex.def)             Requested size: 313.69167pt x 190.03249pt.
- [26 <./figures/FreelancerTalentMeta.png>]
-<figures/TensorBoardSparseCropped.png, id=826, 567.11874pt x 735.74875pt>
+ [26 <./figures/FreelancerTalentSkillsMatrix.png>] [27 <./figures/FreelancerTal
+entMeta.png>]
+<figures/TensorBoardSparseCropped.png, id=838, 567.11874pt x 735.74875pt>
 File: figures/TensorBoardSparseCropped.png Graphic file (type png)
 <use figures/TensorBoardSparseCropped.png>
 Package pdftex.def Info: figures/TensorBoardSparseCropped.png  used on input li
 ne 171.
 (pdftex.def)             Requested size: 313.69167pt x 406.97574pt.
 
-[27] [28 <./figures/TensorBoardSparseCropped.png>]
-<figures/EmbeddingThesis.png, id=845, 660.4675pt x 530.98375pt>
+[28] [29 <./figures/TensorBoardSparseCropped.png>]
+<figures/EmbeddingThesis.png, id=863, 660.4675pt x 530.98375pt>
 File: figures/EmbeddingThesis.png Graphic file (type png)
 <use figures/EmbeddingThesis.png>
-Package pdftex.def Info: figures/EmbeddingThesis.png  used on input line 200.
+Package pdftex.def Info: figures/EmbeddingThesis.png  used on input line 198.
 (pdftex.def)             Requested size: 313.69167pt x 252.19559pt.
- [29]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [30 <./figures/EmbeddingThesis.png>]
-<figures/EmbeddingTrainingMatrix.png, id=866, 1025.8325pt x 182.6825pt>
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [31]
+<figures/EmbeddingTrainingMatrix.png, id=882, 1025.8325pt x 182.6825pt>
 File: figures/EmbeddingTrainingMatrix.png Graphic file (type png)
 <use figures/EmbeddingTrainingMatrix.png>
 Package pdftex.def Info: figures/EmbeddingTrainingMatrix.png  used on input lin
-e 272.
+e 270.
 (pdftex.def)             Requested size: 418.25555pt x 74.48495pt.
- [31 <./figures/EmbeddingTrainingMatrix.png>] [32] [33]
-<figures/PCAExplainedVariance.png, id=898, 431.6125pt x 305.14pt>
+ [32 <./figures/EmbeddingTrainingMatrix.png>] [33] [34]
+<figures/PCAExplainedVariance.png, id=919, 431.6125pt x 305.14pt>
 File: figures/PCAExplainedVariance.png Graphic file (type png)
 <use figures/PCAExplainedVariance.png>
 Package pdftex.def Info: figures/PCAExplainedVariance.png  used on input line 3
-47.
+45.
 (pdftex.def)             Requested size: 313.69167pt x 221.77722pt.
- [34]
-[35 <./figures/PCAExplainedVariance.png>]
-<figures/PCASilhouette.png, id=928, 721.69624pt x 403.5075pt>
+ [35 <./figures/PCAExplainedVariance.png>]
+<figures/PCASilhouette.png, id=940, 721.69624pt x 403.5075pt>
 File: figures/PCASilhouette.png Graphic file (type png)
 <use figures/PCASilhouette.png>
-Package pdftex.def Info: figures/PCASilhouette.png  used on input line 373.
+Package pdftex.def Info: figures/PCASilhouette.png  used on input line 371.
 (pdftex.def)             Requested size: 418.25555pt x 233.8498pt.
-<figures/KMeansCenters.png, id=930, 415.5525pt x 265.99374pt>
+<figures/KMeansCenters.png, id=943, 415.5525pt x 265.99374pt>
 File: figures/KMeansCenters.png Graphic file (type png)
 <use figures/KMeansCenters.png>
-Package pdftex.def Info: figures/KMeansCenters.png  used on input line 383.
+Package pdftex.def Info: figures/KMeansCenters.png  used on input line 381.
 (pdftex.def)             Requested size: 313.69167pt x 200.80173pt.
- [36 <./figures/PCASilhouette.png>]
-<figures/ClusterCentersMatrix.png, id=941, 1302.8675pt x 206.7725pt>
+ [36] [37 <./figures/PCASilhouette.png> <./figures/KMeansCenters.png>]
+<figures/ClusterCentersMatrix.png, id=965, 1302.8675pt x 206.7725pt>
 File: figures/ClusterCentersMatrix.png Graphic file (type png)
 <use figures/ClusterCentersMatrix.png>
 Package pdftex.def Info: figures/ClusterCentersMatrix.png  used on input line 3
-93.
+91.
 (pdftex.def)             Requested size: 418.25555pt x 66.37993pt.
-
-[37 <./figures/KMeansCenters.png> <./figures/ClusterCentersMatrix.png>]
-<figures/DashboardMain.png, id=951, 554.07pt x 320.19624pt>
+ [38 <./figures/ClusterCentersMatrix.png>]
+<figures/DashboardMain.png, id=976, 554.07pt x 320.19624pt>
 File: figures/DashboardMain.png Graphic file (type png)
 <use figures/DashboardMain.png>
-Package pdftex.def Info: figures/DashboardMain.png  used on input line 413.
+Package pdftex.def Info: figures/DashboardMain.png  used on input line 411.
 (pdftex.def)             Requested size: 209.12778pt x 120.85501pt.
-
-[38 <./figures/DashboardMain.png>]
-<figures/DashboardProjects.png, id=963, 1117.17375pt x 690.58pt>
+<figures/DashboardProjects.png, id=980, 1117.17375pt x 690.58pt>
 File: figures/DashboardProjects.png Graphic file (type png)
 <use figures/DashboardProjects.png>
-Package pdftex.def Info: figures/DashboardProjects.png  used on input line 426.
+Package pdftex.def Info: figures/DashboardProjects.png  used on input line 424.
 
 (pdftex.def)             Requested size: 313.69167pt x 193.90903pt.
-<figures/DashboardIndividual.png, id=966, 1105.12875pt x 517.935pt>
+<figures/DashboardIndividual.png, id=983, 1105.12875pt x 517.935pt>
 File: figures/DashboardIndividual.png Graphic file (type png)
 <use figures/DashboardIndividual.png>
 Package pdftex.def Info: figures/DashboardIndividual.png  used on input line 43
-9.
+7.
 (pdftex.def)             Requested size: 418.25555pt x 196.01912pt.
- [39 <./figures/DashboardProjects.png>]
-<figures/DashboardIndividualHybrid.png, id=976, 1090.0725pt x 691.58376pt>
+ [39 <./figures/DashboardMain.png>] [40 <./figures/DashboardProjects.png> <./fi
+gures/DashboardIndividual.png>]
+<figures/DashboardIndividualHybrid.png, id=1003, 1090.0725pt x 691.58376pt>
 File: figures/DashboardIndividualHybrid.png Graphic file (type png)
 <use figures/DashboardIndividualHybrid.png>
 Package pdftex.def Info: figures/DashboardIndividualHybrid.png  used on input l
-ine 448.
+ine 446.
 (pdftex.def)             Requested size: 418.25555pt x 265.3583pt.
-
-[40 <./figures/DashboardIndividual.png>] [41 <./figures/DashboardIndividualHybr
-id.png>]
-<figures/DashboardGroup.png, id=997, 1445.4pt x 555.07375pt>
+ [41 <./figures/DashboardIndividualHybrid.png>]
+<figures/DashboardGroup.png, id=1019, 1445.4pt x 555.07375pt>
 File: figures/DashboardGroup.png Graphic file (type png)
 <use figures/DashboardGroup.png>
-Package pdftex.def Info: figures/DashboardGroup.png  used on input line 466.
+Package pdftex.def Info: figures/DashboardGroup.png  used on input line 464.
 (pdftex.def)             Requested size: 418.25555pt x 160.62pt.
  [42 <./figures/DashboardGroup.png>]
-<figures/TensorBoardFeedback.png, id=1010, 1135.24126pt x 1472.50125pt>
+<figures/TensorBoardFeedback.png, id=1033, 1135.24126pt x 1472.50125pt>
 File: figures/TensorBoardFeedback.png Graphic file (type png)
 <use figures/TensorBoardFeedback.png>
 Package pdftex.def Info: figures/TensorBoardFeedback.png  used on input line 48
-8.
+6.
 (pdftex.def)             Requested size: 334.60571pt x 434.00215pt.
-) (./chapters/06_evaluation.tex
-[43] [44 <./figures/TensorBoardFeedback.png>]
+) (./chapters/06_evaluation.tex [43] [44 <./figures/TensorBoardFeedback.png>]
 chapter 4.
 [45
 
@@ -1898,7 +1893,7 @@ chapter 5.
 [65
 
 
-] [66] [67] [68] [69]) (./chapters/08_conclusion.tex [70] [71]
+] [66] [67] [68] [69] [70]) (./chapters/08_conclusion.tex [71]
 chapter 6.
 ) (./chapters/09_appendix.tex [72
 
@@ -1951,7 +1946,13 @@ Package microtype Info: Character `029' is missing
 [78
 
 
-] [79] [80]
+] [79]
+Overfull \hbox (6.64487pt too wide) in paragraph at lines 60--60
+\T1/pplx/m/n/10.95 (-20) ral net-works on MNIST clas-si-fi-ca-tion task.^^Q In:
+ \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.02763
+ []
+
+[80]
 No complaints by nag.
 [81]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
@@ -1966,11 +1967,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50673 strings out of 492649
- 1124538 string characters out of 6129621
- 1788953 words of memory out of 5000000
- 53062 multiletter control sequences out of 15000+600000
- 591382 words of font info for 343 fonts, out of 8000000 for 9000
+ 50696 strings out of 492649
+ 1125257 string characters out of 6129621
+ 1789570 words of memory out of 5000000
+ 53076 multiletter control sequences out of 15000+600000
+ 591582 words of font info for 346 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  81i,19n,136p,10457b,3395s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -1987,10 +1988,10 @@ ts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/pal
 atino/uplri8a.pfb>
-Output written on main.pdf (89 pages, 2347013 bytes).
+Output written on main.pdf (89 pages, 2347973 bytes).
 PDF statistics:
- 1522 PDF objects out of 1728 (max. 8388607)
- 1349 compressed objects within 14 object streams
- 374 named destinations out of 1000 (max. 500000)
+ 1546 PDF objects out of 1728 (max. 8388607)
+ 1373 compressed objects within 14 object streams
+ 379 named destinations out of 1000 (max. 500000)
  34726 words of extra memory for PDF output out of 35830 (max. 10000000)
 
