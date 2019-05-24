@@ -43,7 +43,7 @@
 \BOOKMARK [1][-]{section.2.9}{Summary}{chapter.2}% 43
 \BOOKMARK [0][-]{chapter.3}{Implementation}{}% 44
 \BOOKMARK [1][-]{section.3.1}{Datasets}{chapter.3}% 45
-\BOOKMARK [2][-]{subsection.3.1.1}{Freelancer Dataset}{section.3.1}% 46
+\BOOKMARK [2][-]{subsection.3.1.1}{Freelancer.com Dataset}{section.3.1}% 46
 \BOOKMARK [2][-]{subsection.3.1.2}{Company Dataset}{section.3.1}% 47
 \BOOKMARK [1][-]{section.3.2}{Unsupervised Individual Recommender}{chapter.3}% 48
 \BOOKMARK [2][-]{subsection.3.2.1}{Recommendation by Similarity}{section.3.2}% 49
@@ -53,11 +53,11 @@
 \BOOKMARK [2][-]{subsection.3.3.1}{Using Sparse Input}{section.3.3}% 53
 \BOOKMARK [2][-]{subsection.3.3.2}{Using Embeddings}{section.3.3}% 54
 \BOOKMARK [1][-]{section.3.4}{Unsupervised Group Recommender}{chapter.3}% 55
-\BOOKMARK [2][-]{subsection.3.4.1}{Baseline}{section.3.4}% 56
-\BOOKMARK [2][-]{subsection.3.4.2}{Diverse}{section.3.4}% 57
+\BOOKMARK [2][-]{subsection.3.4.1}{Baseline Recommender}{section.3.4}% 56
+\BOOKMARK [2][-]{subsection.3.4.2}{Diverse Recommender}{section.3.4}% 57
 \BOOKMARK [1][-]{section.3.5}{Supervised Group Recommender}{chapter.3}% 58
-\BOOKMARK [1][-]{section.3.6}{Group Recommendation using clustering}{chapter.3}% 59
-\BOOKMARK [1][-]{section.3.7}{Dashboard to show data and enter Feedback}{chapter.3}% 60
+\BOOKMARK [1][-]{section.3.6}{Group Recommendation using Clustering}{chapter.3}% 59
+\BOOKMARK [1][-]{section.3.7}{Dashboard to show data and enter feedback}{chapter.3}% 60
 \BOOKMARK [2][-]{subsection.3.7.1}{General Dashboard}{section.3.7}% 61
 \BOOKMARK [2][-]{subsection.3.7.2}{Individual Recommendations}{section.3.7}% 62
 \BOOKMARK [2][-]{subsection.3.7.3}{Group Recommendations}{section.3.7}% 63
@@ -97,6 +97,6 @@
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 97
 \BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 98
 \BOOKMARK [0][-]{chapter.7}{Appendix}{}% 99
-\BOOKMARK [0][-]{chapter*.102}{List of Figures}{}% 100
-\BOOKMARK [0][-]{chapter*.103}{List of Tables}{}% 101
-\BOOKMARK [0][-]{chapter*.104}{Bibliography}{}% 102
+\BOOKMARK [0][-]{chapter*.101}{List of Figures}{}% 100
+\BOOKMARK [0][-]{chapter*.102}{List of Tables}{}% 101
+\BOOKMARK [0][-]{chapter*.103}{Bibliography}{}% 102
