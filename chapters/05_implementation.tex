@@ -12,15 +12,15 @@ The methods used can be categorized as individual and group recommenders. Indivi
 
 \section{Datasets}\label{section:datasets}
 
-The author of the thesis received two separate but similar datasets. Both of the datasets contain information about projects and talents. The company dataset [See~\autoref{subsection:company-dataset}] is the internal database of the company Motius and includes skill vectors of 795 talents and 375 roles. These roles are parts of bigger projects, which is not the case in Freelancer.com dataset. In Freelancer.com dataset, we have projects as opposed to positions in the company dataset. However, we treat the projects in the Freelancer.com data and the roles in the company data the same. The reason for that is that we want to combine both data, and we also want to compare them.
+The author of the thesis received two separate but similar datasets. Both of the datasets contain information about projects and talents. The company dataset [See~\autoref{subsection:company-dataset}] is the internal database of the company Motius and includes skill vectors of 795 talents and 375 roles. These roles are parts of bigger projects, which is not the case in Freelancer.com dataset. In Freelancer.com dataset, we have projects as opposed to positions in the Motius dataset. However, we treat the projects in the Freelancer.com data and the roles in the Motius data the same. The reason for that is that we want to combine both data, and we also want to compare them.
 
 
 
-A huge difference is a fact that the Freelancer.com dataset is much bigger and detailed compared to the company dataset. The Freelancer.com dataset contains 30606 roles that are comparable to the positions in the company dataset. It has 32922 unique talents and 463536 bids by talents to the projects that represent the project-talent pairs.
+A huge difference is a fact that the Freelancer.com dataset is much bigger and detailed compared to the Motius dataset. The Freelancer.com dataset contains 30606 roles that are comparable to the positions in the Motius dataset. It has 32922 unique talents and 463536 bids by talents to the projects that represent the project-talent pairs.
 
 
 
-Another significant contrast between the two datasets is the distribution of their positive and negative labels. Freelancer.com data carries approximately 14-15 applicants per projects, and only one of the applicants get selected as the person to implement the project. Differently,  the company dataset includes multiple talents that advance to the next steps of the interviews. Therefore, we marked all of these talents that got invited with a positive label, and we marked the rest with negative tags. We will give detailed information about both datasets in the upcoming subsections.
+Another significant contrast between the two datasets is the distribution of their positive and negative labels. Freelancer.com data carries approximately 14-15 applicants per projects, and only one of the applicants get selected as the person to implement the project. Differently,  Motius dataset includes multiple talents that advance to the next steps of the interviews. Therefore, we marked all of these talents that got invited with a positive label, and we marked the rest with negative tags. We will give detailed information about both datasets in the upcoming subsections.
 
 
 \subsection{Freelancer.com Dataset}\label{implementation-subsection-freelancer}
@@ -64,16 +64,16 @@ Each bidder lists their skills on their profile page, and the employers may chec
 The dataset encloses  941 unique skills, which are both technical and non-technical. However, the author of the thesis chose to limit these skills to 780, since some of them were not used in notable amounts, and the data can be expressed without using those skills. This dataset was scraped from Freelancer.com.
 
 
-\subsection{Company Dataset}\label{subsection:company-dataset}
+\subsection{Motius Dataset}\label{subsection:company-dataset}
 
 The company dataset at hand is acquired from Motius GmbH. This dataset exported from their internal database and contains information about 795 talents and 375 roles. Each role includes the required skills for them, and each person has their skills listed. One difference to the Freelancer.com dataset would be that the talents also include skills that are associated with their original skill set. In theory, this is called association rules, and the skills that are mostly used together are considered to have a correlation score of 1. Because of these correlations, each talent has many skills listed, some of them highly correlated, and others are not correlated at all.
 
 
-The amount of unique skills in the company data equals to 1768. Nonetheless, more than 85\% of the skills are used rarely, so the author reduced the unique set of skills to  202. Both of the datasets combined, 923 unique skills were given at least five times. A problem we have with the datasets is the naming. Since both Freelancer.com and Motius have used different names for skills, there are exists only a set of 59 common skills. Therefore, training both datasets together does not improve model like it is expected.
+The amount of unique skills in the Motius data equals to 1768. Nonetheless, more than 85\% of the skills are used rarely, so the author reduced the unique set of skills to  202. Both of the datasets combined, 923 unique skills were given at least five times. A problem we have with the datasets is the naming. Since both Freelancer.com and Motius have used different names for skills, there are exists only a set of 59 common skills. Therefore, training both datasets together does not improve model like it is expected.
 
 
 
-When all of Freelancer.com and company dataset are put together in their raw form, the matrix that contains all talent and project data reaches the size of 8 GB. Such a significant memory usage may create a big problem for the developers. When an operation like normalization is being done, the library \textit{Pandas} applies many copying operations, which doubles the memory usage and may crash, if the physical memory is below 32 GB. That is why the author employed embeddings as a dimensionality reduction mechanism [See \ref{subsection:using-embeddings}].
+When all of Freelancer.com and Motius dataset are put together in their raw form, the matrix that contains all talent and project data reaches the size of 8 GB. Such a significant memory usage may create a big problem for the developers. When an operation like normalization is being done, the library \textit{Pandas} applies many copying operations, which doubles the memory usage and may crash, if the physical memory is below 32 GB. That is why the author employed embeddings as a dimensionality reduction mechanism [See \ref{subsection:using-embeddings}].
 
 
 

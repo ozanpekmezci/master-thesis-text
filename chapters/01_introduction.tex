@@ -5,122 +5,50 @@
 
 \chapter{Introduction}\label{chapter:introduction}
 
-Recommender Systems (RSs) are software tools and techniques that provide suggestions for items that are most likely of interest to a particular user ~\parencite{Ricci2015}. 
+The introduction chapter of the thesis will focus on explaining the basic terminology of recommender systems so that readers who are new to the topic can understand the rest quickly. In addition to that, we will also present the motivation and the hypotheses that we want to validate.
 
-Suggestions and items depend on the field that recommder system is applied. For example, for the topic of news article recommenders, the aim will most likely be suggesting news to the readers. In the field of job recommenders though, these suggestions can be bidirectional. Meaning that, job postings can be suggested to applicants or resumes can be recommended to the human resources team of a company.
+\section{Recommender Systems}
 
-This chapter of the thesis will focus on explaining the basic terminology of recommender systems so that readers who are new to the topic can understand the rest easily.
+Recommender Systems are software tools and techniques that provide suggestions for items that are most likely of interest to a particular user ~\parencite{Ricci2015}. 
 
-\section{Background of Classical Recommender Systems}
+Suggestions and items depend on the field that the recommender system is applied. For example, for the topic of news article recommenders, the aim will most likely be suggesting news to the readers. In the field of job recommenders though, these suggestions can be bidirectional. Meaning that job postings can be suggested to applicants or resumes can be recommended to the human resources team of a company.
 
-Although the history of the recommender systems go back to mid-1990s ~\parencite{PARK201210059}, the real boom happened after e-commerce services became mainstream [1]. Since there were too many items to choose from for users, such service was needed. Users of websites were becoming overloaded with the information and the developers of recommender systems had aim of reducing the information to be only relevant to users. 
+Although the history of the recommender systems goes back to mid-1990s ~\parencite{PARK201210059}, the real boom happened after e-commerce services became mainstream \cite{smith2017two}. Since there were too many items to choose from for users, such service was needed. Users of websites were becoming overloaded with the information, and the developers of recommender systems had the aim of reducing the information to be only relevant to users. 
 
-This section contains brief information about classical recommender systems.
-
-\subsection{Why Recommender Systems?}
+\section{Why Recommender Systems?}
 
 As mentioned in the last paragraph, recommender systems have the general function of suggesting items to users. However, why do recommender systems get developed? What kind of benefit do they have for both companies and users?
 
-First of all, recommender systems increase the number of items sold  ~\parencite{Ricci2015}.  Also, most recommenders suggest personalized results, which means that users will see content that fits their desires. This will also increase users buying more items.
+First of all, recommender systems increase the number of items sold  ~\parencite{Ricci2015}.  Also, most recommenders suggest personalized results, which means that users will see content that fits their desires. These recommendations will also increase users buying more items.
 
-Recommenders also increase the coverage of items that user see. Coverage denotes number of recommended unique items divided by the number of all items. Therefore, users can iteract with items that they wouldn't even see without recommenders, that improves chances of buying more items.
+Recommenders also increase the coverage of items that user see. Coverage denotes the number of recommended unique items divided by the number of all items. Therefore, users can interact with items that they would not even see without recommenders, that improves the chances of buying more items.
 
-Another important point is definitely  increasing the user satisfaction. This function of recommenders is the foundation of the thesis at hand. Unfortunately, most of the researchers don't take into account that the user satisfaction does not solely depend on simple evaluation metrics like accuracy, precision or recall but it can also depend on privacy, data security, diversity, serendipity, labeling, and presentation ~\parencite{Beel2016}. When recommender systems take those factors into account, they clearly increase user satisfaction. [Gerekirse iki madde daha var]
+Another essential point is increasing user satisfaction. This function of recommenders is the foundation of the thesis at hand. Unfortunately, most of the researchers do not take into account that the user satisfaction does not solely depend on simple evaluation metrics like accuracy, precision or recall but it can also depend on privacy, data security, diversity, serendipity, labeling, and presentation ~\parencite{Beel2016}. When recommender systems take those factors into account, they increase user satisfaction.
 
-\subsection{Functions}
+\section{User Satisfaction}
 
-To achieve the goals in the previous subsection, recommender systems need to fulfill some functions. Common functions include but not limited to ~\parencite{Ricci2015}:
+The recommendation performance is mainly evaluated in terms of accuracy (i.e., the difference between actual and predicted rating). Concentrating on the accuracy might not be a desired goal of the talent/project recommendations (e.g., simply recommending a \textit{top-N} list of talents that best match the requirements might result in similar talents whose skills only vary in a small extent). Besides the desired diversity, there might be other properties necessary for adequate recommendations (e.g., privacy, data security, diversity, serendipity, labeling, and presentation, and group recommendation).
 
-[kopi - peyst]
-\begin{itemize}
-	\item Find Some Good Items: Recommend to a user some items as a ranked list along with predictions of how much the user would like them (e.g., on a scale of one-to- five stars). This is the main recommendation task that many commercial systems address (see, for instance, Chap. 11). Some systems do not show the predicted rating.
-	\item Find all good items: Recommend all the items that can satisfy some user needs. In such cases it is insufficient to just find some good items. This is especially true when the number of items is relatively small or when the RS is mission-critical, such as in medical or financial applications. In these situations, in addition to the benefit derived from carefully examining all the possibilities, the user may also benefit from the RS ranking of these items or from additional explanations that the RS generates.
-	\item Recommend a sequence: Instead of focusing on the generation of a single recommendation, the idea is to recommend a sequence of items that is pleasing as a whole. Typical examples include recommending a TV series, a book on RSs after having recommended a book on data mining, or a compilation of musical tracks
-	\item Recommend a bundle: Suggest a group of items that fits well together. For instance, a travel plan may be composed of various attractions, destinations, and accommodation services that are located in a delimited area. From the point of view of the user, these various alternatives can be considered and selected as a single travel destination
-\end{itemize}
-[kopi - peyst]
+\section{Setting}
 
-\subsection{Applications}
-[kopi - peyst]
+Recommender systems can be applied to a various set of fields like entertainment, content creation, e-commerce, service sector, and social. However, we chose specific use-case, which is the suggestion of talents to projects to be managed by the recruiters of the companies.
 
-\begin{itemize}
-\item Entertainment—recommendations for movies, music, games, and IPTV.
-\item Content—personalized newspapers, recommendation for documents, recommen-
-dations of webpages, e-learning applications, and e-mail filters.
-\item E-commerce—recommendations of products to buy such as books, cameras, PCs
-etc. for consumers.
-\item Services—recommendations of travel services, recommendation of experts for
-consultation, recommendation of houses to rent, or matchmaking services.
-\item Social—recommendation of people in social networks, and recommendations of content social media content such as tweets, Facebook feeds, LinkedIn updates,
-and others.
-\end{itemize}
+\section{Datasets}\label{section:intro-datasets}
 
-\subsection{Objects}
-
-Data used by typical recommender systems refer to three types of objects~\parencite{Ricci2015}: users, items and interactions. 
-
-[kopi - peyst]
-Items Items are the objects that are recommended. Items may be characterized by their complexity and their value or utility. The value of an item may be positive if the item is useful to the user, or negative if the item is not appropriate and the user made the wrong decision when selecting it. We note that when a user is acquiring an item, one will always incur in a cost which includes the cognitive cost of searching for the item and the real monetary cost eventually paid for the item.
-
-Users Users of an RS, as mentioned above, may have very diverse goals and characteristics. In order to personalize the recommendations and the human- computer interaction, RSs exploit a range of information about the users. This information can be structured in various ways, and again, the selection of what information to model depends on the recommendation technique.
-
-Transactions We generically refer to a transaction as a recorded interaction between a user and the RS. Transactions are log-like data that store important information generated during the human-computer interaction and which are useful for the recommendation generation algorithm that the system is using. For instance, a transaction log may contain a reference to the item selected by the user and a description of the context (e.g., the user goal/query) for that particular recommen- dation. If available, that transaction may also include explicit feedback that the user has provided, such as the rating for the selected item. Implicit, explicit unutma ve uzat, ornekle
-
-[kopi - peyst]
-
-\subsection{Types}
-
-[gelistir, buyut]
-
-\begin{itemize}
-	\item Collaborative-Filtering: Recommendations based on how other users rated items. Similar users are identified and the items that they rated well are recommended. Has cold-start, sparsity and scalibility issues. First research paper released in the mid-1990s, still used widely [8].
-	\item Content-based filtering: The requirements for this approach are features and the ratings of the items by users. A classifier for users' `profile` is built and similar items are recommended based on it. It has the problem of recommending only very similar results that the user already is aware of. It was first mentioned on an academic paper on 1998 [8].
-	\item Knowledge-based filtering: This approach also requires features of the items and explicit description of what the user needs or wants. Then, items that match those needs are recommended. The advantage of this approach is the fact that the system doesn't need data from different users. Unfortunately, the suggestion ability is rather static [4]. Research about this topic was first released on 1999.
-	\item Hybrid Recommender Systems: Since all of the methods have some drawbacks, applications have shifted to combining more than one of the previous approaches. Hybrid recommender systems are still widely used by big companies like Amazon [1],Spotify [2] and Netflix [3].
-\end{itemize}
-
-\subsection{Evaluation Metrics}
-
-Evaluation metrics are bla
-
-\subsubsection{Offline Evaluation}
-\begin{itemize}
-	\item Accuracy
-	\item Precision
-	\item Recall
-\end{itemize}
-
-\subsubsection{Online Evaluation}
-Off-line experiments can measure the quality of the chosen algorithm in fulfilling its recommendation task. However, such evaluation cannot provide any insight about the user satisfaction, acceptance or experience with the system. The algorithms might be very accurate in solving the core recommendation problem, i.e., predicting user ratings, but for some other reason the system may not be accepted by users, for example, because the performance of the system was not as expected.
-Therefore, a user-centric evaluation is also required. It can be performed online after the system has been launched, or as a focused user study. During on-line evaluation, real users interact with the system without being aware of the full nature of the experiment running in the background. It is possible to run various versions of the algorithms on different groups of users for comparison and analysis of the system logs in order to enhance system performance. In addition, most of the algorithms include parameters, such as weight thresholds, the number of neighbors, etc., requiring constant adjustment and calibration.
-
-[kopi - peyst]
-
-More information in research part
-
-\subsection{User Satisfaction}
-
-[proposaldan]
-
-- The recommendation performance is mainly evaluated in terms of accuracy (i.e. difference between true and predicted rating).
-- This might not be a desired goal of the talent/project recommendations (e.g. simply recommending a `top-N` list of talents that best match the requirements might result in similar talents whose skills only vary in a small extent).
-- Besides the desired diversity, there might be other properties necessary for adequate recommendations (e.g. privacy, data security, diversity, serendipity, labeling, and presentation, and group recommendation).
-
-\section{Interest in Recommender Systems}
-
-In recent years, the interest in recommender systems has dramatically increased, as the following facts indicate:
-1. Recommender systems play an important role in highly-rated Internet sites such as Amazon.com, YouTube, Netflix, Spotify, LinkedIn, Facebook, Tripadvisor, Last.fm, and IMDb. Moreover many media companies are now developing and deploying RSs as part of the services they provide to their subscribers. For example, Netflix, the online provider of on-demand streaming media, awarded a million dollar prize to the team that first succeeded in substantially improving the performance of its recommender system [31].
-2. There are conferences and workshops dedicated specifically to the field, namely the Association of Computing Machinery’s (ACM) Conference Series on Recommender Systems (RecSys), established in 2007. This conference stands as the premier annual event in recommender technology research and applications. In addition, sessions dedicated to RSs are frequently included in more traditional conferences in the area of databases, information systems and adaptive systems. Additional noteworthy conferences within this scope include: ACM’s Special Interest Group on Information Retrieval (SIGIR); User Modeling, Adaptation and Personalization (UMAP); Intelligent User Interfaces (IUI); World Wide Web (WWW); and ACM’s Special Interest Group on Management Of Data (SIGMOD).
-3. At institutions of higher education around the world, undergraduate and graduate courses are now dedicated entirely to RSs, tutorials on RSs are very popular at computer science conferences, and a book introducing RSs techniques has been published as well [27]. Springer is publishing several books on specific topics in recommender systems in its series: Springer Briefs in Electrical and Computer Engineering. A large, new collection of articles dedicated to recommender systems applications to software engineering has also recently been published [46].
-4. There have been several special issues in academic journals which cover research and developments in the RSs field. Among the journals that have dedicated issues to RSs are: AI Communications (2008); IEEE Intelligent Systems (2007); International Journal of Electronic Commerce (2006); International Journal of Computer Science and Applications (2006); ACM Transactions on Computer Human Interaction (2005); ACM Transactions on Information Systems (2004); User Modeling and User-Adapted Interaction (2014, 2012); ACM Transactions on Interactive Intelligent Systems (2013); and ACM Transactions on Intelligent Systems and Technology (2015). ~\parencite{Ricci2015}
+To be able to develop a solution on this topic, we used two datasets: one from the website \textit{Freelancer.com} and another one from the company \textit{Motius Gmbh}. These datasets are presented in the section \ref{section:datasets}.
 
 
 \section{Motivation}\label{section:motivation}
 
-- Thus, the aim of this thesis is to investigate how these properties transfer to the talent/project matching (i.e. are they necessary or not) and how they can be algorithmically achieved.
+This thesis aims to find answers to three main questions. The first question is if high accuracy guarantees high user satisfaction. The second one is an extension to the first question and asks if diversity affects user satisfaction positively. The last question asks if a feedback loop increases user satisfaction eventually.
 
-[Also explain job recommender if we do that]
 
 \section{Solution}
 
-How I solve the problem
+To answer the questions that we asked in section \ref{section:motivation}, we first develop models and algorithms that generate predictions. Then, we implement these models and algorithms into a dashboard. Lastly, we execute offline, online evaluation rounds, and user studies to validate our hypotheses that were formulated as questions.
+
+\section{Summary}
+
+In the introduction chapter, we summarized the aim of recommender systems and the aim of this thesis. We also added material so that the text is understandable.
+
+The thesis continues with a review of scientific resources in the next chapter \ref{chapter:review_of_research}.

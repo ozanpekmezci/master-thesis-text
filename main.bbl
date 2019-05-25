@@ -1592,6 +1592,43 @@
       \field{pages}{257\bibrangedash 297}
       \range{pages}{41}
     \endentry
+    \entry{smith2017two}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=a9786de4de77ed01bc8129856d1622a0}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Brent},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9bda5a593644c7d18a9ab67b734f63d1}{%
+           family={Linden},
+           familyi={L\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c92731100fb647c0fdfebdd17b6acd63}
+      \strng{fullhash}{c92731100fb647c0fdfebdd17b6acd63}
+      \strng{bibnamehash}{c92731100fb647c0fdfebdd17b6acd63}
+      \strng{authorbibnamehash}{c92731100fb647c0fdfebdd17b6acd63}
+      \strng{authornamehash}{c92731100fb647c0fdfebdd17b6acd63}
+      \strng{authorfullhash}{c92731100fb647c0fdfebdd17b6acd63}
+      \field{labelalpha}{SL17}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ieee internet computing}
+      \field{number}{3}
+      \field{title}{Two decades of recommender systems at Amazon. com}
+      \field{volume}{21}
+      \field{year}{2017}
+      \field{pages}{12\bibrangedash 18}
+      \range{pages}{7}
+    \endentry
     \entry{smyth2001similarity}{inproceedings}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=ccbc3ce6a6d463b4a755eac0e057f7f5}{%

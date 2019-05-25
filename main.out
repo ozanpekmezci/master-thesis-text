@@ -2,101 +2,98 @@
 \BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 2
 \BOOKMARK [0][-]{toc.0}{Contents}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Background of Classical Recommender Systems}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.1}{Why Recommender Systems?}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.2}{Functions}{section.1.1}% 7
-\BOOKMARK [2][-]{subsection.1.1.3}{Applications}{section.1.1}% 8
-\BOOKMARK [2][-]{subsection.1.1.4}{Objects}{section.1.1}% 9
-\BOOKMARK [2][-]{subsection.1.1.5}{Types}{section.1.1}% 10
-\BOOKMARK [2][-]{subsection.1.1.6}{Evaluation Metrics}{section.1.1}% 11
-\BOOKMARK [2][-]{subsection.1.1.7}{User Satisfaction}{section.1.1}% 12
-\BOOKMARK [1][-]{section.1.2}{Interest in Recommender Systems}{chapter.1}% 13
-\BOOKMARK [1][-]{section.1.3}{Motivation}{chapter.1}% 14
-\BOOKMARK [1][-]{section.1.4}{Solution}{chapter.1}% 15
-\BOOKMARK [0][-]{chapter.2}{Review of Literature and Research}{}% 16
-\BOOKMARK [1][-]{section.2.1}{Types of Recommender Systems}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.2}{Types of input in recommender systems}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.3}{Collaborative Filtering}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.4}{Content-Based Filtering}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.4.1}{Overview of Content-Based Recommender Systems}{section.2.4}% 21
-\BOOKMARK [1][-]{section.2.5}{Knowledge-Based Recommender Systems}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.6}{Recommender System Evaluation Properties}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.6.1}{Accuracy}{section.2.6}% 24
-\BOOKMARK [2][-]{subsection.2.6.2}{Coverage}{section.2.6}% 25
-\BOOKMARK [2][-]{subsection.2.6.3}{Confidence}{section.2.6}% 26
-\BOOKMARK [2][-]{subsection.2.6.4}{Trust}{section.2.6}% 27
-\BOOKMARK [2][-]{subsection.2.6.5}{Novelty}{section.2.6}% 28
-\BOOKMARK [2][-]{subsection.2.6.6}{Serendipity}{section.2.6}% 29
-\BOOKMARK [2][-]{subsection.2.6.7}{Diversity}{section.2.6}% 30
-\BOOKMARK [2][-]{subsection.2.6.8}{Utility}{section.2.6}% 31
-\BOOKMARK [2][-]{subsection.2.6.9}{Risk}{section.2.6}% 32
-\BOOKMARK [2][-]{subsection.2.6.10}{Robustness}{section.2.6}% 33
-\BOOKMARK [2][-]{subsection.2.6.11}{Privacy}{section.2.6}% 34
-\BOOKMARK [2][-]{subsection.2.6.12}{Adaptivity}{section.2.6}% 35
-\BOOKMARK [2][-]{subsection.2.6.13}{Scalability}{section.2.6}% 36
-\BOOKMARK [2][-]{subsection.2.6.14}{Summary}{section.2.6}% 37
-\BOOKMARK [1][-]{section.2.7}{Diversity}{chapter.2}% 38
-\BOOKMARK [2][-]{subsection.2.7.1}{Diversity Evaluation}{section.2.7}% 39
-\BOOKMARK [2][-]{subsection.2.7.2}{Diversity Enhancement Approaches}{section.2.7}% 40
-\BOOKMARK [1][-]{section.2.8}{Artificial Neural Networks}{chapter.2}% 41
-\BOOKMARK [2][-]{subsection.2.8.1}{Embeddings}{section.2.8}% 42
-\BOOKMARK [1][-]{section.2.9}{Summary}{chapter.2}% 43
-\BOOKMARK [0][-]{chapter.3}{Implementation}{}% 44
-\BOOKMARK [1][-]{section.3.1}{Datasets}{chapter.3}% 45
-\BOOKMARK [2][-]{subsection.3.1.1}{Freelancer.com Dataset}{section.3.1}% 46
-\BOOKMARK [2][-]{subsection.3.1.2}{Company Dataset}{section.3.1}% 47
-\BOOKMARK [1][-]{section.3.2}{Unsupervised Individual Recommender}{chapter.3}% 48
-\BOOKMARK [2][-]{subsection.3.2.1}{Recommendation by Similarity}{section.3.2}% 49
-\BOOKMARK [2][-]{subsection.3.2.2}{Recommendation by Popularity}{section.3.2}% 50
-\BOOKMARK [2][-]{subsection.3.2.3}{Hybrid Recommendation}{section.3.2}% 51
-\BOOKMARK [1][-]{section.3.3}{Supervised Individual Recommender}{chapter.3}% 52
-\BOOKMARK [2][-]{subsection.3.3.1}{Using Sparse Input}{section.3.3}% 53
-\BOOKMARK [2][-]{subsection.3.3.2}{Using Embeddings}{section.3.3}% 54
-\BOOKMARK [1][-]{section.3.4}{Unsupervised Group Recommender}{chapter.3}% 55
-\BOOKMARK [2][-]{subsection.3.4.1}{Baseline Recommender}{section.3.4}% 56
-\BOOKMARK [2][-]{subsection.3.4.2}{Diverse Recommender}{section.3.4}% 57
-\BOOKMARK [1][-]{section.3.5}{Supervised Group Recommender}{chapter.3}% 58
-\BOOKMARK [1][-]{section.3.6}{Group Recommendation using Clustering}{chapter.3}% 59
-\BOOKMARK [1][-]{section.3.7}{Dashboard to show data and enter feedback}{chapter.3}% 60
-\BOOKMARK [2][-]{subsection.3.7.1}{General Dashboard}{section.3.7}% 61
-\BOOKMARK [2][-]{subsection.3.7.2}{Individual Recommendations}{section.3.7}% 62
-\BOOKMARK [2][-]{subsection.3.7.3}{Group Recommendations}{section.3.7}% 63
-\BOOKMARK [1][-]{section.3.8}{Improvement of Recommendations via Feedback Learning}{chapter.3}% 64
-\BOOKMARK [1][-]{section.3.9}{Summary}{chapter.3}% 65
-\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 66
-\BOOKMARK [1][-]{section.4.1}{Unsupervised Individual Recommendation}{chapter.4}% 67
-\BOOKMARK [2][-]{subsection.4.1.1}{Existing Company Recommender}{section.4.1}% 68
-\BOOKMARK [2][-]{subsection.4.1.2}{Recommendation by Similarity}{section.4.1}% 69
-\BOOKMARK [2][-]{subsection.4.1.3}{Recommendation by Popularity}{section.4.1}% 70
-\BOOKMARK [2][-]{subsection.4.1.4}{Hybrid Recommendation}{section.4.1}% 71
-\BOOKMARK [1][-]{section.4.2}{Supervised Individual Recommender}{chapter.4}% 72
-\BOOKMARK [2][-]{subsection.4.2.1}{Using Sparse Input}{section.4.2}% 73
-\BOOKMARK [2][-]{subsection.4.2.2}{Using Embeddings}{section.4.2}% 74
-\BOOKMARK [1][-]{section.4.3}{Unsupervised Group Recommender}{chapter.4}% 75
-\BOOKMARK [2][-]{subsection.4.3.1}{Baseline Recommender}{section.4.3}% 76
-\BOOKMARK [2][-]{subsection.4.3.2}{Diverse Recommender}{section.4.3}% 77
-\BOOKMARK [1][-]{section.4.4}{Supervised Group Recommender}{chapter.4}% 78
-\BOOKMARK [2][-]{subsection.4.4.1}{Baseline Recommender}{section.4.4}% 79
-\BOOKMARK [2][-]{subsection.4.4.2}{Diverse Recommender}{section.4.4}% 80
-\BOOKMARK [1][-]{section.4.5}{Feedback Loop}{chapter.4}% 81
-\BOOKMARK [2][-]{subsection.4.5.1}{Online Evaluation and User Study}{section.4.5}% 82
-\BOOKMARK [1][-]{section.4.6}{Summary}{chapter.4}% 83
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 84
-\BOOKMARK [1][-]{section.5.1}{Comparison of Individual Recommenders}{chapter.5}% 85
-\BOOKMARK [2][-]{subsection.5.1.1}{Offline Evaluation}{section.5.1}% 86
-\BOOKMARK [2][-]{subsection.5.1.2}{User Study}{section.5.1}% 87
-\BOOKMARK [1][-]{section.5.2}{Comparison of Group Recommenders}{chapter.5}% 88
-\BOOKMARK [2][-]{subsection.5.2.1}{Offline Evaluation}{section.5.2}% 89
-\BOOKMARK [2][-]{subsection.5.2.2}{User Study}{section.5.2}% 90
-\BOOKMARK [1][-]{section.5.3}{Feedback Loop}{chapter.5}% 91
-\BOOKMARK [1][-]{section.5.4}{Other Topics to Discuss}{chapter.5}% 92
-\BOOKMARK [2][-]{subsection.5.4.1}{Problems about datasets}{section.5.4}% 93
-\BOOKMARK [2][-]{subsection.5.4.2}{Problem about the recommender type}{section.5.4}% 94
-\BOOKMARK [2][-]{subsection.5.4.3}{Reasons to use hybrid recommender}{section.5.4}% 95
-\BOOKMARK [1][-]{section.5.5}{Summary}{chapter.5}% 96
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 97
-\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 98
-\BOOKMARK [0][-]{chapter.7}{Appendix}{}% 99
-\BOOKMARK [0][-]{chapter*.101}{List of Figures}{}% 100
-\BOOKMARK [0][-]{chapter*.102}{List of Tables}{}% 101
-\BOOKMARK [0][-]{chapter*.103}{Bibliography}{}% 102
+\BOOKMARK [1][-]{section.1.1}{Recommender Systems}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Why Recommender Systems?}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{User Satisfaction}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{Setting}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.5}{Datasets}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.6}{Motivation}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.7}{Solution}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.8}{Summary}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{Review of Literature and Research}{}% 13
+\BOOKMARK [1][-]{section.2.1}{Types of Recommender Systems}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{Types of input in recommender systems}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.3}{Collaborative Filtering}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.4}{Content-Based Filtering}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.4.1}{Overview of Content-Based Recommender Systems}{section.2.4}% 18
+\BOOKMARK [1][-]{section.2.5}{Knowledge-Based Recommender Systems}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.6}{Recommender System Evaluation Properties}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.6.1}{Accuracy}{section.2.6}% 21
+\BOOKMARK [2][-]{subsection.2.6.2}{Coverage}{section.2.6}% 22
+\BOOKMARK [2][-]{subsection.2.6.3}{Confidence}{section.2.6}% 23
+\BOOKMARK [2][-]{subsection.2.6.4}{Trust}{section.2.6}% 24
+\BOOKMARK [2][-]{subsection.2.6.5}{Novelty}{section.2.6}% 25
+\BOOKMARK [2][-]{subsection.2.6.6}{Serendipity}{section.2.6}% 26
+\BOOKMARK [2][-]{subsection.2.6.7}{Diversity}{section.2.6}% 27
+\BOOKMARK [2][-]{subsection.2.6.8}{Utility}{section.2.6}% 28
+\BOOKMARK [2][-]{subsection.2.6.9}{Risk}{section.2.6}% 29
+\BOOKMARK [2][-]{subsection.2.6.10}{Robustness}{section.2.6}% 30
+\BOOKMARK [2][-]{subsection.2.6.11}{Privacy}{section.2.6}% 31
+\BOOKMARK [2][-]{subsection.2.6.12}{Adaptivity}{section.2.6}% 32
+\BOOKMARK [2][-]{subsection.2.6.13}{Scalability}{section.2.6}% 33
+\BOOKMARK [2][-]{subsection.2.6.14}{Summary}{section.2.6}% 34
+\BOOKMARK [1][-]{section.2.7}{Diversity}{chapter.2}% 35
+\BOOKMARK [2][-]{subsection.2.7.1}{Diversity Evaluation}{section.2.7}% 36
+\BOOKMARK [2][-]{subsection.2.7.2}{Diversity Enhancement Approaches}{section.2.7}% 37
+\BOOKMARK [1][-]{section.2.8}{Artificial Neural Networks}{chapter.2}% 38
+\BOOKMARK [2][-]{subsection.2.8.1}{Embeddings}{section.2.8}% 39
+\BOOKMARK [1][-]{section.2.9}{Summary}{chapter.2}% 40
+\BOOKMARK [0][-]{chapter.3}{Implementation}{}% 41
+\BOOKMARK [1][-]{section.3.1}{Datasets}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.1.1}{Freelancer.com Dataset}{section.3.1}% 43
+\BOOKMARK [2][-]{subsection.3.1.2}{Motius Dataset}{section.3.1}% 44
+\BOOKMARK [1][-]{section.3.2}{Unsupervised Individual Recommender}{chapter.3}% 45
+\BOOKMARK [2][-]{subsection.3.2.1}{Recommendation by Similarity}{section.3.2}% 46
+\BOOKMARK [2][-]{subsection.3.2.2}{Recommendation by Popularity}{section.3.2}% 47
+\BOOKMARK [2][-]{subsection.3.2.3}{Hybrid Recommendation}{section.3.2}% 48
+\BOOKMARK [1][-]{section.3.3}{Supervised Individual Recommender}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.3.1}{Using Sparse Input}{section.3.3}% 50
+\BOOKMARK [2][-]{subsection.3.3.2}{Using Embeddings}{section.3.3}% 51
+\BOOKMARK [1][-]{section.3.4}{Unsupervised Group Recommender}{chapter.3}% 52
+\BOOKMARK [2][-]{subsection.3.4.1}{Baseline Recommender}{section.3.4}% 53
+\BOOKMARK [2][-]{subsection.3.4.2}{Diverse Recommender}{section.3.4}% 54
+\BOOKMARK [1][-]{section.3.5}{Supervised Group Recommender}{chapter.3}% 55
+\BOOKMARK [1][-]{section.3.6}{Group Recommendation using Clustering}{chapter.3}% 56
+\BOOKMARK [1][-]{section.3.7}{Dashboard to show data and enter feedback}{chapter.3}% 57
+\BOOKMARK [2][-]{subsection.3.7.1}{General Dashboard}{section.3.7}% 58
+\BOOKMARK [2][-]{subsection.3.7.2}{Individual Recommendations}{section.3.7}% 59
+\BOOKMARK [2][-]{subsection.3.7.3}{Group Recommendations}{section.3.7}% 60
+\BOOKMARK [1][-]{section.3.8}{Improvement of Recommendations via Feedback Learning}{chapter.3}% 61
+\BOOKMARK [1][-]{section.3.9}{Summary}{chapter.3}% 62
+\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 63
+\BOOKMARK [1][-]{section.4.1}{Unsupervised Individual Recommendation}{chapter.4}% 64
+\BOOKMARK [2][-]{subsection.4.1.1}{Existing Company Recommender}{section.4.1}% 65
+\BOOKMARK [2][-]{subsection.4.1.2}{Recommendation by Similarity}{section.4.1}% 66
+\BOOKMARK [2][-]{subsection.4.1.3}{Recommendation by Popularity}{section.4.1}% 67
+\BOOKMARK [2][-]{subsection.4.1.4}{Hybrid Recommendation}{section.4.1}% 68
+\BOOKMARK [1][-]{section.4.2}{Supervised Individual Recommender}{chapter.4}% 69
+\BOOKMARK [2][-]{subsection.4.2.1}{Using Sparse Input}{section.4.2}% 70
+\BOOKMARK [2][-]{subsection.4.2.2}{Using Embeddings}{section.4.2}% 71
+\BOOKMARK [1][-]{section.4.3}{Unsupervised Group Recommender}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.3.1}{Baseline Recommender}{section.4.3}% 73
+\BOOKMARK [2][-]{subsection.4.3.2}{Diverse Recommender}{section.4.3}% 74
+\BOOKMARK [1][-]{section.4.4}{Supervised Group Recommender}{chapter.4}% 75
+\BOOKMARK [2][-]{subsection.4.4.1}{Baseline Recommender}{section.4.4}% 76
+\BOOKMARK [2][-]{subsection.4.4.2}{Diverse Recommender}{section.4.4}% 77
+\BOOKMARK [1][-]{section.4.5}{Feedback Loop}{chapter.4}% 78
+\BOOKMARK [2][-]{subsection.4.5.1}{Online Evaluation and User Study}{section.4.5}% 79
+\BOOKMARK [1][-]{section.4.6}{Summary}{chapter.4}% 80
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 81
+\BOOKMARK [1][-]{section.5.1}{Comparison of Individual Recommenders}{chapter.5}% 82
+\BOOKMARK [2][-]{subsection.5.1.1}{Offline Evaluation}{section.5.1}% 83
+\BOOKMARK [2][-]{subsection.5.1.2}{User Study}{section.5.1}% 84
+\BOOKMARK [1][-]{section.5.2}{Comparison of Group Recommenders}{chapter.5}% 85
+\BOOKMARK [2][-]{subsection.5.2.1}{Offline Evaluation}{section.5.2}% 86
+\BOOKMARK [2][-]{subsection.5.2.2}{User Study}{section.5.2}% 87
+\BOOKMARK [1][-]{section.5.3}{Feedback Loop}{chapter.5}% 88
+\BOOKMARK [1][-]{section.5.4}{Other Topics to Discuss}{chapter.5}% 89
+\BOOKMARK [2][-]{subsection.5.4.1}{Problems about datasets}{section.5.4}% 90
+\BOOKMARK [2][-]{subsection.5.4.2}{Problem about the recommender type}{section.5.4}% 91
+\BOOKMARK [2][-]{subsection.5.4.3}{Reasons to use hybrid recommender}{section.5.4}% 92
+\BOOKMARK [1][-]{section.5.5}{Summary}{chapter.5}% 93
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 94
+\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 95
+\BOOKMARK [0][-]{chapter.7}{Appendix}{}% 96
+\BOOKMARK [0][-]{chapter*.99}{List of Figures}{}% 97
+\BOOKMARK [0][-]{chapter*.100}{List of Tables}{}% 98
+\BOOKMARK [0][-]{chapter*.101}{Bibliography}{}% 99

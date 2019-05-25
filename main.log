@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  23 MAY 2019 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  25 MAY 2019 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1707,14 +1707,14 @@ line 20.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
 line 20.
  (./pages/cover.tex
-<logos/tum.pdf, id=417, 54.02504pt x 28.452pt>
+<logos/tum.pdf, id=404, 54.02504pt x 28.452pt>
 File: logos/tum.pdf Graphic file (type pdf)
 <use logos/tum.pdf>
 Package pdftex.def Info: logos/tum.pdf  used on input line 16.
 (pdftex.def)             Requested size: 108.06296pt x 56.9055pt.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 28.
-<logos/faculty.png, id=418, 339.51843pt x 339.51843pt>
+<logos/faculty.png, id=405, 339.51843pt x 339.51843pt>
 File: logos/faculty.png Graphic file (type png)
 <use logos/faculty.png>
 Package pdftex.def Info: logos/faculty.png  used on input line 36.
@@ -1791,7 +1791,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 34
 
 ]
 LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 178.
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 180.
  [6])
 \tf@toc=\write7
 \openout7 = `main.toc'.
@@ -1799,176 +1799,176 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
  [7] (./chapters/01_introduction.tex
 chapter 1.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 20.
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 10.
 [1
 
 
 
-] [2] [3] [4] [5]) (./chapters/02_review_of_research.tex [6]
+] [2]) (./chapters/02_review_of_research.tex [3]
 chapter 2.
-[7
+[4
 
 
 ]) (./chapters/02b_collaborative_filtering.tex)
-(./chapters/02c_content_based_filtering.tex [8]
-<figures/HighLevelContentBased.png, id=642, 609.27625pt x 419.5675pt>
+(./chapters/02c_content_based_filtering.tex [5]
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 8.
+<figures/HighLevelContentBased.png, id=614, 609.27625pt x 419.5675pt>
 File: figures/HighLevelContentBased.png Graphic file (type png)
 <use figures/HighLevelContentBased.png>
 Package pdftex.def Info: figures/HighLevelContentBased.png  used on input line 
 16.
 (pdftex.def)             Requested size: 418.25555pt x 288.0358pt.
- [9 <./figures/HighLevelContentBased.png>] [10]) (./chapters/02d_knowledge_base
-d.tex)
-(./chapters/03_evaluation_metrics.tex [11] [12] [13] [14])
-(./chapters/04_novelty_and_diversity.tex [15] [16] [17] [18])
-(./chapters/05_implementation.tex [19]
+ [6 <./figures/HighLevelContentBased.png>] [7]) (./chapters/02d_knowledge_based
+.tex)
+(./chapters/03_evaluation_metrics.tex [8] [9] [10] [11])
+(./chapters/04_novelty_and_diversity.tex [12] [13] [14] [15])
+(./chapters/05_implementation.tex [16]
 chapter 3.
-[20
+[17
 
 
 ]
-<figures/FreelancerExample.png, id=767, 778.91pt x 533.995pt>
+<figures/FreelancerExample.png, id=739, 778.91pt x 533.995pt>
 File: figures/FreelancerExample.png Graphic file (type png)
 <use figures/FreelancerExample.png>
 Package pdftex.def Info: figures/FreelancerExample.png  used on input line 31.
 (pdftex.def)             Requested size: 418.25555pt x 286.73969pt.
-<figures/FreelancerTalentExample.png, id=770, 777.90625pt x 742.775pt>
+<figures/FreelancerTalentExample.png, id=742, 777.90625pt x 742.775pt>
 File: figures/FreelancerTalentExample.png Graphic file (type png)
 <use figures/FreelancerTalentExample.png>
 Package pdftex.def Info: figures/FreelancerTalentExample.png  used on input lin
 e 42.
 (pdftex.def)             Requested size: 313.69167pt x 299.53017pt.
- [21 <./figures/FreelancerExample.png>] [22 <./figures/FreelancerTalentExample.
+ [18 <./figures/FreelancerExample.png>] [19 <./figures/FreelancerTalentExample.
 png>]
-<figures/FreelancerTalentSkills.png, id=785, 376.40625pt x 470.75874pt>
+<figures/FreelancerTalentSkills.png, id=758, 376.40625pt x 470.75874pt>
 File: figures/FreelancerTalentSkills.png Graphic file (type png)
 <use figures/FreelancerTalentSkills.png>
 Package pdftex.def Info: figures/FreelancerTalentSkills.png  used on input line
  58.
 (pdftex.def)             Requested size: 209.12778pt x 261.55434pt.
- [23 <./figures/FreelancerTalentSkills.png>] [24] [25]
-<figures/FreelancerTalentSkillsMatrix.png, id=813, 1304.875pt x 441.65pt>
+ [20 <./figures/FreelancerTalentSkills.png>] [21] [22]
+<figures/FreelancerTalentSkillsMatrix.png, id=785, 1304.875pt x 441.65pt>
 File: figures/FreelancerTalentSkillsMatrix.png Graphic file (type png)
 <use figures/FreelancerTalentSkillsMatrix.png>
 Package pdftex.def Info: figures/FreelancerTalentSkillsMatrix.png  used on inpu
 t line 129.
 (pdftex.def)             Requested size: 418.25555pt x 141.56001pt.
- [26 <./figures/FreelancerTalentSkillsMatrix.png>]
-<figures/FreelancerTalentMeta.png, id=828, 626.34pt x 379.4175pt>
+ [23 <./figures/FreelancerTalentSkillsMatrix.png>]
+<figures/FreelancerTalentMeta.png, id=801, 626.34pt x 379.4175pt>
 File: figures/FreelancerTalentMeta.png Graphic file (type png)
 <use figures/FreelancerTalentMeta.png>
 Package pdftex.def Info: figures/FreelancerTalentMeta.png  used on input line 1
 54.
 (pdftex.def)             Requested size: 313.69167pt x 190.03249pt.
- [27 <./figures/FreelancerTalentMeta.png>]
-<figures/TensorBoardSparseCropped.png, id=839, 567.11874pt x 735.74875pt>
+ [24 <./figures/FreelancerTalentMeta.png>]
+<figures/TensorBoardSparseCropped.png, id=812, 567.11874pt x 735.74875pt>
 File: figures/TensorBoardSparseCropped.png Graphic file (type png)
 <use figures/TensorBoardSparseCropped.png>
 Package pdftex.def Info: figures/TensorBoardSparseCropped.png  used on input li
 ne 170.
 (pdftex.def)             Requested size: 313.69167pt x 406.97574pt.
 
-[28] [29 <./figures/TensorBoardSparseCropped.png>]
-<figures/EmbeddingThesis.png, id=863, 660.4675pt x 530.98375pt>
+[25] [26 <./figures/TensorBoardSparseCropped.png>]
+<figures/EmbeddingThesis.png, id=835, 660.4675pt x 530.98375pt>
 File: figures/EmbeddingThesis.png Graphic file (type png)
 <use figures/EmbeddingThesis.png>
 Package pdftex.def Info: figures/EmbeddingThesis.png  used on input line 197.
 (pdftex.def)             Requested size: 313.69167pt x 252.19559pt.
- [30 <./figures/EmbeddingThesis.png>]
+ [27 <./figures/EmbeddingThesis.png>]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [31]
-<figures/EmbeddingTrainingMatrix.png, id=882, 1025.8325pt x 182.6825pt>
+ [28]
+<figures/EmbeddingTrainingMatrix.png, id=853, 1025.8325pt x 182.6825pt>
 File: figures/EmbeddingTrainingMatrix.png Graphic file (type png)
 <use figures/EmbeddingTrainingMatrix.png>
 Package pdftex.def Info: figures/EmbeddingTrainingMatrix.png  used on input lin
 e 269.
 (pdftex.def)             Requested size: 418.25555pt x 74.48495pt.
- [32 <./figures/EmbeddingTrainingMatrix.png>]
+ [29 <./figures/EmbeddingTrainingMatrix.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 308.
- [33] [34] [35]
-<figures/PCASilhouette.png, id=948, 721.69624pt x 403.5075pt>
+ [30] [31] [32]
+<figures/PCASilhouette.png, id=920, 721.69624pt x 403.5075pt>
 File: figures/PCASilhouette.png Graphic file (type png)
 <use figures/PCASilhouette.png>
 Package pdftex.def Info: figures/PCASilhouette.png  used on input line 372.
 (pdftex.def)             Requested size: 418.25555pt x 233.8498pt.
 
-[36 <./figures/PCASilhouette.png>]
-<figures/KMeansCenters.png, id=957, 415.5525pt x 265.99374pt>
+[33 <./figures/PCASilhouette.png>]
+<figures/KMeansCenters.png, id=929, 415.5525pt x 265.99374pt>
 File: figures/KMeansCenters.png Graphic file (type png)
 <use figures/KMeansCenters.png>
 Package pdftex.def Info: figures/KMeansCenters.png  used on input line 382.
 (pdftex.def)             Requested size: 313.69167pt x 200.80173pt.
-<figures/ClusterCentersMatrix.png, id=961, 1302.8675pt x 206.7725pt>
+<figures/ClusterCentersMatrix.png, id=933, 1302.8675pt x 206.7725pt>
 File: figures/ClusterCentersMatrix.png Graphic file (type png)
 <use figures/ClusterCentersMatrix.png>
 Package pdftex.def Info: figures/ClusterCentersMatrix.png  used on input line 3
 92.
 (pdftex.def)             Requested size: 418.25555pt x 66.37993pt.
- [37 <./figures/KMeansCenters.png> <./figures/ClusterCentersMatrix.png>]
-<figures/DashboardMain.png, id=973, 554.07pt x 320.19624pt>
+ [34 <./figures/KMeansCenters.png> <./figures/ClusterCentersMatrix.png>]
+<figures/DashboardMain.png, id=945, 554.07pt x 320.19624pt>
 File: figures/DashboardMain.png Graphic file (type png)
 <use figures/DashboardMain.png>
 Package pdftex.def Info: figures/DashboardMain.png  used on input line 412.
 (pdftex.def)             Requested size: 209.12778pt x 120.85501pt.
- [38 <./figures/DashboardMain.png>]
-<figures/DashboardProjects.png, id=987, 1117.17375pt x 690.58pt>
+ [35 <./figures/DashboardMain.png>]
+<figures/DashboardProjects.png, id=960, 1117.17375pt x 690.58pt>
 File: figures/DashboardProjects.png Graphic file (type png)
 <use figures/DashboardProjects.png>
 Package pdftex.def Info: figures/DashboardProjects.png  used on input line 425.
 
 (pdftex.def)             Requested size: 313.69167pt x 193.90903pt.
-<figures/DashboardIndividual.png, id=990, 1105.12875pt x 517.935pt>
+<figures/DashboardIndividual.png, id=963, 1105.12875pt x 517.935pt>
 File: figures/DashboardIndividual.png Graphic file (type png)
 <use figures/DashboardIndividual.png>
 Package pdftex.def Info: figures/DashboardIndividual.png  used on input line 43
 8.
 (pdftex.def)             Requested size: 418.25555pt x 196.01912pt.
- [39 <./figures/DashboardProjects.png>]
-<figures/DashboardIndividualHybrid.png, id=1001, 1090.0725pt x 691.58376pt>
+ [36 <./figures/DashboardProjects.png>]
+<figures/DashboardIndividualHybrid.png, id=974, 1090.0725pt x 691.58376pt>
 File: figures/DashboardIndividualHybrid.png Graphic file (type png)
 <use figures/DashboardIndividualHybrid.png>
 Package pdftex.def Info: figures/DashboardIndividualHybrid.png  used on input l
 ine 447.
 (pdftex.def)             Requested size: 418.25555pt x 265.3583pt.
- [40 <./figures/DashboardIndividual.png>] [41 <./figures/DashboardIndividualHyb
+ [37 <./figures/DashboardIndividual.png>] [38 <./figures/DashboardIndividualHyb
 rid.png>]
-<figures/DashboardGroup.png, id=1023, 1445.4pt x 555.07375pt>
+<figures/DashboardGroup.png, id=994, 1445.4pt x 555.07375pt>
 File: figures/DashboardGroup.png Graphic file (type png)
 <use figures/DashboardGroup.png>
 Package pdftex.def Info: figures/DashboardGroup.png  used on input line 464.
 (pdftex.def)             Requested size: 418.25555pt x 160.62pt.
- [42 <./figures/DashboardGroup.png>]
-<figures/TensorBoardFeedback.png, id=1037, 1135.24126pt x 1472.50125pt>
+ [39 <./figures/DashboardGroup.png>]
+<figures/TensorBoardFeedback.png, id=1008, 1135.24126pt x 1472.50125pt>
 File: figures/TensorBoardFeedback.png Graphic file (type png)
 <use figures/TensorBoardFeedback.png>
 Package pdftex.def Info: figures/TensorBoardFeedback.png  used on input line 48
 6.
 (pdftex.def)             Requested size: 334.60571pt x 434.00215pt.
 )
-(./chapters/06_evaluation.tex [43] [44 <./figures/TensorBoardFeedback.png>]
+(./chapters/06_evaluation.tex [40] [41 <./figures/TensorBoardFeedback.png>]
 chapter 4.
-[45
+[42
 
 
-] [46] [47] [48] [49] [50]
+] [43] [44] [45] [46] [47]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [51]
+ [48]
 Missing character: There is no ; in font nullfont!
- [52] [53] [54] [55]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [56] [57]
+ [49] [50] [51] [52]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [58] [59]
+Missing character: There is no ; in font nullfont!
+ [53] [54]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [55] [56]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1977,14 +1977,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-[60] [61] [62] [63]) (./chapters/07_discussion.tex [64]
+[57] [58] [59] [60]) (./chapters/07_discussion.tex [61]
 chapter 5.
-[65
+[62
 
 
-] [66] [67] [68] [69] [70]) (./chapters/08_conclusion.tex [71]
+] [63] [64] [65] [66] [67]) (./chapters/08_conclusion.tex [68]
 chapter 6.
-) (./chapters/09_appendix.tex [72
+) (./chapters/09_appendix.tex [69
 
 
 ]
@@ -2003,28 +2003,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 10.
-) [73
+) [70
 
 
-] [74]
+] [71]
 Package tocbasic Info: character protrusion at lof deactivated on input line 56
 .
 
-(./main.lof [75
+(./main.lof [72
 
 
 ])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [76]
+ [73]
 Package tocbasic Info: character protrusion at lot deactivated on input line 57
 .
  (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [77
+ [74
 
 
 ]
@@ -2032,33 +2032,33 @@ chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[78
+[75
 
 
-] [79]
+] [76]
 Overfull \hbox (6.64487pt too wide) in paragraph at lines 60--60
 \T1/pplx/m/n/10.95 (-20) ral net-works on MNIST clas-si-fi-ca-tion task.^^Q In:
  \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.02763
  []
 
-[80]
+[77]
 No complaints by nag.
-[81]
+[78]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E35B9CC45D7BF7BE5F61F83870A1EC2F;7028.
+(rerunfilecheck)             Checksum: 20250E5F0A6D9DA576E1A4AC6CC904DD;6749.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51530 strings out of 492649
- 1135367 string characters out of 6129621
- 1805069 words of memory out of 5000000
+ 51523 strings out of 492649
+ 1135312 string characters out of 6129621
+ 1805124 words of memory out of 5000000
  53869 multiletter control sequences out of 15000+600000
  592002 words of font info for 352 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2076,10 +2076,10 @@ nts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/font
 s/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/pa
 latino/uplri8a.pfb>
-Output written on main.pdf (89 pages, 2326837 bytes).
+Output written on main.pdf (86 pages, 2317961 bytes).
 PDF statistics:
- 1545 PDF objects out of 1728 (max. 8388607)
- 1375 compressed objects within 14 object streams
- 384 named destinations out of 1000 (max. 500000)
- 34721 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1517 PDF objects out of 1728 (max. 8388607)
+ 1350 compressed objects within 14 object streams
+ 377 named destinations out of 1000 (max. 500000)
+ 34697 words of extra memory for PDF output out of 35830 (max. 10000000)
 
