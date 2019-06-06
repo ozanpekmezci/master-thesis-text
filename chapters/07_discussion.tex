@@ -11,11 +11,26 @@ First, we start by comparing the results of individual recommenders for differen
 
 \subsection{Offline Evaluation}
 
-The first evaluation method we discuss is offline evaluation, which include the properties accuracy and coverage.
+The first evaluation method we discuss is offline evaluation, which includes the properties accuracy and coverage.
 
 \subsubsection{Accuracy}\label{discussion:single-offline-accuracy}
 
-As always, we first check the accuracy levels of different individual recommendation systems.
+As always, we first check the accuracy levels of different individual recommendation systems. The table below shows the offline evaluation results for different recommenders.
+
+\begin{table}[htp]
+	\caption{Offline evaluation results for different recommenders are shown.}
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Type         & Name           & Top 1 & Top 5 \\ \hline
+		Unsupervised & Motius         & 0.07  & 0.21  \\ \hline
+		Unsupervised & Similarity     & 0.28  & 0.36  \\ \hline
+		Unsupervised & Popularity     & 0.07  & 0.45  \\ \hline
+		Unsupervised & Hybrid         & 0.12  & 0.29  \\ \hline
+		Supervised   & Neural Network & 0.19  & 0.56  \\ \hline
+	\end{tabular}
+	\label{discussion:accuracy-offline}
+\end{table}
 
 The existing recommendation system at the company Motius provides the scores 0.07, 0.21 for the top one, and top five accuracies respectively. A pure similarity-based approach that we developed reached the values 0.28 and 0.36 for the same measures and the pure popularity algorithm achieves 0.07 and 0.45. Lastly, for unsupervised methods, the combination of similarity and popularity algorithms did not reach better results than the similarity recommender. That is why we can conclude that the similarity based recommendation is the best unsupervised method for offline accuracy.
 
@@ -23,7 +38,7 @@ When we also include the supervised recommendation that we developed with neural
 
 \subsubsection{Coverage}
 
-Although we said the pure similarity-based approach is the best one for offline accuracy, it is also the worst one in terms of coverage. Since a significant proportion of talents did not get selected according to their skill match on the website \textit{Freelancer.com}, it only possible to make predictions for 4987 projects with the similarity-based recommendation system. However, the popularity recommender can make predictions for 20433 projects with a worse accuracy, because it always suggests the most experienced person among bidders and there are mostly at least one experienced talent inside the group of bidders for every project.
+Although we said the pure similarity-based approach is the best one for offline accuracy, it is also the worst one in terms of coverage. Since a significant proportion of talents did not get selected according to their skill match on the website \textit{Freelancer.com}, it is only possible to make predictions for 4987 projects with the similarity-based recommendation system. However, the popularity recommender can make predictions for 20433 projects with a worse accuracy, because it always suggests the most experienced person among bidders and there are mostly at least one experienced talent inside the group of bidders for every project.
 
 When we combine the popularity and the similarity recommendation systems with the weights 0.4 and 0.6 respectively, we can make predictions for 14152 projects. In addition to that,  we achieve the accuracies of 0.12 for the top one and 0.29 for the top five. All in all, if we only want to have the maximum coverage, the popularity recommender is the most successful unsupervised method, but hybrid recommenders are more beneficial if we want to optimize both coverage and accuracy.
 
@@ -37,7 +52,7 @@ We also ran a second evaluation round that consisted of a user study with recrui
 
 The recruiters rated the recommendation by similarity method a score of 4.375, which is an unsupervised recommendation method. Same recruiters graded pure neural networks the score of 2.5625 and the hybrid of the first two methods the score of 4.5. From this information, we can conclude that the hybrid model performed the best. However, we must note that the number of participants is only eight, and the score difference is also only around five percent.
 
-\subsubsection{Overall List Value}
+\subsubsection{Overall List Value}\label{discuss-single-satisfaction}
 
 Overall list value, also known as user satisfaction, had similar results to the first item value. The unsupervised model got the score of 3.815, neural networks got 2.8125, and the hybrid of the first two got 4.0625.
 
@@ -55,7 +70,7 @@ Offline evaluation of group recommenders comprises three different measures: acc
 
 The accuracy of the unsupervised baseline recommender is 0.28 for the top one and 0.36 for the top five. When we add the diversity constant to the equation, these results do not get any higher. When we employ the supervised baseline or diverse recommendation system, the maximum accuracy we see is 0.18 for the top one and 0.56 for the top five.
 
-Just like in the individual recommender [See section\ref{discussion:single-offline-accuracy}], we conclude that the unsupervised similarity method predicts the winners better, but the supervised approach produces lists with better accuracy in general.
+Just like in the individual recommender [See section \ref{discussion:single-offline-accuracy}], we conclude that the unsupervised similarity method predicts the winners better, but the supervised approach produces lists with better accuracy in general.
 
 \subsubsection{Diversity}\label{discussion:group-offline-diversity}
 
@@ -77,17 +92,17 @@ The supervised baseline approach received a score of 3.125 from the subjects, an
 
 According to the user study, the average diversity score for the unsupervised baseline recommender is 1.6875. When we add the diversity constant, it goes up until 4.2. For the supervised approach, the baseline score is 2.375, and the diverse version goes up until having the diversity score of almost 5 out of 5. As we said before, neural networks produce more varied lists compared to the similarity-based approaches, and these scores are expected. From the scores that we acquired, supervised diverse recommender with a high diversity constant is the most logical approach, if the diversity is number one constraint. 
 
-\subsubsection{Overall List Value}
+\subsubsection{Overall List Value}\label{discuss-group-satisfaction}
 
-Overall list value, also known as user satisfaction, of the unsupervised baseline recommender is averaged to 3.4375. When we also add the diversity constant, we see the maximum value 3.9 for the diversity constant of 0.4. On the other hand, the overall list value is 3 for supervised baseline recommender, and we also see the maximum value of 3.1 for the diversity constant of 0.4.
+Overall list value, also known as user satisfaction, of the unsupervised baseline recommender is 3.4375 on average. When we also add the diversity constant, we see the maximum value 3.9 for the diversity constant of 0.4. On the other hand, the overall list value is 3 for supervised baseline recommender, and we also see the maximum value of 3.1 for the diversity constant of 0.4.
 
-The answers to this user study suggest that some level of diversity has a positive effect on user satisfaction because the highest overall list values were reached with the same diversity level for both supervised and unsupervised approaches. The number of subjects is only eight, and the peak values of user satisfaction do not provide a significant increase compared to other values. However, this proves that the hypothesis of worths further research and experimentations.
+The answers to this user study suggest that some level of diversity has a positive effect on user satisfaction because the highest overall list values were reached with the same diversity level for both supervised and unsupervised approaches. The number of subjects is only eight, and the peak values of user satisfaction do not provide a significant increase compared to other values. However, this proves that the hypothesis is worth further research and experimentations.
 
-\section{Feedback Loop}
+\section{Feedback Loop}\label{discussion:feedback-loop}
 
 Since it is not possible to conduct an offline evaluation for the feedback loop, we conducted a combination of online evaluation and user study. Subjects were motivated to enter as many feedback as possible, and the author of this thesis continued adding more feedback according to the principles that the recruiters mentioned. Recruiters were asked before about results of a group, and we asked them the same questions afterward. 
 
-According to this user study, the first item values increased from 3.125 to 3.75, overall list value increased from 3 to 3.6875, and the diversity increased from 2.375 to 2.5625. From these results, improvements in first item value and user satisfaction can be seen. However, the number of subjects was only eight, and the author of the thesis accelerated the process by adding more feedback because of these reasons we can also say that the topic of feedback loop requires more experiments to be made. At least, we can be optimistic that the topic worths further experiments.
+According to this user study, the first item values increased from 3.125 to 3.75, overall list value increased from 3 to 3.6875, and the diversity increased from 2.375 to 2.5625. From these results, improvements in first item value and user satisfaction can be seen. However, the number of subjects was only eight, and the author of the thesis added more feedback manually because of these reasons we can also say that the topic of feedback loop requires more experiments to be made. At least, we can be optimistic that the topic worths further experiments.
 
 \section{Other Topics to Discuss}
 
@@ -99,11 +114,11 @@ In the scope of the thesis, we use two databases: one from \textit{Freelancer.co
 
 \subsubsection{Problems about Freelancer.com dataset}
 
-This dataset contains information about projects, talents, and their interactions. However, there are many employers, and many of them have different selection criteria. That is why it is not a trivial task to find a scientific basis for all of the employers. When we checked individual projects individually, we found some selections by employers that are not logical. For example, there are multiple instances of people got hired, although there were other competitors with more relevant skills, higher experience level that is also cheaper. Due to this, the author thinks that the motivation text of the bidders and some other non-mathematical factors also play a role in the selection process. 
+This dataset contains information about projects, talents, and their interactions. However, there are many employers, and many of them have different selection criteria. That is why it is not a trivial task to find a scientific basis for all of the employers. When we checked projects individually, we found some selections by employers that are not logical. For example, there are multiple instances of people got hired, although there were other competitors with more relevant skills, higher experience level that is also cheaper. Due to this, the author thinks that the motivation text of the bidders and some other non-mathematical factors also play a role in the selection process. 
 
 \subsubsection{Problems about Motius dataset}
 
-The company Motius runs an internal recommender system that suggests talents to roles, and we acquired the logs from this recommender. We combined those logs with the other dataset and to trained the model.
+The company Motius runs an internal recommender system that suggests talents to roles, and we acquired the logs from this recommender. We combined those logs with the other dataset and trained the model with that data.
 
 After carefully debugging the model and digging deep into both datasets, we detected some of the problems. First of all, only a small portion of Motius and Freelancer.com features overlap. Since Motius dataset is much smaller, many weights that are unique for this dataset stay untrained. Another problem is that there are instances of duplicate results from the Motius recommender with different labels. For example, for the position of \textit{Android dev}, the same person got recommended twice by the internal recommender, and that person got once accepted and once rejected. This situation was a problem that we solved by removing the duplicate elements. Also, just like in the Freelancer.com dataset, many talents were selected even though they do not meet skill requirements. Another problem in the Motius dataset is that many talents only have couple skills entered in the system, although some small number of others contain 20 skills. Because of this, these talents with 20 skills get favored by the system. Lastly,  many of the selected talents are not selected because their skills fit better than the others, but they were selected due to reasons unknown to the system.
 
@@ -118,4 +133,4 @@ As we also saw in this chapter, "several studies have shown hybrid recommendatio
 
 \section{Summary}
 
-In this chapter, we discussed the outcome from different kind of experiments and commented on the reasons and consequences. Then, we presented the problems that arose with the use-case and datasets of choice. Even though there is no \textit{future work} section, we added many concrete suggestions for people that want to further research this topic.
+In this chapter, we discussed the outcome from different kind of experiments and commented on the reasons and consequences. Then, we presented the problems that arose with the use-case and datasets of choice. We have also added many concrete suggestions for people that want to research this topic further.

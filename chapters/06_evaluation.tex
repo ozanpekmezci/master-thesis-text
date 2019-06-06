@@ -5,7 +5,7 @@
 
 This chapter focuses on assessing the results of the recommender systems that were created in the scope of the chapter \ref{chapter:implementation}. "Recommendation systems have a variety of properties that may affect user experience, such as accuracy, robustness, scalability, and so forth" \cite{shani2011evaluating}. In this thesis, we mostly focus on characteristics such as accuracy, diversity, and others that are related to these two. 
 
-In the first years of recommender systems, the developers of recommendation systems only focused on accuracy. However, this has started to change, and now we know that accuracy is not always equaled user satisfaction. Before starting this thesis, we analyzed what properties are essential to improve user satisfaction in job recommender systems. The research led us to diversity as a metric \cite{castells2015novelty}.
+In the first years of recommender systems, the developers of recommendation systems only focused on accuracy. However, this has started to change, and now we know that accuracy is not always equal to the user satisfaction. Before starting this thesis, we analyzed what properties are essential to improve user satisfaction in job recommender systems. The research led us to diversity as a metric \cite{castells2015novelty}.
 
 When we recommend talent to a project, the only essential evaluation properties are the accuracy of the first item in the list, the accuracy of top \textit{n} items in the list, and the overall list value. We can find out the first two via evaluation algorithms. However, the overall list value can only be acquired from human observers. 
 
@@ -16,40 +16,24 @@ While we are working on our hypothesis, we use all three types of experiments, w
 According to the research \cite{shani2011evaluating}, there are some guidelines that we need to follow to conduct a successful experiment; a \textit{hypothesis}, \textit{controlling variables} and \textit{generalization power}. We hypothesize that diversity increases user satisfaction and serves as an important factor near accuracy. The controlling variables are the factors that stay the same during different experiments. We need those variables to make sure that different results are comparable. In our case, the trained dataset is the same. Also, when we conduct user studies, we ask about the results of the same groups and projects. This way, the user study results are directly comparable. The last guideline is the generalization power; to make sure that our model generalizes well, we combine and adapt \textit{freelancer.com} and Motius datasets together. That is why the generalization power for different job recommender datasets is secured. 
 
 
-\section{Unsupervised Individual Recommendation}
+\section{Unsupervised Individual Recommendation}\label{unsupervised-individual-recommender}
 
 As it was explained in section \ref{implementation-unsupervised-individual}, unsupervised individual recommendation addresses the proposal of single talents to single projects using different methods. What these methods have in common is that they all ignore labels of data and only consider features. The first approach is recommendation via feature similarity, and the second one suggests the most popular candidates, and the last one is the combination of the first two.
 
-When we calculate the accuracy for these methods, we use performance measures such as \textit{precision} and \textit{recall} \cite{burke2015robust}. Precision refers to the percentage of the relevant results, and recall refers to "the percentage of total relevant results correctly classified by the algorithm" \cite{davis2006relationship}.
-
-\begin{equation}
-recall \equiv  sensitivity =\frac{\#  true positives }{\# true positives +\# false negatives }
-\end{equation}
-
-\begin{equation}
-precision =\frac{\#true positives }{\# true positives +\#  false positives }
-\end{equation}
-
-The above equations show how we calculated recall and precision. True positives in our case explain selected and relevant talents. False positives are selected, but irrelevant talents. Lastly, false negatives are not selected, but relevant talents.
-
-To be more specific, true positive is the case, when the first person in the recommendation list is the person that won the project. False positives disclose all non-awarded bidders that are first in the list, and false negatives demonstrate all bidders that are not first in the list but won the project in real life. 
-
-When we start to calculate results, we see that precision and recall always have the same results for the freelancer dataset. For each project, the number of true positives is either one or zero. The number of false negatives or false positives is also one or zero for each project. If the prediction was correct, the number of true positives is one. In this case, both the number of false negatives and false positives are zero.
-
-The takeaway from the previous paragraph does not hold for every dataset. For Motius case, there is more than one talent that got positive feedback for each project. That is the number of true positives can vary from zero to the number of talents that received an invitation. Next, the number of false negatives can have values from zero to the number of people that were accepted. Last, the number of false positives also range from zero to the number of people with positive feedback for each project. Therefore, it is safe to say that those values vary for each project.
+When we calculate the accuracy for these methods, we use the top one and top five accuracies. For the individual recommendation methods, top one refers to what percent of winners for roles were correctly predicted on the first try. Top five is the other case where we do the same if the recommender system has five tries. It can also be explained that the evaluation method checks if the winner of the role exists in the first five positions of the ranked recommendation list.
 
 In the next subsections, we demonstrate the evaluation results for various approaches.
 
 
 \subsection{Existing Company Recommender}\label{evaluation:existing}
 
-The sponsor of this thesis, Motius, runs an internal recommendation system to suggest talents to roles. The internal mechanism that submits recommendations has stored the logs of the past recommendations in an internal database. This database has included all crucial details, such as the name of the roles, projects, talents, recommendation strength, and if the person got an invitation to the next stage. We used the logs to conduct an offline evaluation.
+The company Motius, runs an internal recommendation system to suggest talents to roles. The internal mechanism that submits recommendations has stored the logs of the past recommendations in an internal database. This database has included all crucial details, such as the name of the roles, projects, talents, recommendation strength, and if the person got an invitation to the next stage. We used the logs to conduct an offline evaluation.
 
 \subsubsection{Offline Evaluation}
 
 First of all, the logs contained 140914 recommendations for 375 roles. There are only 961 positive labels, which means the people who got accepted on the recommendation list. Therefore, we can conclude that there are 2-3 accepted talents for every role. We can also confirm that most of the logs consist of talents that got rejected. 
 
-As part of the evaluation, we checked the rate of an accepted talent being the first in the recommendation list and being in the top 5 of the recommendation list so that the results are directly comparable with the recommender systems that we implemented. The first talents in the list only get accepted in 7\% of the roles, and the accepted talents were only a part of 21\% of the projects. Lastly, the average rank of accepted people was 161. 
+As part of the evaluation, we checked the rate of an accepted talent being the first in the recommendation list and being in the top 5 of the recommendation list so that the results are directly comparable with the recommender systems that we implemented. The first talents in the list only get accepted in 7\% of the roles, the rate of acceptance for either one of first five talents in the list were only 21\%. Lastly, the average rank of accepted people was 161. 
 
 \subsection{Recommendation by Similarity}\label{ev-rec-sim}
 
@@ -71,19 +55,19 @@ For this type of recommender, we used the same evaluation metric for different p
 	\end{tabular}
 \end{table}
 
-As figure \ref{tab:evaluation-rec-similarity} depicts top 5 accuracy from different flavors of similarity recommendation systems. Top 5 accuracy explains the case that the recommender suggests a bidder list and the correct result is searched in top 5 elements of this lists, which contains bidders with a descending recommendation strength. 
+As table \ref{tab:evaluation-rec-similarity} depicts top 5 accuracy from different flavors of similarity recommendation systems. Top 5 accuracy explains the case that the recommender suggests a bidder list and the correct result is searched in top 5 elements of this lists, which contains bidders with a descending recommendation strength. 
 
 The depths of freelancer.com dataset are already defined in \ref{implementation-subsection-freelancer}. To sum it up, each project lists their required skills. These required skills do not have any value, so they are used as zero or one. Each talent accommodates a skill vector, which encloses the number of projects that the person finished. For example, if an example talent 1 participated in 10 projects that only required \textit{Python} and two projects that only required \textit{JavaScript}, this person would have a 10 for Python, a 2 for JavaScript and zero for rest of the skills. 
 
-When we do talk about the recommendation by similarity, it suggests that each row is normalized first, so that the highest values correspond to one the smallest zero. Then the cosine similarity of the feature vector of the picked project and the feature vector of all talents are calculated. This cosine similarity is used as the recommendation strength of each talent for a particular project. Then, we sort these values in descending order. 
+When we do talk about the recommendation by similarity, it suggests that each row is normalized first, so that the highest values correspond to one and the smallest to zero. Then the cosine similarity of the feature vector of the picked project and the feature vector of all talents are calculated. This cosine similarity is used as the recommendation strength of each talent for a particular project. Then, we sort these values in descending order. 
 
 \paragraph{A} In this first set, we use the plain mode like it was told in the previous paragraph. This setting means normalizing rows and calculating the cosine similarity. The accuracy we reached is 28\%. 
 
 \paragraph{B} After carefully checking and debugging the setting \textit{A}, we found out that there are many cases of winners with no skill vector. This outcome indicates that many projects hired talents with zero experience according to the freelancer.com dataset. Since this method picks talent just by looking at their features, it is impossible to predict the winners for those projects. That is why we removed the talents that have no skill vector present. Doing this increased the accuracy to 36\%. 
 
-\paragraph{C} When the developer of this thesis checked the data, it seemed like some further improvements could be made. An idea was normalizing columns added to the rows. Normalizing rows was what we were doing in other setups, which is scaling for each talent. Normalizing columns means setting the highest value for each skill to one and the lowest value to zero. Doing this has the advantage that the talents, who finished many projects with particular skills, will not lose hat advantage against others. However, this method decreases the accuracy of 31\%. This implicates that when the project owners choose talents, the information of how many projects the talents completed with relevant skills do not play a significant role. However, it is hard to conclude since every employer is different.
+\paragraph{C} The manual control of the data showed that further improvements could be made to the algorithm. An idea was normalizing columns added to the rows. Normalizing rows was what we were doing in other setups, which is scaling for each talent. Normalizing columns means setting the highest value for each skill to one and the lowest value to zero. Doing this has the advantage that the talents, who finished many projects with particular skills, will not lose hat advantage against others. However, this method decreases the accuracy of 31\%. This implicates that when the project owners choose talents, the information of how many projects the talents completed with relevant skills do not play a significant role. However, it is hard to conclude since every employer is different.
 
-\paragraph{D} To test the suspicion that we have grown, we start losing some information on purpose. This version changes the talent skills to zeroes and ones just like the project feature vectors. If a person has completed any project that involved the relevant skill, that is a one. If this person did not work with a skill before, that value becomes zero. In the end, we reach 35\% accuracy, which is not the best among others but also not the worst, considering we slimmed down the data and lost much information about talent skills.
+\paragraph{D} To verify this observation, we start losing some information on purpose. This version changes the talent skills to zeroes and ones just like the project feature vectors. If a person has completed any project that involved the relevant skill, that is a one. If this person did not work with a skill before, that value becomes zero. In the end, we reach 35\% accuracy, which is not the best among others but also not the worst, considering we slimmed down the data and lost much information about talent skills.
 
 In the end, we decide to use the last version. Because that version has the smallest data frame size, which is beneficial according to what we explained before [See subsection \ref{subsection:company-dataset}]. Also, the accuracy is the second best among others, and it is a structure similar to what we programmed in subsection \ref{subsection:using-embeddings}.
 
@@ -111,7 +95,7 @@ As this is the first user study we conduct, some background information is neces
 
 \subsection{Recommendation by Popularity}\label{subsubsection:eval-popularity}
 
-Popularity recommender is a recommender that is easy to explain: it checks the profile information of every bidder from a specific project. Then it sorts them by their experience level and recommends people that have the most experience. This type of recommendation system is only evaluated via offline evaluation, because the experience level property is only available for the Freelancer dataset. That's why, we did not implement it on the dashboard. 
+Popularity recommender is a recommender that is easy to explain: it checks the profile information of every bidder from a specific project. Then it sorts them by their experience level and recommends people that have the most experience. This type of recommendation system is only evaluated via offline evaluation because the experience level property is only available for the Freelancer dataset. That is why we did not implement it on the dashboard. 
 
 \subsubsection{Offline Evaluation}
 
@@ -120,7 +104,7 @@ Offline evaluation of this method is straightforward. Like we did before, we che
 
 \subsection{Hybrid Recommendation}
 
-According to \cite{burke2002hybrid}, hybridization is a valid technique to combine several recommendation methods to produce a single recommendation. There are different methods to achieve this, but we combine weighted scores of both of other recommenders. In our version, we have decided to add results from both recommenders with some weights. The reason for that is to be able to predict results for as many projects as possible. The \ref{tab:evaluation-amount-prediction} depicts how many projects is it possible to predict the results. The slimmed-down version that we developed to recommend by similarity cannot predict for all projects, because a significant percentage of the winners do not have a skill vector. When we combine both results, we also increase our coverage, since we get to use the results from two different recommenders. Since the popularity information for the Motius dataset doesn't exist, we did not implement this feature into the dashboard. That's why, we also didn't conduct a corresponding user study for this algorithm.
+According to \cite{burke2002hybrid}, hybridization is a valid technique to combine several recommendation methods to produce a single recommendation. There are different methods to achieve this, but we combine weighted scores of both of other recommenders. In our version, we have decided to add results from both recommenders with some weights. The reason for that is to be able to predict results for as many projects as possible. The table \ref{tab:evaluation-amount-prediction} depicts how many projects is it possible to predict the results. In many projects, it is not possible to predict the results, because there are no skill vectors for the project or the bidders. The slimmed-down version that we developed to recommend by similarity cannot predict for all projects, because a significant percentage of the winners do not have a skill vector. When we combine both results, we also increase our coverage, since we get to use the results from two different recommenders. Since the popularity information for the Motius dataset does not exist, we did not implement this feature into the dashboard. That is why we also did not conduct a corresponding user study for this algorithm.
 
 \begin{table}[htp]
 	\caption[The number of predicted projects]{A table that shows the amount of projects that we can generate predictions.}\label{tab:evaluation-amount-prediction}
@@ -178,7 +162,7 @@ Since we decided on a weighted addition of two recommenders, we also have the fl
 	\caption[Weight figure]{Effect of weight selection on hybrid recommenders to the accuracy}\label{fig:weight-selection}
 \end{figure}
 
-Figures \ref{fig:weight-selection} and \ref{fig:weight-selection-coverage}  depict the results of what happens with different similarity weights. Although the figures only show the similarity weights, popularity weights can also be calculated by subtracting the similarity weight from one. The figure \ref{fig:weight-selection} displays top 1 and top 5 accuracy for different weights. When the similarity weight is zero, top 1 accuracy is the lowest, and top 5 accuracy is highest. When the similarity weight is one, both accuracies stay in the middle. The figure \ref{fig:weight-selection-coverage} show the number of projects that are possible to predict results with the recommender at hand. That graph includes a clear function that is inversely proportional to the similarity weight. The highest project coverage can be seen on the highest popularity weight, and the lowest project coverage can be seen on the highest similarity weight.
+Figures \ref{fig:weight-selection} and \ref{fig:weight-selection-coverage}  depict the results of what happens with different similarity weights. Although the figures only show the similarity weights, popularity weights can also be calculated by subtracting the similarity weight from one. The figure \ref{fig:weight-selection} displays top 1 and top 5 accuracy for different weights. When the similarity weight is zero, top 1 accuracy is the lowest, and top 5 accuracy is highest. When the similarity weight is one, both accuracies stay in the middle. The figure \ref{fig:weight-selection-coverage} show the number of projects that are possible to predict results with the recommender at hand. That graph includes a clear function that is inversely proportional to the similarity weight. The highest project coverage can be seen on the highest popularity weight, and the lowest project coverage can be seen on the highest similarity weight. 
 
 It is clear that there is no obvious best weight choice since we both want to increase project coverage and accuracies. We chose the similarity weight 0.6 and popularity weight 0.4 to increase these results.
 
@@ -280,7 +264,8 @@ For this user study, we listed talents for the same role that were suggested by 
 
 \section{Unsupervised Group Recommender}\label{ev:unsupervised-group-rec}
 
-Unsupervised group recommender is another type of recommender that we implemented in the dashboard is the unsupervised group recommender and contains different modes such as baseline and diverse. 
+Unsupervised group recommender is another type of recommender that we implemented in the dashboard. The unsupervised group recommender contains different modes such as baseline and diverse. 
+
 
 \subsection{Baseline Recommender}
 
@@ -288,37 +273,32 @@ The baseline unsupervised group recommender recommends a group of talents by max
 
 \subsubsection{Offline Evaluation}
 
-Many evaluation methods count under offline evaluation. Since they are employed the first time in this thesis, we explain them in a particular way.
+Many evaluation methods are part of the offline evaluation. Since they are employed the first time in this thesis, we explain them in more detail.
 
 \paragraph{Accuracy}
 
-The first detail that we check is the top 1 and top 5 accuracies like we did before. The performance did not change from the results of section \ref{ev-rec-sim}, which means that the top 1 accuracy is around 20\% and top 5 is around 30\%.
+The calculation of offline accuracy for group recommender is different from the individual one [See section \ref{unsupervised-individual-recommender}]. For the case of group recommenders, we calculate the top one and top five accuracies for every project of each group and calculate their average.
+
+The first detail that we check is the top one and top five accuracies as we did before. The performance did not change from the results of section \ref{ev-rec-sim}, which means that the top 1 accuracy is around 20\% and top 5 is around 30\%.
 
 \paragraph{Diversity}\label{ev-unsupervised-group-diversity}
 
 There are many evaluation mechanisms to measure diversity, and the first equations were coined at the beginning of 2000's \cite{smyth2001similarity}.
 
-$$\mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j )$$
+\begin{equation}
+\mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j )
+\label{eq:ev-ild}
+\end{equation}
 
-The above \textit{inter-list diversity} is the first to calculate. This mechanism calculates the diversity inside a recommendation list. As a diversity measure, we use the cosine distance, which is calculated as $1 - Cosine Similarity$, which is used many times in this thesis. With various sizes of groups from the freelancer.com dataset, we calculated the average \textit{ILD} of 40\% with this baseline suggestion engine.
+The above \textit{inter-list diversity} [See equation \eqref{eq:ev-ild}] is the first to calculate. This mechanism calculates the diversity inside a recommendation list. As a diversity measure, we use the cosine distance, which is calculated as $1 - Cosine Similarity$, which is used many times in this thesis [See chapter \ref{chapter:implementation}]. With various sizes of groups from the freelancer.com dataset, we calculated the average ILD value of 40\% with this baseline suggestion engine.
 
 \paragraph{Unexpectedness}\label{ev-unsupervised-group-unexpectedness}
 
-Unexpectedness tells us how unforeseen the data is to the recruiters.  In the formula below $\mathcal { J } _ { u }$ is a symbol for a set of talents that the recruiter has interacted with. When we know about this past, we can compare the talents with the people in the set. We want to maximize the distance between already seen and not yet seen talents. The result that we reach in baseliner is 0.61.
-
-$$
-Unexp = \frac { 1 } { | R | \left| \mathcal { J } _ { u } \right| } \sum _ { i \in R } \sum _ { j \in \mathcal { J } _ { u } } d ( i , j )
-$$
-
-$$
-where 
-\mathcal { J } _ { u } \stackrel { \mathrm { def } } { = } \{ i \in \mathcal { J } | r ( u , i ) \neq \emptyset \}
-$$
-
+Unexpectedness tells us how unforeseen the data is to the recruiters.  In the equation in equation \eqref{research-unexp} $\mathcal { J } _ { u }$ is a symbol for a set of talents that the recruiter has interacted with. When we know about this past, we can compare the talents with the people in the set. We want to maximize the distance between already seen and not yet seen talents. The result that we reach in baseliner is 0.61. For the user studies, we also wanted to ask the recruiters their opinions about the unexpectedness[See section \ref{ev-unsupervised-group-diversity-unexp}]. However, the subjects of the user study can not know about the past interactions of the system. That is why the unexpectedness results are only present for the offline evaluation. 
 
 \subsubsection{User Study}\label{subsubsection:user-study-first-group}
 
-In this user study, we pick a random group and ask the opinions of the recruiters for the performance of the first item for each project in the group, the diversity of these first items in the group and the overall list value. For this and the next user studies, we also wanted to ask the recruiters their opinions about the unexpectedness[See section \ref{ev-unsupervised-group-diversity-unexp}]. However, the subjects of the user study can not know about the past interactions of the system. That's why the unexpectedness results are only present for the offline evaluation. The results are shown in the table \ref{tab:user-study-group-rec-unsupervised}.
+In this user study, we pick a random group and ask the opinions of the recruiters for the performance of the first item for each project in the group, the diversity of these first items in the group and the overall list value.The results are shown in the table \ref{tab:user-study-group-rec-unsupervised}.
 
 \begin{table}[ht]
 	\caption[User Study Group Unsupervised]{A table that shows results of the user study about unsupervised group recommendation}\label{tab:user-study-group-rec-unsupervised}
@@ -338,15 +318,11 @@ Diverse unsupervised group recommender optimizes the relationship of the chosen 
 
 The way this type of recommender functions is already explained in the implementation chapter[See section \ref{implementation-diverse}]. We can sum it up using the formulas:
 
-$$
-R _ { o p t } ( \lambda ) =  { \arg \max } g ( R , \lambda )
-$$
+\begin{equation}
+R _ { o p t } ( \lambda ) =  { \arg \max } (( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R ) ).
+\end{equation}
 
-$$
-g ( R , \lambda ) = ( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R )
-$$
-
-In the above equations, the variable $\lambda$ can be tuned according to our needs. A value closer to zero means, the recruiters want to see more relevant scores and a value closer to one shows more different results. 
+In the above equation, the variable $\lambda$ can be tuned according to our needs. A value closer to zero means, the recruiters want to see more relevant scores and a value closer to one shows more different results. 
 
 \subsubsection{Offline Evaluation}
 
@@ -462,7 +438,7 @@ The figure \ref{fig:unsupervised-diversity-diversity} portrays, how changing the
 \end{figure}
 
 
-We use the same formula, which was explained in paragraph \ref{ev-unsupervised-group-unexpectedness}. Again, we calculate the values separately for different diversity rates and drawn on the figure \ref{fig:unsupervised-diversity-unexpectedness}. It is evident that the diverse recommender did not increase the unexpectedness as it improved diversity.
+We use the same formula, which was explained in paragraph \ref{ev-unsupervised-group-unexpectedness}. Again, we calculate the values separately for different diversity rates and drawn on the figure \ref{fig:unsupervised-diversity-unexpectedness}. It is evident that the diverse recommender did not increase the unexpectedness as steep as it improved diversity.
 
 
 \subsubsection{User Study}
@@ -774,5 +750,5 @@ The discussion about the results is included in chapter \ref{chapter:discussion}
 
 In this chapter, we showed the evaluation results for the unsupervised and supervised individual recommender, unsupervised, and supervised group recommender system and the feedback loop. These results come from offline, online evaluation, and user studies. 
 
-In the next chapter, we continue with understanding the results [See chapter \ref{chapter:discussion}].
+In the next chapter, we continue with understanding the results.
 

@@ -103,12 +103,12 @@
     \endentry
     \entry{anderson2015docker}{article}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=9b5606e9ab1e06176b5c05f0c2b6ce0a}{%
+        {{uniquename=1,uniquepart=given,hash=9b5606e9ab1e06176b5c05f0c2b6ce0a}{%
            family={Anderson},
            familyi={A\bibinitperiod},
            given={Charles},
            giveni={C\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {IEEE}%
@@ -348,47 +348,6 @@
       \field{title}{Natural language processing with Python: analyzing text with the natural language toolkit}
       \field{year}{2009}
     \endentry
-    \entry{burke2015robust}{incollection}{}
-      \name{author}{3}{}{%
-        {{uniquename=0,uniquepart=base,hash=927ab4206ced595b50d2ac5fb4535b88}{%
-           family={Burke},
-           familyi={B\bibinitperiod},
-           given={Robin},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=b61e8704b999ccf78243863cbf5e2413}{%
-           family={O’Mahony},
-           familyi={O\bibinitperiod},
-           given={Michael\bibnamedelima P},
-           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{uniquename=1,uniquepart=given,hash=26c3f4114b262673aa71a726b9de6fa0}{%
-           family={Hurley},
-           familyi={H\bibinitperiod},
-           given={Neil\bibnamedelima J},
-           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=1}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{8e0947d757f6b7108ad3ee172fd3af22}
-      \strng{fullhash}{8e0947d757f6b7108ad3ee172fd3af22}
-      \strng{bibnamehash}{8e0947d757f6b7108ad3ee172fd3af22}
-      \strng{authorbibnamehash}{8e0947d757f6b7108ad3ee172fd3af22}
-      \strng{authornamehash}{8e0947d757f6b7108ad3ee172fd3af22}
-      \strng{authorfullhash}{8e0947d757f6b7108ad3ee172fd3af22}
-      \field{labelalpha}{BOH15}
-      \field{sortinit}{B}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Recommender systems handbook}
-      \field{title}{Robust collaborative recommendation}
-      \field{year}{2015}
-      \field{pages}{961\bibrangedash 995}
-      \range{pages}{35}
-    \endentry
     \entry{burke2000knowledge}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=927ab4206ced595b50d2ac5fb4535b88}{%
@@ -447,6 +406,132 @@
       \field{year}{2002}
       \field{pages}{331\bibrangedash 370}
       \range{pages}{40}
+    \endentry
+    \entry{covington2016deep}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=0169f2fa7857fb3f84d58bffdd4ab3f6}{%
+           family={Covington},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=46b2323af4a505d3970aa48d3d4707a4}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Jay},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=135c293c9df32bc8ce6b0e3cc2d4e2e4}{%
+           family={Sargin},
+           familyi={S\bibinitperiod},
+           given={Emre},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{5f9b7be4001a6da1a2a2c48cb1a325a0}
+      \strng{fullhash}{5f9b7be4001a6da1a2a2c48cb1a325a0}
+      \strng{bibnamehash}{5f9b7be4001a6da1a2a2c48cb1a325a0}
+      \strng{authorbibnamehash}{5f9b7be4001a6da1a2a2c48cb1a325a0}
+      \strng{authornamehash}{5f9b7be4001a6da1a2a2c48cb1a325a0}
+      \strng{authorfullhash}{5f9b7be4001a6da1a2a2c48cb1a325a0}
+      \field{labelalpha}{CAS16}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 10th ACM conference on recommender systems}
+      \field{title}{Deep neural networks for youtube recommendations}
+      \field{year}{2016}
+      \field{pages}{191\bibrangedash 198}
+      \range{pages}{8}
+    \endentry
+    \entry{cheng2016wide}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{uniquename=0,uniquepart=base,hash=ed00db26c928a36037c9e0a3fa4eccf5}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Heng-Tze},
+           giveni={H\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bbbdb7109d6d34d3a35bab1815b6b333}{%
+           family={Koc},
+           familyi={K\bibinitperiod},
+           given={Levent},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ebe6e10551b468ab8050f113ae9b3fc9}{%
+           family={Harmsen},
+           familyi={H\bibinitperiod},
+           given={Jeremiah},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8e25f4617a4e96096278a4abcf8e61de}{%
+           family={Shaked},
+           familyi={S\bibinitperiod},
+           given={Tal},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=aae0ced6a97ff5b4ca38e38013046ebe}{%
+           family={Chandra},
+           familyi={C\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8576a5ea2cc088dab881ef8ec0497629}{%
+           family={Aradhye},
+           familyi={A\bibinitperiod},
+           given={Hrishi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f66a1e2b87f54f429d8392fbcb710199}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Glen},
+           giveni={G\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=3d11e6f2a0d0a1183b2cf62996525afc}{%
+           family={Corrado},
+           familyi={C\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=80f6927515d9b150f5ae0e59189d9bd0}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=922657b8ee942d4c844349875231bf82}{%
+           family={Ispir},
+           familyi={I\bibinitperiod},
+           given={Mustafa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{e2faecc707620d11201f88b5e07990ae}
+      \strng{fullhash}{cd88524b4b29c383467bc91669e2f78d}
+      \strng{bibnamehash}{cd88524b4b29c383467bc91669e2f78d}
+      \strng{authorbibnamehash}{cd88524b4b29c383467bc91669e2f78d}
+      \strng{authornamehash}{e2faecc707620d11201f88b5e07990ae}
+      \strng{authorfullhash}{cd88524b4b29c383467bc91669e2f78d}
+      \field{labelalpha}{Che+16}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1st workshop on deep learning for recommender systems}
+      \field{title}{Wide \& deep learning for recommender systems}
+      \field{year}{2016}
+      \field{pages}{7\bibrangedash 10}
+      \range{pages}{4}
     \endentry
     \entry{chollet2018deep}{book}{}
       \name{author}{1}{}{%
@@ -515,6 +600,49 @@
       \field{pages}{881\bibrangedash 918}
       \range{pages}{38}
     \endentry
+    \entry{christakou2007hybrid}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=36e8b75242efc1411fde651e497379a2}{%
+           family={Christakou},
+           familyi={C\bibinitperiod},
+           given={Christina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cae0322a1a1d7f79d0e468b04b8dbed3}{%
+           family={Vrettos},
+           familyi={V\bibinitperiod},
+           given={Spyros},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b17683f435ae1972e0e9446dd4c35757}{%
+           family={Stafylopatis},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{ed135ae926afa118ed77d93d08e8baa5}
+      \strng{fullhash}{ed135ae926afa118ed77d93d08e8baa5}
+      \strng{bibnamehash}{ed135ae926afa118ed77d93d08e8baa5}
+      \strng{authorbibnamehash}{ed135ae926afa118ed77d93d08e8baa5}
+      \strng{authornamehash}{ed135ae926afa118ed77d93d08e8baa5}
+      \strng{authorfullhash}{ed135ae926afa118ed77d93d08e8baa5}
+      \field{labelalpha}{CVS07}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal on Artificial Intelligence Tools}
+      \field{number}{05}
+      \field{title}{A hybrid movie recommender system based on neural networks}
+      \field{volume}{16}
+      \field{year}{2007}
+      \field{pages}{771\bibrangedash 792}
+      \range{pages}{22}
+    \endentry
     \entry{de2015semantics}{incollection}{}
       \name{author}{5}{}{%
         {{uniquename=0,uniquepart=base,hash=a3f40d574d6339004200fc9d85178f3e}{%
@@ -567,41 +695,6 @@
       \field{year}{2015}
       \field{pages}{119\bibrangedash 159}
       \range{pages}{41}
-    \endentry
-    \entry{davis2006relationship}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=5f9ed160b91c65c59a8d61af7f1e5017}{%
-           family={Davis},
-           familyi={D\bibinitperiod},
-           given={Jesse},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=17a8760845dc1d27d9d632b1d341dd85}{%
-           family={Goadrich},
-           familyi={G\bibinitperiod},
-           given={Mark},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{organization}{1}{%
-        {ACM}%
-      }
-      \strng{namehash}{a70191c945c2170327144b65be800a2e}
-      \strng{fullhash}{a70191c945c2170327144b65be800a2e}
-      \strng{bibnamehash}{a70191c945c2170327144b65be800a2e}
-      \strng{authorbibnamehash}{a70191c945c2170327144b65be800a2e}
-      \strng{authornamehash}{a70191c945c2170327144b65be800a2e}
-      \strng{authorfullhash}{a70191c945c2170327144b65be800a2e}
-      \field{labelalpha}{DG06}
-      \field{sortinit}{D}
-      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 23rd international conference on Machine learning}
-      \field{title}{The relationship between Precision-Recall and ROC curves}
-      \field{year}{2006}
-      \field{pages}{233\bibrangedash 240}
-      \range{pages}{8}
     \endentry
     \entry{desrosiers2011comprehensive}{incollection}{}
       \name{author}{2}{}{%
@@ -1373,6 +1466,43 @@
       \field{year}{2017}
       \field{pages}{503\bibrangedash 519}
       \range{pages}{17}
+    \endentry
+    \entry{nnimagesource}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=7c8e69da067f0b72f04c242706343b50}{%
+           family={Quiza},
+           familyi={Q\bibinitperiod},
+           given={Ramon},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8a50cd2c7d27a3da834f66410aaf0177}{%
+           family={Davim},
+           familyi={D\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7f761b316e00193024ddb81481b3958a}
+      \strng{fullhash}{7f761b316e00193024ddb81481b3958a}
+      \strng{bibnamehash}{7f761b316e00193024ddb81481b3958a}
+      \strng{authorbibnamehash}{7f761b316e00193024ddb81481b3958a}
+      \strng{authornamehash}{7f761b316e00193024ddb81481b3958a}
+      \strng{authorfullhash}{7f761b316e00193024ddb81481b3958a}
+      \field{labelalpha}{QD11}
+      \field{sortinit}{Q}
+      \field{sortinithash}{d257e420984a3a5c57a3330114cd646a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-84996-449-4}
+      \field{journaltitle}{Machining of Hard Materials}
+      \field{month}{01}
+      \field{title}{Computational Methods and Optimization}
+      \field{year}{2011}
+      \field{pages}{177\bibrangedash 208}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1007/978-1-84996-450-0
+      \endverb
     \endentry
     \entry{rousseeuw1987silhouettes}{article}{}
       \name{author}{1}{}{%

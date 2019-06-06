@@ -1,11 +1,13 @@
 % !TeX root = ../main.tex
 % Add the above to each chapter to make compiling the PDF easier in some editors.
 
-\section{Content-Based Filtering}\label{section:content_based_filtering}
+\subsection{Content-Based Filtering}\label{section:content_based_filtering}
 
 Content-based recommender systems employ features of both items and users to build item and user profiles that recommend items that are similar to the other items that the target user liked in the past. The necessary process of producing content-based recommendations consists of matching up the attributes of the target user profile, in which preferences and interests are stored, with the attributes of the items. After this process, we acquire a relevancy score that is an indicator for user-item relevancy. Generally, attributes that describe an item are features that are extracted from the item description. The content extracted from metadata is often too short and not sufficient to correctly define the user interests, that is why textual features are also added \cite{de2015semantics}.
 
-\subsection{Overview of Content-Based Recommender Systems}
+The general principle of content-based methods is to recognize the common characteristics of items that have received a positive rating from a user and then suggest new items to this user that share these characteristics. Recommender systems based only on content generally suffer from the problems of limited content analysis and over-specialization \cite{shardanand1995social}. Limited content analysis happens when the system has a limited amount of information on its users or the content of its items. This limitation means the content of an item is often insufficient to determine its quality. Over-specialization, on the other hand, is the process of recommending similar items to other items that the user rated positively. "Because of this, the system may fail to recommend items that are different but still interesting to the user" \cite{desrosiers2011comprehensive}.
+
+\subsubsection{Overview of Content-Based Recommender Systems}
 
 This section discloses an overview and the process of building a general content-based recommender system and the relevant techniques \cite{de2015semantics}.
 
@@ -29,7 +31,7 @@ The high level architecture of a content-based recommender system is shown in fi
 All of these components are crucial to make a functioning content-based recommender system. As the system always waits for new items, the feedback process is critical, and the retraining should happen regularly.
 
 
-\subsubsection{Advantages and Drawbacks of Content-Based Filtering}
+\paragraph{Advantages and Drawbacks of Content-Based Filtering}
 
 The advantages of content-based filtering against collaborative filtering are listed below \cite{de2015semantics}:
 
