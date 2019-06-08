@@ -23,7 +23,7 @@ Similar to the notation that we used before, $i$ and $j$ denote items, $u$ and $
 
 \subsubsection{Average Intra-List Distance}
 
-Perhaps the most frequently used diversity metric is the average intra-list distance \cite{castells2015novelty}: 
+Perhaps the most frequently used diversity metric is the average intra-list distance \cite{castells2015novelty}
 
 \begin{equation}
 \mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j ) .
@@ -35,7 +35,7 @@ As the name suggests, it has the aim to calculate the average diversity inside a
 
 \subsubsection{User-Specific Unexpectedness}\label{research-unexp}
 
-Unexpectedness is a property that can lead to user satisfaction. The formula below is the way to calculate it for a user:
+Unexpectedness is a property that can lead to user satisfaction. The formula below is the way to calculate it for a user
 
 \begin{equation}
 \mathrm {Unexp} = \frac { 1 } { | R | \left| \mathcal { J } _ { u } \right| } \sum _ { i \in R } \sum _ { j \in \mathcal { J } _ { u } } d ( i , j ) ,
@@ -50,7 +50,7 @@ where
 \label{eq:unexp-set}
 \end{equation}
 
-In words, the distance between recommended items and the items that the user has already interacted with are averaged. This method is also used in the evaluation part of the thesis [See chapter \ref{chapter:evaluation}]. Another way to calculate the unexpectedness is with this formula: 
+In words, the distance between recommended items and the items that the user has already interacted with are averaged. This method is also used in the evaluation part of the thesis [See chapter \ref{chapter:evaluation}]. Another way to calculate the unexpectedness is with this formula
 
 \begin{equation}
 \mathrm {Unexp} = | R - \mathrm {EX} | / | R | .
@@ -65,7 +65,7 @@ In the following paragraphs, we show methods to calculate the diversity of the w
 
 \paragraph{Aggregate diversity}
 
-We can calculate the aggregate diversity for all users in the system to compare the results with the other recommender systems. This way, we compare the diversity of different systems \cite{castells2015novelty}. The aggregate diversity is defined as follows:
+We can calculate the aggregate diversity for all users in the system to compare the results with the other recommender systems. This way, we compare the diversity of different systems \cite{castells2015novelty}. The aggregate diversity is defined as
 
 \begin{equation}
 \mathrm {Aggdiv} = \left| \bigcup _ { u \in{ U } } R _ { u } \right| .
@@ -76,7 +76,7 @@ In the equation \eqref{eq:aggdiv}, $\bigcup$ is the union sign. Therefore, we ca
 
 \paragraph{Gini Index}
 
-Calculating the Gini index means that the interacted items are first sorted in ascending order by the chosen probability, which is the equation \eqref{eq:gini-two} below. The equations to calculate the gini coefficient are:
+Calculating the Gini index means that the interacted items are first sorted in ascending order by the chosen probability, which is the equation \eqref{eq:gini-two} below. The equations to calculate the gini coefficient are
 
 \begin{equation}
 \mathrm {Gini} = \frac { 1 } { |{ J } | - 1 } \sum _ { k = 1 } ^ { | J | } ( 2 k - | J |  - 1 ) p \left( i _ { k } | s \right) ,
@@ -94,7 +94,7 @@ In that equation, $k$ is the number of the least recommended item. In the end, a
 
 \paragraph{Shannon Entropy}
 
-Shannon Entropy is logically similar to the \textit{gini index} and they are calculated similarly. The equation to calculate the Shannon Entropy reads:
+Shannon Entropy is logically similar to the \textit{gini index} and they are calculated similarly. The equation to calculate the Shannon Entropy reads
 
 \begin{equation}
 \mathrm { H } = - \sum _ { i \in \mathcal { J } } p ( i | s ) \log _ { 2 } p ( i | s ) .
@@ -119,7 +119,7 @@ Neural Networks are frameworks to process complex data inputs, and the version o
 \end{figure}
 
 
-'The goal of a feedforward network is to approximate some function $f^{*}$ .For example, for a classifier,  $y=f^{*}(\boldsymbol{x})$ maps an input  $\boldsymbol{x}$ to a category y .  A feedforward network  defines a mapping $\boldsymbol{y}=f(\boldsymbol{x} ; \boldsymbol{\theta})$ and learns the value of the parameters $\boldsymbol{\theta}$  that result in the best function approximation" \cite{Goodfellow-et-al-2016}. For a linear model, $\theta$ would consist of $\boldsymbol{w}$ and $\boldsymbol{b}$. The equation for one layer would be: 
+'The goal of a feedforward network is to approximate some function $f^{*}$ .For example, for a classifier,  $y=f^{*}(\boldsymbol{x})$ maps an input  $\boldsymbol{x}$ to a category y .  A feedforward network  defines a mapping $\boldsymbol{y}=f(\boldsymbol{x} ; \boldsymbol{\theta})$ and learns the value of the parameters $\boldsymbol{\theta}$  that result in the best function approximation" \cite{Goodfellow-et-al-2016}. For a linear model, $\theta$ would consist of $\boldsymbol{w}$ and $\boldsymbol{b}$. The equation for one layer would be
 
 \begin{equation}
 f(\boldsymbol{x} ; \boldsymbol{w}, b)=\sigma(\boldsymbol{x}^{\top} \boldsymbol{w}+b) .

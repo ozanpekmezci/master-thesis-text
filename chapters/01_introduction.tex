@@ -5,9 +5,8 @@
 
 \chapter{Introduction}\label{chapter:introduction}
 
-The introduction chapter of the thesis will focus on explaining the basic terminology of recommender systems so that readers who are new to the topic can understand the rest quickly. In addition to that, we will also present the motivation and the hypotheses that we want to validate.
+The introduction chapter of the thesis will focus on explaining the basic terminology of recommender systems. In addition to that, we will also present the motivation and the hypotheses that we want to validate.
 
-\section{Recommender Systems}
 
 "Recommender Systems are software tools and techniques that provide suggestions for items that are most likely of interest to a particular user." ~\parencite{Ricci2015}
 
@@ -15,7 +14,6 @@ Suggestions and items depend on the field that the recommender system is applied
 
 Although the history of the recommender systems goes back to mid-1990s ~\parencite{PARK201210059}, the real boom happened after e-commerce services became mainstream \cite{smith2017two}. Since there were too many items to choose from for users, such service was needed. Users of websites were becoming overloaded with the information, and the developers of recommender systems had the aim of reducing the information to be only relevant to users. 
 
-\section{Why Recommender Systems?}
 
 As mentioned in the last paragraph, recommender systems have the general function of suggesting items to users. However, why do recommender systems get developed? What kind of benefit do they have for both companies and users?
 
@@ -25,15 +23,12 @@ Recommenders also increase the coverage of items that user see. Coverage denotes
 
 Another essential point is increasing user satisfaction. This function of recommenders is the foundation of the thesis at hand. Unfortunately, most of the researchers do not take into account that the user satisfaction does not solely depend on simple evaluation metrics like accuracy, precision or recall but it can also depend on privacy, data security, diversity, serendipity, labeling, and presentation ~\parencite{Beel2016}. When recommender systems take those factors into account, they increase user satisfaction.
 
-\section{User Satisfaction}
 
 The recommendation performance is mainly evaluated in terms of accuracy (i.e., the difference between actual and predicted rating). Concentrating on the accuracy might not be a desired goal of the talent/project recommendations (e.g., merely recommending a \textit{top-N} list of talents that best match the requirements might result in similar talents whose skills only vary in a small extent). Besides the desired diversity, there might be other properties necessary for adequate recommendations (e.g., privacy, data security, diversity, serendipity, labeling, and presentation, and group recommendation).
 
-\section{Setting}
 
 Recommender systems can be applied to a various set of fields like entertainment, content creation, e-commerce, service sector, and social. However, we chose specific use-case, which is the suggestion of talents to projects to be managed by the recruiters of the companies.
 
-\section{Datasets}\label{section:intro-datasets}
 
 To be able to develop a solution on this topic, we used two datasets: one from the website \textit{Freelancer.com} and another one from the company \textit{Motius Gmbh}. These datasets are presented in the section \ref{section:datasets}.
 
@@ -43,12 +38,14 @@ To be able to develop a solution on this topic, we used two datasets: one from t
 This thesis aims to find answers to three main questions. The first question is if high accuracy guarantees high user satisfaction. The second one is an extension to the first question and asks if diversity affects user satisfaction positively. The last question asks if a feedback loop increases user satisfaction eventually.
 
 
-\section{Solution}
+\section{Contribution}
 
-To answer the questions that we asked in section \ref{section:motivation}, we first develop models and algorithms that generate predictions. Then, we implement these models and algorithms into a dashboard. Lastly, we execute offline, online evaluation rounds, and user studies to validate our hypotheses that were formulated as questions.
+To answer the questions that we asked in section \ref{section:motivation}, we first developed models and algorithms that generate predictions. Then, we implemented these models and algorithms into a dashboard. Lastly, we executed offline, online evaluation rounds, and user studies to validate our hypotheses that were formulated as questions. After performing the previous steps, we can finally answer the questions that we asked in section \ref{section:motivation}. 
 
-\section{Summary}
+First of all, we saw that high accuracy does not always result in high user satisfaction. This case is because other properties also affect user satisfaction, and having a marginal increase in the accuracy may result in a reduction of other properties, that also may decrease user satisfaction. These properties may vary from setting to setting and use-case to use-case. 
 
-In the introduction chapter, we summarized the aim of recommender systems and the aim of this thesis. We also added material so that the text is understandable.
+We found out that diversity is an essential factor for our case, which is recommending a group of talents to a project. Although accuracy and diversity are inversely proportional, a small increase in diversity led to slightly higher user satisfaction. However, a further marginal increase in diversity resulted in a decrease in user satisfaction. 
 
-The thesis continues with a review of scientific resources in the next chapter \ref{chapter:review_of_research}.
+Lastly, we validated if a feedback loop increases user satisfaction. Although the initial implementation and training with a feedback loop do not increase user satisfaction, the subjects of the user study saw a positive effect, after giving more and more feedback. After inserting more than a thousand feedback and retraining with the resulting data, users were more satisfied.
+
+We conclude that user satisfaction in recommender systems can be increased if the developers take user feedback into account and not only focus on algorithmic accuracy.

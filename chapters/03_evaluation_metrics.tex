@@ -16,7 +16,7 @@ In this section, some equations to calculate the accuracy are presented. To unde
 
 To understand the equations, we define some notations; the set of users in the recommender system will be denoted by \textit{U} and the set of items by \textit{I}. Additionally, \textit{R} depicts the set of ratings recorded in the system, and the letter \textit{S} is for the set of possible values for a rating. \textit{S} can be a discrete number from 1 to 5 or an element of the set {like, dislike} or other values depending on the implementation. Also, we suppose that a user $u$ $\in$  $U$ can perform no more than one rating for a particular item $i$ $\in$ $I$ and set $r_{ui}$ this rating. To identify the subset of users that have rated item $i$, we use the notation $U_i$. Similar to that, $I_u$ represents the subset of items that have been rated by a user $u$.
 
-Recommender systems have two main tasks, which are predicting the ratings and recommending a list to the users. Prediction of ratings is self-explanatory, and the aim is predicting the ratings of an unrated item \textit{i} from the user \textit{u}. This task is defined as a regression or a classification problem to learn the function f $\colon$ U $\times$ $I$ $\rightarrow$ S. There are two popular measures of accuracy to for this task: Mean Absolute Error (MAE) and the Root Mean Squared Error (RMSE). These are presented below [See \eqref{eq:mae} and \eqref{eq:rmse} respectively]:
+Recommender systems have two main tasks, which are predicting the ratings and recommending a list to the users. Prediction of ratings is self-explanatory, and the aim is predicting the ratings of an unrated item \textit{i} from the user \textit{u}. This task is defined as a regression or a classification problem to learn the function f $\colon$ U $\times$ $I$ $\rightarrow$ S. There are two popular measures of accuracy to for this task: Mean Absolute Error (MAE) and the Root Mean Squared Error (RMSE). These are presented below [See \eqref{eq:mae} and \eqref{eq:rmse} respectively]
 
 \begin{equation}
 \mathrm { MAE } ( f ) = \frac { 1 } { \left| \mathcal { R } _ {test} \right| } \sum _ { r _ { u i } \in \mathcal { R } _ {test} } \left| f ( u , i ) - r _ { u i } \right| ,
@@ -31,7 +31,7 @@ Recommender systems have two main tasks, which are predicting the ratings and re
 The author of this thesis used them as the cost function of the neural networks [See section \ref{section:supervised}].
 
 
-The other task that was mentioned  is presenting a top-n recommendation list. This list that is shown to a user is represented with L($u$). We define T($u$) as the subset of test items that the user \textit{u} found relevant. The performance of the method is then calculated using the measures of precision and recall:
+The other task that was mentioned  is presenting a top-n recommendation list. This list that is shown to a user is represented with L($u$). We define T($u$) as the subset of test items that the user \textit{u} found relevant. The performance of the method is then calculated using the measures of precision and recall, which are defined as
 
 \begin{equation}
 \mathrm { Precision } ( L ) = \frac { 1 } { | u | } \sum _ { u \in \mathcal { U } } | L ( u ) \cap T ( u ) | / | L ( u ) | ,
@@ -43,7 +43,7 @@ The other task that was mentioned  is presenting a top-n recommendation list. Th
 \label{eq:recall}
 \end{equation}
 
-A drawback of the previous methods is that all items of a recommendation list L($u$) are considered equally interesting to user \textit{u}. An alternative setting would be calculating the success of average hit ranks with the method Average Reciprocal Hit-Rank (ARHR):
+A drawback of the previous methods is that all items of a recommendation list L($u$) are considered equally interesting to user \textit{u}. An alternative setting would be calculating the success of average hit ranks with the method Average Reciprocal Hit-Rank (ARHR), which is defined as
 
 
 \begin{equation}

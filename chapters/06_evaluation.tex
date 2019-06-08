@@ -283,7 +283,7 @@ The first detail that we check is the top one and top five accuracies as we did 
 
 \paragraph{Diversity}\label{ev-unsupervised-group-diversity}
 
-There are many evaluation mechanisms to measure diversity, and the first equations were coined at the beginning of 2000's \cite{smyth2001similarity}.
+There are many evaluation mechanisms to measure diversity, and the first equations were coined at the beginning of 2000's \cite{smyth2001similarity}. The main equation we use is
 
 \begin{equation}
 \mathrm { ILD } = \frac { 1 } { | R | ( | R | - 1 ) } \sum _ { i \in R } \sum _ { j \in R } d ( i , j )
@@ -316,7 +316,7 @@ In this user study, we pick a random group and ask the opinions of the recruiter
 
 Diverse unsupervised group recommender optimizes the relationship of the chosen talents in a group on top of maximizing the relevancy of project-talent pairs. Both project-talent and talent-talent relationships are optimized via cosine similarity. We continue with the evaluation results.
 
-The way this type of recommender functions is already explained in the implementation chapter[See section \ref{implementation-diverse}]. We can sum it up using the formulas:
+The way this type of recommender functions is already explained in the implementation chapter[See section \ref{implementation-diverse}]. We can sum it up using the formula
 
 \begin{equation}
 R _ { o p t } ( \lambda ) =  { \arg \max } (( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R ) ).

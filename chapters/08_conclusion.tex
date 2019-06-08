@@ -5,16 +5,18 @@
 
 In the first chapter [See chapter \ref{chapter:introduction}], we asked some questions which were: 
 
+
 \begin{itemize}
 	\item Does high accuracy guarantee high user satisfaction?
 	\item Does diversity affect user satisfaction positively?
 	\item Would a feedback loop enhance user satisfaction?
 \end{itemize}
 
-Since, we already have developed a solution [See chapter \ref{chapter:conclusion}], evaluated the results [See chapter \ref{chapter:evaluation}] and discussed the outcome of the evaluation methods [See chapter \ref{chapter:discussion}], we can now answer these questions.
 
-From the discussion in section \ref{discuss-single-satisfaction}, we found out that an increase in accuracy does not guarantee higher user satisfaction; they do not correlate. The research in the section \ref{section:evaluation_metrics}, suggest that the reason for that is the fact that other properties also contribute to the user satisfaction and higher user satisfaction can only be guaranteed with a combination of different properties.
+From the discussion in section \ref{discuss-single-satisfaction}, we found out that an increase in accuracy does not guarantee higher user satisfaction; they do not correlate. In the offline evaluation, the unsupervised similarity-based method has the top one accuracy with 0.28, and the supervised neural networks method has the best top five accuracies with 0.56. However, the user study suggests that the combination of these two methods resulted in the best user satisfaction, with 4.0625 points out of 5. The research in the section \ref{section:evaluation_metrics}, suggest that the reason for that is the fact that other properties also contribute to the user satisfaction and higher user satisfaction can only be guaranteed with a combination of different properties.
 
-In section \ref{discuss-group-satisfaction}, we talked about the effect of diversity on user satisfaction. From the relevant evaluation results, we found out that some level of diversity affects user satisfaction positively. However, this does not mean that there is a correlation between diversity and user satisfaction. From our findings, user satisfaction increases until some value of diversity, and then it drops significantly.
 
-The last question is about feedback loops, and that topic was discussed in section \ref{discussion:feedback-loop}. Only enabling a feedback loop did not affect the results positively or negatively. When performed an online evaluation round with around 200 entries, and then retrained the model, there was also a minimal effect on the outcome. However, we saw a noticeable difference with 3500 feedbacks. After having the last round of user study, the experiment subjects agreed that user satisfaction increased. Here we can conclude that a feedback loop with enough constructive feedback can increase user satisfaction.
+In section \ref{discuss-group-satisfaction}, we talked about the effect of diversity on user satisfaction. The unsupervised group recommender produced diversity scores of 1.6875 to 4.2 out of 5 depending on the diversity constant. However, user satisfaction reached the maximum value of 3.9 out of 5 with the diversity constant of 0.4. For the supervised group recommender, the diversity score ranged from 2.375 to 5 out of 5 depending on the diversity constant. The maximum value of 3.1 for user satisfaction was again reached with the diversity constant of 0.4 out of 1. From the relevant evaluation results, we found out that some level of diversity affects user satisfaction positively. However, this does not mean that there is a correlation between diversity and user satisfaction. From our findings, user satisfaction increases until some value of diversity, and then it drops significantly.
+
+
+The last question is about feedback loops, and that topic was discussed in section \ref{discussion:feedback-loop}. Only enabling a feedback loop did not affect the results positively or negatively. When performed an online evaluation round with around 200 entries, and then retrained the model, there was also a minimal effect on the outcome. However, we saw a noticeable difference with 3500 feedbacks. After having the last round of user study, the experiment subjects agreed that user satisfaction increased from 3 to 3.6875. Here we can conclude that a feedback loop with enough constructive feedback can increase user satisfaction.

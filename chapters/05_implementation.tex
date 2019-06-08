@@ -84,7 +84,7 @@ This section demonstrates how unsupervised individual recommenders got implement
 
 \subsection{Recommendation by Similarity}\label{implementation-unsupervised-similarity}
 
-As it was mentioned before, the unsupervised learning techniques focus on learning without the use of labels. Therefore, in the context of this thesis, we find similarities between projects and talents by using their feature vectors. The similarity measure we use for this part of the thesis is the cosine similarity ~\parencite{amatriain2011data}, which reads:
+As it was mentioned before, the unsupervised learning techniques focus on learning without the use of labels. Therefore, in the context of this thesis, we find similarities between projects and talents by using their feature vectors. The similarity measure we use for this part of the thesis is the cosine similarity ~\parencite{amatriain2011data}, which reads
 
 
 
@@ -134,10 +134,10 @@ For this task, we use two different versions; one version that takes all the ski
 The first option that comes to mind is using the data as it is and training the model with them. The format of the talent data is shown in figure \ref{fig:freelancer-talent-matrix} and the projects skills matrix also have the same form with project names as keys.
 
 
-It is crucial to normalize input data before training neural networks ~\parencite{sola1997importance}. It has two significant benefits; it reduces the estimation errors, and it cuts down the training time. That's why we normalize all of the inputs using \textit{StandardScaler} module of \textit{scikit-learn}. It uses equation  \eqref{eq:normal} to scale the data. In the equation, \textit{u} is the mean, and \textit{s} is the standard deviation of the data points.
+It is crucial to normalize input data before training neural networks ~\parencite{sola1997importance}. It has two significant benefits; it reduces the estimation errors, and it cuts down the training time. That's why we normalize all of the inputs using \textit{StandardScaler} module of \textit{scikit-learn}. It uses equation  \eqref{eq:normal} to scale the data. In the equation, \textit{u} is the mean, and \textit{s} is the standard deviation of the data points. The equation reads
 
 \begin{equation}
-z = (x - u) / s
+z = (x - u) / s .
 \label{eq:normal}
 \end{equation}
 
@@ -177,10 +177,10 @@ For each of the inputs, a dense layer exists with the number of neurons equal to
 
 After the activation functions, all layers get concatenated horizontally. Concatenation layer is followed by a dropout layer with half of the neurons are disabled randomly. Next one in the model is a dense layer with 256 nodes, which possesses the same activation function, regularization, and weight initialization methods as the previous dense layers. The model accommodates the last dropout layer and ends with the main output. The output is only a one node layer and involves a \textit{sigmoid} activation function that squeezes the output value to be between 0 and 1. The weight initializer of the last layer is \textit{glorot uniform} \cite{pedamonti2018comparison}.
 
-Each neural network has the aim of minimizing its cost function ~\parencite{Goodfellow-et-al-2016}. The cost function that we chose is \textit{mean squared error}[See ~\eqref{eq:mean-squared-error}]. In the equation. $C$ is the cost function, $n$ is the total number of data points, $y(x)$ are the predicted results, and $a$ is the correct result. This example of the cost function is used mostly for regression tasks and calculates the mean squared difference of the actual value and the predicted output value. The metric we use is accuracy, and more information about it can be found in ~\autoref{chapter:evaluation}.
+Each neural network has the aim of minimizing its cost function ~\parencite{Goodfellow-et-al-2016}. The cost function that we chose is \textit{mean squared error}[See ~\eqref{eq:mean-squared-error}]. In the equation. $C$ is the cost function, $n$ is the total number of data points, $y(x)$ are the predicted results, and $a$ is the correct result. This example of the cost function is used mostly for regression tasks and calculates the mean squared difference of the actual value and the predicted output value. The metric we use is accuracy, and more information about it can be found in ~\autoref{chapter:evaluation}. Mean squared error is defined as
 
 \begin{equation}
-C \equiv \frac{1}{2 n} \sum_{x}\|y(x)-a\|^{2}
+C \equiv \frac{1}{2 n} \sum_{x}\|y(x)-a\|^{2} .
 \label{eq:mean-squared-error}
 \end{equation}
 
@@ -309,10 +309,10 @@ Because of the reasons above, we want to create the recommendation list diversel
 \end{algorithm}
 
 
-In the algorithm above, we first create an empty recommendation list \textit{R} and set a recommendation length \textit{k}. In our example, we only consider the groups with project amount of 5, so \textit{k} is five as well. After that, we find the optimal candidate that has not been selected yet, is relevant to the project at hand and is also diverse to the other selected candidates. Finding the optimal candidate can be tuned with the help of \eqref{eq:diversity-equation}. The $\lambda$ parameter in the equation can be optimized to value the relevancy or diversity more; $\lambda$ of 1 means to only consider variety, 0 factors to consider relevancy and 0.5 gives the balanced result. $f _ { r e l }$ in the equation stands for the relevancy score of the item, and $d i v ( R )$ tells the diversity between the items in the list. When we receive the optimal candidate from the equation, we add the talent to the recommendation list and iterate until we have enough talents for the whole group.
+In the algorithm above, we first create an empty recommendation list \textit{R} and set a recommendation length \textit{k}. In our example, we only consider the groups with project amount of 5, so \textit{k} is five as well. After that, we find the optimal candidate that has not been selected yet, is relevant to the project at hand and is also diverse to the other selected candidates. Finding the optimal candidate can be tuned with the help of \eqref{eq:diversity-equation}. The $\lambda$ parameter in the equation can be optimized to value the relevancy or diversity more; $\lambda$ of 1 means to only consider variety, 0 factors to consider relevancy and 0.5 gives the balanced result. $f _ { r e l }$ in the equation stands for the relevancy score of the item, and $d i v ( R )$ tells the diversity between the items in the list. When we receive the optimal candidate from the equation, we add the talent to the recommendation list and iterate until we have enough talents for the whole group. The equation for the diversity is
 
 \begin{equation}
-g ( R , \lambda ) = ( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R )
+g ( R , \lambda ) = ( 1 - \lambda ) \frac { 1 } { | R | } \sum _ { i \in R } f _ { r e l } ( i ) + \lambda d i v ( R ) .
 \label{eq:diversity-equation}
 \end{equation}
 
@@ -350,20 +350,20 @@ the original variables~\parencite{jolliffe2011principal}.
 
 To determine the number of PCs, we can check the explained variance ratio for the different amount of PCs. Here, it makes sense to note that a higher number will affect the clustering model negatively, and a lower number will not be able to capture everything in the dataset. The author of the thesis experimented with different values.
 
-K-means clustering requires a \textit{k} value that determines the number of clusters the model is going to create. The ideal number of clusters can be verified by calculating the silhouette scores for a different number of clusters. The figure \ref{fig:pca-silhouette} shows silhouette scores for different cluster amounts. Silhouette score calculates the similarity of a data point to its cluster compared to other clusters \parencite{rousseeuw1987silhouettes}. For this task, we use the equations \eqref{eq:silhouette-a}, \eqref{eq:silhouette-b}, \eqref{eq:silhouette-c}. In the equations, different distance metrics can be employed. The choice of the author is the Euclidian distance.  The equation \eqref{eq:silhouette-a} calculates the mean intra-cluster distance for each sample and the next \eqref{eq:silhouette-b} computes mean nearest-cluster distance for each sample, which means the distance between a sample and the nearest cluster that the sample is not a part of. $d(i, j)$ in the \eqref{eq:silhouette-a} stands for the chosen distance function and the $C_{i}$ refers to the number of clusters. The last function \eqref{eq:silhouette-c} converts the results of the first two equations into silhouette coefficients. The mean of all silhouette coefficients from every sample gives the silhouette score for that \textit{k} value. Higher silhouette scores suggest that the samples well matched to its cluster and poorly matched to neighboring clusters. In the example of \ref{fig:pca-silhouette}, it makes sense to select a value like 30. To visualize results, we project the centers of the clusters on a 2D space[See \ref{fig:kmeans-centers}]. The X-axis of the graph is the maximum value in each cluster center coordinate, and the Y-axis of the graph is the maximum value in each cluster center coordinate.
+K-means clustering requires a \textit{k} value that determines the number of clusters the model is going to create. The ideal number of clusters can be verified by calculating the silhouette scores for a different number of clusters. The figure \ref{fig:pca-silhouette} shows silhouette scores for different cluster amounts. Silhouette score calculates the similarity of a data point to its cluster compared to other clusters \parencite{rousseeuw1987silhouettes}. For this task, we use the equations \eqref{eq:silhouette-a}, \eqref{eq:silhouette-b}, \eqref{eq:silhouette-c}. In the equations, different distance metrics can be employed. The choice of the author is the Euclidian distance.  The equation \eqref{eq:silhouette-a} calculates the mean intra-cluster distance for each sample and the next \eqref{eq:silhouette-b} computes mean nearest-cluster distance for each sample, which means the distance between a sample and the nearest cluster that the sample is not a part of. $d(i, j)$ in the \eqref{eq:silhouette-a} stands for the chosen distance function and the $C_{i}$ refers to the number of clusters. The last function \eqref{eq:silhouette-c} converts the results of the first two equations into silhouette coefficients. The mean of all silhouette coefficients from every sample gives the silhouette score for that \textit{k} value. Higher silhouette scores suggest that the samples well matched to its cluster and poorly matched to neighboring clusters. In the example of \ref{fig:pca-silhouette}, it makes sense to select a value like 30. To visualize results, we project the centers of the clusters on a 2D space[See \ref{fig:kmeans-centers}]. The X-axis of the graph is the maximum value in each cluster center coordinate, and the Y-axis of the graph is the maximum value in each cluster center coordinate. The relevant equations are defined to be
 
 \begin{equation}
-a(i)=\frac{1}{\left|C_{i}\right|-1} \sum_{j \in C_{i}, i \neq j} d(i, j)
+a(i)=\frac{1}{\left|C_{i}\right|-1} \sum_{j \in C_{i}, i \neq j} d(i, j) , 
 \label{eq:silhouette-a}
 \end{equation}
 
 \begin{equation}
-b(i)=\min _{i \neq j} \frac{1}{\left|C_{j}\right|} \sum_{j \in C_{j}} d(i, j)
+b(i)=\min _{i \neq j} \frac{1}{\left|C_{j}\right|} \sum_{j \in C_{j}} d(i, j) ,
 \label{eq:silhouette-b}
 \end{equation}
 
 \begin{equation}
-s(i)=\frac{b(i)-a(i)}{\max \{a(i), b(i)\}}
+s(i)=\frac{b(i)-a(i)}{\max \{a(i), b(i)\}} .
 \label{eq:silhouette-c}
 \end{equation}
 
