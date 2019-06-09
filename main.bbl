@@ -1408,7 +1408,7 @@
       \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:1804.02763}
+      \field{journaltitle}{arXiv:1804.02763}
       \field{title}{Comparison of non-linear activation functions for deep neural networks on MNIST classification task}
       \field{year}{2018}
     \endentry

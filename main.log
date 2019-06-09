@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  8 JUN 2019 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  9 JUN 2019 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2043,13 +2043,7 @@ Package microtype Info: Character `029' is missing
 [76
 
 
-] [77]
-Overfull \hbox (6.64487pt too wide) in paragraph at lines 59--59
-\T1/pplx/m/n/10.95 (-20) ral net-works on MNIST clas-si-fi-ca-tion task.^^Q In:
- \T1/pplx/m/it/10.95 (-20) arXiv preprint arXiv:1804.02763
- []
-
-[78]
+] [77] [78]
 No complaints by nag.
 [79]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
@@ -2086,7 +2080,7 @@ pe1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
 /palatino/uplbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/upl
 ri8a.pfb>
-Output written on main.pdf (87 pages, 2352739 bytes).
+Output written on main.pdf (87 pages, 2354648 bytes).
 PDF statistics:
  1480 PDF objects out of 1728 (max. 8388607)
  1307 compressed objects within 14 object streams
