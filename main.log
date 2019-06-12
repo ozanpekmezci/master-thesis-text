@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  9 JUN 2019 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.18)  12 JUN 2019 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2060,7 +2060,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  51576 strings out of 492649
  1136295 string characters out of 6129621
- 1803240 words of memory out of 5000000
+ 1803248 words of memory out of 5000000
  53902 multiletter control sequences out of 15000+600000
  598335 words of font info for 367 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2080,7 +2080,7 @@ pe1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
 /palatino/uplbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/upl
 ri8a.pfb>
-Output written on main.pdf (87 pages, 2354648 bytes).
+Output written on main.pdf (87 pages, 2354659 bytes).
 PDF statistics:
  1480 PDF objects out of 1728 (max. 8388607)
  1307 compressed objects within 14 object streams

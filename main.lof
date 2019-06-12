@@ -7,13 +7,13 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces High level architecture of a content based recommender ~\parencite {de2015semantics}.\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces High level architecture of a content based recommender ~\parencite {de2015semantics}\relax }}{5}{figure.caption.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces High level architecture of a feedforward neural network ~\parencite {nnimagesource}.\relax }}{16}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces High level architecture of a feedforward neural network ~\parencite {nnimagesource}\relax }}{16}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer.com Website\relax }}{19}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces An example project from the Freelancer.com website\relax }}{19}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The winner and other bidders to the same project\relax }}{20}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
@@ -55,19 +55,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Coverage figure}}{50}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Unsupervised-diversity-accuracy Figure}}{54}{figure.caption.77}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Unsupervised group recommender accuracy figure}}{54}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Unsupervised-diversity-diversity Figure}}{55}{figure.caption.79}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Unsupervised group recommender diversity figure}}{55}{figure.caption.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Unsupervised Diverse Group Unexpectedness Figure}}{55}{figure.caption.81}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Unsupervised diverse group unexpectedness figure}}{55}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Unsupervised diverse user study figure}}{56}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Accuracy in Diverse Supervised Group Recommender}}{58}{figure.caption.92}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Accuracy in diverse supervised group recommender figure}}{58}{figure.caption.92}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Diversity in Diverse Supervised Group Recommender}}{59}{figure.caption.94}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Diversity in diverse supervised group recommender figure}}{59}{figure.caption.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Supervised Diverse Group Unexpectedness Figure}}{59}{figure.caption.96}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Supervised diverse group unexpectedness figure}}{59}{figure.caption.96}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Supervised diverse user study figure}}{60}{figure.caption.98}
 \defcounter {refsection}{0}\relax 
@@ -77,8 +77,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Model Code}}{71}{figure.caption.113}
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Model code}}{71}{figure.caption.113}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Model Bias Code}}{72}{figure.caption.114}
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Model bias code}}{72}{figure.caption.114}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
