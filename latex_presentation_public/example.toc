@@ -1,0 +1,37 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Problem}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Motivation}{5}{0}{1}
+\beamer@sectionintoc {2}{Review of Literature and Research}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Overview of Content-Based Recommender Systems}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Advantages and Drawbacks of Content-Based Filtering}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Recommender System Evaluation Properties}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{Accuracy and Diversity}{10}{0}{2}
+\beamer@sectionintoc {3}{Implementation}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Unsupervised Individual Recommender}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Supervised Individual Recommender with Feedback Learning}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{Group Recommenders}{14}{0}{3}
+\beamer@subsectionintoc {3}{4}{Unsupervised and Supervised Group Recommender}{15}{0}{3}
+\beamer@subsectionintoc {3}{5}{Dashboard Main}{16}{0}{3}
+\beamer@subsectionintoc {3}{6}{Dashboard Projects}{17}{0}{3}
+\beamer@subsectionintoc {3}{7}{Dashboard Individual}{18}{0}{3}
+\beamer@subsectionintoc {3}{8}{Dashboard Individual Hybrid}{19}{0}{3}
+\beamer@subsectionintoc {3}{9}{Dashboard Group}{20}{0}{3}
+\beamer@sectionintoc {4}{Evaluation}{21}{0}{4}
+\beamer@subsectionintoc {4}{1}{Offline Accuracy of Individual Recommenders}{22}{0}{4}
+\beamer@subsectionintoc {4}{2}{User Study Results of Individual Recommenders}{23}{0}{4}
+\beamer@subsectionintoc {4}{3}{Accuracy of Unsupervised Group Recommender}{24}{0}{4}
+\beamer@subsectionintoc {4}{4}{Diversity of Unsupervised Group Recommender}{25}{0}{4}
+\beamer@subsectionintoc {4}{5}{User Study about Unsupervised Group Recommender}{26}{0}{4}
+\beamer@subsectionintoc {4}{6}{Accuracy of Supervised Group Recommender}{27}{0}{4}
+\beamer@subsectionintoc {4}{7}{Diversity of Supervised Group Recommender}{28}{0}{4}
+\beamer@subsectionintoc {4}{8}{User Study about Supervised Group Recommender}{29}{0}{4}
+\beamer@subsectionintoc {4}{9}{Online Evaluation and User Study about Feedback Learning}{30}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{31}{0}{5}
+\beamer@subsectionintoc {5}{1}{Artificial Neural Networks}{32}{0}{5}
+\beamer@subsectionintoc {5}{2}{Others Evaluation Methods}{33}{0}{5}
+\beamer@subsectionintoc {5}{3}{Freelancer.com Dataset(1)}{34}{0}{5}
+\beamer@subsectionintoc {5}{4}{Freelancer.com Dataset(2)}{35}{0}{5}
+\beamer@subsectionintoc {5}{5}{Freelancer.com Dataset(3)}{36}{0}{5}
+\beamer@subsectionintoc {5}{6}{Model of Sparse Input}{37}{0}{5}
+\beamer@subsectionintoc {5}{7}{Supervised Individual Recommender}{38}{0}{5}
+\beamer@subsectionintoc {5}{8}{Extra Information}{39}{0}{5}
